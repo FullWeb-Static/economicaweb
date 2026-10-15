@@ -1009,6 +1009,21 @@
         margin-top: 40px !important; /* Desplaza el bloque de texto dorado hacia abajo */
         display: block !important;
     }
+    /* 8. CORRECCIÓN DE TARJETA: Forzar el apilamiento vertical en celulares */
+    .carousel-track, .catalog-section .container > div:last-of-type {
+        display: flex !important;
+        flex-direction: column !important; /* Pasa de horizontal a vertical */
+        align-items: center !important;    /* Centra las tarjetas en el teléfono */
+        gap: 25px !important;              /* Separación limpia hacia abajo */
+        width: 100% !important;
+    }
+
+    /* 9. AJUSTE DE ANCHO DE CARD: Adaptabilidad al 100% del teléfono */
+    .luxury-card, .catalog-section [class*="card"] {
+        max-width: 100% !important;
+        width: 100% !important;
+        flex: 1 1 auto !important;
+    }
 
         </style>
 
