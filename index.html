@@ -393,20 +393,30 @@
         max-width: 100% !important;
         word-wrap: break-word !important;
     }
-    /* 11. REPARACIÓN DE TARJETAS INSTRUCTIVAS: Activa el desplazamiento lateral en las 4 pequeñas */
-    .arquitectura-track, 
-    [id*="arquitectura"] .carousel-track,
-    section:nth-of-type(2) > div > div {
-        display: flex !important;
-        flex-direction: row !important; /* Mantener una al lado de la otra */
-        flex-wrap: nowrap !important;   /* Prohibido amontonarse hacia abajo */
-        overflow-x: auto !important;    /* HABILITA EL DESLIZAMIENTO CON EL DEDO */
+        /* 11. REPARACIÓN DE TARJETAS INSTRUCTIVAS: Desbloqueo de carrusel táctil en las 4 pequeñas */
+    .grid-soluciones-premium {
+        display: flex !important;       /* Rompe la grilla rígida de PC */
+        flex-direction: row !important; /* Mantiene las tarjetas una al lado de la otra */
+        flex-wrap: nowrap !important;   /* Prohibido que se amontonen abajo */
+        overflow-x: auto !important;    /* ACTIVA EL DESLIZAMIENTO CON EL DEDO */
         overflow-y: hidden !important;
-        scroll-snap-type: x mandatory !important;
+        scroll-snap-type: x mandatory !important; /* Efecto magnético móvil */
         gap: 15px !important;
-        padding: 10px 5px !important;
+        padding: 15px 5px !important;
         width: 100% !important;
-        scrollbar-width: none !important; /* Oculta la barra ploma */
+        scrollbar-width: none !important; /* Oculta la barra ploma en Firefox */
+    }
+
+    /* Ocultar barra de scroll en Chrome, Safari y Edge mobile */
+    .grid-soluciones-premium::-webkit-scrollbar {
+        display: none !important;
+    }
+
+    /* Ajuste micro-nítido para las 4 cards pequeñas instructivas */
+    .grid-soluciones-premium .tarjeta-solucion-premium {
+        flex: 0 0 265px !important; width: 265px !important; min-width: 265px !important;
+        max-width: 80vw !important;
+        height: auto !important;
     }
 
     /* Ocultar barra en Chrome y Safari móvil */
