@@ -343,11 +343,29 @@
 
     /* 5. Fuentes compactas de alta legibilidad */
     .nav-links-right a, #nav-menu a {
-        font-size: 0.68rem !important;
-        font-weight: 700 !important;
-        white-space: nowrap !important;
-        letter-spacing: 0.5px !important;
-    }
+    font-size: 0.65rem !important;        /* Mantiene el tamaño micro-nitidez responsivo */
+    font-weight: 800 !important;          /* Letra con más cuerpo y presencia */
+    color: #ffffff !important;            /* Blanco puro para máximo contraste y legibilidad */
+    text-transform: uppercase !important;
+    white-space: nowrap !important;
+    letter-spacing: 0.5px !important;
+    padding: 4px 6px !important;          /* Encasillado interno sutil sin agrandar la barra */
+    background: rgba(223, 197, 159, 0.05) !important; /* Fondo bronce cristalino de fondo */
+    border: 1px solid rgba(223, 197, 159, 0.2) !important; /* Borde ultra-fino de contención */
+    border-radius: 3px !important;        /* Esquinas suavizadas de lujo */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5) !important; /* Sombra para despegarlo del fondo */
+    text-shadow: 0 1px 2px rgba(0,0,0,0.8) !important;
+}
+
+/* Destello brillante al presionar el dedo sobre cualquier opción */
+.nav-links-right a:active, #nav-menu a:active,
+.nav-links-right a:hover, #nav-menu a:hover {
+    color: var(--gold-bright) !important; /* Oro de máximo brillo */
+    background: rgba(223, 197, 159, 0.15) !important;
+    border-color: var(--gold-bronzite) !important;
+    box-shadow: 0 0 10px rgba(223, 197, 159, 0.3) !important;
+}
+
 
     /* 6. COLCHÓN DE CONTROL: Espacio necesario para que el menú de dos pisos no tape el inicio */
     #inicio, .hero-section, section:first-of-type {
@@ -370,7 +388,7 @@
         overflow-y: hidden !important;
         scroll-snap-type: x mandatory !important; /* Efecto magnético fluido */
         gap: 20px !important;
-        padding: 30px 10px 15px 10px !important;
+        padding: 25px 10px 15px 10px !important;
         width: 100% !important;
         scrollbar-width: none !important; /* Oculta barra en Firefox */
     }
