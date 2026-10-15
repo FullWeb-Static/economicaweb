@@ -948,20 +948,58 @@
               height: 100% !important;
           }
 
-          @media (max-width: 768px) {
-              .grid-soluciones-premium {
-                  grid-template-columns: 1fr !important;
-                  gap: 20px !important;
-              }
-              .tarjeta-solucion-premium {
-                  max-width: 100% !important;
-              }
-              .manifesto-box {
-                  padding: 25px 15px !important;
-                  margin-left: 10px !important;
-                  margin-right: 10px !important;
-              }
-          }
+          @media screen and (max-width: 768px) {
+    /* 1. Blindar el documento contra desbordes laterales */
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    /* 2. Dejar la cabecera delgada y fija en el techo del teléfono */
+    header.premium-header {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: auto !important;
+        padding: 10px 0 !important;
+        z-index: 9999 !important;
+        background-color: #040608 !important; /* Tu color dark obsidian */
+        border-bottom: 1px solid rgba(223, 197, 159, 0.1) !important;
+    }
+
+    /* 3. Forzar a la caja wrapper a mantener el logo y los links en los extremos */
+    .nav-wrapper {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        width: 100% !important;
+        padding: 0 15px !important;
+    }
+
+    /* 4. Forzar a todos los links a quedarse alineados en una sola fila de lado */
+    .nav-links-right, #nav-menu {
+        display: flex !important;
+        flex-direction: row !important; /* Estrictamente horizontal */
+        flex-wrap: nowrap !important;   /* Prohibido irse hacia abajo */
+        gap: 8px !important;            /* Espacio compacto entre opciones */
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* 5. Achicar las letras y mantener el texto en un solo renglón para que calcen todos */
+    .nav-links-right a, #nav-menu a {
+        font-size: 0.62rem !important;  /* Tamaño micro-nitidez responsivo */
+        white-space: nowrap !important; /* Evita que las palabras se rompan en dos pisos */
+        letter-spacing: 0px !important;
+    }
+
+    /* 6. Reducir el espacio gigante superior de la primera sección */
+    #inicio, .hero-section, section:first-of-type {
+        padding-top: 70px !important; /* Espacio exacto abajo del menú fijo */
+        margin-top: 0 !important;
+    }
+}
         </style>
 
         <!-- Contenedor maestro con la grilla aislada -->
