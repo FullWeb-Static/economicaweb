@@ -998,20 +998,17 @@
         letter-spacing: 0.5px !important;
     }
 
-        /* 6. COMPRESIÓN DEL HERO: Ajuste elástico aumentado para empujar el título */
+            /* 6. COMPRESIÓN DEL HERO: Espacio elástico aumentado para liberar el fondo */
     #inicio, .hero-section, section:first-of-type {
-        padding-top: 70px !important; /* Añade la separación justa para no pisar el texto */
+        padding-top: 100px !important; /* Incrementamos el colchón base de la sección */
         margin-top: 0 !important;
     }
 
-    /* 7. Proporción del título principal de tu negocio */
-    h1, .luxury-main-title {
-        font-size: 1.7rem !important;
-        line-height: 1.3 !important;
-        max-width: 100% !important;
-        word-wrap: break-word !important;
+    /* 7. EMPUJE QUIRÚRGICO DEL TEXTO: Separa la primera línea para que baje de la barra */
+    .hero-tagline, #inicio span:first-of-type, #inicio p:first-of-type {
+        margin-top: 40px !important; /* Desplaza el bloque de texto dorado hacia abajo */
+        display: block !important;
     }
-}
 
         </style>
 
