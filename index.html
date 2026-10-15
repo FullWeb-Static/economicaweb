@@ -25,6 +25,7 @@
     <link rel="preconnect" href="https://googleapis.com" />
     <link rel="preconnect" href="https://gstatic.com" crossorigin />
     <link href="https://googleapis.com" rel="stylesheet" />
+
     <style>
       /* --- VARIABLES CROMÁTICAS DE ALTO CONTRASTE Y LUJO DE e-WEB --- */
       :root {
@@ -119,23 +120,6 @@
       }
       .brand-luxury-title span {
           color: var(--gold-bronzite); text-shadow: 0 0 12px rgba(223, 197, 159, 0.4);
-      }
-
-      /* Botón Menú Hamburguesa Móvil Nativo */
-      .menu-toggle {
-          display: none;
-          flex-direction: column;
-          gap: 5px;
-          cursor: pointer;
-          background: none;
-          border: none;
-          z-index: 100000;
-      }
-      .menu-toggle span {
-          display: block;
-          width: 25px;
-          height: 2px;
-          background-color: var(--gold-bronzite);
       }
 
       .nav-links-right {
@@ -1387,20 +1371,6 @@
       </div>
     </div>
     <script>
-      // LÓGICA DE APERTURA DEL MENÚ MÓVIL (Mantiene intacto tu diseño sin desarmar)
-      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-      const navMenu = document.getElementById('nav-menu');
-
-      if (mobileMenuBtn && navMenu) {
-          mobileMenuBtn.addEventListener('click', () => {
-              navMenu.classList.toggle('active');
-          });
-          navMenu.querySelectorAll('a').forEach(link => {
-              link.addEventListener('click', () => {
-                  navMenu.classList.remove('active');
-              });
-          });
-      }
 
               // INTERCEPTOR INTELIGENTE DE FORMULARIO - e-WEB SOBERANO
         const luxuryForm = document.querySelector('.luxury-form');
