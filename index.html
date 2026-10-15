@@ -1586,9 +1586,17 @@
         }
 
       window.closeSuccessModal = function() {
-          successModal.style.opacity = '0';
-          successModal.style.pointerEvents = 'none';
-      };
+    if (typeof successModal !== 'undefined' && successModal) {
+        successModal.style.opacity = '0';
+        successModal.style.pointerEvents = 'none';
+        
+        // ANCLAJE DE CONVERSIÓN: Sube suavemente a la pasarela activa arriba
+        const targetPasarela = document.getElementById('pasarela-pagos');
+        if (targetPasarela) {
+            targetPasarela.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
+};
 
       // MOTOR DE CONSTELACIONES INTERACTIVAS EN 3D NATIVO (Grosor de líneas a 1.2px)
       (function() {
