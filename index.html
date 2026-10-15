@@ -299,34 +299,102 @@
           .hero-headline { font-size: 3.5rem; }
       }
 
-      @media (max-width: 768px) {
-          .menu-toggle { display: flex; } /* Activa el botón hamburguesa */
-          .hero-headline { font-size: 2.8rem; }
-          .nav-wrapper { padding: 12px 15px !important; }
+@media screen and (max-width: 768px) {
+    /* 1. Blindaje absoluto contra desbordes en el documento */
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+    }
 
-          /* Esconde el menú de escritorio y lo prepara para desplegarse verticalmente */
-          .nav-links-right {
-              display: none !important;
-              flex-direction: column !important;
-              position: absolute;
-              top: 100%; left: 0; width: 100%;
-              background-color: rgba(4, 6, 8, 0.98);
-              padding: 30px 20px !important; gap: 18px !important;
-              border-bottom: 2px solid var(--gold-bronzite);
-              box-shadow: 0 10px 30px rgba(0,0,0,0.9);
-          }
+    /* 2. CABECERA RIGIDAMENTE FIJA: Bloqueada en el techo sin moverse nunca */
+    header.premium-header {
+        position: fixed !important; /* Cambiado a fixed para bloqueo total */
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: auto !important;
+        padding: 12px 0 !important;
+        z-index: 9999 !important; /* Capa máxima sobre todo el contenido */
+        background-color: #040608 !important; /* Tu color dark obsidian */
+        border-bottom: 1px solid rgba(223, 197, 159, 0.1) !important;
+    }
 
-          /* Clase activadora del menú móvil con JavaScript */
-          .nav-links-right.active { display: flex !important; }
-          .cta-header-btn { width: 100%; text-align: center; }
+    /* 3. Contenedor vertical para los dos pisos del menú fijo */
+    .nav-wrapper {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 10px !important;
+        width: 100% !important;
+        padding: 0 10px !important;
+    }
 
-          .carousel-track { grid-template-columns: 1fr !important; gap: 25px; }
-          .luxury-card { width: 100% !important; max-width: 100%; }
-          .luxury-image-container { height: 320px; }
-          .vault-frame { padding: 40px 20px; width: 100%; }
-          .premium-btn-group { flex-direction: column; gap: 15px; }
-          .btn-luxury-solid, .btn-luxury-outline { width: 100%; justify-content: center; }
-      }
+    /* 4. Doble hilera horizontal para los 7 enlaces del menú */
+    .nav-links-right, #nav-menu {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 8px 12px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+    }
+
+    /* 5. Fuentes compactas de alta legibilidad */
+    .nav-links-right a, #nav-menu a {
+        font-size: 0.68rem !important;
+        font-weight: 700 !important;
+        white-space: nowrap !important;
+        letter-spacing: 0.5px !important;
+    }
+
+    /* 6. COLCHÓN DE CONTROL: Espacio necesario para que el menú de dos pisos no tape el inicio */
+    #inicio, .hero-section, section:first-of-type {
+        padding-top: 140px !important; /* Mueve el título principal abajo de la barra fija */
+        margin-top: 0 !important;
+    }
+
+    /* 7. Empuje del texto secundario para perfecta visibilidad */
+    .hero-tagline, #inicio span:first-of-type, #inicio p:first-of-type {
+        margin-top: 20px !important;
+        display: block !important;
+    }
+
+    /* 8. CARRUSEL TÁCTIL MÓVIL: Tarjetas de lado deslizables con el dedo (Evita página infinita) */
+    .carousel-track {
+        display: flex !important;
+        flex-direction: row !important; /* Mantener horizontal */
+        flex-wrap: nowrap !important;   /* Prohibido saltar hacia abajo */
+        overflow-x: auto !important;    /* Activa deslizamiento lateral con el dedo */
+        overflow-y: hidden !important;
+        scroll-snap-type: x mandatory !important; /* Efecto magnético fluido */
+        gap: 20px !important;
+        padding: 15px 5px !important;
+        width: 100% !important;
+        scrollbar-width: none !important; /* Oculta barra en Firefox */
+    }
+
+    .carousel-track::-webkit-scrollbar {
+        display: none !important; /* Oculta barra en Chrome/Safari */
+    }
+
+    /* 9. ANCHOS DE TARJETA EN CARRUSEL: Deja ver un trozo de la siguiente tarjeta */
+    .luxury-card {
+        flex: 0 0 285px !important; /* Ancho perfecto para pantallas táctiles */
+        scroll-snap-align: center !important; /* Imán al deslizar */
+        max-width: 85vw !important;
+    }
+
+    /* 10. Proporción del título principal de tu negocio */
+    h1, .luxury-main-title {
+        font-size: 1.7rem !important;
+        line-height: 1.3 !important;
+        max-width: 100% !important;
+        word-wrap: break-word !important;
+    }
+}
+
     </style>
   </head>
   <body>
@@ -1009,20 +1077,31 @@
         margin-top: 40px !important; /* Desplaza el bloque de texto dorado hacia abajo */
         display: block !important;
     }
-    /* 8. CORRECCIÓN DE TARJETA: Forzar el apilamiento vertical en celulares */
-    .carousel-track, .catalog-section .container > div:last-of-type {
+        /* 8. CARRUSEL TÁCTIL: Desplazamiento horizontal fluido con el dedo */
+    .carousel-track {
         display: flex !important;
-        flex-direction: column !important; /* Pasa de horizontal a vertical */
-        align-items: center !important;    /* Centra las tarjetas en el teléfono */
-        gap: 25px !important;              /* Separación limpia hacia abajo */
+        flex-direction: row !important; /* Mantiene las tarjetas de lado */
+        flex-wrap: nowrap !important;   /* Prohibido que salten hacia abajo */
+        overflow-x: auto !important;    /* Habilita el scroll horizontal */
+        overflow-y: hidden !important;
+        scroll-snap-type: x mandatory !important; /* Efecto magnético al deslizar */
+        gap: 20px !important;
+        padding: 15px !important;
         width: 100% !important;
+        
+        /* Ocultar la barra de scroll para mantener la estética limpia */
+        scrollbar-width: none; /* Firefox */
     }
 
-    /* 9. AJUSTE DE ANCHO DE CARD: Adaptabilidad al 100% del teléfono */
-    .luxury-card, .catalog-section [class*="card"] {
-        max-width: 100% !important;
-        width: 100% !important;
-        flex: 1 1 auto !important;
+    .carousel-track::-webkit-scrollbar {
+        display: none; /* Chrome, Safari y Edge */
+    }
+
+    /* 9. ANCHOS SEGUROS: Tamaño adaptado para que se note que hay más tarjetas al lado */
+    .luxury-card {
+        flex: 0 0 290px !important; /* Ancho fijo óptimo para celulares */
+        scroll-snap-align: center !important; /* Centra la tarjeta magnéticamente */
+        max-width: 85vw !important;
     }
 
         </style>
