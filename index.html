@@ -393,6 +393,36 @@
         max-width: 100% !important;
         word-wrap: break-word !important;
     }
+    /* 11. REPARACIÓN DE TARJETAS INSTRUCTIVAS: Activa el desplazamiento lateral en las 4 pequeñas */
+    .arquitectura-track, 
+    [id*="arquitectura"] .carousel-track,
+    section:nth-of-type(2) > div > div {
+        display: flex !important;
+        flex-direction: row !important; /* Mantener una al lado de la otra */
+        flex-wrap: nowrap !important;   /* Prohibido amontonarse hacia abajo */
+        overflow-x: auto !important;    /* HABILITA EL DESLIZAMIENTO CON EL DEDO */
+        overflow-y: hidden !important;
+        scroll-snap-type: x mandatory !important;
+        gap: 15px !important;
+        padding: 10px 5px !important;
+        width: 100% !important;
+        scrollbar-width: none !important; /* Oculta la barra ploma */
+    }
+
+    /* Ocultar barra en Chrome y Safari móvil */
+    .arquitectura-track::-webkit-scrollbar,
+    [id*="arquitectura"] .carousel-track::-webkit-scrollbar {
+        display: none !important;
+    }
+
+    /* Ajuste de ancho micro-nitidez para las 4 cards instructivas en celular */
+    .arquitectura-track > div,
+    [id*="arquitectura"] .luxury-card,
+    section:nth-of-type(2) [class*="card"] {
+        flex: 0 0 260px !important; /* Ancho compacto ideal para las cards pequeñas */
+        scroll-snap-align: center !important;
+        max-width: 80vw !important;
+    }
 }
 
     </style>
