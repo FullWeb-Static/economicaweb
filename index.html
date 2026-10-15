@@ -949,57 +949,70 @@
           }
 
           @media screen and (max-width: 768px) {
-    /* 1. Blindar el documento contra desbordes laterales */
+    /* 1. Bloqueo hermético de desbordes laterales */
     html, body {
         overflow-x: hidden;
         width: 100%;
     }
 
-    /* 2. Dejar la cabecera delgada y fija en el techo del teléfono */
+    /* 2. Cabecera fija adaptada para dos pisos en celular */
     header.premium-header {
         position: fixed !important;
         top: 0 !important;
         left: 0 !important;
         right: 0 !important;
         width: auto !important;
-        padding: 10px 0 !important;
+        padding: 12px 0 !important;
         z-index: 9999 !important;
-        background-color: #040608 !important; /* Tu color dark obsidian */
+        background-color: #040608 !important; /* Tu tono --dark-obsidian */
         border-bottom: 1px solid rgba(223, 197, 159, 0.1) !important;
     }
 
-    /* 3. Forzar a la caja wrapper a mantener el logo y los links en los extremos */
+    /* 3. Transformar el contenedor en un bloque vertical para los dos pisos */
     .nav-wrapper {
         display: flex !important;
-        justify-content: space-between !important;
+        flex-direction: column !important; /* Logo arriba, links abajo */
         align-items: center !important;
+        gap: 10px !important;
         width: 100% !important;
-        padding: 0 15px !important;
+        padding: 0 10px !important;
     }
 
-    /* 4. Forzar a todos los links a quedarse alineados en una sola fila de lado */
+    /* 4. El menú de links se adapta en múltiples filas horizontales (Doble Hilera) */
     .nav-links-right, #nav-menu {
         display: flex !important;
-        flex-direction: row !important; /* Estrictamente horizontal */
-        flex-wrap: nowrap !important;   /* Prohibido irse hacia abajo */
-        gap: 8px !important;            /* Espacio compacto entre opciones */
+        flex-direction: row !important;
+        flex-wrap: wrap !important; /* PERMITE CREAR LA DOBLE HILERA AUTOMÁTICA */
+        justify-content: center !important; /* Centra los links de forma estética */
+        gap: 8px 12px !important; /* Separación limpia entre filas y columnas */
         margin: 0 !important;
         padding: 0 !important;
+        width: 100% !important;
     }
 
-    /* 5. Achicar las letras y mantener el texto en un solo renglón para que calcen todos */
+    /* 5. Estilo micro-nítido para que los 7 links calcen perfectamente */
     .nav-links-right a, #nav-menu a {
-        font-size: 0.62rem !important;  /* Tamaño micro-nitidez responsivo */
-        white-space: nowrap !important; /* Evita que las palabras se rompan en dos pisos */
-        letter-spacing: 0px !important;
+        font-size: 0.68rem !important; /* Tipografía compacta y legible */
+        font-weight: 700 !important;
+        white-space: nowrap !important;
+        letter-spacing: 0.5px !important;
     }
 
-    /* 6. Reducir el espacio gigante superior de la primera sección */
+    /* 6. BAJAR EL MARGEN DEL TÍTULO: Espacio aumentado para que la barra de dos pisos no lo tape */
     #inicio, .hero-section, section:first-of-type {
-        padding-top: 70px !important; /* Espacio exacto abajo del menú fijo */
+        padding-top: 130px !important; /* Eleva el margen para dar espacio al menú responsivo */
         margin-top: 0 !important;
     }
+
+    /* 7. Ajuste del título principal del negocio */
+    h1, .luxury-main-title {
+        font-size: 1.7rem !important;
+        line-height: 1.3 !important;
+        max-width: 100% !important;
+        word-wrap: break-word !important;
+    }
 }
+
         </style>
 
         <!-- Contenedor maestro con la grilla aislada -->
