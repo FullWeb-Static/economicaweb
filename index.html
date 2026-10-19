@@ -495,33 +495,39 @@
         display: none !important; /* Desaparece por completo el botón de correo en celulares y tablets */
     }
 
-    /* 15. OPTIMIZACIÓN DE RECTÁNGULOS DE ENTRADA Y TEXTOS EN FORMULARIO MÓVIL */
-    .luxury-input, 
-    .luxury-form-container input, 
-    .luxury-form-container textarea, 
-    .luxury-form-container select,
-    [class*="input"] {
-        padding: 16px 14px !important;       /* Agrandar el rectángulo negro hacia arriba y abajo */
-        font-size: 0.85rem !important;        /* Tamaño equilibrado para que la frase quepa completa */
-        line-height: 1.4 !important;
-        color: #ffffff !important;           /* Letra blanca pura cuando el usuario escribe */
-        width: 100% !important;
-        box-sizing: border-box !important;
-    }
+    /* 15. EXPANSIÓN HORIZONTAL Y MULTI-LÍNEA PARA RECTÁNGULOS DE LA BÓVEDA */
+.luxury-input, 
+.luxury-form-container input, 
+.luxury-form-container textarea, 
+.luxury-form-container select,
+[class*="input"] {
+    padding: 16px 14px !important;       /* Relleno vertical y horizontal balanceado */
+    font-size: 0.88rem !important;        /* Letra un pelín más grande y nítida */
+    line-height: 1.4 !important;
+    color: #ffffff !important;
+    width: 100% !important;              /* Abre el campo horizontalmente al máximo */
+    max-width: 100% !important;
+    box-sizing: border-box !important;   /* Evita desbordes fuera de la pantalla */
+}
 
-    /* Forzar a que los marcadores de posición (letras grises internas) sean brillantes y legibles */
-    .luxury-input::placeholder,
-    [class*="input"]::placeholder {
-        color: #94a3b8 !important;           /* Gris plata brillante de alta visibilidad */
-        font-size: 0.82rem !important;        /* Ajuste fino para evitar que el texto se corte */
-        opacity: 1 !important;               /* Evita que los iPhone atenúen el color */
-    }
-    
-    /* Darle más altura específica a la caja de texto grande (textarea) */
-    textarea.luxury-input, 
-    textarea[class*="input"] {
-        min-height: 140px !important;        /* Espacio expandido para que el texto largo respire */
-    }
+/* Rompe el bloqueo horizontal de las letras grises para crear renglones automáticos */
+.luxury-input::placeholder,
+[class*="input"]::placeholder {
+    color: #94a3b8 !important;           /* Gris plata de alto contraste */
+    font-size: 0.82rem !important;
+    white-space: normal !important;      /* OBLIGA A LA FRASE A SALTAR ABAJO SI NO CABE */
+    line-height: 1.4 !important;        /* Espaciado perfecto entre los pisos del texto */
+    word-wrap: break-word !important;    /* Blindaje de quiebre para palabras extensas */
+    display: inline-block !important;    /* Habilita la flexibilidad de altura interna */
+    width: 100% !important;
+    opacity: 1 !important;
+}
+
+/* Espacio expandido específico para el área de descripción larga */
+textarea.luxury-input, 
+textarea[class*="input"] {
+    min-height: 140px !important;        
+}
 }
 
     </style>
