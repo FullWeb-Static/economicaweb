@@ -808,51 +808,100 @@ textarea[class*="input"] {
         font-weight: 700 !important;
     }
 
-    /* 23. RECUADRO HORIZONTAL FIJO Y REORDENAMIENTO PARA EL PIE DE FIRMAS */
-    footer .container > div:last-of-type,
-    footer div[style*="border-top"] {
-        display: flex !important;
-        flex-direction: column !important; /* Coloca un crédito sobre el otro de forma simétrica */
-        align-items: center !important;
-        justify-content: center !important;
-        gap: 8px !important;
-        text-align: center !important;
+    /* 23. ENCASILLADO MÁXIMO HORIZONTAL Y ULTRA-COMPACTO DEL PIE DE PÁGINA (FOOTER SLIM) */
+    footer.footer-luxury-premium,
+    footer,
+    footer .container {
+        background-color: #0b0f17 !important; /* Gris grafito profundo */
+        border: 1px solid rgba(223, 197, 159, 0.3) !important; /* Micro-borde dorado nítido */
+        border-radius: 4px !important;                          
         
-        /* FORMATO RECTANGULAR HORIZONTAL OSCURO DEFINITIVO */
-        background-color: #040608 !important; /* Tu tono negro obsidian profundo */
-        border: 1px solid rgba(223, 197, 159, 0.25) !important; /* Micro-borde perimetral de bronce */
-        border-radius: 4px !important;         /* Esquinas suavizadas de ingeniería */
-        
-        /* EXPANSIÓN MÁXIMA HORIZONTAL */
+        /* EXPANSIÓN DE COSTADOS Y COMPRESIÓN VERTICAL MÁXIMA */
         width: 100% !important;
         max-width: 100% !important;
         min-width: 100% !important;
-        padding: 16px 10px !important;         /* Relleno compacto para mantenerlo estilizado */
-        margin-top: 25px !important;
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+        padding-top: 15px !important;     /* Reducido a la mitad para achatar el techo */
+        padding-bottom: 12px !important;  /* Base ultra-corta */
         margin-left: 0 !important;
         margin-right: 0 !important;
         box-sizing: border-box !important;
+        display: block !important;
     }
 
-    /* Fuentes micro-nítidas encuadradas dentro del rectángulo */
-    footer .container > div:last-of-type p,
-    footer div[style*="border-top"] p {
-        font-size: 0.72rem !important;        /* Tipografía compacta de gran autoridad */
-        line-height: 1.4 !important;
-        color: rgba(255, 255, 255, 0.45) !important; /* Blanco atenuado premium */
+    /* REORDENAMIENTO VERTICAL APRETADO SIN ESPACIOS MUERTOS */
+    footer .container > div:first-of-type {
+        display: flex !important;
+        flex-direction: column !important; 
+        align-items: center !important;    
+        text-align: center !important;
+        gap: 12px !important;              /* Se reduce la separación entre bloques a la mitad */
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Forzar el empaquetado corto en cada bloque interno */
+    footer .container > div:first-of-type > div {
+        width: 100% !important;
+        max-width: 100% !important;
         margin: 0 !important;
         padding: 0 !important;
-        width: 100% !important;
-        display: block !important;
-        letter-spacing: 0.3px !important;
+        text-align: center !important;
     }
 
-    /* Resalte de los dominios oficiales en oro */
-    footer .container > div:last-of-type p a,
-    footer div[style*="border-top"] p a {
-        color: #dfc59f !important;
-        text-decoration: underline !important;
-        font-weight: 700 !important;
+    /* Achicar el espacio de separación de los títulos internos */
+    footer h4, .footer-luxury-premium h4 {
+        text-align: center !important;
+        margin-top: 0 !important;
+        margin-bottom: 4px !important;     /* Texto pegado a su descripción */
+        font-size: 1.1rem !important;      /* Título un pelín más elegante y compacto */
+        width: 100% !important;
+    }
+
+    /* Reducir el colchón de los párrafos explicativos */
+    footer p, .footer-luxury-premium p {
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+        font-size: 0.82rem !important;
+        line-height: 1.4 !important;
+        color: #94a3b8 !important;
+    }
+
+    /* Unificar las hileras de enlaces en un formato corto */
+    footer ul {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;    
+        gap: 4px !important;               /* Enlaces muy pegaditos entre sí */
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    footer ul li {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* FRANJA DE CRÉDITOS FINAL COMPRESA EN LA BASE */
+    footer .container > div:last-of-type,
+    footer div[style*="border-top"] {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 4px !important;               /* Junta los dos renglones de créditos */
+        text-align: center !important;
+        border-top: 1px solid rgba(223, 197, 159, 0.15) !important; 
+        padding-top: 10px !important;      /* Micro-colchón divisorio interno */
+        margin-top: 14px !important;       /* Espacio de separación corto */
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    footer p, footer span, footer a {
+        font-size: 0.80rem !important;     /* Tipografía compacta micro-nitidez */
+        line-height: 1.4 !important;
+        text-align: center !important;
     }
 }
     </style>
@@ -1793,7 +1842,7 @@ textarea[class*="input"] {
     >
       <div class="container">
         <div
-          style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; margin-bottom: 20px; text-align: left;"
+          style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; margin-bottom: 20px;
         >
           <div style="flex: 1; min-width: 280px;">
             <h4
@@ -1804,17 +1853,12 @@ textarea[class*="input"] {
             <p
               style="color: #a1b0cb; font-size: 0.95rem; line-height: 1.8; font-weight: 300; max-width: 320px;"
             >
-              Alta ingeniería de software y arquitectura en infraestructura
+              Ingeniería de software y arquitectura en infraestructura
               digital. Soluciones a la medida a través del ecosistema de
               economicaweb.cl, una división de FullWeb.cl
             </p>
           </div>
           <div style="flex: 1; min-width: 200px;">
-            <h4
-              style="font-family: 'Cinzel', serif; font-size: 1rem; color: #dfc59f; letter-spacing: 1.5px; margin-bottom: 25px; font-weight: 700; text-transform: uppercase;"
-            >
-              Navegación
-            </h4>
             <ul style="list-style: none; padding: 0; margin: 0;">
               <li style="margin-bottom: 12px;">
                 <a
@@ -1833,11 +1877,6 @@ textarea[class*="input"] {
             </ul>
           </div>
           <div style="flex: 1; min-width: 260px;">
-            <h4
-              style="font-family: 'Cinzel', serif; font-size: 1rem; color: #dfc59f; letter-spacing: 1.5px; margin-bottom: 25px; font-weight: 700; text-transform: uppercase;"
-            >
-              Contacto Directo
-            </h4>
             <p
               style="color: #a1b0cb; font-size: 0.95rem; margin-bottom: 12px; font-weight: 600;"
             >
