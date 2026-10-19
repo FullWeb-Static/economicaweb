@@ -661,7 +661,7 @@ textarea[class*="input"] {
         text-transform: uppercase !important;
         text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9) !important;
     }
-      /* 21. ENSANCHAMIENTO DE CONTENEDORES Y ENCUADRE DE TEXTO EXPLICATIVO EN CELULARES */
+          /* 21. ENSANCHAMIENTO DE CONTENEDORES Y ENCUADRE CÉNTRICO DE TEXTOS EN CELULARES */
     [id*="arquitectura"], 
     .arquitectura-section, 
     .about-section, 
@@ -670,29 +670,34 @@ textarea[class*="input"] {
         width: 100% !important;
         max-width: 100% !important;
         min-width: 100% !important;
-        padding-left: 12px !important;  /* Margen micro-nítido elegante a los lados de la pantalla */
-        padding-right: 12px !important;
+        padding-left: 15px !important;  /* Colchón perimetral elegante a los costados del teléfono */
+        padding-right: 15px !important;
         margin-left: 0 !important;
         margin-right: 0 !important;
         box-sizing: border-box !important;
     }
-    /* FORZAR LA CUADRATURA DE LA LETRA (ADIÓS A LOS ESPACIOS DESORDENADOS) */
+
+    /* FORZAR LA CUADRATURA CÉNTRICA SIMÉTRICA (ADIÓS A LO ROBÓTICO E IZQUIERDO) */
     [id*="arquitectura"] p,
     .arquitectura-section p,
     .about-section p,
     section p {
-        font-size: 0.88rem !important;      /* Tamaño óptimo de lectura corporativa en celular */
-        line-height: 1.6 !important;        /* Interlineado equilibrado */
-        text-align: left !important;        /* Fuerza el encuadre ordenado alineado a la izquierda */
-        letter-spacing: 0px !important;     /* Mata los espacios gigantes entre letras */
-        word-spacing: normal !important;    /* Restablece la distancia natural entre palabras */
+        font-size: 0.88rem !important;      /* Tipografía óptima de lectura premium */
+        line-height: 1.6 !important;        /* Interlineado fluido de alta gama */
+        text-align: center !important;      /* MAGNETISMO AL CENTRO PERFECTO */
+        text-justify: none !important;      /* Mata el estiramiento feo del navegador */
+        letter-spacing: 0px !important;     /* Une las letras de forma compacta y natural */
+        word-spacing: normal !important;    /* Restablece la distancia exacta entre palabras */
         width: 100% !important;
-        max-width: 100% !important;
+        max-width: 92vw !important;         /* Evita que los renglones muerdan los bordes físicos */
+        margin-left: auto !important;       /* Centrado geométrico de la caja de texto */
+        margin-right: auto !important;
         padding: 0 !important;
-        margin-bottom: 18px !important;
-        color: #e2e8f0 !important;          /* Tono plata brillante de alta visibilidad que resalta */
+        margin-bottom: 20px !important;
+        color: #e2e8f0 !important;          /* Tono plata brillante de alta visibilidad */
     }
-    /* Centrar y ordenar los títulos internos de estas secciones */
+
+    /* Asegurar que los encabezados mantengan la misma jerarquía céntrica imponente */
     section h2, section h3, .luxury-title {
         text-align: center !important;
         width: 100% !important;
