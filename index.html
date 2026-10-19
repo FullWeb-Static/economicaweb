@@ -602,35 +602,7 @@ textarea[class*="input"] {
         max-width: 88vw !important;
         box-sizing: border-box !important;
     }
-      /* 19. ENSANCHAMIENTO EXTREMO HORIZONTAL DE SISTEMAS & REDES (HERO INICIO) */
-    #inicio,
-    .hero-section,
-    section:first-of-type,
-    #inicio .container,
-    .hero-content {
-        width: 100% !important;
-        max-width: 100% !important;
-        min-width: 100% !important;
-        padding-left: 2px !important;   /* Reduce el margen lateral al mínimo igual que la Bóveda */
-        padding-right: 2px !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        box-sizing: border-box !important;
-        text-align: center !important;  /* Mantiene los textos dorados y blancos centrados */
-    }
-    /* Forzar a que los bloques de descripción interna se expandan a los lados */
-    .hero-text-block, 
-    .hero-description,
-    #inicio p,
-    #inicio span {
-        width: 100% !important;
-        max-width: 94vw !important;     /* Le da el ancho máximo visible de la pantalla táctil */
-        margin-left: auto !important;
-        margin-right: auto !important;
-        box-sizing: border-box !important;
-        word-wrap: break-word !important;
-    }
-      /* 20. APERTURA HORIZONTAL EXTREMA DE LOS RECTÁNGULOS DE ESTUDIO Y DESCRIPCIÓN */
+      /* 19. APERTURA HORIZONTAL EXTREMA DE LOS RECTÁNGULOS DE ESTUDIO Y DESCRIPCIÓN */
     .arquitectura-section .container,
     [id*="landing-page"] .container,
     [id*="arquitectura"] .container,
@@ -701,7 +673,56 @@ textarea[class*="input"] {
         word-wrap: break-word !important;
         padding: 0 !important;
     }
-          /* 21. CUADRO VÍTREO ROSE GOLD PARA EL ESTUDIO DE VIABILIDAD EN LAS TARIFAS */
+      /* 21. APERTURA HORIZONTAL EXTREMA E IMPOCO COMPACTA PARA EL HERO (SISTEMAS & REDES) */
+    #inicio,
+    .hero-section,
+    section:first-of-type,
+    header + section,
+    main > section:first-child {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 100% !important;
+        /* Bajamos el colchón lateral al mínimo extremo (2px) para rozar las esquinas */
+        padding-left: 2px !important;   
+        padding-right: 2px !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    /* FORZAR LA EXPANSIÓN DE TODOS LOS CONTENEDORES INTERNOS DEL INICIO */
+    #inicio .container,
+    .hero-section .container,
+    .hero-content,
+    .luxury-hero-box,
+    section:first-of-type > div {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 100% !important;
+        /* Colchón mínimo de 8px para que los textos dorados rocen la orilla con total elegancia */
+        padding-left: 8px !important;   
+        padding-right: 8px !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Estirar al máximo los bloques de párrafos y subtítulos dorados/blancos */
+    #inicio p,
+    #inicio span,
+    .hero-description,
+    .hero-tagline,
+    .luxury-main-title {
+        width: 100% !important;
+        max-width: 98vw !important; /* Ocupa el 98% del ancho total de la pantalla táctil */
+        box-sizing: border-box !important;
+        word-wrap: break-word !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+          /* 22. CUADRO VÍTREO ROSE GOLD PARA EL ESTUDIO DE VIABILIDAD EN LAS TARIFAS */
     .pasarela-container p,
     #pasarela-pagos p,
     .luxury-form-container + p,
