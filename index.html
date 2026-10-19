@@ -630,33 +630,74 @@ textarea[class*="input"] {
         box-sizing: border-box !important;
         word-wrap: break-word !important;
     }
-      /* 20. ENCASILLADO PREMIUM DE ALTA VISIBILIDAD PARA EL ESTUDIO DE VIABILIDAD */
+          /* 20. ENCASILLADO PREMIUM DE ALTA VISIBILIDAD PARA EL ESTUDIO DE VIABILIDAD (CORREGIDO) */
     .viabilidad-highlight-box,
+    .vault-frame h2,
     .vault-frame h3,
+    .vault-frame p.subtitle,
+    .luxury-form-box h2,
     .luxury-form-box h3,
-    [class*="viabilidad"],
-    section:last-of-type h3 {
-        background: linear-gradient(135deg, rgba(28, 36, 48, 0.95) 0%, rgba(18, 24, 32, 0.95) 100%) !important; /* Fondo grafito profundo texturizado */
-        border: 1px solid rgba(223, 197, 159, 0.5) !important; /* Micro-borde dorado/bronce de realce visible */
+    .private-vault-section h2,
+    .private-vault-section h3,
+    [class*="viabilidad"] {
+        background: linear-gradient(135deg, rgba(28, 36, 48, 0.98) 0%, rgba(14, 20, 28, 0.98) 100%) !important; /* Fondo grafito profundo texturizado */
+        border: 1px solid rgba(223, 197, 159, 0.55) !important; /* Micro-borde dorado/bronce de realce visible */
         border-radius: 6px !important;                          /* Esquinas suaves de ingeniería premium */
         padding: 18px 14px !important;                          /* Espaciado interno amplio para que el texto respire */
-        margin-top: 15px !important;
+        margin-top: 20px !important;
         margin-bottom: 25px !important;
         text-align: center !important;
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.9) !important;    /* Efecto flotante para despegarlo del fondo */
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.95) !important;   /* Efecto flotante para despegarlo del fondo */
         width: 100% !important;
         box-sizing: border-box !important;
         display: block !important;
     }
-    /* Resalte tipográfico interno del título de viabilidad */
-    .viabilidad-highlight-box strong,
-    [class*="viabilidad"] strong,
-    .vault-frame h3 strong {
+
+    /* Forzar el resalte de todas las letras internas del bloque de viabilidad */
+    .vault-frame h2, .vault-frame h3, .vault-frame h2 *, .vault-frame h3 * {
         color: #fbf0db !important;        /* Oro de máximo brillo para capturar la mirada */
         font-weight: 900 !important;
         letter-spacing: 0.5px !important;
         text-transform: uppercase !important;
         text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9) !important;
+    }
+      /* 21. ENSANCHAMIENTO DE CONTENEDORES Y ENCUADRE DE TEXTO EXPLICATIVO EN CELULARES */
+    [id*="arquitectura"], 
+    .arquitectura-section, 
+    .about-section, 
+    section,
+    section .container {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 100% !important;
+        padding-left: 12px !important;  /* Margen micro-nítido elegante a los lados de la pantalla */
+        padding-right: 12px !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        box-sizing: border-box !important;
+    }
+    /* FORZAR LA CUADRATURA DE LA LETRA (ADIÓS A LOS ESPACIOS DESORDENADOS) */
+    [id*="arquitectura"] p,
+    .arquitectura-section p,
+    .about-section p,
+    section p {
+        font-size: 0.88rem !important;      /* Tamaño óptimo de lectura corporativa en celular */
+        line-height: 1.6 !important;        /* Interlineado equilibrado */
+        text-align: left !important;        /* Fuerza el encuadre ordenado alineado a la izquierda */
+        letter-spacing: 0px !important;     /* Mata los espacios gigantes entre letras */
+        word-spacing: normal !important;    /* Restablece la distancia natural entre palabras */
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin-bottom: 18px !important;
+        color: #e2e8f0 !important;          /* Tono plata brillante de alta visibilidad que resalta */
+    }
+    /* Centrar y ordenar los títulos internos de estas secciones */
+    section h2, section h3, .luxury-title {
+        text-align: center !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        letter-spacing: 0.5px !important;
     }
 }
     </style>
