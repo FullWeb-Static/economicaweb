@@ -520,7 +520,7 @@ select.luxury-select option,
 [class*="select"] option {
     background-color: #080c12 !important; /* Tu fondo obsidian oscuro */
     color: #ffffff !important;            /* Letra blanca de alta visibilidad */
-    font-size: 0.60rem !important;        /* OPCIONES que el usuario elige (El menú desplegable)*/
+    font-size: 0.66rem !important;        /* OPCIONES que el usuario elige (El menú desplegable)*/
     white-space: normal !important;       /* Permite la soltura del texto */
     word-wrap: break-word !important;
 }
@@ -529,7 +529,7 @@ select.luxury-select option,
 .luxury-input::placeholder,
 [class*="input"]::placeholder {
     color: #94a3b8 !important;           /* Gris plata de alto contraste */
-    font-size: 0.60rem !important;       /* INSTRUCCIONES grises de los campos vacíos (El Placeholder) */
+    font-size: 0.66rem !important;       /* INSTRUCCIONES grises de los campos vacíos (El Placeholder) */
     white-space: normal !important;      /* OBLIGA A LA FRASE A SALTAR ABAJO SI NO CABE */
     line-height: 1.4 !important;
     word-wrap: break-word !important;
@@ -543,15 +543,27 @@ textarea.luxury-input,
 textarea[class*="input"] {
     min-height: 140px !important;        
  }
-    /* 16. LIBERACIÓN HORIZONTAL DEL CONTENEDOR DE LA BÓVEDA */
-    .luxury-form-container,
-    .private-vault-section .container {
-        width: 100% !important;
-        max-width: 100% !important;
-        min-width: 100% !important;
-        padding: 0 10px !important; /* Margen mínimo de cortesía en los bordes del celular */
-        box-sizing: border-box !important;
-    }
+    /* 16. ENSANCHAMIENTO EXTREMO HORIZONTAL DE LA BÓVEDA */
+.luxury-form-container,
+.private-vault-section .container,
+.luxury-form {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 100% !important;
+    padding: 0 4px !important;    /* Reduce el margen lateral al mínimo para ganar espacio */
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
+}
+
+/* Abrir los márgenes internos de la propia caja azul para dar más espacio a las letras */
+.vault-frame, 
+.luxury-form-box {
+    padding: 20px 10px !important; /* Relleno lateral mínimo de 10px para expandir el interior */
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+ }
 }
     </style>
   </head>
