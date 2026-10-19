@@ -602,31 +602,47 @@ textarea[class*="input"] {
         max-width: 88vw !important;
         box-sizing: border-box !important;
     }
-      /* 19. APERTURA HORIZONTAL EXTREMA DE LOS RECTÁNGULOS DE ESTUDIO Y DESCRIPCIÓN */
-    .arquitectura-section .container,
-    [id*="landing-page"] .container,
-    [id*="arquitectura"] .container,
-    section:nth-of-type(2) .container,
-    section:nth-of-type(3) .container {
+          /* 19. ENSANCHAMIENTO EXTREMO PARA EL RECTÁNGULO DE SISTEMAS & REDES (MANIFIESTO) */
+    #corporativo,
+    .corporate-extended-section,
+    #corporativo .container {
         width: 100% !important;
         max-width: 100% !important;
         min-width: 100% !important;
-        padding-left: 1px !important;   /* Reduce el margen lateral al mínimo para estirar la caja a las esquinas */
-        padding-right: 1px !important;
+        padding-left: 2px !important;   /* Reduce el margen externo al mínimo para rozar el borde físico */
+        padding-right: 2px !important;
         margin-left: 0 !important;
         margin-right: 0 !important;
         box-sizing: border-box !important;
     }
 
-    /* Forzar a que los marcos internos de esos rectángulos se abran de borde a borde */
-    .arquitectura-content,
-    .about-content-box,
-    section:nth-of-type(2) > div,
-    section:nth-of-type(3) > div {
+    /* APERTURA DE BORDE A BORDE PARA LA CAJA DE CRISTAL DEL MANIFIESTO */
+    #corporativo .manifesto-box,
+    .corporate-extended-section .manifesto-box,
+    .manifesto-box {
         width: 100% !important;
         max-width: 100% !important;
-        padding-left: 1px !important;  /* Deja respirar el texto interno pegado a la orilla */
-        padding-right: 6px !important;
+        min-width: 100% !important;
+        padding-left: 14px !important;  /* Sangría interna para que las letras no toquen el borde */
+        padding-right: 14px !important;
+        padding-top: 30px !important;
+        padding-bottom: 30px !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        border-radius: 4px !important;  
+        box-sizing: border-box !important;
+    }
+
+    /* Extensión y balance tipográfico para las definiciones internas */
+    #corporativo .manifesto-box p,
+    .manifesto-box p {
+        width: 100% !important;
+        max-width: 100% !important;
+        text-align: justify !important; 
+        font-size: 0.92rem !important;  /* Tamaño calibrado para pantallas móviles */
+        line-height: 1.6 !important;
+        letter-spacing: 0px !important;
+        word-spacing: normal !important;
         box-sizing: border-box !important;
     }
           /* 20. ENSANCHAMIENTO EXTREMO HORIZONTAL DEL RECTÁNGULOS DE LANDING PAGE MÓVIL */
