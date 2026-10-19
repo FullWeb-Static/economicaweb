@@ -520,7 +520,7 @@ select.luxury-select option,
 [class*="select"] option {
     background-color: #080c12 !important; /* Tu fondo obsidian oscuro */
     color: #ffffff !important;            /* Letra blanca de alta visibilidad */
-    font-size: 0.60rem !important;        /* OPCIONES que el usuario elige (El menú desplegable)*/
+    font-size: 0.58rem !important;        /* OPCIONES que el usuario elige (El menú desplegable)*/
     white-space: normal !important;       /* Permite la soltura del texto */
     word-wrap: break-word !important;
 }
@@ -529,7 +529,7 @@ select.luxury-select option,
 .luxury-input::placeholder,
 [class*="input"]::placeholder {
     color: #94a3b8 !important;           /* Gris plata de alto contraste */
-    font-size: 0.60rem !important;       /* INSTRUCCIONES grises de los campos vacíos (El Placeholder) */
+    font-size: 0.58rem !important;       /* INSTRUCCIONES grises de los campos vacíos (El Placeholder) */
     white-space: normal !important;      /* OBLIGA A LA FRASE A SALTAR ABAJO SI NO CABE */
     line-height: 1.4 !important;
     word-wrap: break-word !important;
@@ -603,6 +603,64 @@ textarea[class*="input"] {
         min-width: 290px !important;
         max-width: 88vw !important;
         box-sizing: border-box !important;
+    }
+      /* 19. ENSANCHAMIENTO EXTREMO HORIZONTAL DE SISTEMAS & REDES (HERO INICIO) */
+    #inicio,
+    .hero-section,
+    section:first-of-type,
+    #inicio .container,
+    .hero-content {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 100% !important;
+        padding-left: 6px !important;   /* Reduce el margen lateral al mínimo igual que la Bóveda */
+        padding-right: 6px !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        box-sizing: border-box !important;
+        text-align: center !important;  /* Mantiene los textos dorados y blancos centrados */
+    }
+
+    /* Forzar a que los bloques de descripción interna se expandan a los lados */
+    .hero-text-block, 
+    .hero-description,
+    #inicio p,
+    #inicio span {
+        width: 100% !important;
+        max-width: 94vw !important;     /* Le da el ancho máximo visible de la pantalla táctil */
+        margin-left: auto !important;
+        margin-right: auto !important;
+        box-sizing: border-box !important;
+        word-wrap: break-word !important;
+    }
+      /* 20. ENCASILLADO PREMIUM DE ALTA VISIBILIDAD PARA EL ESTUDIO DE VIABILIDAD */
+    .viabilidad-highlight-box,
+    .vault-frame h3,
+    .luxury-form-box h3,
+    [class*="viabilidad"],
+    section:last-of-type h3 {
+        background: linear-gradient(135deg, rgba(28, 36, 48, 0.95) 0%, rgba(18, 24, 32, 0.95) 100%) !important; /* Fondo grafito profundo texturizado */
+        border: 1px solid rgba(223, 197, 159, 0.5) !important; /* Micro-borde dorado/bronce de realce visible */
+        border-radius: 6px !important;                          /* Esquinas suaves de ingeniería premium */
+        padding: 18px 14px !important;                          /* Espaciado interno amplio para que el texto respire */
+        margin-top: 15px !important;
+        margin-bottom: 25px !important;
+        text-align: center !important;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.9) !important;    /* Efecto flotante para despegarlo del fondo */
+        width: 100% !important;
+        box-sizing: border-box !important;
+        display: block !important;
+    }
+
+    /* Resalte tipográfico interno del título de viabilidad */
+    .viabilidad-highlight-box strong,
+    [class*="viabilidad"] strong,
+    .vault-frame h3 strong {
+        color: #fbf0db !important;        /* Oro de máximo brillo para capturar la mirada */
+        font-weight: 900 !important;
+        letter-spacing: 0.5px !important;
+        text-transform: uppercase !important;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9) !important;
     }
 }
     </style>
