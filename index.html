@@ -657,6 +657,45 @@ textarea[class*="input"] {
         padding-right: 6px !important;
         box-sizing: border-box !important;
     }
+      /* 23. ENSANCHAMIENTO EXTREMO HORIZONTAL DEL SECTOR LANDING PAGE EN CELULARES */
+    #landing-page,
+    .landing-section,
+    [id*="landing"] {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 100% !important;
+        padding-left: 4px !important;   /* Reduce el margen externo al mínimo para estirar a las esquinas */
+        padding-right: 4px !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Forzar a que los marcos y contenedores internos de la Landing se abran de borde a borde */
+    #landing-page .container,
+    .landing-section .container,
+    .landing-content,
+    .landing-box,
+    [id*="landing"] .container > div {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 100% !important;
+        padding-left: 12px !important;  /* Colchón mínimo interno de cortesía para que la letra no pegue en el vidrio */
+        padding-right: 12px !important;
+        box-sizing: border-box !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    /* Expandir los párrafos de texto internos para que las palabras se reacomoden solas */
+    #landing-page p,
+    .landing-section p,
+    [id*="landing"] p {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        word-wrap: break-word !important;
+    }
           /* 21. CUADRO VÍTREO ROSE GOLD PARA EL ESTUDIO DE VIABILIDAD EN LAS TARIFAS */
     .pasarela-container p,
     #pasarela-pagos p,
