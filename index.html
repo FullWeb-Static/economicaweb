@@ -520,7 +520,7 @@ select.luxury-select option,
 [class*="select"] option {
     background-color: #080c12 !important; /* Tu fondo obsidian oscuro */
     color: #ffffff !important;            /* Letra blanca de alta visibilidad */
-    font-size: 0.62rem !important;        /* OPCIONES que el usuario elige (El menú desplegable)*/
+    font-size: 0.60rem !important;        /* OPCIONES que el usuario elige (El menú desplegable)*/
     white-space: normal !important;       /* Permite la soltura del texto */
     word-wrap: break-word !important;
 }
@@ -529,7 +529,7 @@ select.luxury-select option,
 .luxury-input::placeholder,
 [class*="input"]::placeholder {
     color: #94a3b8 !important;           /* Gris plata de alto contraste */
-    font-size: 0.62rem !important;       /* INSTRUCCIONES grises de los campos vacíos (El Placeholder) */
+    font-size: 0.60rem !important;       /* INSTRUCCIONES grises de los campos vacíos (El Placeholder) */
     white-space: normal !important;      /* OBLIGA A LA FRASE A SALTAR ABAJO SI NO CABE */
     line-height: 1.4 !important;
     word-wrap: break-word !important;
@@ -568,8 +568,8 @@ textarea[class*="input"] {
     .grid-soluciones-premium .tarjeta-solucion-premium,
     [id*="arquitectura"] .luxury-card,
     section:nth-of-type(2) [class*="card"] {
-        border: 1px solid rgba(223, 197, 159, 0.45) !important; /* Contorno dorado/bronce nítido de alta visibilidad */
-        background-color: rgba(24, 32, 43, 0.88) !important;  /* Fondo gris pizarra traslúcido para dar volumen */
+        border: 2px solid rgba(223, 197, 159, 0.50) !important; /* Contorno dorado/bronce nítido de alta visibilidad */
+        background-color: rgba(24, 32, 43, 0.80) !important;  /* Fondo gris pizarra traslúcido para dar volumen */
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8) !important;   /* Sombra elegante que las hace flotar */
     }
 
@@ -577,6 +577,32 @@ textarea[class*="input"] {
     .grid-soluciones-premium .tarjeta-solucion-premium:active {
         border-color: #ffffff !important; /* El contorno brilla en blanco puro al tacto */
         box-shadow: 0 15px 30px rgba(223, 197, 159, 0.25) !important;
+    }
+      /* 18. ENSANCHAMIENTO EXTREMO HORIZONTAL DEL SECTOR DE ARQUITECTURA */
+    section:nth-of-type(2),
+    section:nth-of-type(2) .container,
+    .grid-soluciones-premium {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 100% !important;
+        padding-left: 4px !important;   /* Reduce el margen lateral al mínimo igual que la Bóveda */
+        padding-right: 4px !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Estirar el carril y darle los mismos píxeles elásticos a las 4 tarjetas pequeñas */
+    .grid-soluciones-premium {
+        padding: 25px 8px 20px 8px !important; /* Añade aire arriba para la elevación 3D y abre los lados */
+    }
+
+    .grid-soluciones-premium .tarjeta-solucion-premium {
+        flex: 0 0 290px !important;    /* Ensancha las tarjetas de 265px a 290px para que el texto respire */
+        width: 290px !important;
+        min-width: 290px !important;
+        max-width: 88vw !important;
+        box-sizing: border-box !important;
     }
 }
     </style>
