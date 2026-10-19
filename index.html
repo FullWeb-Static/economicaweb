@@ -673,54 +673,6 @@ textarea[class*="input"] {
         word-wrap: break-word !important;
         padding: 0 !important;
     }
-          /* 21. APERTURA HORIZONTAL EXTREMA MÁXIMA PARA EL HERO (SISTEMAS & REDES) */
-    #inicio,
-    .hero-section,
-    section:first-of-type,
-    header + section,
-    main > section:first-child {
-        width: 100vw !important;         /* Forzamos a ocupar el 100% del ancho visual del celular */
-        max-width: 100vw !important;
-        min-width: 100vw !important;
-        padding-left: 0 !important;   
-        padding-right: 0 !important;
-        /* TRUCO INGENIERÍA: Márgenes negativos para forzar el estiramiento máximo a las esquinas */
-        margin-left: -15px !important;   
-        margin-right: -15px !important;
-        box-sizing: border-box !important;
-    }
-
-    /* FORZAR LA EXPANSIÓN DE TODOS LOS CONTENEDORES INTERNOS DEL INICIO */
-    #inicio .container,
-    .hero-section .container,
-    .hero-content,
-    .luxury-hero-box,
-    section:first-of-type > div {
-        width: 100% !important;
-        max-width: 100% !important;
-        min-width: 100% !important;
-        padding-left: 12px !important;   /* Pequeño colchón interno de cortesía para que la letra respire */
-        padding-right: 12px !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        box-sizing: border-box !important;
-    }
-
-    /* Estirar al máximo los bloques de párrafos y subtítulos dorados/blancos */
-    #inicio p,
-    #inicio span,
-    .hero-description,
-    .hero-tagline,
-    .luxury-main-title {
-        width: 100% !important;
-        max-width: 100% !important;     /* El texto ahora tiene toda la carretera horizontal disponible */
-        box-sizing: border-box !important;
-        word-wrap: break-word !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
-        padding-left: 5px !important;
-        padding-right: 5px !important;
-    }
           /* 22. CUADRO VÍTREO ROSE GOLD PARA EL ESTUDIO DE VIABILIDAD EN LAS TARIFAS */
     .pasarela-container p,
     #pasarela-pagos p,
