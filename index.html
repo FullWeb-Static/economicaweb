@@ -661,48 +661,32 @@ textarea[class*="input"] {
         text-transform: uppercase !important;
         text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9) !important;
     }
-          /* 21. ENSANCHAMIENTO DE CONTENEDORES Y ENCUADRE CÉNTRICO DE TEXTOS EN CELULARES */
-    [id*="arquitectura"], 
-    .arquitectura-section, 
-    .about-section, 
-    section,
-    section .container {
+      /* 21. APERTURA HORIZONTAL EXTREMA DE LOS RECTÁNGULOS DE ESTUDIO Y DESCRIPCIÓN */
+    .arquitectura-section .container,
+    [id*="landing-page"] .container,
+    [id*="arquitectura"] .container,
+    section:nth-of-type(2) .container,
+    section:nth-of-type(3) .container {
         width: 100% !important;
         max-width: 100% !important;
         min-width: 100% !important;
-        padding-left: 15px !important;  /* Colchón perimetral elegante a los costados del teléfono */
-        padding-right: 15px !important;
+        padding-left: 4px !important;   /* Reduce el margen lateral al mínimo para estirar la caja a las esquinas */
+        padding-right: 4px !important;
         margin-left: 0 !important;
         margin-right: 0 !important;
         box-sizing: border-box !important;
     }
 
-    /* FORZAR LA CUADRATURA CÉNTRICA SIMÉTRICA (ADIÓS A LO ROBÓTICO E IZQUIERDO) */
-    [id*="arquitectura"] p,
-    .arquitectura-section p,
-    .about-section p,
-    section p {
-        font-size: 0.88rem !important;      /* Tipografía óptima de lectura premium */
-        line-height: 1.6 !important;        /* Interlineado fluido de alta gama */
-        text-align: center !important;      /* MAGNETISMO AL CENTRO PERFECTO */
-        text-justify: none !important;      /* Mata el estiramiento feo del navegador */
-        letter-spacing: 0px !important;     /* Une las letras de forma compacta y natural */
-        word-spacing: normal !important;    /* Restablece la distancia exacta entre palabras */
-        width: 100% !important;
-        max-width: 92vw !important;         /* Evita que los renglones muerdan los bordes físicos */
-        margin-left: auto !important;       /* Centrado geométrico de la caja de texto */
-        margin-right: auto !important;
-        padding: 0 !important;
-        margin-bottom: 20px !important;
-        color: #e2e8f0 !important;          /* Tono plata brillante de alta visibilidad */
-    }
-
-    /* Asegurar que los encabezados mantengan la misma jerarquía céntrica imponente */
-    section h2, section h3, .luxury-title {
-        text-align: center !important;
+    /* Forzar a que los marcos internos de esos rectángulos se abran de borde a borde */
+    .arquitectura-content,
+    .about-content-box,
+    section:nth-of-type(2) > div,
+    section:nth-of-type(3) > div {
         width: 100% !important;
         max-width: 100% !important;
-        letter-spacing: 0.5px !important;
+        padding-left: 10px !important;  /* Deja respirar el texto interno pegado a la orilla */
+        padding-right: 10px !important;
+        box-sizing: border-box !important;
     }
 }
     </style>
