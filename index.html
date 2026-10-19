@@ -306,40 +306,90 @@
         width: 100%;
     }
 
-        /* 2. CABECERA RIGIDAMENTE FIJA: Bloqueada en el techo en formato micro-compacto */
+            /* 2. CABECERA RIGIDAMENTE FIJA: Bloqueada en el techo en formato micro-compacto */
     header.premium-header {
         position: fixed !important;
         top: 0 !important;
         left: 0 !important;
         right: 0 !important;
         width: auto !important;
-        padding: 6px 0 4px 0 !important;   /* Reduce el relleno vertical al mínimo extremo */
+        padding: 5px 8px 4px 8px !important;   /* Reduce el relleno vertical al mínimo extremo */
         z-index: 99999 !important;
         background-color: #040608 !important;
         border-bottom: 1px solid rgba(223, 197, 159, 0.1) !important;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8) !important;
     }
 
-    /* 3. Contenedor vertical optimizado para los dos pisos del menú compacto */
+    /* 3. FILA SUPERIOR EXCLUSIVA: LOGO A LA IZQUIERDA Y BOTÓN LANDING A LA DERECHA */
     .nav-wrapper {
         display: flex !important;
-        flex-direction: column !important;
+        flex-direction: row !important;        /* Cambia de columna a fila horizontal */
+        flex-wrap: wrap !important;            /* Permite que los otros links bajen al segundo piso */
         align-items: center !important;
-        gap: 5px !important;               /* Reduce a la mitad la separación entre el logo y los links */
+        justify-content: space-between !important; /* Empuja el logo a la izquierda y el botón a la derecha */
         width: 100% !important;
-        padding: 0 10px !important;
+        gap: 6px !important;
+        padding: 0 !important;
     }
 
-    /* 4. Doble hilera horizontal para los 7 enlaces del menú */
+    /* Forzar al logotipo e-WEB a recostarse a la extrema izquierda */
+    .nav-wrapper h4, 
+    header.premium-header h4,
+    header h4 {
+        margin: 0 !important;
+        padding: 0 !important;
+        text-align: left !important;
+        font-size: 1.20rem !important;         /* Micro-ajustado para calzar en la fila de arriba */
+        display: inline-block !important;
+    }
+
+    /* 4. SEGUNDO PISO SLIM: Hilera compacta para los demás enlaces secundarios */
     .nav-links-right, #nav-menu {
         display: flex !important;
         flex-direction: row !important;
         flex-wrap: wrap !important;
-        justify-content: center !important;
-        gap: 8px 12px !important;
+        justify-content: center !important;    /* Centra los links de abajo */
+        gap: 4px 6px !important;               /* Súper pegados para no robar espacio vertical */
         margin: 0 !important;
         padding: 0 !important;
         width: 100% !important;
+    }
+
+    /* EXTRACCIÓN Y ESTILO PREMIUM PARA EL BOTÓN "¿QUÉ ES LANDING PAGE?" ARRIBA */
+.nav-wrapper a[href*="landing"],
+.nav-wrapper a[href*="que-es"],
+.nav-links-right a:last-of-type,
+#nav-menu a:last-of-type {
+    position: absolute !important;
+    top: 10px !important;                 /* Eje de alineación vertical perfecto con e-WEB */
+    right: 12px !important;               /* Margen de cortesía con el borde físico de la pantalla */
+    font-size: 0.60rem !important;        /* Tipografía micro-nítida de alta tecnología */
+    font-weight: 800 !important;
+    color: #ffffff !important;            /* Texto blanco de alta definición */
+    text-transform: uppercase !important;
+    white-space: nowrap !important;
+    letter-spacing: 0.5px !important;
+    padding: 5px 10px !important;         /* Proporción estilizada y rectangular fina */
+    
+    /* INGENIERÍA DE CRISTAL (GLASSMORPHISM PREMIUM) */
+    background: linear-gradient(135deg, rgba(223, 175, 159, 0.08) 0%, rgba(223, 197, 159, 0.15) 100%) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    
+    /* MICRO-BORDE DE PRIVILEGIO Y ESQUINAS SUAVIZADAS CÁPSULA */
+    border: 1px solid rgba(223, 175, 159, 0.55) !important; /* Hilo Rose Gold súper nítido */
+    border-radius: 20px !important;       /* Formato óvalo premium que destruye el look cuadrado */
+    
+    /* RELIEVE TRIDIMENSIONAL FLOATING */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5), inset 0 1px 2px rgba(255, 255, 255, 0.1) !important;
+    z-index: 100000 !important;
+    transition: all 0.3s ease !important;
+}
+
+        /* Ocultar únicamente el enlace duplicado que se queda abajo en la lista */
+    .nav-links-right li:last-child,
+    #nav-menu li:last-child {
+        display: none !important;
     }
 
     /* 5. Fuentes compactas de alta legibilidad */
@@ -902,94 +952,104 @@ textarea[class*="input"] {
         line-height: 1.4 !important;
         text-align: center !important;
     }
-      /* 34. RESTAURACIÓN DEL TÍTULO DE CABEZA SEGURO (SIN MÁRGENES NEGATIVOS) */
-    h1, .hero-headline, .luxury-main-title {
-        background: linear-gradient(135deg, rgba(15, 22, 32, 0.30) 0%, rgba(6, 10, 16, 0.40) 100%) !important;
-        backdrop-filter: blur(15px) !important;
-        -webkit-backdrop-filter: blur(15px) !important;
-        border: 1px solid rgba(223, 175, 159, 0.45) !important;
-        border-radius: 6px !important;                          
+    /* 24. TÍTULO DE CABEZA IMPERANTE, MASIVO Y FLOTANTE (SIN CAJAS NI RECTÁNGULOS) */
+    h1.hero-headline,
+    .luxury-hero h1,
+    .luxury-hero .hero-headline,
+    #inicio .hero-headline {
+        /* 1. Extirpación absoluta de fondos, bordes y formas */
+        background: none !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        border: none !important;
+        border-radius: 0px !important;
+        box-shadow: none !important;
+        transform: none !important;
+        
+        /* 2. Apertura Horizontal Natural Equilibrada */
         width: 100% !important;
-        max-width: 100% !important;     
+        max-width: 100% !important;
         min-width: 100% !important;
-        margin-left: 0 !important;       
+        margin-left: 0 !important;
         margin-right: 0 !important;
         margin-top: 10px !important;
-        margin-bottom: 25px !important;
-        padding: 22px 10px !important;                          
+        margin-bottom: 20px !important;
+        padding-left: 4px !important;
+        padding-right: 4px !important;
         box-sizing: border-box !important;
         display: block !important;
-        text-align: center !important;    
+        text-align: center !important;
         word-wrap: break-word !important;
-        font-size: 1.65rem !important;    
-        font-weight: 900 !important;      
-        line-height: 1.4 !important;      
-        color: #ffffff !important;        
-        transform: translateY(-2px) !important;
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.9), 0 0 15px rgba(223, 175, 159, 0.08) !important;
+
+        /* 3. TIPOGRAFÍA MASIVA E IMPERANTE PARA PANTALLAS TÁCTILES */
+        font-size: 1.85rem !important;    /* Letra grande de gran impacto y presencia corporativa */
+        font-weight: 900 !important;      /* Grosor de máxima autoridad */
+        line-height: 1.30 !important;    /* Renglones compactos y elegantes */
+        color: #ffffff !important;        /* Blanco puro de alto contraste */
+
+        /* 4. INGENIERÍA DE LEVITACIÓN (EFECTO LETRAS VOLANDO EN EL ESPACIO) */
+        text-shadow: 
+            0 3px 15px rgba(0, 0, 0, 0.98),  /* Capa oscura profunda para despegar las letras del fondo */
+            0 1px 4px rgba(0, 0, 0, 0.95),
+            0 0 20px rgba(223, 197, 159, 0.2) !important; /* Aura sutil Rose Gold tras la tipografía */
     }
 
-    h1 span, .hero-headline span {
-        font-size: 0.95rem !important;    
-        letter-spacing: 3px !important;   
-        line-height: 1.3 !important;
-        margin-bottom: 12px !important;
+    /* Subtítulo superior en oro bronce de la cabecera flotante */
+    .luxury-hero .hero-headline span,
+    h1.hero-headline span {
+        font-size: 0.95rem !important;    /* Tamaño refinado y nítido */
+        letter-spacing: 4px !important;   /* Sangría elástica expandida de lujo */
+        line-height: 1.2 !important;
+        margin-bottom: 15px !important;
         margin-left: auto !important;
         margin-right: auto !important;
         display: block !important;
         text-align: center !important;
-        color: #dfc59f !important;        
-        text-shadow: 0 2px 6px rgba(0, 0, 0, 0.95) !important;
+        color: #dfc59f !important;        /* Tu tono de bronce/oro premium */
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95) !important;
     }
 
-     /* 25. CINTURÓN HORIZONTAL DE BORDE A BORDE ABSOLUTO (FRANJA DIVISORIA MÓVIL) */
+    /* 25. CUBÍCULO VÍTREO ANCHO, EQUILIBRADO Y ESTILIZADO PARA EL TEXTO DESCRIPTIVO */
     .luxury-hero .hero-descriptor,
     .luxury-hero p:not(.hero-headline p),
     #inicio p.hero-descriptor,
     .hero-descriptor {
-        /* 1. Fondo de Cristal Ahumado Traslúcido con Transparencia Mayor (25%) */
-        background: linear-gradient(135deg, rgba(14, 20, 28, 0.28) 0%, rgba(5, 8, 12, 0.38) 100%) !important;
-        backdrop-filter: blur(16px) !important;
-        -webkit-backdrop-filter: blur(16px) !important;
+        /* 1. Fondo de Cristal Traslúcido al 25% (Transparencia Mayor Elegante) */
+        background: linear-gradient(135deg, rgba(15, 22, 32, 0.25) 0%, rgba(6, 10, 16, 0.35) 100%) !important;
+        backdrop-filter: blur(14px) !important;
+        -webkit-backdrop-filter: blur(14px) !important;
         
-        /* 2. El Truco de la Franja Divisoria: Bordes horizontales limpios e infinitos */
-        border-top: 1px solid rgba(223, 175, 159, 0.45) !important;
-        border-bottom: 1px solid rgba(223, 175, 159, 0.45) !important;
-        border-left: none !important;      /* Elimina los bordes laterales por completo */
-        border-right: none !important;     /* Elimina los bordes laterales por completo */
-        border-radius: 0px !important;      /* Rompe las esquinas curvas para forzar la banda continua */
+        /* 2. Micro-Borde Perimetral de 1px (Rose Gold de Privilegio) */
+        border: 1px solid rgba(223, 175, 159, 0.40) !important;
+        border-radius: 6px !important;    /* Esquinas suavizadas que aportan finura visual */
         
-        /* 3. INGENIERÍA DE APERTURA INFINITA TOTAL (ROMPIMIENTO DEL CONTAINER) */
-        width: 100vw !important;           /* Fuerza a la caja a medir exactamente el 100% de la pantalla del celular */
-        max-width: 100vw !important;
-        min-width: 100vw !important;
+        /* 3. FORMATO ANCHO INTELLIGENTE (ROMPIMIENTO DEL EMBUDO ANGOSTO) */
+        width: calc(100% + 24px) !important;  /* Abre el rectángulo de forma generosa a lo horizontal */
+        max-width: 96vw !important;           /* Límite seguro para un encaje recto impecable */
+        margin-left: -12px !important;        /* Centra el exceso absorbiendo el aire muerto del container */
+        margin-right: -12px !important;
         
-        /* TRUCO SENIOR: Centra el ancho expandido anulando el padding residual del papá */
-        position: relative !important;
-        left: 50% !important;
-        transform: translateX(-50%) !important; /* Clava el centro exacto de la banda en el medio de la pantalla */
-        
-        /* Separaciones verticales estilizadas */
+        /* Ajustes de posición verticales para achatular el bloque */
         margin-top: 25px !important;          
-        margin-bottom: 25px !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        
-        /* 4. Colchón de aire interno para que las letras respiren y no toquen las orillas del teléfono */
-        padding: 20px 16px !important;   
+        margin-bottom: 30px !important;
+        padding: 18px 14px !important;        /* Colchón interno holgado para que las letras respiren */
         box-sizing: border-box !important;
         display: block !important;
+        position: relative !important;
+        left: 0 !important;                   /* Reinicia desfases horizontales */
+        transform: none !important;
         
-        /* 5. Tipografía Mediana Premium en Formato de Consola Técnica */
-        font-size: 0.92rem !important;   
-        font-weight: 500 !important;      
-        line-height: 1.65 !important;     
-        color: #f1f5f9 !important;        
-        text-align: justify !important;     /* Cuadra el testamento comercial con total autoridad */
+        /* 4. TIPOGRAFÍA MEDIANA PREMIUM DE ALTA FIDELIDAD */
+        font-size: 0.94rem !important;        
+        font-weight: 500 !important;          
+        line-height: 1.62 !important;         /* Interlineado fluido que evita el amontonamiento */
+        color: #f1f5f9 !important;            /* Blanco plata brillante nítido */
+        text-align: justify !important;       /* Cuadra el escrito con total rigor corporativo */
         word-wrap: break-word !important;
-        
-        /* 6. Proyección de Penumbra en Bloque Sólido */
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.9) !important;
+
+        /* 5. Elevación Tridimensional Sutil sobre la Red de Estrellas */
+        transform: translateY(-1px) !important;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.9), 0 0 15px rgba(223, 175, 159, 0.05) !important;
     }
 }
     </style>
