@@ -520,7 +520,7 @@ select.luxury-select option,
 [class*="select"] option {
     background-color: #080c12 !important; /* Tu fondo obsidian oscuro */
     color: #ffffff !important;            /* Letra blanca de alta visibilidad */
-    font-size: 0.66rem !important;        /* OPCIONES que el usuario elige (El menú desplegable)*/
+    font-size: 0.62rem !important;        /* OPCIONES que el usuario elige (El menú desplegable)*/
     white-space: normal !important;       /* Permite la soltura del texto */
     word-wrap: break-word !important;
 }
@@ -529,7 +529,7 @@ select.luxury-select option,
 .luxury-input::placeholder,
 [class*="input"]::placeholder {
     color: #94a3b8 !important;           /* Gris plata de alto contraste */
-    font-size: 0.66rem !important;       /* INSTRUCCIONES grises de los campos vacíos (El Placeholder) */
+    font-size: 0.62rem !important;       /* INSTRUCCIONES grises de los campos vacíos (El Placeholder) */
     white-space: normal !important;      /* OBLIGA A LA FRASE A SALTAR ABAJO SI NO CABE */
     line-height: 1.4 !important;
     word-wrap: break-word !important;
@@ -564,6 +564,20 @@ textarea[class*="input"] {
     max-width: 100% !important;
     box-sizing: border-box !important;
  }
+      /* 17. ENMARCADO DORADO PREMIUM PARA LAS 4 TARJETAS INSTRUCTIVAS PEQUEÑAS */
+    .grid-soluciones-premium .tarjeta-solucion-premium,
+    [id*="arquitectura"] .luxury-card,
+    section:nth-of-type(2) [class*="card"] {
+        border: 1px solid rgba(223, 197, 159, 0.45) !important; /* Contorno dorado/bronce nítido de alta visibilidad */
+        background-color: rgba(24, 32, 43, 0.88) !important;  /* Fondo gris pizarra traslúcido para dar volumen */
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8) !important;   /* Sombra elegante que las hace flotar */
+    }
+
+    /* Destello de luz al presionar o arrastrar la tarjeta con el dedo */
+    .grid-soluciones-premium .tarjeta-solucion-premium:active {
+        border-color: #ffffff !important; /* El contorno brilla en blanco puro al tacto */
+        box-shadow: 0 15px 30px rgba(223, 197, 159, 0.25) !important;
+    }
 }
     </style>
   </head>
