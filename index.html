@@ -366,11 +366,16 @@
     box-shadow: 0 0 10px rgba(223, 197, 159, 0.3) !important;
 }
 
-
-    /* 6. COLCHÓN DE CONTROL: Espacio necesario para que el menú de dos pisos no tape el inicio */
-    #inicio, .hero-section, section:first-of-type {
+        /* 6. COLCHÓN DE CONTROL Y ENSANCHAMIENTO ABSOLUTO DE SISTEMAS & REDES */
+    #inicio, .luxury-hero, section:first-of-type, .luxury-hero .container {
         padding-top: 140px !important; /* Mueve el título principal abajo de la barra fija */
         margin-top: 0 !important;
+        width: 100% !important;        /* Rompe el candado estrecho del container */
+        max-width: 100% !important;
+        min-width: 100% !important;
+        padding-left: 8px !important;  /* Margen mínimo de cortesía en las esquinas */
+        padding-right: 8px !important;
+        box-sizing: border-box !important;
     }
 
     /* 7. Empuje del texto secundario para perfecta visibilidad */
