@@ -388,7 +388,7 @@
         overflow-y: hidden !important;
         scroll-snap-type: x mandatory !important; /* Efecto magnético fluido */
         gap: 20px !important;
-        padding: 25px 10px 15px 10px !important;
+        padding: 30px 10px 15px 10px !important;
         width: 100% !important;
         scrollbar-width: none !important; /* Oculta barra en Firefox */
     }
@@ -450,6 +450,42 @@
         flex: 0 0 260px !important; /* Ancho compacto ideal para las cards pequeñas */
         scroll-snap-align: center !important;
         max-width: 80vw !important;
+    }
+    /* 12. ILUMINACIÓN PREMIUM DE CUBÍCULOS Y CONTENEDORES EN CELULARES */
+    .luxury-card, 
+    .tarjeta-solucion-premium, 
+    .vault-frame,
+    [class*="card"] {
+        background-color: rgba(24, 32, 43, 0.88) !important; /* Gris pizarra de sombra con inyección de luz */
+        backdrop-filter: blur(10px) !important;
+        -webkit-backdrop-filter: blur(10px) !important;
+        border: 1px solid rgba(223, 197, 159, 0.4) !important; /* Enmarcado de bronce nítido visible */
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.9) !important;   /* Despega los cubículos del fondo */
+    }
+
+    /* 13. TONOS DE ALTA VISIBILIDAD PARA TEXTOS MÓVILES */
+    .luxury-card p, 
+    .tarjeta-solucion-premium span, 
+    .vault-frame p,
+    p {
+        color: #e2e8f0 !important; /* Pasa de gris oscuro a un plata brillante de alta lectura */
+        font-weight: 500 !important;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9) !important;
+    }
+
+    .luxury-card h3, 
+    .tarjeta-solucion-premium strong,
+    h3 {
+        color: #fbf0db !important; /* Oro de máximo brillo para destacar títulos */
+        font-weight: 800 !important;
+        letter-spacing: 0.5px !important;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9) !important;
+    }
+
+    /* Contraste mejorado para el fondo de los flyers dentro de las tarjetas */
+    .luxury-image-container {
+        border-color: rgba(223, 197, 159, 0.45) !important;
+        background-color: #020304 !important;
     }
 }
 
