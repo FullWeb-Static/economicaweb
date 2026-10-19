@@ -902,44 +902,40 @@ textarea[class*="input"] {
         line-height: 1.4 !important;
         text-align: center !important;
     }
-        /* 24. APERTURA HORIZONTAL EXTREMA E INGENIERÍA DE FLOTACIÓN PARA EL TÍTULO DE CABEZA */
-    header + .luxury-hero .hero-headline,
-    .luxury-hero h1,
-    .luxury-hero .hero-headline,
-    #inicio .hero-headline,
-    h1.hero-headline {
+          /* 24. DETONADOR DE APERTURA HORIZONTAL EXTREMA PARA EL TÍTULO DE CABEZA */
+    h1, .hero-headline, .luxury-main-title {
         width: 100% !important;
-        max-width: 98vw !important;     /* Fuerza al gran título a ocupar el 98% del ancho de la pantalla */
-        margin-left: auto !important;     /* Centrado geométrico impecable */
-        margin-right: auto !important;
-        padding-left: 4px !important;    /* Reduce el colchón lateral al mínimo extremo para rozar los bordes */
-        padding-right: 4px !important;
-        
-        /* FUERZA EL ACHICADO PROPORCIONAL DE LETRA PARA CELULARES */
-        font-size: 1.55rem !important;   /* Evita que la letra de 4.8rem explote en el teléfono */
-        line-height: 1.35 !important;    /* Interlineado fluido de alta gama para que los renglones respiren */
-        text-align: center !important;   /* Magnetismo céntrico corporativo */
+        max-width: 100vw !important;     /* Ocupa el 100% del ancho visual físico del celular */
+        min-width: 100vw !important;
+        margin-left: -15px !important;    /* Truco de ingeniería: Rompe el contenedor y vuela a las esquinas */
+        margin-right: -15px !important;
+        padding-left: 8px !important;     /* Colchón mínimo para que las letras rocen el borde físico */
+        padding-right: 8px !important;
         box-sizing: border-box !important;
-        word-wrap: break-word !important;
         display: block !important;
+        text-align: center !important;    /* Mantiene el magnetismo céntrico corporativo */
+        word-wrap: break-word !important;
 
-        /* INGENIERÍA VISUAL: Efecto de letras volando sobre las constelaciones */
-        color: #ffffff !important;       /* Blanco puro de máximo contraste */
+        /* FUERZA EL ACHICADO RESPONSIVO DE ALTA CONVERSIÓN */
+        font-size: 1.45rem !important;    /* Evita que los 4.8rem de PC asfixien la pantalla táctil */
+        line-height: 1.35 !important;    /* Interlineado fluido de alta gama */
+
+        /* INGENIERÍA DE FLOTACIÓN TRIDIMENSIONAL (LETRAS VOLANDO) */
+        color: #ffffff !important;
         text-shadow: 
-            0 3px 12px rgba(0, 0, 0, 0.98),  /* Sombra ultra-oscura para despegar la letra del fondo */
+            0 3px 12px rgba(0, 0, 0, 0.98),  /* Sombra profunda para despegar la letra del fondo */
             0 1px 4px rgba(0, 0, 0, 0.95),
-            0 0 20px rgba(223, 197, 159, 0.15) !important; /* Destello áurico sutil de fondo */
+            0 0 15px rgba(223, 197, 159, 0.15) !important; /* Aura dorada sutil */
     }
 
-    /* Ajuste elástico para el subtítulo superior en oro bronce de cabeza */
-    .luxury-hero .hero-headline span,
-    header + .luxury-hero .hero-headline span {
-        font-size: 0.90rem !important;   /* Tamaño refinado para pantallas táctiles */
-        letter-spacing: 4px !important;  /* Sangría elástica expandida elegante */
+    /* Forzar la soltura expandida del subtítulo superior en oro bronce de la portada */
+    h1 span, .hero-headline span {
+        font-size: 0.88rem !important;    /* Letras finas y estilizadas para celulares */
+        letter-spacing: 3px !important;   /* Sangría elástica expandida elegante */
         line-height: 1.2 !important;
         margin-bottom: 12px !important;
         display: block !important;
-        color: #dfc59f !important;       /* Tu tono oro bronces original */
+        color: #dfc59f !important;
         text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95) !important;
     }
 }
@@ -1601,13 +1597,6 @@ textarea[class*="input"] {
         flex: 0 0 285px !important;
         scroll-snap-align: center !important;
         max-width: 85vw !important;
-    }
-
-    h1, .luxury-main-title {
-        font-size: 1.7rem !important;
-        line-height: 1.3 !important;
-        max-width: 100% !important;
-        word-wrap: break-word !important;
     }
 }
 
