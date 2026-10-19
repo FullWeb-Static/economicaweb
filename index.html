@@ -630,7 +630,7 @@ textarea[class*="input"] {
         box-sizing: border-box !important;
         word-wrap: break-word !important;
     }
-      /* 21. APERTURA HORIZONTAL EXTREMA DE LOS RECTÁNGULOS DE ESTUDIO Y DESCRIPCIÓN */
+      /* 20. APERTURA HORIZONTAL EXTREMA DE LOS RECTÁNGULOS DE ESTUDIO Y DESCRIPCIÓN */
     .arquitectura-section .container,
     [id*="landing-page"] .container,
     [id*="arquitectura"] .container,
@@ -657,47 +657,49 @@ textarea[class*="input"] {
         padding-right: 6px !important;
         box-sizing: border-box !important;
     }
-      /* 22. CUADRO VÍTREO FLOTANTE CON ENMARCADO DORADO ROSA (ROSE GOLD) PARA VIABILIDAD */
-    .vault-frame h2,
-    .vault-frame h3,
-    .luxury-form-box h2,
-    .luxury-form-box h3,
-    .private-vault-section h2,
-    .private-vault-section h3,
-    #boveda-seccion h2,
-    #boveda-seccion h3,
-    [class*="viabilidad"] {
+          /* 21. CUADRO VÍTREO ROSE GOLD PARA EL ESTUDIO DE VIABILIDAD EN LAS TARIFAS */
+    .pasarela-container p,
+    #pasarela-pagos p,
+    .luxury-form-container + p,
+    .plan-selection-container + p,
+    #plan-selector + p,
+    p.viabilidad-text,
+    p.estudio-gratuito {
         /* 1. Efecto Vítreo de Lujo (Fondo Grafito Traslúcido Flotante) */
-        background: linear-gradient(135deg, rgba(32, 40, 52, 0.75) 0%, rgba(18, 24, 32, 0.85) 100%) !important;
+        background: linear-gradient(135deg, rgba(36, 44, 56, 0.80) 0%, rgba(20, 26, 34, 0.90) 100%) !important;
         backdrop-filter: blur(12px) !important;
         -webkit-backdrop-filter: blur(12px) !important;
         
-        /* 2. Enmarcado Perimetral en Dorado Rosa (Rose Gold Premium) */
-        border: 1px solid rgba(223, 175, 159, 0.6) !important; /* Tono Rose Gold calibrado con nitidez */
-        border-radius: 8px !important;                          /* Esquinas suavizadas de ingeniería */
+        /* 2. Enmarcado Perimetral en Dorado Rosa (Rose Gold) */
+        border: 1px solid rgba(223, 175, 159, 0.7) !important; /* Tono Rose Gold metalizado bien visible */
+        border-radius: 8px !important;                          /* Esquinas suavizadas premium */
         
-        /* 3. Expansión Horizontal Extrema a las Esquinas */
+        /* 3. Expansión Horizontal Máxima a las Esquinas */
         width: 100% !important;
         max-width: 100% !important;
         min-width: 100% !important;
-        padding: 20px 14px !important;                          /* Aire interno amplio para ordenar la letra */
-        margin-top: 15px !important;
-        margin-bottom: 25px !important;
+        padding: 18px 12px !important;                          /* Colchón interno amplio para encuadrar la letra */
+        margin-top: 20px !important;
+        margin-bottom: 20px !important;
         box-sizing: border-box !important;
         display: block !important;
-        text-align: center !important;
         
-        /* 4. Efecto de Sombra Tridimensional */
-        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.95), 0 0 15px rgba(223, 175, 159, 0.1) !important;
+        /* 4. Cuadratura Tipográfica y Magnetismo al Centro */
+        text-align: center !important;
+        text-justify: none !important;
+        letter-spacing: 0.5px !important;
+        word-spacing: normal !important;
+        
+        /* 5. Efecto de Sombra Tridimensional */
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.95), 0 0 15px rgba(223, 175, 159, 0.15) !important;
     }
 
-    /* Forzar la cuadratura y el brillo del texto interno del bloque de viabilidad */
-    .vault-frame h2 *, .vault-frame h3 *, .vault-frame h2, .vault-frame h3 {
-        color: #fcf4e8 !important;        /* Blanco marfil de máxima nitidez */
-        font-weight: 900 !important;
-        letter-spacing: 0.8px !important;
+    /* Forzar el brillo del texto interno del bloque de viabilidad en las tarifas */
+    .pasarela-container p *, #pasarela-pagos p *, .pasarela-container p {
+        color: #fcf4e8 !important;        /* Blanco marfil nítido de alta gama */
+        font-weight: 800 !important;
         text-transform: uppercase !important;
-        text-shadow: 0 2px 5px rgba(0, 0, 0, 0.9) !important;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9) !important;
     }
 }
     </style>
