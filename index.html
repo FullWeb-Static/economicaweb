@@ -382,6 +382,20 @@
     .hero-tagline, #inicio span:first-of-type, #inicio p:first-of-type {
         margin-top: 20px !important;
         display: block !important;
+
+    /* 7.1. LIBERACIÓN HORIZONTAL EXTREMA PARA LAS LETRAS DE SISTEMAS & REDES */
+    .luxury-hero .hero-descriptor,
+    .luxury-hero p,
+    .luxury-hero h1,
+    .hero-headline {
+        width: 100% !important;
+        max-width: 96vw !important;     /* Fuerza al texto a ocupar el 96% del ancho real de la pantalla */
+        margin-left: auto !important;     /* Centrado geométrico perfecto */
+        margin-right: auto !important;
+        padding-left: 4px !important;    /* Reduce el colchón lateral al mínimo extremo */
+        padding-right: 4px !important;
+        box-sizing: border-box !important;
+        word-wrap: break-word !important; /* Blindaje para que ninguna palabra extensa rompa la orilla */
     }
 
     /* 8. CARRUSEL TÁCTIL MÓVIL: Tarjetas de lado deslizables con el dedo (Evita página infinita) */
