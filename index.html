@@ -487,6 +487,41 @@
         border-color: rgba(223, 197, 159, 0.45) !important;
         background-color: #020304 !important;
     }
+
+    /* 14. ELIMINACIÓN DE BOTÓN DE CONTACTO EN CELULARES (FOCO EN FORMULARIO) */
+    .cta-header-btn, 
+    header nav a[href^="mailto:"],
+    #nav-menu a.cta-header-btn {
+        display: none !important; /* Desaparece por completo el botón de correo en celulares y tablets */
+    }
+
+    /* 15. OPTIMIZACIÓN DE RECTÁNGULOS DE ENTRADA Y TEXTOS EN FORMULARIO MÓVIL */
+    .luxury-input, 
+    .luxury-form-container input, 
+    .luxury-form-container textarea, 
+    .luxury-form-container select,
+    [class*="input"] {
+        padding: 16px 14px !important;       /* Agrandar el rectángulo negro hacia arriba y abajo */
+        font-size: 0.85rem !important;        /* Tamaño equilibrado para que la frase quepa completa */
+        line-height: 1.4 !important;
+        color: #ffffff !important;           /* Letra blanca pura cuando el usuario escribe */
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Forzar a que los marcadores de posición (letras grises internas) sean brillantes y legibles */
+    .luxury-input::placeholder,
+    [class*="input"]::placeholder {
+        color: #94a3b8 !important;           /* Gris plata brillante de alta visibilidad */
+        font-size: 0.82rem !important;        /* Ajuste fino para evitar que el texto se corte */
+        opacity: 1 !important;               /* Evita que los iPhone atenúen el color */
+    }
+    
+    /* Darle más altura específica a la caja de texto grande (textarea) */
+    textarea.luxury-input, 
+    textarea[class*="input"] {
+        min-height: 140px !important;        /* Espacio expandido para que el texto largo respire */
+    }
 }
 
     </style>
