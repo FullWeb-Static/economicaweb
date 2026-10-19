@@ -699,9 +699,9 @@ textarea[class*="input"] {
         width: 100% !important;
         max-width: 100% !important;
         min-width: 100% !important;
-        /* Colchón mínimo de 8px para que los textos dorados rocen la orilla con total elegancia */
-        padding-left: 8px !important;   
-        padding-right: 8px !important;
+        /* Colchón mínimo de 4px para que los textos dorados rocen la orilla con total elegancia */
+        padding-left: 4px !important;   
+        padding-right: 4px !important;
         margin-left: 0 !important;
         margin-right: 0 !important;
         box-sizing: border-box !important;
@@ -765,6 +765,50 @@ textarea[class*="input"] {
         font-weight: 800 !important;
         text-transform: uppercase !important;
         text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9) !important;
+    }
+      /* 25. RECUADRO 3D SOBRESALIENTE PREMIUM PARA EL TÍTULO DE SOLICITUD */
+    .private-vault-section h2,
+    .vault-frame h2,
+    .luxury-form-box h2,
+    #boveda-seccion h2,
+    [id*="boveda"] h2,
+    [class*="solicitud"] h2 {
+        /* 1. Fondo Corporativo Texturizado Con Relieve */
+        background: linear-gradient(135deg, #1c2430 0%, #0d121a 100%) !important;
+        
+        /* 2. Micro-Borde Superior Brillante para Simular Luz Real */
+        border-top: 1px solid rgba(255, 255, 255, 0.25) !important;
+        border-left: 1px solid rgba(223, 197, 159, 0.4) !important;
+        border-right: 1px solid rgba(223, 197, 159, 0.2) !important;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.6) !important; /* Base oscura para dar peso */
+        border-radius: 8px !important;                          /* Esquinas suaves de ingeniería */
+        
+        /* 3. Expansión Horizontal y Confort de Aire */
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 100% !important;
+        padding: 20px 14px !important;                          /* Colchón amplio para que la letra respire */
+        margin-top: 10px !important;
+        margin-bottom: 25px !important;
+        box-sizing: border-box !important;
+        display: block !important;
+        text-align: center !important;
+        
+        /* 4. INGENIERÍA 3D: Sombra Doble Profunda de Elevación Física */
+        transform: translateY(-2px) !important;                /* Eleva físicamente la caja en el espacio */
+        box-shadow: 
+            0 15px 30px rgba(0, 0, 0, 0.95),                  /* Sombra proyectada del cubículo */
+            0 2px 4px rgba(255, 255, 255, 0.05) inset,         /* Brillo interno superior */
+            0 0 15px rgba(223, 197, 159, 0.1) !important;      /* Aura dorada suave */
+    }
+
+    /* Resalte Tipográfico Interno de Máxima Autoridad */
+    .private-vault-section h2 *, .vault-frame h2 *, .private-vault-section h2 {
+        color: #ffffff !important;                             /* Blanco puro de alto contraste */
+        font-weight: 900 !important;                           /* Letra con mucho cuerpo */
+        letter-spacing: 0.6px !important;
+        text-transform: uppercase !important;
+        text-shadow: 0 2px 5px rgba(0, 0, 0, 0.9) !important;   /* Sombra negra detrás de las letras */
     }
 }
     </style>
