@@ -966,12 +966,11 @@ textarea[class*="input"] {
         width: 100% !important;
     }
 
-   /* 24. TÍTULO DE CABEZA IMPERANTE, MASIVO Y ULTRA-INTENSO (MÁXIMO IMPACTO MÓVIL) */
+   /* 24. TÍTULO DE CABEZA IMPERANTE, MASIVO Y CON ANIMACIÓN ESPACIAL FLUIDA */
 h1.hero-headline,
 .luxury-hero h1,
 .luxury-hero .hero-headline,
 #inicio .hero-headline {
-    /* 1. Extirpación absoluta de fondos, bordes y formas */
     background: none !important;
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
@@ -979,57 +978,52 @@ h1.hero-headline,
     border-radius: 0px !important;
     box-shadow: none !important;
     transform: none !important;
-    
-    /* 2. Apertura Horizontal Natural Equilibrada */
     width: 100% !important;
     max-width: 100% !important;
     min-width: 100% !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
-    margin-top: 15px !important;       /* Un poco más de aire con la cabecera */
+    margin-top: 15px !important;       
     margin-bottom: 22px !important;
-    padding-left: 6px !important;       /* Aprovecha al máximo los costados */
+    padding-left: 6px !important;       
     padding-right: 6px !important;
     box-sizing: border-box !important;
     display: block !important;
     text-align: center !important;
     word-wrap: break-word !important;
 
-    /* 3. TIPOGRAFÍA MASIVA E ULTRA-INTENSA PARA PANTALLAS TÁTILES */
-    font-size: 2.40rem !important;    /* 🚨 AUMENTADO: Letra gigante de enorme presencia comercial 🚨 */
-    font-weight: 900 !important;      /* 🚨 Grosor máximo e intenso de autoridad corporativa 🚨 */
-    line-height: 1.25 !important;     /* Renglones perfectamente compactos y proporcionados */
-    color: #ffffff !important;        /* Blanco puro de alta definición */
-    letter-spacing: 0.5px !important; /* Soltura micro-nítida expandida elegante */
+    font-size: 2.15rem !important;    
+    font-weight: 900 !important;      
+    line-height: 1.25 !important;     
+    color: #ffffff !important;        
+    letter-spacing: 0.5px !important; 
 
-    /* 4. INGENIERÍA DE NITIDEZ: CUATRO CAPAS DE ESCUDO CONTRA CONSTELACIONES */
     text-shadow: 
-        0 4px 15px rgba(0, 0, 0, 1.0),   /* Capa 1: Bloqueo absoluto del brillo de fondo */
-        0 2px 5px rgba(0, 0, 0, 0.98),   /* Capa 2: Delineado negro ultra-saturado de alta definición */
-        0 0 25px rgba(223, 197, 159, 0.40), /* Capa 3: Brillo áurico Rose Gold intenso que enciende la frase */
-        0 0 12px rgba(255, 255, 255, 0.25) !important; /* Capa 4: Reflejo cristalino interno */
+        0 4px 15px rgba(0, 0, 0, 1.0),   
+        0 2px 5px rgba(0, 0, 0, 0.98),   
+        0 0 25px rgba(223, 197, 159, 0.40), 
+        0 0 12px rgba(255, 255, 255, 0.25) !important; 
+
+    /* 🚨 MOTOR DE MOVIMIENTO: Activa la animación al cargar la página 🚨 */
+    animation: emergerDesdeArriba 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+    opacity: 0; /* Arranca invisible para esperar el disparo de la animación */
 }
 
-/* Subtítulo superior en oro bronce de la cabecera flotante */
-.luxury-hero .hero-headline span,
-.luxury-hero .hero-headline span,
-h1.hero-headline span,
-#nav-menu + .luxury-hero .hero-headline span {
-    font-size: 0.95rem !important;    /* Tamaño refinado y nítido */
-    letter-spacing: 4px !important;   /* Sangría elástica de lujo */
-    line-height: 1.2 !important;
-    margin-bottom: 15px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    display: block !important;
-    text-align: center !important;
-    color: #dfc59f !important;        /* Tu oro bronce original */
-    
-    /* Sombra reinforced para las letras pequeñas doradas de arriba */
-    text-shadow: 
-        0 3px 10px rgba(0, 0, 0, 1.0),
-        0 1px 3px rgba(0, 0, 0, 0.98),
-        0 0 15px rgba(223, 197, 159, 0.25) !important;
+/* FOTOGRAMAS CLAVE MAESTROS PARA LA FRICCION DE CAÍDA Y REVELADO */
+@keyframes emergerDesdeArriba {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px); /* Arranca 30px desplazado hacia arriba en el cielo */
+        filter: blur(3px);             /* Micro-desenfoque inicial cinematográfico */
+    }
+    40% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);      /* Clava el título en su centro geométrico perfecto */
+        filter: blur(0);               /* Nitidez de trazo absoluta al 100% */
+    }
 }
 
 /* 25. CUBÍCULO VÍTREO ANCHO, EQUILIBRADO Y ESTILIZADO PARA EL TEXTO DESCRIPTIVO */
