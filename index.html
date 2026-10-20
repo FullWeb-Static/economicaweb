@@ -917,20 +917,28 @@ textarea[class*="input"] {
         color: #94a3b8 !important;
     }
 
-    /* Unificar las hileras de enlaces en un formato corto */
-    footer ul {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;    
-        gap: 4px !important;               /* Enlaces muy pegaditos entre sí */
-        padding: 0 !important;
-        margin: 0 !important;
-    }
+    /* Unificar las hileras de enlaces en un formato horizontal ultra-corto y apretado */
+footer ul,
+.footer-luxury-premium ul {
+    display: flex !important;
+    flex-direction: row !important;       /* Mantiene los links de lado en una sola fila */
+    flex-wrap: wrap !important;           
+    justify-content: center !important;   /* Centrado geométrico perfecto */
+    align-items: center !important;
+    gap: 16px !important;                 
+    padding: 0 !important;
     
-    footer ul li {
-        margin: 0 !important;
-        padding: 0 !important;
-    }
+    /* 🚨 COMPRESIÓN EXTREMA: Colapsa los colchones de aire arriba y abajo 🚨 */
+    margin-top: 4px !important;          /* Pega los enlaces a la descripción de arriba */
+    margin-bottom: 4px !important;       /* Pega los enlaces a la franja de Enlace Oficial de abajo */
+    list-style: none !important;
+    width: 100% !important;
+}
+
+    margin: 10px auto 12px auto !important; /* Achica drásticamente el espacio vacío arriba y abajo */
+    list-style: none !important;
+    width: 100% !important;
+}
 
     /* FRANJA DE CRÉDITOS FINAL COMPRESA EN LA BASE */
     footer .container > div:last-of-type,
