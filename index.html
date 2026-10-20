@@ -1026,7 +1026,7 @@ h1.hero-headline,
     }
 }
 
-/* 25. CUBÍCULO VÍTREO ANCHO, EQUILIBRADO Y ESTILIZADO PARA EL TEXTO DESCRIPTIVO */
+/* 25. CUBÍCULO VÍTREO ANCHO ANIMADO EN CASCADA SECUENCIAL CON RETRASO */
 .luxury-hero .hero-descriptor,
 .luxury-hero p:not(.hero-headline p),
 #inicio p.hero-descriptor,
@@ -1038,79 +1038,57 @@ h1.hero-headline,
     
     /* 2. Micro-Borde Perimetral de 1px (Rose Gold de Privilegio) */
     border: 1px solid rgba(223, 175, 159, 0.40) !important;
-    border-radius: 6px !important;    /* Esquinas suavizadas que aportan finura visual */
+    border-radius: 6px !important;    /* Esquinas suavizadas finas */
     
     /* 3. FORMATO ANCHO INTELIGNETE (ROMPIMIENTO DEL EMBUDO ANGOSTO) */
-    width: calc(100% + 24px) !important;  /* Abre el rectángulo de forma generosa a lo horizontal */
+    width: calc(100% + 24px) !important;  /* Abre el rectángulo horizontalmente */
     max-width: 96vw !important;           /* Límite seguro para un encaje recto impecable */
-    margin-left: -12px !important;        /* Centra el exceso absorbiendo el aire muerto del container */
+    margin-left: -12px !important;        /* Centra el exceso absorbiendo el aire muerto */
     margin-right: -12px !important;
     
     /* Ajustes de posición verticales para achatular el bloque */
     margin-top: 25px !important;          
     margin-bottom: 30px !important;
-    padding: 18px 14px !important;        /* Colchón interno holgado para que las letras respiren */
+    padding: 18px 14px !important;        /* Colchón interno holgado */
     box-sizing: border-box !important;
     display: block !important;
     position: relative !important;
-    left: 0 !important;                   /* Reinicia desfases horizontales */
+    left: 0 !important;                   
     transform: none !important;
     
     /* 4. TIPOGRAFÍA MEDIANA PREMIUM DE ALTA FIDELIDAD */
     font-size: 0.94rem !important;        
     font-weight: 500 !important;          
-    line-height: 1.62 !important;         /* Interlineado fluido que evita el amontonamiento */
+    line-height: 1.62 !important;         /* Interlineado fluido */
     color: #f1f5f9 !important;            /* Blanco plata brillante nítido */
-    text-align: justify !important;       /* Cuadra el escrito con total rigor corporativo */
+    text-align: justify !important;       /* Cuadra el escrito con rigor corporativo */
     word-wrap: break-word !important;
 
     /* 5. Elevación Tridimensional Sutil sobre la Red de Estrellas */
-    transform: translateY(-1px) !important;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.9), 0 0 15px rgba(223, 175, 159, 0.05) !important;
+
+    /* 🚨 MOTOR DE MOVIMIENTO EN CASCADA CON RETRASO DE 0.4 SEGUNDOS 🚨 */
+    animation: emergerDesdeAbajo 1.3s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+    animation-delay: 0.4s !important;    /* Espera exacta a que el título termine de caer */
+    opacity: 0;                           /* Nace invisible esperando su turno coreográfico */
 }
 
-    /* 25. CUBÍCULO VÍTREO ANCHO, EQUILIBRADO Y ESTILIZADO PARA EL TEXTO DESCRIPTIVO */
-    .luxury-hero .hero-descriptor,
-    .luxury-hero p:not(.hero-headline p),
-    #inicio p.hero-descriptor,
-    .hero-descriptor {
-        /* 1. Fondo de Cristal Traslúcido al 25% (Transparencia Mayor Elegante) */
-        background: linear-gradient(135deg, rgba(15, 22, 32, 0.25) 0%, rgba(6, 10, 16, 0.35) 100%) !important;
-        backdrop-filter: blur(14px) !important;
-        -webkit-backdrop-filter: blur(14px) !important;
-        
-        /* 2. Micro-Borde Perimetral de 1px (Rose Gold de Privilegio) */
-        border: 1px solid rgba(223, 175, 159, 0.40) !important;
-        border-radius: 6px !important;    /* Esquinas suavizadas que aportan finura visual */
-        
-        /* 3. FORMATO ANCHO INTELLIGENTE (ROMPIMIENTO DEL EMBUDO ANGOSTO) */
-        width: calc(100% + 24px) !important;  /* Abre el rectángulo de forma generosa a lo horizontal */
-        max-width: 96vw !important;           /* Límite seguro para un encaje recto impecable */
-        margin-left: -12px !important;        /* Centra el exceso absorbiendo el aire muerto del container */
-        margin-right: -12px !important;
-        
-        /* Ajustes de posición verticales para achatular el bloque */
-        margin-top: 25px !important;          
-        margin-bottom: 30px !important;
-        padding: 18px 14px !important;        /* Colchón interno holgado para que las letras respiren */
-        box-sizing: border-box !important;
-        display: block !important;
-        position: relative !important;
-        left: 0 !important;                   /* Reinicia desfases horizontales */
-        transform: none !important;
-        
-        /* 4. TIPOGRAFÍA MEDIANA PREMIUM DE ALTA FIDELIDAD */
-        font-size: 0.94rem !important;        
-        font-weight: 500 !important;          
-        line-height: 1.62 !important;         /* Interlineado fluido que evita el amontonamiento */
-        color: #f1f5f9 !important;            /* Blanco plata brillante nítido */
-        text-align: justify !important;       /* Cuadra el escrito con total rigor corporativo */
-        word-wrap: break-word !important;
-
-        /* 5. Elevación Tridimensional Sutil sobre la Red de Estrellas */
-        transform: translateY(-1px) !important;
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.9), 0 0 15px rgba(223, 175, 159, 0.05) !important;
+/* FOTOGRAMAS CLAVE MAESTROS PARA LA SUBIDA ELÁSTICA DE LA DESCRIPCIÓN */
+@keyframes emergerDesdeAbajo {
+    0% {
+        opacity: 0;
+        transform: translateY(35px);      /* Arranca desplazado 35px hacia abajo en el fondo */
+        filter: blur(4px);                 /* Micro-desenfoque inicial de cámara cinematográfica */
     }
+    30% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(-1px);      /* Se clava flotando levemente en su relieve final */
+        filter: blur(0);                   /* Nitidez de lectura absoluta al 100% */
+    }
+}
 
     /* 26. CANDADO DE MÁXIMA FUERZA DE CRISTAL PARA EL BOTÓN SUPERIOR (CÁPSULA) */
     .nav-wrapper a[href*="landing"],
@@ -1128,6 +1106,7 @@ h1.hero-headline,
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6) !important;
     }
 }
+
     </style>
   </head>
   <body>
