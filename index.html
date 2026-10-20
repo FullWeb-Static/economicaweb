@@ -966,62 +966,114 @@ textarea[class*="input"] {
         width: 100% !important;
     }
 
-    /* 24. TÍTULO DE CABEZA IMPERANTE, MASIVO Y FLOTANTE (SIN CAJAS NI RECTÁNGULOS) */
-    h1.hero-headline,
-    .luxury-hero h1,
-    .luxury-hero .hero-headline,
-    #inicio .hero-headline {
-        /* 1. Extirpación absoluta de fondos, bordes y formas */
-        background: none !important;
-        backdrop-filter: none !important;
-        -webkit-backdrop-filter: none !important;
-        border: none !important;
-        border-radius: 0px !important;
-        box-shadow: none !important;
-        transform: none !important;
-        
-        /* 2. Apertura Horizontal Natural Equilibrada */
-        width: 100% !important;
-        max-width: 100% !important;
-        min-width: 100% !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        margin-top: 10px !important;
-        margin-bottom: 20px !important;
-        padding-left: 4px !important;
-        padding-right: 4px !important;
-        box-sizing: border-box !important;
-        display: block !important;
-        text-align: center !important;
-        word-wrap: break-word !important;
+   /* 24. TÍTULO DE CABEZA IMPERANTE, MASIVO Y FLOTANTE (SIN CAJAS NI RECTÁNGULOS) */
+h1.hero-headline,
+.luxury-hero h1,
+.luxury-hero .hero-headline,
+#inicio .hero-headline {
+    /* 1. Extirpación absoluta de fondos, bordes y formas */
+    background: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border: none !important;
+    border-radius: 0px !important;
+    box-shadow: none !important;
+    transform: none !important;
+    
+    /* 2. Apertura Horizontal Natural Equilibrada */
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 10px !important;
+    margin-bottom: 20px !important;
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+    box-sizing: border-box !important;
+    display: block !important;
+    text-align: center !important;
+    word-wrap: break-word !important;
 
-        /* 3. TIPOGRAFÍA MASIVA E IMPERANTE PARA PANTALLAS TÁCTILES */
-        font-size: 1.85rem !important;    /* Letra grande de gran impacto y presencia corporativa */
-        font-weight: 900 !important;      /* Grosor de máxima autoridad */
-        line-height: 1.30 !important;    /* Renglones compactos y elegantes */
-        color: #ffffff !important;        /* Blanco puro de alto contraste */
+    /* 3. TIPOGRAFÍA MASIVA E IMPERANTE PARA PANTALLAS TÁTILES */
+    font-size: 1.85rem !important;    /* Letra grande de gran impacto y presencia corporativa */
+    font-weight: 900 !important;      /* Grosor de máxima autoridad */
+    line-height: 1.30 !important;     /* Renglones compactos y elegantes */
+    color: #ffffff !important;        /* Blanco puro de alto contraste */
+    letter-spacing: 0.3px !important; /* Soltura micro-nítida de trazo */
 
-        /* 4. INGENIERÍA DE LEVITACIÓN (EFECTO LETRAS VOLANDO EN EL ESPACIO) */
-        text-shadow: 
-            0 3px 15px rgba(0, 0, 0, 0.98),  /* Capa oscura profunda para despegar las letras del fondo */
-            0 1px 4px rgba(0, 0, 0, 0.95),
-            0 0 20px rgba(223, 197, 159, 0.2) !important; /* Aura sutil Rose Gold tras la tipografía */
-    }
+    /* 4. INGENIERÍA DE NITIDEZ: CUATRO CAPAS DE ESCUDO CONTRA CONSTELACIONES */
+    text-shadow: 
+        0 4px 12px rgba(0, 0, 0, 1.0),   /* Capa 1: Bloqueo absoluto del brillo de fondo */
+        0 2px 4px rgba(0, 0, 0, 0.95),   /* Capa 2: Delineado ultra-oscuro de alta definición */
+        0 0 25px rgba(223, 197, 159, 0.35), /* Capa 3: Brillo áurico Rose Gold que enciende la frase */
+        0 0 10px rgba(255, 255, 255, 0.2) !important; /* Capa 4: Reflejo cristalino interno */
+}
 
-    /* Subtítulo superior en oro bronce de la cabecera flotante */
-    .luxury-hero .hero-headline span,
-    h1.hero-headline span {
-        font-size: 0.95rem !important;    /* Tamaño refinado y nítido */
-        letter-spacing: 4px !important;   /* Sangría elástica expandida de lujo */
-        line-height: 1.2 !important;
-        margin-bottom: 15px !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
-        display: block !important;
-        text-align: center !important;
-        color: #dfc59f !important;        /* Tu tono de bronce/oro premium */
-        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95) !important;
-    }
+/* Subtítulo superior en oro bronce de la cabecera flotante */
+.luxury-hero .hero-headline span,
+.luxury-hero .hero-headline span,
+h1.hero-headline span,
+#nav-menu + .luxury-hero .hero-headline span {
+    font-size: 0.95rem !important;    /* Tamaño refinado y nítido */
+    letter-spacing: 4px !important;   /* Sangría elástica de lujo */
+    line-height: 1.2 !important;
+    margin-bottom: 15px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+    text-align: center !important;
+    color: #dfc59f !important;        /* Tu oro bronce original */
+    
+    /* Sombra reinforced para las letras pequeñas doradas de arriba */
+    text-shadow: 
+        0 3px 10px rgba(0, 0, 0, 1.0),
+        0 1px 3px rgba(0, 0, 0, 0.98),
+        0 0 15px rgba(223, 197, 159, 0.25) !important;
+}
+
+/* 25. CUBÍCULO VÍTREO ANCHO, EQUILIBRADO Y ESTILIZADO PARA EL TEXTO DESCRIPTIVO */
+.luxury-hero .hero-descriptor,
+.luxury-hero p:not(.hero-headline p),
+#inicio p.hero-descriptor,
+.hero-descriptor {
+    /* 1. Fondo de Cristal Traslúcido al 25% (Transparencia Mayor Elegante) */
+    background: linear-gradient(135deg, rgba(15, 22, 32, 0.25) 0%, rgba(6, 10, 16, 0.35) 100%) !important;
+    backdrop-filter: blur(14px) !important;
+    -webkit-backdrop-filter: blur(14px) !important;
+    
+    /* 2. Micro-Borde Perimetral de 1px (Rose Gold de Privilegio) */
+    border: 1px solid rgba(223, 175, 159, 0.40) !important;
+    border-radius: 6px !important;    /* Esquinas suavizadas que aportan finura visual */
+    
+    /* 3. FORMATO ANCHO INTELIGNETE (ROMPIMIENTO DEL EMBUDO ANGOSTO) */
+    width: calc(100% + 24px) !important;  /* Abre el rectángulo de forma generosa a lo horizontal */
+    max-width: 96vw !important;           /* Límite seguro para un encaje recto impecable */
+    margin-left: -12px !important;        /* Centra el exceso absorbiendo el aire muerto del container */
+    margin-right: -12px !important;
+    
+    /* Ajustes de posición verticales para achatular el bloque */
+    margin-top: 25px !important;          
+    margin-bottom: 30px !important;
+    padding: 18px 14px !important;        /* Colchón interno holgado para que las letras respiren */
+    box-sizing: border-box !important;
+    display: block !important;
+    position: relative !important;
+    left: 0 !important;                   /* Reinicia desfases horizontales */
+    transform: none !important;
+    
+    /* 4. TIPOGRAFÍA MEDIANA PREMIUM DE ALTA FIDELIDAD */
+    font-size: 0.94rem !important;        
+    font-weight: 500 !important;          
+    line-height: 1.62 !important;         /* Interlineado fluido que evita el amontonamiento */
+    color: #f1f5f9 !important;            /* Blanco plata brillante nítido */
+    text-align: justify !important;       /* Cuadra el escrito con total rigor corporativo */
+    word-wrap: break-word !important;
+
+    /* 5. Elevación Tridimensional Sutil sobre la Red de Estrellas */
+    transform: translateY(-1px) !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.9), 0 0 15px rgba(223, 175, 159, 0.05) !important;
+}
 
     /* 25. CUBÍCULO VÍTREO ANCHO, EQUILIBRADO Y ESTILIZADO PARA EL TEXTO DESCRIPTIVO */
     .luxury-hero .hero-descriptor,
