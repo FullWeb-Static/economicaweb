@@ -857,107 +857,99 @@ textarea[class*="input"] {
         font-weight: 700 !important;
     }
 
-    /* 23. ENCASILLADO MÁXIMO HORIZONTAL Y ULTRA-COMPACTO DEL PIE DE PÁGINA (FOOTER SLIM) */
+    /* 23. ENCASILLADO MÁXIMO HORIZONTAL Y ULTRA-COMPACTO DEL PIE DE PÁGINA (FRANJA SLIM) */
     footer.footer-luxury-premium,
     footer,
+    .footer-luxury-premium,
     footer .container {
-        background-color: #0b0f17 !important; /* Gris grafito profundo */
-        border: 1px solid rgba(223, 197, 159, 0.3) !important; /* Micro-borde dorado nítido */
-        border-radius: 4px !important;                          
+        background-color: #0b0f17 !important; 
+        border-top: 1px solid rgba(223, 197, 159, 0.3) !important; /* Mantiene solo el micro-borde del techo */
+        border-bottom: 1px solid rgba(223, 197, 159, 0.15) !important;
+        border-left: none !important;    /* Rompe los bordes de los lados para look de franja */
+        border-right: none !important;
+        border-radius: 0px !important;    /* Quita las esquinas curvas para forzar la banda continua */
         
-        /* EXPANSIÓN DE COSTADOS Y COMPRESIÓN VERTICAL MÁXIMA */
+        /* 🚨 CONTROL DE ALTURA VERTICAL ULTRA-DELGADA 🚨 */
+        padding-top: 4px !important;      /* Aplasta el colchón de aire superior al extremo */
+        padding-bottom: 4px !important;   /* Aplasta el colchón de aire inferior al extremo */
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+        margin: 10px 0 0 0 !important;
         width: 100% !important;
         max-width: 100% !important;
         min-width: 100% !important;
-        padding-left: 12px !important;
-        padding-right: 12px !important;
-        padding-top: 15px !important;     /* Reducido a la mitad para achatar el techo */
-        padding-bottom: 12px !important;  /* Base ultra-corta */
-        margin-left: 0 !important;
-        margin-right: 0 !important;
         box-sizing: border-box !important;
         display: block !important;
     }
 
-    /* REORDENAMIENTO VERTICAL APRETADO SIN ESPACIOS MUERTOS */
+    /* Contenedor vertical ultra-pegado */
     footer .container > div:first-of-type {
         display: flex !important;
         flex-direction: column !important; 
         align-items: center !important;    
         text-align: center !important;
-        gap: 12px !important;              /* Se reduce la separación entre bloques a la mitad */
+        gap: 2px !important;              /* Reduce a la nada la separación entre bloques */
         width: 100% !important;
-        box-sizing: border-box !important;
     }
 
-    /* Forzar el empaquetado corto en cada bloque interno */
     footer .container > div:first-of-type > div {
         width: 100% !important;
         max-width: 100% !important;
         margin: 0 !important;
         padding: 0 !important;
-        text-align: center !important;
     }
 
-    /* Achicar el espacio de separación de los títulos internos */
+    /* Reducir el título e-WEB de la firma */
     footer h4, .footer-luxury-premium h4 {
-        text-align: center !important;
+        font-size: 1.05rem !important;    /* Más pequeño para no abombar la altura */
         margin-top: 0 !important;
-        margin-bottom: 4px !important;     /* Texto pegado a su descripción */
-        font-size: 1.1rem !important;      /* Título un pelín más elegante y compacto */
+        margin-bottom: 2px !important;     
         width: 100% !important;
     }
 
-    /* Reducir el colchón de los párrafos explicativos */
+    /* Compactar la descripción principal */
     footer p, .footer-luxury-premium p {
-        margin-bottom: 0 !important;
-        padding-bottom: 0 !important;
-        font-size: 0.82rem !important;
-        line-height: 1.4 !important;
+        margin-top: 0 !important;
+        margin-bottom: 2px !important;
+        font-size: 0.78rem !important;    /* Tipografía sutil tipo micro-consola */
+        line-height: 1.35 !important;
         color: #94a3b8 !important;
     }
 
-    /* Unificar las hileras de enlaces en un formato horizontal ultra-corto y apretado */
-footer ul,
-.footer-luxury-premium ul {
-    display: flex !important;
-    flex-direction: row !important;       /* Mantiene los links de lado en una sola fila */
-    flex-wrap: wrap !important;           
-    justify-content: center !important;   /* Centrado geométrico perfecto */
-    align-items: center !important;
-    gap: 16px !important;                 
-    padding: 0 !important;
+    /* Unificar hileras de enlaces ultra-cortas */
+    footer ul, .footer-luxury-premium ul {
+        display: flex !important;
+        flex-direction: row !important;       
+        justify-content: center !important;   
+        align-items: center !important;
+        gap: 14px !important;                 
+        padding: 0 !important;
+        margin-top: 2px !important;          
+        margin-bottom: 2px !important;       
+        list-style: none !important;
+        width: 100% !important;
+    }
     
-    /* 🚨 COMPRESIÓN EXTREMA: Colapsa los colchones de aire arriba y abajo 🚨 */
-    margin-top: 4px !important;          /* Pega los enlaces a la descripción de arriba */
-    margin-bottom: 4px !important;       /* Pega los enlaces a la franja de Enlace Oficial de abajo */
-    list-style: none !important;
-    width: 100% !important;
-}
+    footer ul li { margin: 0 !important; padding: 0 !important; }
 
-    margin: 10px auto 12px auto !important; /* Achica drásticamente el espacio vacío arriba y abajo */
-    list-style: none !important;
-    width: 100% !important;
-}
-
-    /* FRANJA DE CRÉDITOS FINAL COMPRESA EN LA BASE */
+    /* 🚨 COMPRESIÓN DE LA FRANJA DE CRÉDITOS FINAL EN LA BASE 🚨 */
     footer .container > div:last-of-type,
     footer div[style*="border-top"] {
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
-        gap: 4px !important;               /* Junta los dos renglones de créditos */
-        text-align: center !important;
+        gap: 1px !important;               /* Junta los dos renglones finales al máximo */
         border-top: 1px solid rgba(223, 197, 159, 0.15) !important; 
-        padding-top: 10px !important;      /* Micro-colchón divisorio interno */
-        margin-top: 14px !important;       /* Espacio de separación corto */
+        padding-top: 6px !important;      /* Micro-colchón divisorio interno */
+        margin-top: 4px !important;       /* Reduce drásticamente la distancia con el Enlace Oficial */
         width: 100% !important;
         box-sizing: border-box !important;
     }
 
+    /* Calibración final de tipografías micro-esbeltas */
     footer p, footer span, footer a {
-        font-size: 0.80rem !important;     /* Tipografía compacta micro-nitidez */
-        line-height: 1.4 !important;
+        font-size: 0.76rem !important;     
+        line-height: 1.3 !important;
         text-align: center !important;
     }
 
