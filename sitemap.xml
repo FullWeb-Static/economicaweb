@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://sitemaps.org">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <!-- Página Principal -->
     <url>
-        <loc>https://economicaweb.cl</loc>
+        <loc>https://economicaweb.cl/</loc>
         <lastmod>2026-11-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
