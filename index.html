@@ -1,2288 +1,738 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      e-WEB | Ingeniería en Ventas Digitales & Landing Pages Económicas
-    </title>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>e-WEB | Creación de páginas web en Santiago, Chile</title>
+<meta name="description" content="Diseñamos y desarrollamos landing pages, sitios corporativos y tiendas online. Elige tu plan Basic, Medium o High y pide tu cotización.">
+<meta name="theme-color" content="#0a2540">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230a2540'/%3E%3Ctext x='32' y='47' font-size='46' font-family='Arial' font-weight='800' text-anchor='middle' fill='%23ffffff'%3Ee%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CL">
+<meta property="og:site_name" content="e-WEB">
+<meta property="og:title" content="e-WEB | Creación de páginas web en Santiago, Chile">
+<meta property="og:description" content="Diseñamos y desarrollamos landing pages, sitios corporativos y tiendas online. Elige tu plan y pide tu cotización.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"e-WEB","telephone":"+56922133902","email":"contacto@economicaweb.cl","description":"Agencia de desarrollo web: landing pages, sitios corporativos y tiendas online.","areaServed":"CL","address":{"@type":"PostalAddress","addressLocality":"Santiago","addressCountry":"CL"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0a2540;--txt:#33475b;--mut:#6b7c93;--bg:#f6f9fc;--line:#dfe6ee;--a:#0b5cff;--a2:#0847c4;--r:10px;--nav:68px}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:auto}
+body{font:16px/1.65 "Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--txt);background:#fff;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{width:min(1120px,90vw);margin:auto}
+a{color:inherit}
 
-    <!-- METADATOS PREMIUM PARA VISTA PREVIA EN WHATSAPP Y REDES SOCIALES -->
-    <meta
-      property="og:title"
-      content="e-WEB | Ingeniería en Ventas Digitales & Landing Pages Económicas"
-    />
-    <meta
-      property="og:description"
-      content="Estructuramos plataformas web avanzadas, páginas de aterrizaje de alta conversión y soluciones digitales de alta gama con el dominio de economicaweb.cl."
-    />
-    <meta property="og:image" content="https://economicaweb.cl" />
-    <meta property="og:url" content="https://economicaweb.cl" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="e-WEB Technologies" />
+/* Navegación */
+.nav{position:fixed;inset:0 0 auto;z-index:20;height:var(--nav);display:flex;justify-content:space-between;align-items:center;padding:0 5vw;background:#fffffff2;backdrop-filter:blur(8px);border-bottom:1px solid var(--line);color:var(--ink)}
+.nav a{text-decoration:none}
+.nav ul{display:flex;gap:30px;list-style:none;padding:0;font-size:.95rem;font-weight:500}
+.nav ul a:hover{color:var(--a)}
+.logo{font-weight:800;font-size:1.3rem;letter-spacing:-.02em}.logo span{color:var(--a)}
+.nav-r{display:flex;gap:10px;align-items:center}
+.menu{display:none;background:#fff;border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:8px 14px;font:inherit;font-size:.9rem;font-weight:600;cursor:pointer}
+@media(max-width:760px){.nav ul{display:none}.menu{display:block}.nav ul.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;gap:18px;padding:22px 5vw 26px;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 12px 24px #0a254014}}
 
-    <!-- Tipografías Premium: Serif Inglesa Cinzel y Sans-Serif Limpia Inter -->
-    <link rel="preconnect" href="https://googleapis.com" />
-    <link rel="preconnect" href="https://gstatic.com" crossorigin />
-    <link href="https://googleapis.com" rel="stylesheet" />
+/* Botones */
+.btn{display:inline-block;padding:12px 26px;border-radius:8px;background:var(--a);color:#fff;font-family:inherit;font-weight:600;font-size:1rem;text-decoration:none;border:1px solid var(--a);cursor:pointer;transition:background .25s,border-color .25s}
+.btn:hover{background:var(--a2);border-color:var(--a2)}
+.btn:disabled{opacity:.6;cursor:wait}
+.btn.ghost{background:transparent;color:#fff;border-color:#ffffff66}
+.btn.ghost:hover{background:#ffffff1a;border-color:#fff}
+.nav .btn{padding:9px 18px;font-size:.9rem}
 
-    <style>
-      /* --- VARIABLES CROMÁTICAS DE ALTO CONTRASTE Y LUJO DE e-WEB --- */
-      :root {
-          --dark-obsidian: #040608;      /* Negro Profundo Absoluto */
-          --oxford-graphite: #0f141c;    /* Gris Grafito con matiz azulado */
-          --slate-luxury: #18202b;       /* Gris Pizarra de Sombra */
-          --gold-bronzite: #dfc59f;      /* Oro Viejo / Bronce Pulido */
-          --gold-bright: #fbf0db;        /* Oro de Máximo Brillo para Textos */
-          --text-pure-white: #ffffff;    /* Contraste Máximo */
-          --text-muted-silver: #94a3b8;  /* Plata Atenuado */
-          --shadow-premium: 0 30px 60px rgba(0, 0, 0, 0.7);
-          --transition-premium: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-      }
+/* Hero */
+.hero{background:var(--ink);color:#fff;padding:calc(var(--nav) + 90px) 0 100px}
+.hero-in{display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:center}
+@media(max-width:900px){.hero-in{grid-template-columns:1fr;gap:44px}.hero{padding:calc(var(--nav) + 56px) 0 70px}}
+.kicker{color:#8fb4ff;font-weight:600;font-size:.95rem}
+h1{font-size:clamp(2.1rem,4.6vw,3.4rem);line-height:1.12;letter-spacing:-.025em;font-weight:800;margin:16px 0 20px}
+.hero p{color:#b9c7dc;font-size:1.1rem;max-width:540px}
+.cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px}
+.checks{display:flex;gap:26px;flex-wrap:wrap;margin-top:36px;color:#d5deec;font-size:.95rem;font-weight:500}
+.checks span::before{content:"✓";color:#6ee7b7;font-weight:800;margin-right:8px}
+.mock{background:#fff;border-radius:12px;padding:16px 18px 22px;box-shadow:0 30px 60px #00000040}
+.dots{display:flex;gap:6px;margin-bottom:16px}.dots i{width:10px;height:10px;border-radius:50%;background:#d5dde8}
+.sk{height:12px;border-radius:6px;margin:12px 0;background:#e9eef5}
+.sk.big{height:84px;border-radius:8px;background:#dbe6fb}
+.sk.btn2{width:34%;height:30px;border-radius:8px;background:var(--a)}
 
-      /* --- DECLARACIÓN NATIVA DE NIEBLA LÍQUIDA EN MOVIMIENTO --- */
-      @keyframes nieblaDigital {
-          0% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-          100% { background-position: 0% 50%; }
-      }
-      @keyframes auraDorada {
-          0% { box-shadow: 0 0 15px rgba(223, 197, 159, 0.15); border-color: rgba(223, 197, 159, 0.3); }
-          50% { box-shadow: 0 0 40px rgba(223, 197, 159, 0.5); border-color: rgba(223, 197, 159, 0.9); }
-          100% { box-shadow: 0 0 15px rgba(223, 197, 159, 0.15); border-color: rgba(223, 197, 159, 0.3); }
-      }
-      @keyframes flotacionSuave {
-          0% { transform: translateY(0px) scale(1); }
-          50% { transform: translateY(-10px) scale(1.05); }
-          100% { transform: translateY(0px) scale(1); }
-      }
+/* Secciones */
+section{padding:96px 0;scroll-margin-top:var(--nav)}.alt{background:var(--bg)}
+h2{font-size:clamp(1.7rem,3.2vw,2.3rem);line-height:1.2;letter-spacing:-.02em;color:var(--ink);font-weight:800;max-width:680px}
+.lead{color:var(--mut);max-width:620px;margin:12px 0 48px;font-size:1.05rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
+.card{background:#fff;border:1px solid var(--line);border-top:3px solid var(--a);border-radius:var(--r);padding:26px;transition:box-shadow .3s}
+.card:hover{box-shadow:0 12px 32px #0a254014}
+.card h3{color:var(--ink);font-size:1.1rem;margin-bottom:8px}.card p{color:var(--mut);font-size:.95rem}
+.n{color:var(--a);font-weight:700;font-size:.85rem;margin-bottom:8px}
 
-      * {
-          box-sizing: border-box;
-          margin: 0;
-          padding: 0;
-          transition: var(--transition-premium);
-      }
-      body {
-          font-family: 'Inter', sans-serif;
-          background-color: var(--dark-obsidian);
-          color: var(--text-pure-white);
-          line-height: 1.7;
-          overflow-x: hidden;
-      }
-      /* --- CANVAS GENERAL DE FONDO PARA TODA LA WEB --- */
-      .hero-canvas-wrapper {
-          position: fixed !important;
-          top: 0 !important; left: 0 !important; right: 0 !important; bottom: 0 !important;
-          width: 100% !important; height: 100% !important;
-          z-index: 0 !important; pointer-events: none !important; overflow: hidden !important;
-          background-color: var(--dark-obsidian) !important;
-      }
+/* Planes */
+.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:24px;padding-top:14px}
+.plan{position:relative;display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:12px;padding:32px 28px;cursor:pointer;transition:box-shadow .3s,border-color .3s}
+.plan:hover{box-shadow:0 12px 32px #0a254014}
+.plan input{position:absolute;opacity:0;pointer-events:none}
+.plan.sel{border-color:var(--a);box-shadow:0 0 0 2px var(--a),0 18px 40px #0b5cff22}
+.plan:focus-within{outline:3px solid #0b5cff55;outline-offset:3px}
+.tag{position:absolute;top:-13px;left:28px;background:var(--ink);color:#fff;font-size:.78rem;font-weight:600;padding:4px 12px;border-radius:99px;white-space:nowrap}
+.lvl{color:var(--a);font-weight:700;font-size:.85rem}
+.plan h3{font-size:1.35rem;color:var(--ink)}.plan .sub{color:var(--mut);font-size:.92rem}
+.price{font-size:2.3rem;font-weight:800;color:var(--ink);letter-spacing:-.02em;margin:14px 0 0}.price small{font-size:.9rem;color:var(--mut);font-weight:500}
+.plan ul{list-style:none;padding:0;margin:20px 0 24px;display:grid;gap:10px;font-size:.95rem}
+.plan li::before{content:"✓";color:var(--a);font-weight:800;margin-right:10px}
+.pick{margin-top:auto;text-align:center;padding:11px;border-radius:8px;border:1px solid var(--line);font-weight:600;color:var(--ink);transition:background .25s,color .25s}
+.pick::after{content:"Elegir este plan"}
+.plan.sel .pick{background:var(--a);border-color:var(--a);color:#fff}
+.plan.sel .pick::after{content:"✓ Plan elegido"}
+.sum{margin:44px 0 0;display:flex;gap:18px;align-items:center;justify-content:space-between;flex-wrap:wrap;background:var(--ink);color:#fff;padding:18px 24px;border-radius:var(--r)}
+.note{color:var(--mut);font-size:.85rem;margin-top:16px}
 
-      /* --- CANVAS EXCLUSIVO ENVOLVENTE EN LA CABECERA --- */
-      .header-canvas-container {
-          position: absolute !important;
-          top: 0 !important; left: 0 !important; right: 0 !important; bottom: 0 !important;
-          width: 100% !important; height: 100% !important;
-          z-index: 1 !important; pointer-events: none !important; overflow: hidden !important;
-          background: transparent !important;
-      }
+.inc{margin-top:76px}
+.inc h3{font-size:1.5rem;color:var(--ink);letter-spacing:-.02em}
+.inc .lead{margin:8px 0 28px}
+.inc .grid{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
 
-      .hero-canvas-wrapper canvas, .header-canvas-container canvas {
-          width: 100% !important; height: 100% !important;
-          display: block !important; position: absolute !important;
-          top: 0 !important; left: 0 !important; background: transparent !important;
-      }
 
-      header, section, footer, main, div.container, .about-luxury-section, .corporate-extended-section, .services-intro-section {
-          position: relative !important; z-index: 2 !important; background-color: transparent !important;
-      }
-      .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 0 15px; }
-      /* --- STICKY HEADER DE LUJO CONGELADO INMÓVIL OPTIMIZADO --- */
-      .premium-header {
-          background-color: rgba(4, 6, 8, 0.95) !important;
-          backdrop-filter: blur(15px) !important;
-          -webkit-backdrop-filter: blur(15px) !important;
-          border-bottom: 2px solid rgba(223, 197, 159, 0.25) !important;
-          position: fixed !important;
-          top: 0 !important; left: 0 !important;
-          z-index: 99999 !important; width: 100% !important;
-          box-shadow: 0 8px 40px rgba(0, 0, 0, 0.8) !important;
-      }
-      .nav-wrapper {
-          display: flex !important; justify-content: space-between !important;
-          align-items: center !important; padding: 18px 0 !important;
-      }
-      .brand-luxury-title {
-          font-family: 'Cinzel', serif; font-size: 1.8rem; color: var(--text-pure-white);
-          font-weight: 900; letter-spacing: 1px; text-decoration: none;
-          text-shadow: 0 0 15px rgba(255, 255, 255, 0.15);
-      }
-      .brand-luxury-title span {
-          color: var(--gold-bronzite); text-shadow: 0 0 12px rgba(223, 197, 159, 0.4);
-      }
+/* Resumen de plan: acabado oro premium */
+#planes .sum{
+  position:relative;isolation:isolate;overflow:hidden;
+  border:1px solid #c9a45b;
+  background:linear-gradient(115deg,#0a2540 0%,#123858 48%,#0a2540 100%);
+  box-shadow:0 5px 0 #b58b3c,0 14px 34px #0a254026,inset 0 1px 0 #ffffff20;
+}
+#planes .sum:before,#planes .sum:after{
+  content:"";position:absolute;top:0;bottom:0;width:5px;z-index:-1;
+  background:linear-gradient(180deg,#fff0bd 0%,#d7b66d 22%,#a87928 50%,#f2d58b 78%,#b68a37 100%);
+  box-shadow:0 0 16px #d6b36a55;
+}
+#planes .sum:before{left:0}
+#planes .sum:after{right:0}
+#planes .sum span{position:relative;padding-left:12px}
+#planes .sum span:before{content:"";position:absolute;left:0;top:50%;height:24px;width:2px;transform:translateY(-50%);background:linear-gradient(180deg,transparent,#e9c875,transparent)}
+#planes .sum .btn{
+  position:relative;overflow:hidden;transform:translateY(0);
+  background:linear-gradient(135deg,#0b5cff,#0847c4);border-color:#0b5cff;
+  box-shadow:0 5px 0 #06358e,0 10px 22px #0003;
+  transition:transform .28s cubic-bezier(.2,.8,.2,1),background .28s,box-shadow .28s,border-color .28s;
+}
+#planes .sum .btn:before{
+  content:"";position:absolute;inset:0;transform:translateX(-130%) skewX(-20deg);
+  background:linear-gradient(90deg,transparent,#ffffff55,transparent);
+  transition:transform .6s ease;
+}
+#planes .sum .btn:hover{
+  transform:translateY(-6px) scale(1.04);
+  background:linear-gradient(125deg,#fff0bd 0%,#e8c46e 24%,#c9953d 48%,#f2d99b 72%,#d9ad58 100%);
+  border-color:#f0d18a;color:#142b43;
+  box-shadow:0 8px 0 #98702b,0 19px 32px #b58b3c55,0 0 22px #e4c16a66;
+}
+#planes .sum .btn:hover:before{transform:translateX(130%) skewX(-20deg)}
+#planes .sum .btn:active{transform:translateY(-2px) scale(1.015);box-shadow:0 3px 0 #98702b,0 8px 16px #b58b3c44}
+@media(prefers-reduced-motion:reduce){#planes .sum .btn{transition:none}}
 
-      .nav-links-right {
-          display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important;
-          align-items: center !important; gap: 14px !important; font-size: 0.82rem;
-          letter-spacing: 1px; text-transform: uppercase;
-      }
-      .nav-links-right a {
-          color: #cbd5e1;
-          text-decoration: none;
-          font-weight: 700;
-          position: relative;
-          text-shadow: 0 1px 4px rgba(0,0,0,0.5);
-      }
-      .nav-links-right a:hover {
-          color: var(--gold-bright) !important;
-          text-shadow: 0 0 8px rgba(251, 240, 219, 0.6), 0 0 15px rgba(223, 197, 159, 0.3) !important;
-      }
-      .cta-header-btn {
-          border: 1px solid var(--gold-bronzite) !important;
-          padding: 8px 16px !important;
-          border-radius: 4px;
-          color: var(--gold-bronzite) !important;
-          font-weight: 800 !important;
-          background: rgba(223, 197, 159, 0.03) !important;
-          letter-spacing: 0.5px !important;
-          white-space: nowrap !important;
-      }
-      .cta-header-btn:hover {
-          background: linear-gradient(135deg, var(--gold-bronzite) 0%, #b3976f 100%) !important;
-          color: var(--dark-obsidian) !important;
-          box-shadow: 0 0 20px rgba(223, 197, 159, 0.4);
-          text-shadow: none !important;
-      }
-      /* --- HERO CON ENFOQUE EN CAPTACIÓN DE LEADS Y CIERRE INMEDIATO --- */
-      .luxury-hero {
-          position: relative !important; padding: 230px 0 160px 0 !important;
-          background: radial-gradient(circle, transparent 20%, rgba(4, 6, 8, 0.96) 88%),
-                      linear-gradient(-45deg, #040608, #131920, #090c0f, #1e2631) !important;
-          background-size: 100% 100%, 400% 400% !important;
-          animation: nieblaDigital 12s ease infinite !important;
-          text-align: center !important;
-          border-bottom: 1px solid rgba(223, 197, 159, 0.2) !important;
-          overflow: hidden;
-      }
-      /* Destello de fondo áurico central regulado */
-      .luxury-hero::before {
-          content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-          width: 700px; height: 700px;
-          background: radial-gradient(circle, rgba(223, 197, 159, 0.08) 0%, transparent 65%) !important;
-          pointer-events: none; z-index: 2;
-      }
-
-      /* --- TITULACIÓN MAESTRA FIRME, SIN PARPADEO DE LUZ --- */
-      .hero-headline {
-          font-family: 'Cinzel', serif; font-size: 4.8rem; font-weight: 900;
-          line-height: 1.25; letter-spacing: 0.5px; margin-bottom: 35px;
-          color: var(--text-pure-white);
-          text-shadow: 0 2px 12px rgba(251, 240, 219, 0.4), 0 4px 15px rgba(0,0,0,0.95) !important;
-          position: relative; z-index: 3;
-      }
-
-      /* --- SUBTÍTULO SUPERIOR FIRME, LEGIBLE Y SEPARADO CON MARCO MATE --- */
-      .hero-headline span {
-          display: block; font-size: 1.7rem; font-family: 'Inter', sans-serif;
-          color: var(--gold-bronzite); text-transform: uppercase; letter-spacing: 10px;
-          margin-bottom: 25px; font-weight: 800;
-          text-shadow: 0 2px 10px rgba(223, 197, 159, 0.35), 0 4px 10px rgba(0,0,0,0.9) !important;
-      }
-      .hero-descriptor {
-          font-size: 1.4rem;
-          max-width: 850px;
-          margin: 0 auto 60px auto;
-          color: #f8fafc !important; /* Blanco premium de alta fidelidad, nítido y limpio */
-          font-weight: 500;          /* Subido ligeramente para que tenga más cuerpo y presencia */
-          position: relative;
-          z-index: 3;
-          text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95); /* Capa de penumbra protectora anti-estrellas */
-      }
-      .premium-btn-group {
-          display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;
-          position: relative; z-index: 3;
-      }
-      /* --- PARCHE DE BOTONERAS INTEGRADAS ALTO IMPACTO TRANSPARENCICA (NATIVO e-WEB) --- */
-      .btn-luxury-solid, .btn-luxury-outline {
-          display: inline-flex !important;
-          align-items: center !important;
-          padding: 20px 42px !important;
-          border-radius: 4px !important;
-          font-weight: 800 !important;
-          text-decoration: none !important;
-          font-size: 0.95rem !important;
-          letter-spacing: 1.5px !important;
-          text-transform: uppercase !important;
-          backdrop-filter: blur(10px) !important;
-          -webkit-backdrop-filter: blur(10px) !important;
-          transition: var(--transition-premium) !important;
-          text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8) !important;
-      }
-
-      /* BOTÓN 1: PROYECTOS WEB (PLATEADO CRISTALINO - PRIORIDAD 1) */
-      .btn-luxury-outline {
-          background: rgba(241, 245, 219, 0.04) !important;
-          color: #ffffff !important;
-          border: 1px solid rgba(255, 255, 255, 0.5) !important;
-          box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05), inset 0 0 12px rgba(255, 255, 255, 0.05) !important;
-      }
-      .btn-luxury-outline:hover {
-          transform: translateY(-5px) !important;
-          border-color: #ffffff !important;
-          background: rgba(255, 255, 255, 0.12) !important;
-          box-shadow: 0 15px 40px rgba(255, 255, 255, 0.25), inset 0 0 20px rgba(255, 255, 255, 0.1) !important;
-          color: #ffffff !important;
-      }
-
-      /* BOTÓN 2: CONSULTA WHATSAPP (VERDE ESMERILADO TRANSPARENTE - BAJO PERFIL) */
-      .btn-luxury-solid {
-          background: rgba(37, 211, 102, 0.06) !important;
-          color: #e2e8f0 !important;
-          border: 1px solid rgba(37, 211, 102, 0.35) !important;
-          box-shadow: 0 4px 20px rgba(37, 211, 102, 0.03), inset 0 0 12px rgba(37, 211, 102, 0.02) !important;
-      }
-      .btn-luxury-solid:hover {
-          transform: translateY(-5px) !important;
-          background: rgba(37, 211, 102, 0.15) !important;
-          border-color: rgba(37, 211, 102, 0.7) !important;
-          color: #ffffff !important;
-          box-shadow: 0 15px 40px rgba(37, 211, 102, 0.25), inset 0 0 20px rgba(37, 211, 102, 0.05) !important;
-      }
-      /* --- SECCIÓN DOBLE CARRUSEL INTERACTIVO --- */
-      .tech-showcase { padding: 120px 0; }
-      .carousel-wrapper { width: 100% !important; max-width: 1200px; margin-left: auto !important; margin-right: auto !important; overflow: hidden; }
-
-      /* Usamos CSS Grid elástico para que en celulares se ordene automáticamente hacia abajo */
-      .carousel-track {
-          display: grid !important;
-          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
-          gap: 20px;
-          width: 100% !important;
-      }
-      .luxury-card {
-          background: rgba(15, 20, 28, 0.65) !important; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-          padding: 55px 45px; border-radius: 8px; border: 1px solid rgba(223, 197, 159, 0.12) !important;
-          box-shadow: var(--shadow-premium); height: 100% !important;
-          display: flex !important; flex-direction: column !important; justify-content: flex-start !important;
-      }
-      .luxury-card:hover { transform: translateY(-15px) scale(1.03); background: rgba(24, 32, 43, 0.85) !important; border-color: var(--gold-bronzite) !important; box-shadow: 0 35px 70px rgba(0, 0, 0, 0.85), 0 0 30px rgba(223, 197, 159, 0.25); }
-      .card-image-link { display: block !important; text-decoration: none !important; margin-bottom: 25px; }
-      .luxury-image-container { width: 100%; height: 450px; overflow: hidden; border-radius: 6px; background-color: #000000; border: 2px solid #d4af37; box-shadow: inset 0 0 15px #000000, 0 6px 20px rgba(0, 0, 0, 0.7); }
-      .luxury-image-container img { width: 100% !important; height: 100% !important; object-fit: contain !important; background-color: #000000; opacity: 0.9; display: block; }
-      .luxury-card:hover .luxury-image-container { border-color: #ffffff; box-shadow: 0 0 20px rgba(212, 175, 55, 0.5); }
-      .luxury-card:hover .luxury-image-container img { opacity: 1; transform: scale(1.02); }
-      .luxury-card h3 { font-family: 'Cinzel', serif; font-size: 1.6rem; margin-bottom: 20px; font-weight: 700; color: var(--gold-bright); text-shadow: 0 0 10px rgba(251, 240, 219, 0.3); }
-      .luxury-card p { color: var(--text-muted-silver); font-size: 1rem; }
-      /* --- FORMULARIO PRIVADO --- */
-      .private-vault-section { padding: 110px 0; }
-      .vault-frame { max-width: 650px; margin: 0 auto; background-color: rgba(17, 22, 27, 0.9); padding: 55px 50px; border-radius: 8px; border: 2px solid var(--gold-bronzite); animation: auraDorada 4s ease-in-out infinite; text-align: center; box-shadow: var(--shadow-premium); }
-      .vault-frame h3 { font-family: 'Cinzel', serif; font-size: 1.9rem; color: var(--gold-bright); margin-bottom: 15px; }
-      .luxury-form { display: flex !important; flex-direction: column !important; gap: 18px !important; width: 100% !important; }
-      .form-group { width: 100% !important; position: relative !important; }
-      .luxury-form input[type="text"], .luxury-form input[type="email"], .luxury-form input[type="tel"], .luxury-form select, .luxury-form textarea { width: 100% !important; padding: 14px 16px !important; background-color: #080808 !important; border: 1px solid rgba(212, 175, 55, 0.2) !important; border-radius: 4px !important; color: #ffffff !important; font-size: 0.95rem !important; transition: all 0.3s ease !important; }
-      .luxury-form input:focus, .luxury-form select:focus, .luxury-form textarea:focus { outline: none !important; border-color: #d4af37 !important; box-shadow: 0 0 8px rgba(212, 175, 55, 0.3) !important; background-color: #0d0d0d !important; }
-      .luxury-select { appearance: none !important; -webkit-appearance: none !important; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://w3.org' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23d4af37' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>") !important; background-repeat: no-repeat !important; background-position: right 16px center !important; cursor: pointer !important; }
-      .luxury-select option { background-color: #0b0b0b !important; color: #ffffff !important; }
-      .luxury-form textarea { resize: vertical !important; min-height: 100px !important; }
-      .btn-submit-luxury { width: 100% !important; padding: 15px !important; background: linear-gradient(135deg, #d4af37 0%, #aa842c 100%) !important; border: none !important; border-radius: 4px !important; color: #000000 !important; font-weight: 700; font-size: 0.95rem !important; letter-spacing: 1.5px !important; cursor: pointer !important; margin-top: 10px !important; }
-      .btn-submit-luxury:hover { background: linear-gradient(135deg, #ffffff 0%, #d4af37 100%) !important; box-shadow: 0 0 15px rgba(212, 175, 55, 0.5) !important; }
-      html { scroll-behavior: smooth !important; }
-
-      /* Regla universal para que la cabecera fija no tape tus títulos al clickear el menú */
-      section, div[id], footer {
-          scroll-margin-top: 90px !important;
-      }
-
-      @media (max-width: 900px) {
-          .nav-links-right a { font-size: 0.8rem !important; letter-spacing: 0.5px !important; }
-          .hero-headline { font-size: 3.5rem; }
-      }
-
-@media screen and (max-width: 768px) {
-    /* 1. Blindaje absoluto contra desbordes en el documento */
-    html, body {
-        overflow-x: hidden;
-        width: 100%;
-    }
-
-            /* 2. CABECERA RIGIDAMENTE FIJA: Bloqueada en el techo en formato micro-compacto */
-    header.premium-header {
-        position: fixed !important;
-        top: 0 !important;
-        left: 0 !important;
-        right: 0 !important;
-        width: auto !important;
-        padding: 5px 8px 4px 8px !important;   /* Reduce el relleno vertical al mínimo extremo */
-        z-index: 99999 !important;
-        background-color: #040608 !important;
-        border-bottom: 1px solid rgba(223, 197, 159, 0.1) !important;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8) !important;
-    }
-
-    /* 3. FILA SUPERIOR EXCLUSIVA: LOGO A LA IZQUIERDA Y BOTÓN LANDING A LA DERECHA */
-    .nav-wrapper {
-        display: flex !important;
-        flex-direction: row !important;        /* Cambia de columna a fila horizontal */
-        flex-wrap: wrap !important;            /* Permite que los otros links bajen al segundo piso */
-        align-items: center !important;
-        justify-content: space-between !important; /* Empuja el logo a la izquierda y el botón a la derecha */
-        width: 100% !important;
-        gap: 6px !important;
-        padding: 0 !important;
-    }
-
-    /* Forzar al logotipo e-WEB a recostarse a la extrema izquierda */
-    .nav-wrapper h4, 
-    header.premium-header h4,
-    header h4 {
-        margin: 0 !important;
-        padding: 0 !important;
-        text-align: left !important;
-        font-size: 1.20rem !important;         /* Micro-ajustado para calzar en la fila de arriba */
-        display: inline-block !important;
-    }
-
-    /* 4. SEGUNDO PISO SLIM: Hilera compacta para los demás enlaces secundarios */
-    .nav-links-right, #nav-menu {
-        display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: wrap !important;
-        justify-content: center !important;    /* Centra los links de abajo */
-        gap: 4px 6px !important;               /* Súper pegados para no robar espacio vertical */
-        margin: 0 !important;
-        padding: 0 !important;
-        width: 100% !important;
-    }
-
-    /* EXTRACCIÓN Y ESTILO PREMIUM PARA EL BOTÓN "¿QUÉ ES LANDING PAGE?" ARRIBA */
-.nav-wrapper a[href*="landing"],
-.nav-wrapper a[href*="que-es"],
-.nav-links-right a:last-of-type,
-#nav-menu a:last-of-type {
-    position: absolute !important;
-    top: 10px !important;                 /* Eje de alineación vertical perfecto con e-WEB */
-    right: 12px !important;               /* Margen de cortesía con el borde físico de la pantalla */
-    font-size: 0.60rem !important;        /* Tipografía micro-nítida de alta tecnología */
-    font-weight: 800 !important;
-    color: #ffffff !important;            /* Texto blanco de alta definición */
-    text-transform: uppercase !important;
-    white-space: nowrap !important;
-    letter-spacing: 0.5px !important;
-    padding: 5px 10px !important;         /* Proporción estilizada y rectangular fina */
-    
-    /* INGENIERÍA DE CRISTAL (GLASSMORPHISM PREMIUM) */
-    background: linear-gradient(135deg, rgba(223, 175, 159, 0.08) 0%, rgba(223, 197, 159, 0.15) 100%) !important;
-    backdrop-filter: blur(10px) !important;
-    -webkit-backdrop-filter: blur(10px) !important;
-    
-    /* MICRO-BORDE DE PRIVILEGIO Y ESQUINAS SUAVIZADAS CÁPSULA */
-    border: 1px solid rgba(223, 175, 159, 0.55) !important; /* Hilo Rose Gold súper nítido */
-    border-radius: 20px !important;       /* Formato óvalo premium que destruye el look cuadrado */
-    
-    /* RELIEVE TRIDIMENSIONAL FLOATING */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5), inset 0 1px 2px rgba(255, 255, 255, 0.1) !important;
-    z-index: 100000 !important;
-    transition: all 0.3s ease !important;
+/* Cotización: experiencia visual premium */
+#cotizar{background:radial-gradient(ellipse at 12% 8%,#fff8e8 0,transparent 34%),radial-gradient(ellipse at 90% 92%,#dce8fb 0,transparent 38%),linear-gradient(145deg,#f8fbff 0%,#eaf0f8 55%,#f5f8fc 100%);position:relative;overflow:hidden;isolation:isolate}
+#cotizar:before,#cotizar:after{content:"";position:absolute;pointer-events:none;z-index:-1;width:240px;height:240px;border:1px solid #c69b4b55;transform:rotate(45deg);border-radius:34px}
+#cotizar:before{top:-145px;left:-105px;box-shadow:0 0 0 14px #d6b36a0d,0 0 0 30px #d6b36a0a}
+#cotizar:after{bottom:-155px;right:-105px;box-shadow:0 0 0 14px #d6b36a0d,0 0 0 30px #d6b36a0a}
+#cotizar .wrap{position:relative}
+#cotizar h2{text-align:center;margin:0 auto;color:#0a2540;text-shadow:0 1px 0 #fff}
+#cotizar h2:after{content:"";display:block;width:76px;height:3px;margin:18px auto 0;border-radius:9px;background:linear-gradient(90deg,#9b742b,#f1d58b,#b88a36);box-shadow:0 2px 7px #b88a3633}
+#cotizar .lead{text-align:center;margin:14px auto 42px;max-width:680px}
+#cotizar .f{margin-inline:auto;max-width:760px;position:relative;background:linear-gradient(145deg,#fff 0%,#fcfdff 58%,#f5f8fc 100%);border:1px solid #d8c18a;border-radius:22px;padding:clamp(22px,4vw,42px);box-shadow:0 3px 0 #b58b3c,0 8px 0 #e6d5ad,0 28px 65px #0a254025,0 45px 90px #0a254012,inset 0 1px 0 #fff;gap:18px;transform:perspective(1200px) rotateX(.4deg)}
+#cotizar .f:before{content:"";position:absolute;inset:9px;border:1px solid #d7b66d66;border-radius:15px;pointer-events:none}
+#cotizar .f .fl:first-of-type:before{content:"";position:absolute;top:18px;left:18px;width:26px;height:26px;border-top:2px solid #c39a4b;border-left:2px solid #c39a4b;border-radius:7px 0 0 0;pointer-events:none}
+#cotizar .f:after{content:"";position:absolute;top:0;left:32px;right:32px;height:3px;border-radius:0 0 8px 8px;background:linear-gradient(90deg,transparent,#b68a37,#f4dda0,#b68a37,transparent)}
+#cotizar .f input:not([type=hidden]):not([type=checkbox]),#cotizar .f select,#cotizar .f textarea{border:1px solid #d8e2ef;background:#fbfdff;border-radius:11px;padding:14px 16px;transition:border-color .2s,box-shadow .2s,background .2s}
+#cotizar .f input:focus,#cotizar .f select:focus,#cotizar .f textarea:focus{background:#fff;border-color:#0b5cff;box-shadow:0 0 0 4px #0b5cff14;outline:none}
+#cotizar .f .fs{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:#0b5cff;margin:8px 0 0}
+#cotizar .f .fl{gap:8px}
+#cotizar .f textarea{min-height:130px;resize:vertical}
+#cotizar .f button[type=submit]{width:100%;padding:15px 24px;border-radius:11px;font-size:1.02rem;box-shadow:0 10px 24px #0b5cff2b}
+#cotizar .f button[type=submit]{
+  position:relative;isolation:isolate;overflow:hidden;
+  transform:translate3d(0,0,0) scale(1);
+  transform-origin:center center;
+  will-change:transform,box-shadow;
+  transition:transform .42s cubic-bezier(.2,.85,.25,1.25),background .3s,box-shadow .42s,border-color .3s,color .3s;
+  color:#fff;box-shadow:0 5px 0 #0847c4,0 10px 22px #0b5cff25;
+}
+#cotizar .f button[type=submit]:before{
+  content:"";position:absolute;inset:-2px;z-index:-1;pointer-events:none;
+  transform:translateX(-150%) skewX(-22deg);
+  background:linear-gradient(90deg,transparent 20%,#fff8dcaa 48%,#fff 52%,transparent 78%);
+  transition:transform .75s cubic-bezier(.2,.65,.25,1);
+}
+#cotizar .f button[type=submit]:hover{
+  transform:translate3d(0,-6px,0) scale(1.04);
+  background:linear-gradient(115deg,#fff2c9 0%,#f0d58c 18%,#d7ad58 38%,#bd8734 55%,#f4dca0 76%,#d6a84f 100%);
+  border-color:#f4dca0;color:#102b45;
+  /* Elevación hacia afuera + halo rosa únicamente alrededor */
+  box-shadow:0 4px 0 #713747,0 14px 0 #a66b52,
+    0 24px 34px #8f594755,
+    0 0 0 2px #9b654f,
+    0 0 14px 4px #9b654f66,
+    0 0 30px 8px #c39a5b44;
+}
+#cotizar .f button[type=submit]:hover:before{transform:translateX(150%) skewX(-22deg)}
+#cotizar .f button[type=submit]:focus-visible{
+  outline:2px solid #9b654f;outline-offset:5px;
+  box-shadow:0 0 0 2px #9b654f,0 0 16px 5px #9b654f66;
 }
 
-        /* Ocultar únicamente el enlace duplicado que se queda abajo en la lista */
-    .nav-links-right li:last-child,
-    #nav-menu li:last-child {
-        display: none !important;
-    }
+#cotizar .f button[type=submit]:active{
+  transform:translate3d(0,-3px,0) scale(1.012);
+  box-shadow:0 2px 0 #713747,0 7px 15px #8f594744;
+}
+@media(prefers-reduced-motion:reduce){#cotizar .f button[type=submit]{transition:none}}
 
-    /* 5. Fuentes compactas de alta legibilidad */
-    .nav-links-right a, #nav-menu a {
-    font-size: 0.65rem !important;        /* Mantiene el tamaño micro-nitidez responsivo */
-    font-weight: 800 !important;          /* Letra con más cuerpo y presencia */
-    color: #ffffff !important;            /* Blanco puro para máximo contraste y legibilidad */
-    text-transform: uppercase !important;
-    white-space: nowrap !important;
-    letter-spacing: 0.5px !important;
-    padding: 4px 6px !important;          /* Encasillado interno sutil sin agrandar la barra */
-    background: rgba(223, 197, 159, 0.05) !important; /* Fondo bronce cristalino de fondo */
-    border: 1px solid rgba(223, 197, 159, 0.2) !important; /* Borde ultra-fino de contención */
-    border-radius: 3px !important;        /* Esquinas suavizadas de lujo */
-    box-shadow: 0 2px 8px rgba(0,0,0,0.5) !important; /* Sombra para despegarlo del fondo */
-    text-shadow: 0 1px 2px rgba(0,0,0,0.8) !important;
+#cotizar .f .note{text-align:center;line-height:1.5}
+#cotizar .f .msg{text-align:center;margin-top:4px}
+@media(max-width:640px){#cotizar .f{padding:22px 18px;border-radius:16px}}
+
+/* Cotización centrada */
+#cotizar h2,#cotizar .lead{text-align:center;margin-left:auto;margin-right:auto}
+#cotizar .lead{margin-bottom:48px}
+#cotizar .f{margin-inline:auto}
+
+
+
+/* Planes: línea Gold/Bordó premium coherente con cotización y FAQ */
+#planes .plans{gap:26px;padding-top:22px;perspective:1400px}
+#planes .plan{
+  isolation:isolate;overflow:visible;
+  background:linear-gradient(145deg,#fff 0%,#fdfefe 60%,#f6f8fc 100%);
+  border:1px solid #d8c18a;border-radius:17px;
+  box-shadow:0 3px 0 #c4a05a,0 12px 28px #0a254012,inset 0 1px 0 #fff;
+  transform:translate3d(0,0,0);
+  transition:transform .38s cubic-bezier(.2,.8,.2,1),box-shadow .38s,border-color .3s,background .3s;
+}
+#planes .plan:before{
+  content:"";position:absolute;inset:8px;border:1px solid #d7b66d66;border-radius:11px;
+  pointer-events:none;z-index:-1
+}
+#planes .plan:after{
+  content:"";position:absolute;top:0;left:28px;right:28px;height:3px;border-radius:0 0 8px 8px;
+  background:linear-gradient(90deg,transparent,#b68a37,#f4dda0,#b68a37,transparent);
+  opacity:.8;pointer-events:none
+}
+#planes .plan:hover{
+  transform:translate3d(0,-8px,0) scale(1.012);
+  border-color:#bd9850;
+  box-shadow:0 4px 0 #a66b52,0 14px 0 #d2a66a,0 28px 42px #8f594722,0 0 0 1px #c39a5b33;
+}
+#planes .plan.sel{
+  border:2px solid #c39a5b;
+  background:linear-gradient(145deg,#fffdf7 0%,#fff 52%,#f8f4eb 100%);
+  box-shadow:0 4px 0 #a66b52,0 14px 0 #d2a66a,0 28px 48px #8f594733,inset 0 1px 0 #fff;
+}
+#planes .plan.sel:after{height:4px;opacity:1}
+#planes .plan .tag{
+  background:linear-gradient(125deg,#713747,#a66b52,#c39a5b);
+  border:1px solid #d9b875;color:#fff;
+  box-shadow:0 3px 0 #59303b,0 8px 18px #8f594733
+}
+#planes .plan .lvl{color:#9b742b}
+#planes .plan li::before{color:#a66b52}
+#planes .plan .pick{
+  position:relative;overflow:hidden;
+  border:1px solid #d8c18a;border-radius:10px;
+  background:linear-gradient(145deg,#fff,#fbf8f0);
+  box-shadow:0 2px 0 #c4a05a;
+  transition:transform .35s cubic-bezier(.2,.8,.2,1),background .3s,box-shadow .35s,border-color .3s,color .3s
+}
+#planes .plan .pick:hover{
+  transform:translateY(-5px) scale(1.025);
+  background:linear-gradient(115deg,#fff0bd,#e8c46e,#c9953d,#f2d99b,#d9ad58);
+  border-color:#e8c46e;color:#142b43;
+  box-shadow:0 4px 0 #a66b52,0 12px 24px #8f594733,0 0 0 2px #a66b5233
+}
+#planes .plan.sel .pick{
+  background:linear-gradient(115deg,#713747,#a66b52,#c39a5b);
+  border-color:#a66b52;color:#fff;
+  box-shadow:0 3px 0 #59303b,0 10px 22px #8f594733
+}
+#planes .plan.sel .pick:hover{
+  transform:translateY(-5px) scale(1.025);
+  background:linear-gradient(115deg,#fff0bd,#e8c46e,#c9953d,#f2d99b,#d9ad58);
+  color:#142b43;box-shadow:0 4px 0 #a66b52,0 12px 24px #8f594733
+}
+@media(prefers-reduced-motion:reduce){#planes .plan,#planes .plan .pick{transition:none}}
+
+
+
+/* Cristal sutil / ondas luminosas detrás de Nivel 1, 2 y 3 */
+#planes .plan .lvl{
+  position:relative;display:inline-flex;align-items:center;
+  padding:7px 12px;margin:-7px 0 5px -12px;
+  border-radius:10px;isolation:isolate;
+  background:linear-gradient(115deg,#ffffffb8,#f7edda88 42%,#e9f2ff88 72%,#ffffffa8);
+  border:1px solid #d8c18a55;
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  box-shadow:inset 0 1px 0 #ffffffd9,0 4px 12px #b58b3c0d;
+  overflow:hidden;
+}
+#planes .plan .lvl:before{
+  content:"";position:absolute;inset:-45% -25%;z-index:-1;pointer-events:none;
+  background:linear-gradient(112deg,transparent 25%,#ffffffd9 39%,#e9d7ad88 46%,#ffffffb8 53%,transparent 68%);
+  transform:translateX(-70%) rotate(-8deg);
+  animation:planGlassWave 7.5s ease-in-out infinite;
+}
+#planes .plan .lvl:after{
+  content:"";position:absolute;left:10%;right:10%;bottom:0;height:1px;pointer-events:none;
+  background:linear-gradient(90deg,transparent,#c39a5b99,#fff,#c39a5b99,transparent);
+}
+#planes .plan:hover .lvl{
+  border-color:#c39a5b88;
+  box-shadow:inset 0 1px 0 #fff,0 5px 16px #c39a5b22;
+}
+#planes .plan.sel .lvl{
+  background:linear-gradient(115deg,#fffdf7cc,#f3e5c6aa 45%,#eaf1ffbb 80%,#ffffffcc);
+  border-color:#c39a5b77;
+}
+@keyframes planGlassWave{
+  0%,18%{transform:translateX(-75%) rotate(-8deg);opacity:.35}
+  48%{opacity:.8}
+  78%,100%{transform:translateX(75%) rotate(-8deg);opacity:.25}
+}
+@media(prefers-reduced-motion:reduce){#planes .plan .lvl:before{animation:none}}
+
+/* Badge Más popular: delante y flotante */
+#planes .plan{position:relative;z-index:1}
+#planes .plan.sel{z-index:5}
+#planes .plan .tag{
+  position:absolute;top:-14px;left:30px;z-index:30;
+  transform:translateZ(0);
+  isolation:isolate;
+}
+#planes .plan.sel:before,#planes .plan.sel:after{z-index:0}
+#planes .plan.sel .tag{z-index:50;box-shadow:0 4px 0 #59303b,0 10px 20px #8f594755}
+
+/* FAQ con identidad Gold/Bordó premium */
+#faq{background:radial-gradient(ellipse at 8% 0%,#fff8e8 0,transparent 32%),linear-gradient(145deg,#f8fbff 0%,#edf2f8 58%,#f7f9fc 100%);position:relative;isolation:isolate}
+#faq .faq{max-width:920px}
+#faq h2{color:#0a2540;text-shadow:0 1px 0 #fff}
+#faq h2:after{content:"";display:block;width:76px;height:3px;margin:18px 0 0;border-radius:9px;background:linear-gradient(90deg,#9b742b,#f1d58b,#b88a36);box-shadow:0 2px 7px #b88a3633}
+#faq .lead{margin:14px 0 42px}
+#faq .faq details{
+  position:relative;isolation:isolate;overflow:hidden;
+  background:linear-gradient(145deg,#fff 0%,#fcfdff 62%,#f6f8fc 100%);
+  border:1px solid #d8c18a;border-radius:13px;
+  padding:0;margin:0 0 15px;
+  box-shadow:0 3px 0 #c4a05a,0 9px 22px #0a254010,inset 0 1px 0 #fff;
+  transition:transform .32s cubic-bezier(.2,.8,.2,1),box-shadow .32s,border-color .28s;
+}
+#faq .faq details:before{
+  content:"";position:absolute;left:0;top:0;bottom:0;width:4px;
+  background:linear-gradient(180deg,#fff0bd,#d6ad58,#a66b52,#713747);
+  opacity:.9;z-index:-1
+}
+#faq .faq details:hover{
+  transform:translateY(-4px);
+  border-color:#c9a45b;
+  box-shadow:0 4px 0 #b58b3c,0 14px 28px #b58b3c22,0 0 0 1px #d6ad5833;
+}
+#faq .faq summary{
+  list-style:none;display:flex;align-items:center;gap:13px;
+  padding:20px 24px 20px 27px;
+  color:#0a2540;font-weight:700;cursor:pointer;
+  transition:color .25s,background .25s;
+}
+#faq .faq summary::-webkit-details-marker{display:none}
+#faq .faq summary:before{
+  content:"＋";flex:0 0 26px;width:26px;height:26px;display:grid;place-items:center;
+  border-radius:7px;color:#8d622b;font-size:18px;font-weight:700;
+  background:linear-gradient(145deg,#fff4d5,#e7c879);
+  box-shadow:0 2px 0 #b58b3c;border:1px solid #d8b96c;
+  transition:transform .3s,background .3s,color .3s;
+}
+#faq .faq details[open] summary{
+  color:#713747;background:linear-gradient(90deg,#fff8e8,#fff 65%,#fffaf4);
+  border-bottom:1px solid #e8d8b4
+}
+#faq .faq details[open] summary:before{
+  content:"−";transform:rotate(180deg);
+  color:#fff;background:linear-gradient(145deg,#a66b52,#713747);
+  border-color:#a66b52;box-shadow:0 2px 0 #59303b
+}
+#faq .faq details p{
+  margin:0;padding:18px 28px 23px 66px;
+  color:#52677e;line-height:1.75;
+  background:linear-gradient(180deg,#fffdf9,#fff);
+}
+#faq .faq details[open]{box-shadow:0 4px 0 #b58b3c,0 15px 32px #0a254018,inset 0 1px 0 #fff}
+@media(max-width:640px){
+ #faq .faq summary{padding:17px 16px;gap:10px}
+ #faq .faq details p{padding:15px 18px 20px 53px}
 }
 
-/* Destello brillante al presionar el dedo sobre cualquier opción */
-.nav-links-right a:active, #nav-menu a:active,
-.nav-links-right a:hover, #nav-menu a:hover {
-    color: var(--gold-bright) !important; /* Oro de máximo brillo */
-    background: rgba(223, 197, 159, 0.15) !important;
-    border-color: var(--gold-bronzite) !important;
-    box-shadow: 0 0 10px rgba(223, 197, 159, 0.3) !important;
+/* Formulario y FAQ */
+.f{max-width:720px;width:100%;margin-inline:auto;display:grid;gap:16px}
+.fl{display:grid;gap:6px;font-size:.9rem;font-weight:600;color:var(--ink)}
+.fl select{font-weight:400}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:640px){.two{grid-template-columns:1fr}}
+.fs{font-size:.8rem;font-weight:700;color:var(--a);margin-top:6px}
+input,select,textarea{font:inherit;padding:13px 14px;border:1px solid #cbd5e1;border-radius:8px;width:100%;background:#fff;color:var(--txt)}
+input:focus,select:focus,textarea:focus{outline:3px solid #0b5cff33;border-color:var(--a)}
+.msg{font-weight:600;min-height:1.6em;color:var(--ink)}
+details{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:16px 20px;margin-bottom:12px}
+summary{cursor:pointer;font-weight:600;color:var(--ink)}details p{margin-top:10px;color:var(--mut)}
+.faq{max-width:820px}
+footer{background:var(--ink);color:#9fb0c8;text-align:center;padding:40px 5vw;font-size:.9rem}
+.flogo{color:#fff;font-weight:800;font-size:1.2rem}.flogo span{color:#8fb4ff}
+.flinks{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin:14px 0 18px}
+.flinks a{text-decoration:none}.flinks a:hover{color:#fff}
+.wa{position:fixed;right:20px;bottom:20px;z-index:30;display:flex;align-items:center;gap:8px;padding:12px 18px;border-radius:99px;background:#25d366;color:var(--ink);font-weight:700;text-decoration:none;box-shadow:0 10px 30px #0004}
+@media(max-width:480px){.wa span{display:none}.wa{padding:14px}}
+
+/* Navegación corporativa dorada */
+.nav{border-bottom:1px solid #e3d3ab;box-shadow:0 8px 26px #0a254012}
+.nav:after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;pointer-events:none;background:linear-gradient(90deg,transparent 0%,#b68a37 18%,#f4dda0 48%,#d9ad58 62%,#c18a6e 80%,transparent 100%);opacity:.95}
+.logo,.flogo{background:linear-gradient(110deg,#8a6420 0%,#c9953d 22%,#f6e2a6 44%,#d9ad58 62%,#c9956f 84%,#a66b52 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+.logo{font-size:1.45rem;filter:drop-shadow(0 1px 0 #fff8)}
+.flogo{display:inline-block}
+.nav ul{gap:4px}
+.nav ul a{position:relative;display:block;padding:10px 16px;color:#0a2540;font-weight:600;letter-spacing:.015em;transition:color .3s,text-shadow .3s}
+.nav ul a:after{content:"";position:absolute;left:16px;right:16px;bottom:2px;height:2px;border-radius:3px;background:linear-gradient(90deg,#9b742b,#f4dda0,#c18a6e);box-shadow:0 0 10px #e4c16a99;transform:scaleX(0);transform-origin:center;transition:transform .38s cubic-bezier(.2,.8,.2,1)}
+.nav ul a:hover,.nav ul a:focus-visible{color:#713747;text-shadow:0 0 16px #e4c16a66;outline:none}
+.nav ul a:hover:after,.nav ul a:focus-visible:after{transform:scaleX(1)}
+.nav .btn{position:relative;overflow:hidden;isolation:isolate;color:#142b43;font-weight:700;border:1px solid #e8c46e;background:linear-gradient(115deg,#fff0bd 0%,#e8c46e 26%,#c9953d 54%,#f2d99b 78%,#d9ad58 100%);box-shadow:0 3px 0 #a66b52,0 8px 18px #b58b3c33,inset 0 1px 0 #ffffff88;transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s,filter .3s}
+.nav .btn:before{content:"";position:absolute;inset:0;z-index:-1;transform:translateX(-140%) skewX(-20deg);background:linear-gradient(90deg,transparent,#ffffffaa,transparent);transition:transform .7s ease}
+.nav .btn:hover,.nav .btn:focus-visible{transform:translateY(-3px);color:#142b43;border-color:#f4dda0;background:linear-gradient(115deg,#fff0bd 0%,#e8c46e 26%,#c9953d 54%,#f2d99b 78%,#d9ad58 100%);box-shadow:0 5px 0 #a66b52,0 14px 26px #b58b3c55,0 0 18px #e4c16a77;filter:saturate(1.08)}
+.nav .btn:hover:before,.nav .btn:focus-visible:before{transform:translateX(140%) skewX(-20deg)}
+.menu{border-color:#d8c18a;color:#713747;box-shadow:0 2px 0 #c4a05a}
+@media(max-width:760px){.nav ul a{padding:8px 0}.nav ul a:after{left:0;right:auto;width:44px;transform-origin:left}}
+
+/* Tarjetas grafito: servicios, proceso e incluido en todos los planes */
+.card{position:relative;isolation:isolate;background:linear-gradient(150deg,#2d353f 0%,#222931 55%,#1a2027 100%);border:1px solid #4a5461;border-radius:17px;padding:30px 26px 28px;box-shadow:0 3px 0 #10151b,0 14px 30px #0a254026,inset 0 1px 0 #ffffff1a;transform:translate3d(0,0,0);transition:transform .38s cubic-bezier(.2,.8,.2,1),box-shadow .38s,border-color .3s}
+.card:before{content:"";position:absolute;inset:8px;border:1px solid #8d99a833;border-radius:11px;pointer-events:none;z-index:-1}
+.card:after{content:"";position:absolute;top:0;left:26px;right:26px;height:3px;border-radius:0 0 8px 8px;background:linear-gradient(90deg,transparent,#7d8998,#e8edf4,#7d8998,transparent);opacity:.9;pointer-events:none}
+.card:hover{transform:translate3d(0,-8px,0) scale(1.012);border-color:#8d99a8;box-shadow:0 4px 0 #0b0f14,0 14px 0 #39424d,0 28px 42px #0a254040,0 0 0 1px #8d99a855}
+.card h3{color:#f1f4f8;font-size:1.12rem;transition:color .3s}
+.card:hover h3{color:#fff}
+.card p{color:#aeb8c5}
+.card .n{color:#9fb0c8;letter-spacing:.08em;text-transform:uppercase;font-size:.78rem}
+@media(max-width:640px){
+  #servicios .grid,#proceso .grid,.inc .grid{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 5vw;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;padding:16px 5vw 24px;margin:-16px -5vw -8px;scrollbar-width:none}
+  #servicios .grid::-webkit-scrollbar,#proceso .grid::-webkit-scrollbar,.inc .grid::-webkit-scrollbar{display:none}
+  #servicios .grid>.card,#proceso .grid>.card,.inc .grid>.card{flex:0 0 80%;scroll-snap-align:start}
 }
+@media(prefers-reduced-motion:reduce){.card,.nav ul a,.nav ul a:after,.nav .btn,.nav .btn:before{transition:none}}
 
-    /* 6. COLCHÓN DE CONTROL: Espacio necesario para que el menú de dos pisos no tape el inicio */
-    #inicio, .hero-section, section:first-of-type {
-        padding-top: 140px !important; /* Mueve el título principal abajo de la barra fija */
-        margin-top: 0 !important;
-    }
+/* Títulos, hero y pie */
+h2{text-wrap:balance}
+#servicios h2{max-width:900px}
+.cta .btn{position:relative;isolation:isolate;overflow:hidden;font-weight:700;letter-spacing:.02em;background:linear-gradient(145deg,#ffffff24,#ffffff0a);border:1px solid #e8c46e77;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:inset 0 1px 0 #ffffff40,0 4px 0 #ffffff14,0 12px 26px #00000033;transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s,border-color .3s,background .3s}
+.cta .btn span{background:linear-gradient(110deg,#f6e2a6 0%,#e8c46e 38%,#f0c3a8 72%,#e3a98d 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.cta .btn.ghost{border-color:#d9e0ea77}
+.cta .btn.ghost span{background:linear-gradient(110deg,#fff 0%,#dfe6ef 36%,#aeb9c8 64%,#f4f7fb 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.cta .btn:before{content:"";position:absolute;inset:0;z-index:-1;transform:translateX(-140%) skewX(-20deg);background:linear-gradient(90deg,transparent,#ffffff44,transparent);transition:transform .7s ease}
+.cta .btn:hover,.cta .btn:focus-visible{transform:translateY(-6px) scale(1.03);border-color:#f4dda0;background:linear-gradient(145deg,#ffffff33,#ffffff12);box-shadow:inset 0 1px 0 #ffffff55,0 6px 0 #ffffff12,0 18px 32px #00000040,0 0 22px #e4c16a55}
+.cta .btn.ghost:hover,.cta .btn.ghost:focus-visible{border-color:#fff;box-shadow:inset 0 1px 0 #ffffff55,0 6px 0 #ffffff12,0 18px 32px #00000040,0 0 22px #dfe6ef66}
+.cta .btn:hover:before,.cta .btn:focus-visible:before{transform:translateX(140%) skewX(-20deg)}
+.checks{gap:10px;margin-top:34px;font-size:.88rem;font-weight:600}
+.checks span{position:relative;display:inline-flex;align-items:center;padding:8px 14px;border-radius:99px;color:#f3e4bf;letter-spacing:.01em;background:linear-gradient(145deg,#ffffff1a,#ffffff08);border:1px solid #e8c46e40;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:inset 0 1px 0 #ffffff26,0 6px 16px #00000026;text-shadow:0 0 12px #e4c16a44;transition:transform .3s cubic-bezier(.2,.8,.2,1),border-color .3s,box-shadow .3s,background .3s}
+.checks span::before{content:"✓";margin-right:8px;font-weight:800;background:linear-gradient(135deg,#f6e2a6,#e3a98d);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.checks span:hover{transform:translateY(-4px);border-color:#f4dda0aa;background:linear-gradient(145deg,#ffffff26,#ffffff0d);box-shadow:inset 0 1px 0 #ffffff40,0 12px 22px #00000033,0 0 16px #e4c16a44}
+.checks span.hl{color:#fff4cf;border-color:#f4dda0aa;background:linear-gradient(115deg,#e8c46e33,#c9956f26 60%,#ffffff12);box-shadow:inset 0 1px 0 #ffffff44,0 0 18px #e4c16a44,0 6px 16px #00000026}
+footer{position:relative}
+footer:before{content:"";position:absolute;left:0;right:0;top:0;height:2px;pointer-events:none;background:linear-gradient(90deg,transparent 0%,#b68a37 18%,#f4dda0 48%,#d9ad58 62%,#c18a6e 80%,transparent 100%);box-shadow:0 0 14px #e4c16a66}
+@media(prefers-reduced-motion:reduce){.cta .btn,.cta .btn:before,.checks span{transition:none}}
 
-    /* 7. Empuje del texto secundario para perfecta visibilidad */
-    .hero-tagline, #inicio span:first-of-type, #inicio p:first-of-type {
-        margin-top: 20px !important;
-        display: block !important;
-    }
+/* Política de privacidad (sección compacta) */
+#privacidad{padding:64px 0}
+#privacidad h2{font-size:clamp(1.4rem,2.6vw,1.8rem);text-shadow:0 1px 0 #fff}
+#privacidad h2:after{content:"";display:block;width:76px;height:3px;margin:16px 0 0;border-radius:9px;background:linear-gradient(90deg,#9b742b,#f1d58b,#b88a36);box-shadow:0 2px 7px #b88a3633}
+#privacidad .lead{margin:12px 0 26px;font-size:.98rem;max-width:780px}
+.pv{display:grid;grid-template-columns:repeat(auto-fit,minmax(205px,1fr));gap:14px}
+.pv>div{position:relative;background:linear-gradient(145deg,#fff 0%,#fbf8f0 100%);border:1px solid #e3d3ab;border-radius:12px;padding:16px 16px 18px;box-shadow:0 2px 0 #c4a05a,0 8px 18px #0a254010;font-size:.82rem;line-height:1.55;color:#52677e;min-width:0;transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s}
+.pv>div:before{content:"";position:absolute;top:0;left:16px;right:16px;height:2px;border-radius:0 0 6px 6px;background:linear-gradient(90deg,transparent,#b68a37,#f4dda0,#b68a37,transparent)}
+.pv>div:hover{transform:translateY(-3px);box-shadow:0 3px 0 #b58b3c,0 12px 24px #b58b3c22}
+.pv h3{display:flex;align-items:center;gap:8px;font-size:.92rem;line-height:1.3;color:#713747;margin-bottom:8px}
+.pv h3 i{flex:0 0 22px;width:22px;height:22px;display:grid;place-items:center;border-radius:6px;font-style:normal;font-size:.75rem;font-weight:700;color:#8d622b;background:linear-gradient(145deg,#fff4d5,#e7c879);border:1px solid #d8b96c;box-shadow:0 2px 0 #b58b3c}
+.pv a{color:#713747;font-weight:600;text-decoration:underline;font-size:.78rem;overflow-wrap:anywhere}
+#cotizar .f .chk a{color:#713747;font-weight:600;text-decoration:underline}
+@media(prefers-reduced-motion:reduce){.pv>div{transition:none}}
 
-    /* 8. CARRUSEL TÁCTIL MÓVIL: Tarjetas de lado deslizables con el dedo (Evita página infinita) */
-    .carousel-track {
-        display: flex !important;
-        flex-direction: row !important; /* Mantener horizontal */
-        flex-wrap: nowrap !important;   /* Prohibido saltar hacia abajo */
-        overflow-x: auto !important;    /* Activa deslizamiento lateral con el dedo */
-        overflow-y: hidden !important;
-        scroll-snap-type: x mandatory !important; /* Efecto magnético fluido */
-        gap: 20px !important;
-        padding: 30px 10px 15px 10px !important;
-        width: 100% !important;
-        scrollbar-width: none !important; /* Oculta barra en Firefox */
-    }
+/* IVA y aceptación Ley 21.719 */
+#planes .plan .iva{color:#9b742b;font-size:.8rem;font-weight:600;letter-spacing:.02em;margin-top:2px}
+#cotizar .f .chk{display:flex;gap:12px;align-items:flex-start;font-size:.88rem;font-weight:500;line-height:1.5;color:#33475b;background:linear-gradient(145deg,#fffdf7,#f8f4eb);border:1px solid #e3d3ab;border-radius:11px;padding:14px 16px;cursor:pointer;transition:border-color .2s,box-shadow .2s}
+#cotizar .f .chk input{flex:0 0 20px;width:20px;height:20px;padding:0;margin:2px 0 0;accent-color:#a66b52;cursor:pointer}
+#cotizar .f .chk b{color:#713747}
+#cotizar .f .chk:focus-within{border-color:#c39a5b;box-shadow:0 0 0 4px #c39a5b22}
 
-    .carousel-track::-webkit-scrollbar {
-        display: none !important; /* Oculta barra en Chrome/Safari */
-    }
+/* Aparición suave al hacer scroll */
+.js .rv{opacity:0}
+.js .rv.in{opacity:1;animation:riseIn .95s cubic-bezier(.2,.8,.2,1) backwards;animation-delay:calc(var(--i,0)*90ms)}
+@keyframes riseIn{from{opacity:0;transform:translate3d(0,48px,0)}to{opacity:1;transform:translate3d(0,0,0)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .rv{opacity:1}}
+</style>
+</head>
+<body>
 
-    /* 9. ANCHOS DE TARJETA EN CARRUSEL: Deja ver un trozo de la siguiente tarjeta */
-    .luxury-card {
-        flex: 0 0 285px !important; /* Ancho perfecto para pantallas táctiles */
-        scroll-snap-align: center !important; /* Imán al deslizar */
-        max-width: 85vw !important;
-    }
+<nav class="nav">
+  <a class="logo" href="#inicio">e-<span>WEB</span></a>
+  <ul id="menu">
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#proceso">Proceso</a></li>
+    <li><a href="#planes">Planes</a></li>
+    <li><a href="#faq">Preguntas</a></li>
+  </ul>
+  <div class="nav-r">
+    <a class="btn" href="#cotizar">Cotizar</a>
+    <button class="menu" id="mb" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">Menú</button>
+  </div>
+</nav>
 
-    /* 10. Proporción del título principal de tu negocio */
-    h1, .luxury-main-title {
-        font-size: 1.7rem !important;
-        line-height: 1.3 !important;
-        max-width: 100% !important;
-        word-wrap: break-word !important;
-    }
-        /* 11. REPARACIÓN DE TARJETAS INSTRUCTIVAS: Desbloqueo de carrusel táctil en las 4 pequeñas */
-    .grid-soluciones-premium {
-        display: flex !important;       /* Rompe la grilla rígida de PC */
-        flex-direction: row !important; /* Mantiene las tarjetas una al lado de la otra */
-        flex-wrap: nowrap !important;   /* Prohibido que se amontonen abajo */
-        overflow-x: auto !important;    /* ACTIVA EL DESLIZAMIENTO CON EL DEDO */
-        overflow-y: hidden !important;
-        scroll-snap-type: x mandatory !important; /* Efecto magnético móvil */
-        gap: 15px !important;
-        padding: 15px 5px !important;
-        width: 100% !important;
-        scrollbar-width: none !important; /* Oculta la barra ploma en Firefox */
-    }
-
-    /* Ocultar barra de scroll en Chrome, Safari y Edge mobile */
-    .grid-soluciones-premium::-webkit-scrollbar {
-        display: none !important;
-    }
-
-    /* Ajuste micro-nítido para las 4 cards pequeñas instructivas */
-    .grid-soluciones-premium .tarjeta-solucion-premium {
-        flex: 0 0 265px !important; width: 265px !important; min-width: 265px !important;
-        max-width: 80vw !important;
-        height: auto !important;
-    }
-
-    /* Ocultar barra en Chrome y Safari móvil */
-    .arquitectura-track::-webkit-scrollbar,
-    [id*="arquitectura"] .carousel-track::-webkit-scrollbar {
-        display: none !important;
-    }
-
-    /* Ajuste de ancho micro-nitidez para las 4 cards instructivas en celular */
-    .arquitectura-track > div,
-    [id*="arquitectura"] .luxury-card,
-    section:nth-of-type(2) [class*="card"] {
-        flex: 0 0 260px !important; /* Ancho compacto ideal para las cards pequeñas */
-        scroll-snap-align: center !important;
-        max-width: 80vw !important;
-    }
-    /* 12. ILUMINACIÓN PREMIUM DE CUBÍCULOS Y CONTENEDORES EN CELULARES */
-    .luxury-card, 
-    .tarjeta-solucion-premium, 
-    .vault-frame,
-    [class*="card"] {
-        background-color: rgba(24, 32, 43, 0.88) !important; /* Gris pizarra de sombra con inyección de luz */
-        backdrop-filter: blur(10px) !important;
-        -webkit-backdrop-filter: blur(10px) !important;
-        border: 1px solid rgba(223, 197, 159, 0.4) !important; /* Enmarcado de bronce nítido visible */
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.9) !important;   /* Despega los cubículos del fondo */
-    }
-
-    /* 13. TONOS DE ALTA VISIBILIDAD PARA TEXTOS MÓVILES */
-    .luxury-card p, 
-    .tarjeta-solucion-premium span, 
-    .vault-frame p,
-    p {
-        color: #e2e8f0 !important; /* Pasa de gris oscuro a un plata brillante de alta lectura */
-        font-weight: 500 !important;
-        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9) !important;
-    }
-
-    .luxury-card h3, 
-    .tarjeta-solucion-premium strong,
-    h3 {
-        color: #fbf0db !important; /* Oro de máximo brillo para destacar títulos */
-        font-weight: 800 !important;
-        letter-spacing: 0.5px !important;
-        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9) !important;
-    }
-
-    /* Contraste mejorado para el fondo de los flyers dentro de las tarjetas */
-    .luxury-image-container {
-        border-color: rgba(223, 197, 159, 0.45) !important;
-        background-color: #020304 !important;
-    }
-
-    /* 14. ELIMINACIÓN DE BOTÓN DE CONTACTO EN CELULARES (FOCO EN FORMULARIO) */
-    .cta-header-btn, 
-    header nav a[href^="mailto:"],
-    #nav-menu a.cta-header-btn {
-        display: none !important; /* Desaparece por completo el botón de correo en celulares y tablets */
-    }
-
-    /* 15. EXPANSIÓN HORIZONTAL Y APERTURA DE SELECTORES EN LA BÓVEDA MÓVIL */
-.luxury-input, 
-.luxury-form-container input, 
-.luxury-form-container textarea, 
-.luxury-form-container select,
-select.luxury-select,
-[class*="input"],
-[class*="select"] {
-    padding: 16px 12px !important;       /* Relleno vertical y horizontal balanceado */
-    font-size: 0.85rem !important;       /* Letra compacta para que quepa la frase */
-    line-height: 1.4 !important;
-    color: #ffffff !important;
-    width: 100% !important;              /* Abre el campo horizontalmente al máximo */
-    max-width: 100% !important;
-    min-width: 100% !important;          /* Fuerza al rectángulo a estirarse a los bordes */
-    box-sizing: border-box !important;   /* Evita desbordes fuera de la pantalla */
-    display: block !important;
-}
-
-/* Forzar a que las opciones internas del menú desplegable se abran y sean legibles */
-select.luxury-select option,
-.luxury-form-container select option,
-[class*="select"] option {
-    background-color: #080c12 !important; /* Tu fondo obsidian oscuro */
-    color: #ffffff !important;            /* Letra blanca de alta visibilidad */
-    font-size: 0.40rem !important;        /* OPCIONES que el usuario elige (El menú desplegable)*/
-    white-space: normal !important;       /* Permite la soltura del texto */
-    word-wrap: break-word !important;
-}
-
-/* Rompe el bloqueo horizontal de las letras grises placeholders para crear renglones */
-.luxury-input::placeholder,
-[class*="input"]::placeholder {
-    color: #94a3b8 !important;           /* Gris plata de alto contraste */
-    font-size: 0.40rem !important;       /* INSTRUCCIONES grises de los campos vacíos (El Placeholder) */
-    white-space: normal !important;      /* OBLIGA A LA FRASE A SALTAR ABAJO SI NO CABE */
-    line-height: 1.4 !important;
-    word-wrap: break-word !important;
-    display: inline-block !important;
-    width: 100% !important;
-    opacity: 1 !important;
-}
-
-/* Espacio expandido específico para el área de descripción larga */
-textarea.luxury-input, 
-textarea[class*="input"] {
-    min-height: 140px !important;        
- }
-    /* 16. ENSANCHAMIENTO EXTREMO HORIZONTAL DE LA BÓVEDA */
-.luxury-form-container,
-.private-vault-section .container,
-.luxury-form {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 100% !important;
-    padding: 0 2px !important;    /* Reduce el margen lateral al mínimo para ganar espacio */
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    box-sizing: border-box !important;
-}
-
-/* Abrir los márgenes internos de la propia caja azul para dar más espacio a las letras */
-.vault-frame, 
-.luxury-form-box {
-    padding: 20px 9px !important; /* Relleno lateral mínimo de 10px para expandir el interior */
-    width: 100% !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
- }
-      /* 17. ENMARCADO DORADO PREMIUM PARA LAS 4 TARJETAS INSTRUCTIVAS PEQUEÑAS */
-    .grid-soluciones-premium .tarjeta-solucion-premium,
-    [id*="arquitectura"] .luxury-card,
-    section:nth-of-type(2) [class*="card"] {
-        border: 2px solid rgba(223, 197, 159, 0.50) !important; /* Contorno dorado/bronce nítido de alta visibilidad */
-        background-color: rgba(24, 32, 43, 0.80) !important;  /* Fondo gris pizarra traslúcido para dar volumen */
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8) !important;   /* Sombra elegante que las hace flotar */
-    }
-
-    /* Destello de luz al presionar o arrastrar la tarjeta con el dedo */
-    .grid-soluciones-premium .tarjeta-solucion-premium:active {
-        border-color: #ffffff !important; /* El contorno brilla en blanco puro al tacto */
-        box-shadow: 0 16px 30px rgba(223, 197, 159, 0.25) !important;
-    }
-           /* 18. CUBÍCULO VÍTREO FLOTANTE CON MICRO-BORDE DE ORO PARA LA DEFINICIÓN MAESTRA */
-    #que-es-landing .container,
-    .master-definition-box {
-        width: 100% !important;
-        max-width: 100% !important;
-        min-width: 100% !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        box-sizing: border-box !important;
-    }
-
-    /* CAPA DE CRISTAL FLOTANTE: Transparencia parcial con micro-borde de 1px oro pulido */
-    #que-es-landing .master-definition-box {
-        /* 1. Fondo Grafito con Transparencia Parcial Avanzada */
-        background: linear-gradient(135deg, rgba(20, 26, 34, 0.75) 0%, rgba(6, 9, 12, 0.85) 100%) !important;
-        
-        /* 2. Desenfoque Elástico de Vidrio (Glassmorphism Nativo) */
-        backdrop-filter: blur(15px) !important;
-        -webkit-backdrop-filter: blur(15px) !important;
-        
-        /* 3. El Micro-Borde de 1px en Oro Bronce Pulido */
-        border: 1px solid rgba(223, 197, 159, 0.55) !important; 
-        border-radius: 6px !important;                          /* Mantener esquinas suavizadas de lujo */
-        
-        /* 4. Apertura Extrema a los Costados y Colchón */
-        padding-left: 14px !important;  
-        padding-right: 14px !important;
-        padding-top: 35px !important;
-        padding-bottom: 35px !important;
-        box-sizing: border-box !important;
-        
-        /* 5. Sombra Tridimensional Profunda (Efecto Sobresaliente Flotante) */
-        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9), 0 0 20px rgba(223, 197, 159, 0.08) !important;
-        transform: translateY(-2px) !important;                 /* Despega la caja físicamente hacia el frente */
-    }
-
-    /* Encuadre tipográfico nítido para que el texto resalte sobre el cristal */
-    #que-es-landing .master-definition-box p {
-        width: 100% !important;
-        max-width: 100% !important;
-        text-align: justify !important; 
-        font-size: 0.92rem !important;  
-        line-height: 1.6 !important;
-        letter-spacing: 0px !important;
-        word-spacing: normal !important;
-        color: #e2e8f0 !important;      /* Tono plata brillante de máxima lectura */
-        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9) !important;
-        box-sizing: border-box !important;
-        padding: 0 !important;
-    }
-
-    /* Sincronización céntrica del encabezado de la definición */
-    #que-es-landing .master-definition-box h3 {
-        text-align: center !important;
-        font-size: 1.4rem !important;   
-        color: #ffffff !important;
-        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95) !important;
-        width: 100% !important;
-        margin-bottom: 15px !important;
-    }
-
-          /* 19. ENSANCHAMIENTO EXTREMO PARA EL RECTÁNGULO DE SISTEMAS & REDES (MANIFIESTO) */
-    #corporativo,
-    .corporate-extended-section,
-    #corporativo .container {
-        width: 100% !important;
-        max-width: 100% !important;
-        min-width: 100% !important;
-        padding-left: 2px !important;   /* Reduce el margen externo al mínimo para rozar el borde físico */
-        padding-right: 2px !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        box-sizing: border-box !important;
-    }
-
-    /* APERTURA DE BORDE A BORDE PARA LA CAJA DE CRISTAL DEL MANIFIESTO */
-    #corporativo .manifesto-box,
-    .corporate-extended-section .manifesto-box,
-    .manifesto-box {
-        width: 100% !important;
-        max-width: 100% !important;
-        min-width: 100% !important;
-        padding-left: 14px !important;  /* Sangría interna para que las letras no toquen el borde */
-        padding-right: 14px !important;
-        padding-top: 30px !important;
-        padding-bottom: 30px !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        border-radius: 4px !important;  
-        box-sizing: border-box !important;
-    }
-
-    /* Extensión y balance tipográfico para las definiciones internas */
-    #corporativo .manifesto-box p,
-    .manifesto-box p {
-        width: 100% !important;
-        max-width: 100% !important;
-        text-align: justify !important; 
-        font-size: 0.92rem !important;  /* Tamaño calibrado para pantallas móviles */
-        line-height: 1.6 !important;
-        letter-spacing: 0px !important;
-        word-spacing: normal !important;
-        box-sizing: border-box !important;
-    }
-          /* 20. ENSANCHAMIENTO EXTREMO HORIZONTAL DEL RECTÁNGULOS DE LANDING PAGE MÓVIL */
-    #landing-page,
-    .landing-section,
-    [id*="landing"],
-    section:nth-of-type(3),
-    section:nth-of-type(4) {
-        width: 100% !important;
-        max-width: 100% !important;
-        min-width: 100% !important;
-        padding-left: 4px !important;   /* Reduce el margen lateral externo al mínimo absoluto */
-        padding-right: 4px !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        box-sizing: border-box !important;
-    }
-
-    /* OBLIGA A LA CAJA INTERNA DE LA LANDING A ABRIRSE DE BORDE A BORDE */
-    #landing-page .container,
-    .landing-section .container,
-    .landing-content,
-    .landing-box,
-    .arquitectura-section + section > div,
-    [id*="landing"] > div {
-        width: 100% !important;
-        max-width: 100% !important;
-        min-width: 100% !important;
-        padding-left: 10px !important;  /* Colchón de cortesía para que la letra no toque el borde físico */
-        padding-right: 10px !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        box-sizing: border-box !important;
-    }
-
-    /* Estira los bloques de párrafos internos para que el texto ocupe todo el ancho ganado */
-    #landing-page p,
-    .landing-section p,
-    [id*="landing"] p,
-    .landing-content-box p {
-        width: 100% !important;
-        max-width: 100% !important;
-        box-sizing: border-box !important;
-        word-wrap: break-word !important;
-        padding: 0 !important;
-    }
-          /* 21. CUADRO VÍTREO ROSE GOLD PARA EL ESTUDIO DE VIABILIDAD EN LAS TARIFAS */
-    .pasarela-container p,
-    #pasarela-pagos p,
-    .luxury-form-container + p,
-    .plan-selection-container + p,
-    #plan-selector + p,
-    p.viabilidad-text,
-    p.estudio-gratuito {
-        /* 1. Efecto Vítreo de Lujo (Fondo Grafito Traslúcido Flotante) */
-        background: linear-gradient(135deg, rgba(36, 44, 56, 0.80) 0%, rgba(20, 26, 34, 0.90) 100%) !important;
-        backdrop-filter: blur(12px) !important;
-        -webkit-backdrop-filter: blur(12px) !important;
-        
-        /* 2. Enmarcado Perimetral en Dorado Rosa (Rose Gold) */
-        border: 1px solid rgba(223, 175, 159, 0.7) !important; /* Tono Rose Gold metalizado bien visible */
-        border-radius: 8px !important;                          /* Esquinas suavizadas premium */
-        
-        /* 3. Expansión Horizontal Máxima a las Esquinas */
-        width: 100% !important;
-        max-width: 100% !important;
-        min-width: 100% !important;
-        padding: 18px 12px !important;                          /* Colchón interno amplio para encuadrar la letra */
-        margin-top: 20px !important;
-        margin-bottom: 20px !important;
-        box-sizing: border-box !important;
-        display: block !important;
-        
-        /* 4. Cuadratura Tipográfica y Magnetismo al Centro */
-        text-align: center !important;
-        text-justify: none !important;
-        letter-spacing: 0.5px !important;
-        word-spacing: normal !important;
-        
-        /* 5. Efecto de Sombra Tridimensional */
-        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.95), 0 0 15px rgba(223, 175, 159, 0.15) !important;
-    }
-
-    /* Forzar el brillo del texto interno del bloque de viabilidad en las tarifas */
-    .pasarela-container p *, #pasarela-pagos p *, .pasarela-container p {
-        color: #fcf4e8 !important;        /* Blanco marfil nítido de alta gama */
-        font-weight: 800 !important;
-        text-transform: uppercase !important;
-        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9) !important;
-    }
-
-    /* 22. REORDENAMIENTO PREMIUM Y SIMETRÍA PARA EL PIE DE FIRMAS FINAL */
-    footer .container > div:last-of-type,
-    footer div[style*="border-top"] {
-        display: flex !important;
-        flex-direction: column !important; /* Rompe la hilera horizontal rígida de PC */
-        align-items: center !important;    /* Alineación geométrica al centro absoluto */
-        justify-content: center !important;
-        gap: 12px !important;              /* Espacio de aire elegante entre las dos firmas */
-        text-align: center !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        padding-top: 20px !important;
-        padding-bottom: 10px !important;
-        box-sizing: border-box !important;
-    }
-
-    /* Ajuste de nitidez y soltura para los párrafos de los créditos */
-    footer .container > div:last-of-type p,
-    footer div[style*="border-top"] p {
-        font-size: 0.74rem !important;     /* Letra micro-nítida idéntica al formulario */
-        line-height: 1.4 !important;
-        color: rgba(255, 255, 255, 0.45) !important; /* Tono atenuado elegante de alta gama */
-        margin: 0 !important;
-        padding: 0 !important;
-        width: 100% !important;
-        display: block !important;
-    }
-
-    /* Resalte metálico de alta visibilidad para los enlaces de los dominios */
-    footer .container > div:last-of-type p a,
-    footer div[style*="border-top"] p a {
-        color: var(--gold-bronzite, #dfc59f) !important;
-        text-decoration: underline !important;
-        font-weight: 700 !important;
-    }
-
-       /* 23. ENCASILLADO MÁXIMO HORIZONTAL Y ULTRA-COMPACTO DEL PIE DE PÁGINA (FRANJA SLIM) */
-    footer.footer-luxury-premium,
-    footer,
-    .footer-luxury-premium,
-    footer .container {
-        background-color: #0b0f17 !important; 
-        border-top: 1px solid rgba(223, 197, 159, 0.3) !important; 
-        border-bottom: 1px solid rgba(223, 197, 159, 0.15) !important;
-        border-left: none !important;    
-        border-right: none !important;
-        border-radius: 0px !important;    
-        
-        /* Achatado absoluto de colchón de aire */
-        padding-top: 6px !important;      
-        padding-bottom: 6px !important;   
-        padding-left: 8px !important;
-        padding-right: 8px !important;
-        margin: 10px 0 0 0 !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        min-width: 100% !important;
-        box-sizing: border-box !important;
-        display: block !important;
-    }
-
-    /* 🚨 FUERZA EL MAGNETISMO AL CENTRO ABSOLUTO DE TODO EL CONTENIDO INTERNO 🚨 */
-    footer .container > div:first-of-type,
-    footer .container > div,
-    footer div,
-    .footer-luxury-premium div {
-        display: flex !important;
-        flex-direction: column !important; 
-        align-items: center !important;    /* Centra los bloques horizontalmente */
-        justify-content: center !important;
-        text-align: center !important;     /* Centra todas las líneas de letras de inmediato */
-        gap: 1px !important;               /* Elimina espacios vacíos intermedios */
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 0 auto !important;
-        padding: 0 !important;
-        box-sizing: border-box !important;
-        flex: none !important;             /* Anula las columnas elásticas de PC */
-    }
-
-    /* Compactación milimétrica para los h4 y títulos internos */
-    footer h4, .footer-luxury-premium h4 {
-        font-size: 1.05rem !important;    
-        text-align: center !important;
-        margin-top: 0 !important;
-        margin-bottom: 2px !important;     
-        width: 100% !important;
-    }
-
-    /* Compactación y alineación central para el párrafo descriptivo largo */
-    footer p, .footer-luxury-premium p, footer .container p {
-        margin-top: 0 !important;
-        margin-bottom: 2px !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
-        font-size: 0.76rem !important;    
-        line-height: 1.35 !important;
-        color: #94a3b8 !important;
-        text-align: center !important;     /* Sella el centrado del texto largo descriptivo */
-        width: 100% !important;
-        max-width: 100% !important;
-        display: block !important;
-    }
-
-    /* Unificar hileras de enlaces horizontales y centradas */
-    footer ul, .footer-luxury-premium ul {
-        display: flex !important;
-        flex-direction: row !important;       
-        justify-content: center !important;   
-        align-items: center !important;
-        gap: 14px !important;                 
-        padding: 0 !important;
-        margin-top: 2px !important;          
-        margin-bottom: 2px !important;       
-        list-style: none !important;
-        width: 100% !important;
-    }
-    
-    footer ul li { margin: 0 !important; padding: 0 !important; display: inline-block !important; }
-
-    /* COMPRESIÓN DE LA FRANJA DE CRÉDITOS FINAL EN LA BASE DEL RECTÁNGULO */
-    footer .container > div:last-of-type,
-    footer div[style*="border-top"] {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        justify-content: center !important;
-        gap: 1px !important;               
-        border-top: 1px solid rgba(223, 197, 159, 0.15) !important; 
-        padding-top: 6px !important;      
-        margin-top: 4px !important;       
-        width: 100% !important;
-        box-sizing: border-box !important;
-        text-align: center !important;
-    }
-
-    /* Fuentes micro-esbeltas finales */
-    footer span, footer a, footer div[style*="border-top"] p {
-        font-size: 0.74rem !important;     
-        line-height: 1.3 !important;
-        text-align: center !important;
-        display: block !important;
-        width: 100% !important;
-    }
-
-   /* 24. TÍTULO DE CABEZA IMPERANTE, MASIVO Y CON ANIMACIÓN ESPACIAL FLUIDA */
-h1.hero-headline,
-.luxury-hero h1,
-.luxury-hero .hero-headline,
-#inicio .hero-headline {
-    background: none !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
-    border: none !important;
-    border-radius: 0px !important;
-    box-shadow: none !important;
-    transform: none !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 100% !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    margin-top: 15px !important;       
-    margin-bottom: 22px !important;
-    padding-left: 6px !important;       
-    padding-right: 6px !important;
-    box-sizing: border-box !important;
-    display: block !important;
-    text-align: center !important;
-    word-wrap: break-word !important;
-
-    font-size: 2.15rem !important;    
-    font-weight: 900 !important;      
-    line-height: 1.25 !important;     
-    color: #ffffff !important;        
-    letter-spacing: 0.5px !important; 
-
-    text-shadow: 
-        0 4px 15px rgba(0, 0, 0, 1.0),   
-        0 2px 5px rgba(0, 0, 0, 0.98),   
-        0 0 25px rgba(223, 197, 159, 0.40), 
-        0 0 12px rgba(255, 255, 255, 0.25) !important; 
-
-    /* 🚨 MOTOR DE MOVIMIENTO: Activa la animación al cargar la página 🚨 */
-    animation: emergerDesdeArriba 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
-    opacity: 0; /* Arranca invisible para esperar el disparo de la animación */
-}
-
-/* FOTOGRAMAS CLAVE MAESTROS PARA LA FRICCION DE CAÍDA Y REVELADO */
-@keyframes emergerDesdeArriba {
-    0% {
-        opacity: 0;
-        transform: translateY(-30px); /* Arranca 30px desplazado hacia arriba en el cielo */
-        filter: blur(3px);             /* Micro-desenfoque inicial cinematográfico */
-    }
-    40% {
-        opacity: 0.5;
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);      /* Clava el título en su centro geométrico perfecto */
-        filter: blur(0);               /* Nitidez de trazo absoluta al 100% */
-    }
-}
-
-/* 25. CUBÍCULO VÍTREO ANCHO ANIMADO EN CASCADA SECUENCIAL CON RETRASO */
-.luxury-hero .hero-descriptor,
-.luxury-hero p:not(.hero-headline p),
-#inicio p.hero-descriptor,
-.hero-descriptor {
-    /* 1. Fondo de Cristal Traslúcido al 25% (Transparencia Mayor Elegante) */
-    background: linear-gradient(135deg, rgba(15, 22, 32, 0.25) 0%, rgba(6, 10, 16, 0.35) 100%) !important;
-    backdrop-filter: blur(14px) !important;
-    -webkit-backdrop-filter: blur(14px) !important;
-    
-    /* 2. Micro-Borde Perimetral de 1px (Rose Gold de Privilegio) */
-    border: 1px solid rgba(223, 175, 159, 0.40) !important;
-    border-radius: 6px !important;    /* Esquinas suavizadas finas */
-    
-    /* 3. FORMATO ANCHO INTELIGNETE (ROMPIMIENTO DEL EMBUDO ANGOSTO) */
-    width: calc(100% + 24px) !important;  /* Abre el rectángulo horizontalmente */
-    max-width: 96vw !important;           /* Límite seguro para un encaje recto impecable */
-    margin-left: -12px !important;        /* Centra el exceso absorbiendo el aire muerto */
-    margin-right: -12px !important;
-    
-    /* Ajustes de posición verticales para achatular el bloque */
-    margin-top: 25px !important;          
-    margin-bottom: 30px !important;
-    padding: 18px 14px !important;        /* Colchón interno holgado */
-    box-sizing: border-box !important;
-    display: block !important;
-    position: relative !important;
-    left: 0 !important;                   
-    transform: none !important;
-    
-    /* 4. TIPOGRAFÍA MEDIANA PREMIUM DE ALTA FIDELIDAD */
-    font-size: 0.94rem !important;        
-    font-weight: 500 !important;          
-    line-height: 1.62 !important;         /* Interlineado fluido */
-    color: #f1f5f9 !important;            /* Blanco plata brillante nítido */
-    text-align: justify !important;       /* Cuadra el escrito con rigor corporativo */
-    word-wrap: break-word !important;
-
-    /* 5. Elevación Tridimensional Sutil sobre la Red de Estrellas */
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.9), 0 0 15px rgba(223, 175, 159, 0.05) !important;
-
-    /* 🚨 MOTOR DE MOVIMIENTO EN CASCADA CON RETRASO DE 0.4 SEGUNDOS 🚨 */
-    animation: emergerDesdeAbajo 1.3s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
-    animation-delay: 0.4s !important;    /* Espera exacta a que el título termine de caer */
-    opacity: 0;                           /* Nace invisible esperando su turno coreográfico */
-}
-
-/* FOTOGRAMAS CLAVE MAESTROS PARA LA SUBIDA ELÁSTICA DE LA DESCRIPCIÓN */
-@keyframes emergerDesdeAbajo {
-    0% {
-        opacity: 0;
-        transform: translateY(35px);      /* Arranca desplazado 35px hacia abajo en el fondo */
-        filter: blur(4px);                 /* Micro-desenfoque inicial de cámara cinematográfica */
-    }
-    30% {
-        opacity: 0.3;
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(-1px);      /* Se clava flotando levemente en su relieve final */
-        filter: blur(0);                   /* Nitidez de lectura absoluta al 100% */
-    }
-}
-
-    /* 26. CANDADO DE MÁXIMA FUERZA DE CRISTAL PARA EL BOTÓN SUPERIOR (CÁPSULA) */
-    .nav-wrapper a[href*="landing"],
-    .nav-wrapper a[href*="que-es"],
-    header .nav-wrapper a,
-    #nav-menu a[href*="landing"] {
-        border-radius: 24px !important;       /* Fuerza las esquinas curvas circulares de inmediato */
-        background: linear-gradient(135deg, rgba(223, 175, 159, 0.08) 0%, rgba(223, 197, 159, 0.15) 100%) !important;
-        backdrop-filter: blur(10px) !important;
-        -webkit-backdrop-filter: blur(10px) !important;
-        border: 1px solid rgba(223, 175, 159, 0.6) !important; /* Resalta el micro-borde Rose Gold */
-        padding: 5px 12px !important;         /* Proporción elástica perfecta de píldora */
-        top: 9px !important;                  /* Centrado milimétrico en el eje de e-WEB */
-        right: 10px !important;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6) !important;
-    }
-}
-
-    </style>
-  </head>
-  <body>
-    <!-- CANVAS FIJO MAESTRO DE FONDO (300 PUNTOS BAJO EL TÍTULO ACTIVADOS NATIVOS) -->
-    <div class="hero-canvas-wrapper">
-      <canvas id="constellationCanvas"></canvas>
+<header class="hero" id="inicio">
+  <div class="wrap hero-in">
+    <div>
+      <span class="kicker">Agencia de desarrollo web en Santiago, Chile</span>
+      <h1>Sitios web profesionales que convierten visitas en clientes</h1>
+      <p>Diseñamos y desarrollamos páginas web rápidas, seguras y listas para crecer junto a tu negocio. Elige un plan y te enviamos tu cotización.</p>
+      <div class="cta">
+        <a class="btn" href="#planes"><span>Ver planes</span></a>
+        <a class="btn ghost" href="#cotizar"><span>Pedir cotización</span></a>
+      </div>
+      <div class="checks"><span>HTTPS seguro</span><span>Protección anti-DDoS</span><span class="hl">DMARC · SPF · DKIM</span><span>Antispam y antiphishing</span><span>Verificación en 2 pasos</span><span>Correo corporativo</span><span>Responsive</span><span>Alta velocidad</span></div>
     </div>
+    <div class="mock" aria-hidden="true">
+      <div class="dots"><i></i><i></i><i></i></div>
+      <div class="sk big"></div><div class="sk" style="width:80%"></div><div class="sk" style="width:60%"></div><div class="sk btn2"></div>
+    </div>
+  </div>
+</header>
 
-    <!-- STICKY HEADER CORPORATIVO INTERACTIVO CON ENLACES EXPANSIVOS -->
-    <header class="premium-header">
-      <div class="container nav-wrapper">
-        <a href="#" class="brand-luxury-title">e-<span>WEB</span></a>
+<main>
+<section id="servicios">
+  <div class="wrap">
+    <h2 class="reveal">Todo lo que tu negocio necesita en&nbsp;la&nbsp;web</h2>
+    <p class="lead reveal">Desde una página simple hasta una tienda completa, con diseño a medida.</p>
+    <div class="grid reveal">
+      <div class="card"><h3>Landing pages</h3><p>Una página enfocada en un objetivo: que tus visitas te contacten o compren.</p></div>
+      <div class="card"><h3>Sitios corporativos</h3><p>Presencia profesional para tu empresa, con varias secciones y formulario.</p></div>
+      <div class="card"><h3>Tiendas online</h3><p>Catálogo, carrito y pagos para vender las 24 horas del día.</p></div>
+      <div class="card"><h3>Mantención y SEO</h3><p>Actualizaciones, velocidad y posicionamiento para seguir creciendo.</p></div>
+    </div>
+  </div>
+</section>
 
-        <nav class="nav-links-right" id="nav-menu">
-          <a href="#ingenieria">Catálogo</a>
-          <a href="#quienes-somos">Nosotros</a>
-          <a href="#boveda">Formulario WEB</a>
-          <a href="#pasarela-pagos">Pagar Servicio</a>
-          <a href="#corporativo">Saber Mas</a>
-          <a href="#que-es-landing">¿Que es Landing Page?</a>
-          <a
-            href="mailto:contacto@economicaweb.cl?subject=Solicitud%20de%20Credenciales%20y%20Estudio%20de%20Viabilidad%20-%20e-WEB&body=Estimados%20ingenieros%20de%20e-WEB%2C%0A%0ASolicito%20formalmente%20el%20inicio%20de%20un%20estudio%20de%20viabilidad%20técnica%20para%20la%20infraestructura%20digital%20de%20nuestra%20organización.%0A%0AQuedo%20atento%20a%20la%20apertura%20de%20nuestras%20credenciales.%0A%0AAtentamente%2C%0A%5BInserte%20Nombre%20y%20Firma%20Corporativa%5D"
-            class="cta-header-btn"
-          >
-            ✉️ CONTACTAR
-          </a>
-        </nav>
-      </div>
-    </header>
-    <!-- HERO PRINCIPAL CON REVELACIÓN DE MOVIMIENTOS ORBITALES E ILUMINACIÓN MAESTRA FIRME -->
-    <section class="luxury-hero">
-      <!-- LIENZO DUPLICADO PROYECTADO DELANTE DEL ENTORNO AZUL -->
-      <div class="header-canvas-container">
-        <canvas id="headerConstellationCanvas"></canvas>
-      </div>
+<section class="alt" id="proceso">
+  <div class="wrap">
+    <h2 class="reveal">Así trabajamos</h2>
+    <p class="lead reveal">Un proceso simple, sin vueltas y con entregas claras.</p>
+    <div class="grid reveal">
+      <div class="card"><div class="n">Paso 1</div><h3>Conversamos</h3><p>Entendemos tu negocio, tu público y lo que quieres lograr.</p></div>
+      <div class="card"><div class="n">Paso 2</div><h3>Diseñamos</h3><p>Te mostramos una propuesta visual para que la apruebes.</p></div>
+      <div class="card"><div class="n">Paso 3</div><h3>Desarrollamos</h3><p>Programamos tu sitio rápido, seguro y adaptado a celulares.</p></div>
+      <div class="card"><div class="n">Paso 4</div><h3>Publicamos</h3><p>Lo ponemos en línea y te acompañamos en los primeros pasos.</p></div>
+    </div>
+  </div>
+</section>
 
-      <div class="container">
-        <h1 class="hero-headline">
-          <span
-            >INGENIERÍA EN VENTAS DIGITALES<br /><small
-              style="font-size: 0.95rem; letter-spacing: 4px; color: #dfc59f; display: block; margin-top: 8px;"
-              >Captación de Leads</small
-            ></span
-          >
-          Landing Pages de Alto Rendimiento<br />Diseñadas para capturar
-          Clientes Potenciales
-        </h1>
-        <p class="hero-descriptor">
-          Eliminamos las distracciones y los menús complejos para mantener a sus
-          visitantes enfocados en una sola meta: Su Negocio. Para captación de
-          Leads, contacto comercial, creamos páginas de aterrizaje [Landing
-          Page] autónomas alineadas exactamente con su publicidad, transformando
-          visitas anónimas en prospectos reales y clientes potenciales a un solo
-          clic. Inicie relaciones de confianza con ofertas personalizadas a
-          través de una infraestructura web de alta conversión.
-        </p>
-
-        <!-- INCISO: BOTONERA DE CONVERSIÓN PREMIUM (TRANSPARENCIAS DE ALTA FIDELIDAD) -->
-        <div class="premium-btn-group">
-          <a href="#boveda" class="btn-luxury-outline"
-            >Contactar / Proyectos Web 📂</a
->
-          <a
-            href="https://wa.me/56922133902?text=Hola%21%20Me%20interesa%20cotizar%20un%20proyecto%20web%20con%20ustedes.%20%C2%BFMe%20podr%C3%ADan%20dar%20m%C3%A1s%20informaci%C3%B3n%3F"
-            target="_blank"
-            class="btn-luxury-solid">
-            CONSULTA EXPRÉS POR WHATSAPP 📱💬</a
-        </div>
-      </div>
-    </section>
-
-    <!-- SECCIÓN INTERMEDIA: TÍTULO ANCLA DE ALTA INGENIERÍA -->
-    <section
-      id="ingenieria"
-      class="services-intro-section"
-      style="padding-top: 60px; padding-bottom: 20px;"
-    >
-      <div class="container" style="text-align: center;">
-        <span
-          class="gold-badge"
-          style="color: #d4af37; font-size: 0.85rem; letter-spacing: 3px; font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 12px;"
-        >
-          Ecosistema de Soluciones
-        </span>
-        <h2
-          class="section-main-title"
-          style="color: #ffffff; font-size: 2.6rem; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 18px; text-transform: uppercase;"
-        >
-          Explore Nuestras
-          <span style="color: #d4af37;">Divisiones Tecnológicas</span>
-        </h2>
-        <p
-          style="color: #a0a0a0; max-width: 650px; margin: 0 auto; font-size: 1.05rem; line-height: 1.6;"
-        >
-          Deslice para interactuar con los flyers instructivos y carpetas
-          técnicas de nuestra ingeniería de privilegio.
-        </p>
-      </div>
-    </section>
-    <!-- PRIMER CARRUSEL: DIVISIONES TÉCNICAS -->
-    <div
-      class="carousel-wrapper"
-      style="margin-bottom: 40px; padding-top: 40px; border-top: 1px solid var(--gold-bronzite) !important;"
-    >
-      <div class="carousel-track">
-        <div
-          class="luxury-card"
-          style="border-top: 4px solid var(--gold-bronzite) !important;"
-        >
-          <a
-            href="documentos/tu-documentacion-1.jpg"
-            target="_blank"
-            class="card-image-link"
-          >
-            <div class="luxury-image-container">
-              <img src="imagenes/tu-imagen-1.png" alt="Páginas Web Premium" />
-            </div>
-          </a>
-          <h3>Páginas Web Premium</h3>
-          <p>
-            Diseño arquitectónico a medida con código nativo ultra veloz.
-            Interfaces sofisticadas, transiciones fluidas y optimización SEO
-            avanzada para marcas que exigen distinción absoluta.
-          </p>
-          <!-- BOTÓN COMPLEMENTARIO DEBAJO DEL TEXTO -->
-          <a href="documentos/ficha-paginas-premium.pdf" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; margin-top: 15px; padding: 10px 18px; background: rgba(223, 197, 159, 0.05); border: 1px dashed #dfc59f; border-radius: 4px; color: #dfc59f; font-family: 'Inter', sans-serif; font-weight: 600; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; width: 100%;">
-             📄 Ver Ficha Técnica Completa
-          </a>
-        </div>
-        <div
-          class="luxury-card"
-          style="border-top: 4px solid var(--gold-bronzite) !important;"
-        >
-          <a
-            href="documentos/tu-documentacion-2.jpg"
-            target="_blank"
-            class="card-image-link"
-          >
-            <div class="luxury-image-container">
-              <img
-                src="imagenes/tu-imagen-2.png"
-                alt="Servidores & Infraestructura"
-              />
-            </div>
-          </a>
-          <h3>Servidores &amp; Infraestructura</h3>
-          <p>
-            Alojamiento cloud de alto rendimiento con tolerancia cero a fallos.
-            Despliegue seguro en la nube, optimización de bases de datos y
-            copias de respaldo automatizadas.
-          </p>
-          <!-- BOTÓN COMPLEMENTARIO DEBAJO DEL TEXTO -->
-          <a href="documentos/ficha-servidores-infraestructura.pdf" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; margin-top: 15px; padding: 10px 18px; background: rgba(223, 197, 159, 0.05); border: 1px dashed #dfc59f; border-radius: 4px; color: #dfc59f; font-family: 'Inter', sans-serif; font-weight: 600; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; width: 100%;">
-             📄 Ver Ficha Técnica Completa
-          </a>
-        </div>
-        <div
-          class="luxury-card"
-          style="border-top: 4px solid var(--gold-bronzite) !important;"
-        >
-          <a
-            href="documentos/tu-documentacion-3.jpg"
-            target="_blank"
-            class="card-image-link"
-          >
-            <div class="luxury-image-container">
-              <img src="imagenes/tu-imagen-3.png" alt="Estrategia en Redes" />
-            </div>
-          </a>
-          <h3>Estrategia en Redes</h3>
-          <p>
-            Sincronización técnica de ecosistemas sociales para captación de
-            leads de alto valor. Integración de API de conversión, píxeles
-            analíticos y embudos automatizados.
-          </p>
-          <!-- BOTÓN COMPLEMENTARIO DEBAJO DEL TEXTO -->
-          <a href="documentos/ficha-estrategia-redes.pdf" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; margin-top: 15px; padding: 10px 18px; background: rgba(223, 197, 159, 0.05); border: 1px dashed #dfc59f; border-radius: 4px; color: #dfc59f; font-family: 'Inter', sans-serif; font-weight: 600; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; width: 100%;">
-             📄 Ver Ficha Técnica Completa
-          </a>
-        </div>
+<section id="planes">
+  <div class="wrap">
+    <h2 class="reveal">Elige tu plan</h2>
+    <p class="lead reveal">Selecciona el nivel que más se acerque a lo que necesitas.</p>
+    <div class="plans reveal" role="radiogroup" aria-label="Planes">
+      <!-- Edita aquí precios y características de cada plan -->
+      <label class="plan" data-price="$150.000">
+        <input type="radio" name="plan" value="Basic">
+        <p class="lvl">Nivel 1</p><h3>Basic</h3><p class="sub">Para empezar con presencia en la web</p>
+        <p class="price">$150.000 <small>CLP</small></p><p class="iva">IVA incluido</p>
+        <ul><li>Landing de 1 página</li><li>1 correo corporativo de 5 GB</li><li>Hasta 2 alias de correo</li><li>Formulario de contacto</li><li>Botón de WhatsApp</li><li>SEO básico</li><li>Entrega en ~5 días hábiles</li></ul>
+        <span class="pick"></span>
+      </label>
+      <label class="plan" data-price="$200.000">
+        <span class="tag">Más popular</span>
+        <input type="radio" name="plan" value="Medium">
+        <p class="lvl">Nivel 2</p><h3>Medium</h3><p class="sub">Para negocios que quieren crecer</p>
+        <p class="price">$200.000 <small>CLP</small></p><p class="iva">IVA incluido</p>
+        <ul><li>Hasta 5 páginas</li><li>Todo lo del plan Basic, más:</li><li>2 correos corporativos de 5 GB cada uno</li><li>Hasta 4 alias (2 por correo)</li><li>Animaciones y diseño a medida</li><li>Google Analytics</li><li>Optimización de velocidad</li><li>Entrega en ~10 días hábiles</li></ul>
+        <span class="pick"></span>
+      </label>
+      <label class="plan" data-price="$250.000">
+        <input type="radio" name="plan" value="High">
+        <p class="lvl">Nivel 3</p><h3>High</h3><p class="sub">Para vender y escalar en serio</p>
+        <p class="price">$250.000 <small>CLP</small></p><p class="iva">IVA incluido</p>
+        <ul><li>Hasta 10 páginas o tienda online</li><li>Todo lo del plan Medium, más:</li><li>4 correos corporativos de 5 GB cada uno</li><li>Hasta 6 alias (máximo 2 por correo)</li><li>Pagos y reservas integrados</li><li>SEO avanzado</li><li>Panel para editar contenido</li><li>3 meses de soporte</li></ul>
+        <span class="pick"></span>
+      </label>
+    </div>
+    <div class="inc reveal">
+      <h3>Incluido en todos los planes</h3>
+      <p class="lead">Estas características vienen con Basic, Medium y High, sin costo adicional.</p>
+      <div class="grid">
+        <div class="card"><h3>Conexión segura HTTPS</h3><p>Certificado de seguridad con candado en el navegador, conexión cifrada y protección frente a ataques y tráfico malicioso.</p></div>
+        <div class="card"><h3>Código 100% puro y responsive</h3><p>Desarrollado en HTML, CSS y JavaScript puros, sin plantillas pesadas. Se adapta a celular, tablet y computador.</p></div>
+        <div class="card"><h3>Abre en menos de 1 segundo</h3><p>Alta velocidad de carga para que tus clientes no se vayan antes de ver tu oferta.</p></div>
+        <div class="card"><h3>Visible en Google</h3><p>Indexación en buscadores y configuración de Google Search Console para que tu sitio sea encontrado.</p></div>
+        <div class="card"><h3>Correo corporativo seguro</h3><p>Casillas con tu propio dominio (contacto@tuempresa.cl), con filtros antispam y antiphishing, cifrado y verificación en dos pasos.</p></div>
+        <div class="card"><h3>Administración de correo incluida</h3><p>Nosotros nos encargamos de desbloquear cuentas, agregar o eliminar usuarios, restablecer contraseñas y configurar el pie de firma.</p></div>
       </div>
     </div>
-    <!-- SEGUNDO CARRUSEL: INFRAESTRUCTURA DE RESPALDO -->
-    <div
-      class="carousel-wrapper"
-      style="margin-bottom: 60px; padding-top: 40px; border-top: 1px solid var(--gold-bronzite) !important;"
-    >
-      <div class="carousel-track">
-        <div
-          class="luxury-card"
-          style="border-top: 4px solid var(--gold-bronzite) !important;"
-        >
-          <a
-            href="documentos/tu-documentacion-4.jpg"
-            target="_blank"
-            class="card-image-link"
-          >
-            <div class="luxury-image-container">
-              <img src="imagenes/tu-imagen-4.png" alt="Nube Redundante" />
-            </div>
-          </a>
-          <h3>Nube Redundante</h3>
-          <p>
-            Nodos de alojamiento distribuidos en centros de datos con
-            certificación Tier III. Conectividad paralela y tolerancia a
-            catástrofes para garantizar un uptime del 99.99%.
-          </p>
-          <!-- BOTÓN COMPLEMENTARIO DEBAJO DEL TEXTO -->
-          <a href="documentos/ficha-nube-redundante.pdf" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; margin-top: 15px; padding: 10px 18px; background: rgba(223, 197, 159, 0.05); border: 1px dashed #dfc59f; border-radius: 4px; color: #dfc59f; font-family: 'Inter', sans-serif; font-weight: 600; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; width: 100%;">
-             📄 Ver Ficha Técnica Completa
-          </a>
-        </div>
-        <div
-          class="luxury-card"
-          style="border-top: 4px solid var(--gold-bronzite) !important;"
-        >
-          <a
-            href="documentos/tu-documentacion-5.jpg"
-            target="_blank"
-            class="card-image-link"
-          >
-            <div class="luxury-image-container">
-              <img
-                src="imagenes/tu-imagen-5.png"
-                alt="Blindaje DDoS Avanzado"
-              />
-            </div>
-          </a>
-          <h3>Blindaje DDoS Avanzado</h3>
-          <p>
-            Mitigación de ataques volumétricos en tiempo real mediante hardware
-            dedicado. Monitoreo automatizado y firewalls de última generación
-            para resguardar su información corporativa.
-          </p>
-          <!-- BOTÓN COMPLEMENTARIO DEBAJO DEL TEXTO -->
-          <a href="documentos/ficha-blindaje-ddos.pdf" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; margin-top: 15px; padding: 10px 18px; background: rgba(223, 197, 159, 0.05); border: 1px dashed #dfc59f; border-radius: 4px; color: #dfc59f; font-family: 'Inter', sans-serif; font-weight: 600; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; width: 100%;">
-             📄 Ver Ficha Técnica Completa
-          </a>
-        </div>
-        <div
-          class="luxury-card"
-          style="border-top: 4px solid var(--gold-bronzite) !important;"
-        >
-          <a
-            href="documentos/tu-documentacion-6.jpg"
-            target="_blank"
-            class="card-image-link"
-          >
-            <div class="luxury-image-container">
-              <img src="imagenes/tu-imagen-6.png" alt="Copias Automatizadas" />
-            </div>
-          </a>
-          <h3>Copias Automatizadas</h3>
-          <p>
-            Sistemas de backup en caliente con almacenamiento encriptado fuera
-            de sitio. Recuperación inmediata ante desastres informáticos o
-            corrupción accidental de archivos.
-          </p>
-          <!-- BOTÓN COMPLEMENTARIO DEBAJO DEL TEXTO -->
-          <a href="documentos/ficha-copias-automatizadas.pdf" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; margin-top: 15px; padding: 10px 18px; background: rgba(223, 197, 159, 0.05); border: 1px dashed #dfc59f; border-radius: 4px; color: #dfc59f; font-family: 'Inter', sans-serif; font-weight: 600; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; width: 100%;">
-             📄 Ver Ficha Técnica Completa
-          </a>
-        </div>
+    <div class="sum reveal"><span id="sumTxt"></span><a class="btn" href="#cotizar">Cotizar este plan</a></div>
+    <p class="note">Valores en pesos chilenos, IVA incluido. Referenciales, sujetos a cotización final.</p>
+  </div>
+</section>
+
+<section class="alt" id="cotizar">
+  <div class="wrap">
+    <h2 class="reveal">Pide tu cotización</h2>
+    <p class="lead reveal">Cuéntanos qué tienes en mente. En pocos pasos prepararemos una propuesta clara para tu negocio, sin compromiso.</p>
+    <form class="f reveal" id="f" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="551beba8-acd8-4302-a343-a3fbc727c2fd">
+      <input type="hidden" name="subject" value="Nueva cotización desde e-WEB">
+      <input type="hidden" name="from_name" value="e-WEB">
+      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+      <input type="text" name="nombre" aria-label="Tu nombre" placeholder="Tu nombre" required autocomplete="name">
+      <input type="email" name="email" aria-label="Tu correo" placeholder="Tu correo" required autocomplete="email">
+      <input type="tel" name="telefono" aria-label="Teléfono o WhatsApp" placeholder="Teléfono o WhatsApp" autocomplete="tel">
+      <p class="fs">Tu proyecto</p>
+      <label class="fl">Plan elegido<select name="plan_elegido" id="planSel">
+        <option value="Basic">Plan Basic (Nivel 1) · $150.000 IVA incl.</option>
+        <option value="Medium">Plan Medium (Nivel 2) · $200.000 IVA incl.</option>
+        <option value="High">Plan High (Nivel 3) · $250.000 IVA incl.</option>
+      </select></label>
+      <div class="two">
+        <label class="fl">Tipo de proyecto
+          <select name="tipo_proyecto"><option value="">Selecciona una opción</option><option>Landing page</option><option>Sitio corporativo</option><option>Tienda online</option><option>Mantención y SEO</option></select>
+        </label>
+        <label class="fl">¿Qué quieres lograr con tu página?
+          <select name="objetivo"><option value="">Selecciona una opción</option><option>Que los clientes me contacten directo por WhatsApp</option><option>Que llenen un formulario para registrar sus datos (prospectos)</option><option>Que agenden una cita o llamada en mi calendario</option><option>Vender un producto o servicio directamente en la página</option></select>
+        </label>
       </div>
+      <label class="fl">Dominio y hosting
+        <select name="dominio_hosting"><option value="">Selecciona una opción</option><option>Ya tengo un dominio comprado</option><option>No tengo dominio, necesito comprar uno nuevo</option><option>Ya tengo dominio y hosting (alojamiento web)</option></select>
+      </label>
+      <div class="two">
+        <label class="fl">Material para tu página
+          <select name="material"><option value="">Selecciona una opción</option><option>Tengo el logotipo, las fotos y los textos listos</option><option>Tengo el logotipo, pero necesito ayuda con textos y fotos</option><option>No tengo nada, necesito ayuda con todo desde cero</option></select>
+        </label>
+        <label class="fl">Plazo deseado
+          <select name="plazo"><option value="">Selecciona una opción</option><option>Urgente (menos de 1 semana)</option><option>Plazo normal (2 a 3 semanas)</option><option>No tengo prisa (más de 1 mes)</option></select>
+        </label>
+      </div>
+      <textarea name="mensaje" rows="5" aria-label="Cuéntanos sobre tu proyecto" placeholder="Cuéntanos sobre tu proyecto" required></textarea>
+      <label class="chk"><input type="checkbox" name="aceptacion_ley_21719" value="Acepta tratamiento de datos (Ley N° 21.719)" required><span>Acepto el tratamiento de mis datos personales para recibir mi cotización, conforme a la <b>Ley&nbsp;N°&nbsp;21.719</b> sobre protección de datos personales. <a href="#privacidad">Ver política de privacidad</a>.</span></label>
+      <button class="btn" type="submit">Solicitar mi cotización&nbsp; →</button>
+      <p class="note" style="margin:0">Enviar este formulario no te obliga a ningún pago. Usaremos tus datos solo para responder tu cotización.</p>
+      <p class="msg" id="msg" role="status"></p>
+    </form>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap faq">
+    <h2 class="reveal">Preguntas frecuentes</h2>
+    <p class="lead reveal">Lo que más nos preguntan antes de empezar.</p>
+    <div class="reveal">
+      <details><summary>¿Cuánto demora tener mi página lista?</summary><p>Depende del plan: desde cerca de una semana para una landing hasta unas semanas para un sitio o tienda más completos.</p></details>
+      <details><summary>¿Puedo cambiar de plan más adelante?</summary><p>Sí. Podemos ampliar tu sitio con nuevas páginas o funciones cuando lo necesites.</p></details>
+      <details><summary>¿Mi página se verá bien en el celular?</summary><p>Sí, todos los planes incluyen diseño responsive que se adapta a cualquier pantalla.</p></details>
+      <details><summary>¿Incluye dominio y hosting?</summary><p>Lo conversamos en la cotización: podemos usar los que ya tengas o ayudarte a contratarlos.</p></details>
+      <details><summary>¿Qué necesito para empezar?</summary><p>Solo contarnos sobre tu negocio. Si ya tienes logo, textos o fotos, los usamos; si no, te orientamos.</p></details>
+      <details><summary>¿Qué incluye el correo corporativo?</summary><p>Casillas de 5 GB con tu propio dominio, alias, pie de firma y filtros de seguridad. Nosotros nos encargamos de la administración: desbloqueo de cuentas, altas y bajas de usuarios y restablecimiento de contraseñas.</p></details>
+      <details><summary>¿Qué es un alias de correo?</summary><p>Es una dirección adicional (por ejemplo ventas@tuempresa.cl) que llega a la misma casilla, así separas consultas sin pagar otro usuario.</p></details>
     </div>
-
-        <!-- ========================================================
-     SECCIÓN REGISTRADA: PASARELA INTELIGENTE MERCADO PAGO 
-     ======================================================== -->
-    <section id="pasarela-pagos" style="padding: 80px 0 40px 0; background: transparent !important; position: relative; z-index: 5; text-align: center;">
-      <div class="container">
-        <span style="color: #d4af37; font-size: 0.85rem; letter-spacing: 3px; font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 12px; font-family: 'Inter', sans-serif;">
-          Pasarela Automatizada e-WEB
-        </span>
-        <h2 style="color: #ffffff; font-size: 2.3rem; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 25px; text-transform: uppercase; font-family: 'Cinzel', serif;">
-          Módulo de Selección <span style="color: #d4af37;">& Tarifas</span>
-        </h2>
-
-        <!-- Selector de Planes Corporativos de las 6 Cards -->
-        <div style="max-width: 500px; margin: 0 auto 40px auto; padding: 0 15px;">
-          <label style="color: #94a3b8; font-family: 'Inter', sans-serif; font-size: 0.9rem; display: block; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px;">
-            1. Seleccione la arquitectura revisada en el catálogo:
-          </label>
-          <select id="selector-planes-pago" class="luxury-select" style="width: 100% !important; padding: 14px 16px !important; background-color: #080808 !important; border: 2px solid #dfc59f !important; border-radius: 4px !important; color: #ffffff !important; font-size: 0.95rem !important; font-weight: 700; text-transform: uppercase;">
-            <option value="plan1" selected>Card 1: Páginas Web Premium</option>
-            <option value="plan2">Card 2: Servidores & Infraestructura</option>
-            <option value="plan3">Card 3: Estrategia en Redes</option>
-            <option value="plan4">Card 4: Nube Redundante</option>
-            <option value="plan5">Card 5: Blindaje DDoS Avanzado</option>
-            <option value="plan6">Card 6: Copias Automatizadas</option>
-          </select>
-        </div>
-
-        <p id="alerta-formulario" style="color: #a1b0cb; font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 500; margin-bottom: 35px; letter-spacing: 0.5px; max-width: 800px; margin-left: auto; margin-right: auto; line-height: 1.6; padding: 0 15px;">
-  🛡️ <strong style="color: #dfc59f;">Estudio de Viabilidad 100% Gratuito:</strong> El envío del formulario inferior sirve para agendar la evaluación formal de su proyecto y <span style="color: #22c55e; font-weight: 700;">no lo obliga a realizar ningún pago.</span> Los botones de la pasarela son un acelerador de prioridad estrictamente voluntario que se activarán de forma automática una vez que envíe sus datos; ahí podrá decidir si pagar de forma inmediata para acelerar su entrada a producción o simplemente esperar su tiempo de contacto formal.
-</p>
-
-        <!-- Bloque de Botones de Pago Modulares -->
-        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; max-width: 900px; margin: 0 auto;">
-          
-          <!-- Enlace 1: Abono del 50% -->
-          <div style="background-color: rgba(15, 20, 28, 0.85); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 2px solid rgba(230, 230, 230, 0.7); padding: 35px 30px; border-radius: 6px; flex: 1 1 280px; box-shadow: 0 20px 40px rgba(0,0,0,0.6); text-align: center;">
-            <h4 style="font-family: 'Cinzel', serif; font-size: 1.1rem; color: #ffffff; margin-bottom: 15px; text-transform: uppercase;">Abono del 50%</h4>
-            <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 25px; font-family: 'Inter', sans-serif;">Active el inicio técnico de su infraestructura abonando el porcentaje inicial.</p>
-            <a id="btn-mp-50" href="#boveda" style="display: block; padding: 12px; background: transparent; border: 1px solid rgba(223, 197, 159, 0.4); border-radius: 4px; color: rgba(223, 197, 159, 0.5); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; text-decoration: none; letter-spacing: 0.5px; cursor: pointer; transition: all 0.4s ease;">
-              🔒 Bloqueado hasta enviar datos
-            </a>
-          </div>
-
-          <!-- Enlace 2: Pago Completo / Liquidación -->
-          <div style="background-color: rgba(15, 20, 28, 0.85); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 2px solid #dfc59f; padding: 35px 30px; border-radius: 6px; flex: 1 1 280px; box-shadow: 0 20px 40px rgba(0,0,0,0.6); text-align: center;">
-            <h4 style="font-family: 'Cinzel', serif; font-size: 1.1rem; color: #fbf0db; margin-bottom: 15px; text-transform: uppercase;">Inversión Total</h4>
-            <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 25px; font-family: 'Inter', sans-serif;">Liquidación soberana llave en mano. Despliegue inmediato en producción.</p>
-            <a id="btn-mp-100" href="#boveda" style="display: block; padding: 12px; background: rgba(223, 197, 159, 0.05); border: 1px dashed rgba(223, 197, 159, 0.3); border-radius: 4px; color: rgba(251, 240, 219, 0.4); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; text-decoration: none; letter-spacing: 0.5px; cursor: pointer; transition: all 0.4s ease;">
-              🔒 Bloqueado hasta enviar datos
-            </a>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <section class="private-vault-section" id="boveda">
-      <div class="container">
-        <div class="vault-frame">
-          <h3>Solicitar Estudio Landing Page</h3>
-          <p
-            style="color: var(--text-muted-silver); font-size: 0.95rem; margin-bottom: 30px;"
-          >
-            Ingrese los datos técnicos de su proyecto para agendar un estudio de
-            viabilidad automatizado con nuestros ingenieros.
-          </p>
-
-          <form
-            action="https://api.web3forms.com/submit"
-            method="POST"
-            class="luxury-form"
-          >
-            <!-- CONFIGURACIÓN DE WEB3FORMS -->
-            <input type="hidden" name="access_key" value="551beba8-acd8-4302-a343-a3fbc727c2fd" />
-
-            <!-- ==========================================
-                         BLOQUE 1: DATOS DE CONTACTO
-                         ========================================== -->
-            <div class="form-group">
-              <input
-                type="text"
-                name="nombre_completo"
-                required
-                placeholder="Nombre y Apellido Completo"
-              />
-            </div>
-            <div class="form-group">
-              <input
-                type="tel"
-                name="whatsapp"
-                required
-                placeholder="Número de WhatsApp (Ej: +56912345678)"
-              />
-            </div>
-            <div class="form-group">
-              <input
-                type="email"
-                name="correo"
-                required
-                placeholder="Dirección de correo electrónico seguro"
-              />
-            </div>
-            <!-- ==========================================
-                         BLOQUE 2: INFORMACIÓN DE LA EMPRESA Y DOMINIO
-                         ========================================== -->
-            <div class="form-group">
-              <input
-                type="text"
-                name="nombre_empresa_proyecto"
-                required
-                placeholder="Nombre de la empresa o proyecto"
-              />
-            </div>
-
-            <div class="form-group">
-              <textarea
-                name="giro_negocio"
-                rows="3"
-                required
-                placeholder="¿A qué se dedica tu negocio? (Explica brevemente qué vendes, qué servicio ofreces o a qué hace referencia tu marca)"
-              ></textarea>
-            </div>
-
-            <div class="form-group">
-              <select name="estado_dominio" required class="luxury-select">
-                <option value="" disabled selected hidden>
-                  ¿Tiene un dominio actual o requiere comprar uno nuevo?
-                </option>
-                <option value="Ya tengo un dominio comprado">
-                  Ya tengo un dominio comprado.
-                </option>
-                <option value="No tengo dominio, necesito comprar uno nuevo">
-                  No tengo dominio, necesito comprar uno nuevo.
-                </option>
-                <option value="Ya tengo dominio y hosting (alojamiento web)">
-                  Ya tengo dominio y hosting (alojamiento web).
-                </option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <input
-                type="text"
-                name="enlace_actual_opcional"
-                placeholder="Si ya tienes un dominio o página web actual, escribe el enlace aquí (Opcional)"
-              />
-            </div>
-            <!-- ==========================================
-                         BLOQUE INTERMEDIO: SELECCIÓN DE ARQUITECTURA WEB
-                         ========================================== -->
-            <div class="form-group">
-              <select name="division_interes" required class="luxury-select">
-                <option value="" disabled selected hidden>
-                  Seleccione la arquitectura web para su estudio
-                </option>
-                <option
-                  value="1. Captadora de Clientes (Landing Page con Formulario)"
-                >
-                  División 1: Captadora de Clientes (Landing Page con
-                  Formulario)
-                </option>
-                <option
-                  value="2. Flyer Comercial Interactivo (Anuncio Web de Alto Impacto)"
-                >
-                  División 2: Flyer Comercial Interactivo (Anuncio Web de Alto
-                  Impacto)
-                </option>
-                <option
-                  value="3. Embudo Comercial Relámpago (Venta Directa con Link de Pago)"
-                >
-                  División 3: Embudo Comercial Relámpago (Venta Directa con Link
-                  de Pago)
-                </option>
-                <option
-                  value="4. Mini Tarjeta Digital Puente (Enlace para Biografía de Redes)"
-                >
-                  División 4: Mini Tarjeta Digital Puente (Enlace para Biografía
-                  de Redes)
-                </option>
-              </select>
-            </div>
-            <!-- ==========================================
-                         BLOQUE 3: DETALLES DE LA LANDING PAGE
-                         ========================================== -->
-            <div class="form-group">
-              <select
-                name="objetivo_principal_landing"
-                required
-                class="luxury-select"
-              >
-                <option value="" disabled selected hidden>
-                  ¿Cuál es el objetivo principal de esta Landing Page?
-                </option>
-                <option
-                  value="Que los clientes me contacten directo por WhatsApp"
-                >
-                  Que los clientes me contacten directo por WhatsApp.
-                </option>
-                <option
-                  value="Que llenen un formulario para registrar sus datos (prospectos)"
-                >
-                  Que llenen un formulario para registrar sus datos
-                  (prospectos).
-                </option>
-                <option value="Que agenden una cita o llamada en mi calendario">
-                  Que agenden una cita o llamada en mi calendario.
-                </option>
-                <option
-                  value="Vender un producto o servicio directamente en la página"
-                >
-                  Vender un producto o servicio directamente en la página.
-                </option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <select
-                name="estado_materiales_marca"
-                required
-                class="luxury-select"
-              >
-                <option value="" disabled selected hidden>
-                  ¿Cuentas con el logotipo y los textos listos para la página?
-                </option>
-                <option
-                  value="Sí, tengo el logotipo, las fotos y los textos listos para entregarte"
-                >
-                  Sí, tengo el logotipo, las fotos y los textos listos para
-                  entregarte.
-                </option>
-                <option
-                  value="Tengo el logotipo, pero necesito ayuda con los textos/fotos"
-                >
-                  Tengo el logotipo, pero necesito ayuda con los textos/fotos.
-                </option>
-                <option
-                  value="No tengo nada, necesito que me ayudes con todo desde cero"
-                >
-                  No tengo nada, necesito que me ayudes con todo desde cero.
-                </option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <select
-                name="plazo_entrega_estimado"
-                required
-                class="luxury-select"
-              >
-                <option value="" disabled selected hidden>
-                  ¿Para cuándo necesitas que la página esté publicada y
-                  funcionando?
-                </option>
-                <option value="¡Urgente! (Menos de 1 semana)">
-                  ¡Urgente! (Menos de 1 semana).
-                </option>
-                <option value="Plazo normal (2 a 3 semanas)">
-                  Plazo normal (2 a 3 semanas).
-                </option>
-                <option value="No tengo prisa (Más de 1 mes)">
-                  No tengo prisa (Más de 1 mes).
-                </option>
-              </select>
-            </div>
-
-            <button type="submit" class="btn-submit-luxury">
-              ENVIAR SOLICITUD DE ESTUDIO
-            </button>
-          </form>
-        </div>
-      </div>
-    </section>
-    <!-- ★ SECCIÓN REPARADA CON ÉXITO: GLOSARIO DIDÁCTICO & MANIFIESTO CON ANCLAJE DE MENÚ (id="que-es-landing") -->
-    <section
-      id="que-es-landing"
-      style="padding: 90px 0; background: transparent !important; position: relative; z-index: 5;"
-    >
-      <div
-        style="width: 90%; max-width: 1200px; margin: 0 auto; padding: 0 15px; text-align: center;"
-      >
-        <span
-          style="color: #d4af37; font-size: 0.85rem; letter-spacing: 3px; font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 12px; font-family: 'Inter', sans-serif;"
-          >Guía de Soluciones</span
-        >
-        <h2
-          style="color: #ffffff; font-size: 2.3rem; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 20px; text-transform: uppercase; font-family: 'Cinzel', serif;"
-        >
-          ¿Qué Arquitectura
-          <span style="color: #d4af37;">Necesita tu Negocio?</span>
-        </h2>
-        <p
-          style="color: #a0a0a0; max-width: 650px; margin: 0 auto 50px auto; font-size: 1.05rem; line-height: 1.6; font-family: 'Inter', sans-serif;"
-        >
-          Conoce al grano las diferencias de nuestra ingeniería de aterrizaje
-          para elegir la option perfecta en tu solicitud.
-        </p>
-
-        <!-- ESTILOS LOCALES EXCLUSIVOS SANEADOS SIN INTERFERENCIA -->
-        <style>
-          .nav-links-right a {
-              position: relative !important;
-              padding: 6px 0 !important;
-          }
-
-          .nav-links-right a::after {
-              content: '' !important;
-              position: absolute !important;
-              bottom: 0 !important;
-              left: 50% !important;
-              width: 0 !important;
-              height: 1.5px !important;
-              background: var(--gold-bronzite) !important;
-              transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1), left 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
-              box-shadow: 0 0 8px var(--gold-bronzite) !important;
-          }
-
-          .nav-links-right a:hover::after {
-              width: 100% !important;
-              left: 0 !important;
-          }
-
-          .manifesto-box {
-              max-width: 850px !important;
-              margin: 0 auto !important;
-              background-color: rgba(15, 20, 28, 0.40) !important;
-              backdrop-filter: blur(12px) !important;
-              -webkit-backdrop-filter: blur(12px) !important;
-              border: 3px solid rgba(255, 255, 255, 0.4) !important;
-              padding: 45px 40px !important;
-              border-radius: 6px !important;
-              box-shadow: 0 20px 50px rgba(0, 0, 0, 0.85) !important;
-              font-family: 'Inter', sans-serif !important;
-          }
-
-          .grid-soluciones-premium {
-              display: grid !important;
-              grid-template-columns: repeat(4, 1fr) !important;
-              gap: 25px !important;
-              margin-bottom: 60px !important;
-              width: 100% !important;
-          }
-
-          .tarjeta-solucion-premium {
-              background-color: rgba(15, 20, 28, 0.85) !important;
-              backdrop-filter: blur(10px) !important;
-              -webkit-backdrop-filter: blur(10px) !important;
-              border: 1px solid rgba(212, 175, 55, 0.15) !important;
-              padding: 25px !important;
-              border-radius: 4px !important;
-              text-align: left !important;
-              box-shadow: 0 4px 20px rgba(0,0,0,0.5) !important;
-              font-family: 'Inter', sans-serif !important;
-              height: 100% !important;
-          }
-      }
-
-        </style>
-
-        <!-- Contenedor maestro con la grilla aislada -->
-        <div class="grid-soluciones-premium">
-          <!-- Tarjeta 1 -->
-          <div class="tarjeta-solucion-premium">
-            <span
-              style="font-size: 1.5rem; display: block; margin-bottom: 10px;"
-              >📋</span
-            >
-            <strong
-              style="color: #ffffff; display: block; margin-bottom: 8px; text-transform: uppercase; font-size: 0.95rem; letter-spacing: 0.5px;"
-              >1. Captadora de Clientes</strong
-            >
-            <span
-              style="color: #888888; font-size: 0.9rem; line-height: 1.5; display: block;"
-              >**Propósito:** Conseguir datos de contacto. Una página limpia con
-              formulario directo para registrar prospectos (WhatsApp/Correo) y
-              agendar llamadas de inmediato.</span
-            >
-          </div>
-
-          <!-- Tarjeta 2 -->
-          <div class="tarjeta-solucion-premium">
-            <span
-              style="font-size: 1.5rem; display: block; margin-bottom: 10px;"
-              >📱</span
-            >
-            <strong
-              style="color: #ffffff; display: block; margin-bottom: 8px; text-transform: uppercase; font-size: 0.95rem; letter-spacing: 0.5px;"
-              >2. Flyer Interactivo</strong
-            >
-            <span
-              style="color: #888888; font-size: 0.9rem; line-height: 1.5; display: block;"
-              >**Propósito:** Impacto visual premium. Funciona como un anuncio
-              de alto impacto optimizado para celular, acomodando imágenes de
-              producto y botones de acción.</span
-            >
-          </div>
-
-          <!-- Tarjeta 3 -->
-          <div class="tarjeta-solucion-premium">
-            <span
-              style="font-size: 1.5rem; display: block; margin-bottom: 10px;"
-              >⚡</span
-            >
-            <strong
-              style="color: #ffffff; display: block; margin-bottom: 8px; text-transform: uppercase; font-size: 0.95rem; letter-spacing: 0.5px;"
-              >3. Embudo Relámpago</strong
-            >
-            <span
-              style="color: #888888; font-size: 0.9rem; line-height: 1.5; display: block;"
-              >**Propósito:** Venta agresiva directa. Enfocada en un solo
-              producto o servicio, empujando al cliente a pagar al instante
-              mediante links seguros de Flow, Mercado Pago o WhatsApp.</span
-            >
-          </div>
-
-          <!-- Tarjeta 4 -->
-          <div class="tarjeta-solucion-premium">
-            <span
-              style="font-size: 1.5rem; display: block; margin-bottom: 10px;"
-              >🔗</span
-            >
-            <strong
-              style="color: #ffffff; display: block; margin-bottom: 8px; text-transform: uppercase; font-size: 0.95rem; letter-spacing: 0.5px;"
-              >4. Mini Tarjeta Puente</strong
-            >
-            <span
-              style="color: #888888; font-size: 0.9rem; line-height: 1.5; display: block;"
-              >**Propósito:** Derivar tráfico de redes. Una micro-landing ultra
-              liviana de enlaces directos que se coloca en la biografía de
-              Instagram o TikTok para enrutar visitas rápido.</span
-            >
-          </div>
-        </div>
-
-        <!-- CONTENEDOR MAESTRO UNIFICADO CRISTALINO CON VARIACIÓN DE MARCA e-WEB -->
-        <div
-          class="master-definition-box"
-          style="max-width: 1120px; margin: 0 auto; background-color: rgba(4, 6, 8, 0.75) !important; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 2px solid #dfc59f; border-radius: 6px; box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7); text-align: left; position: relative !important; z-index: 10 !important; overflow: hidden; padding: 45px 40px;"
-        >
-          <div
-            style="margin-bottom: 25px; border-bottom: 1px solid rgba(223, 197, 159, 0.2); padding-bottom: 20px;"
-          >
-            <span
-              style="color: #d4af37; font-size: 0.85rem; letter-spacing: 3px; font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 10px; font-family: 'Inter', sans-serif;"
-              >Referente al 2026 & LinkedIn Web de Página de Aterrizaje</span
-            >
-            <h3
-              style="font-family: 'Cinzel', serif; font-size: 2rem; color: #ffffff; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin: 0; text-shadow: 0 2px 12px rgba(251, 240, 219, 0.35);"
-            >
-              Definición Maestra de
-              <span style="color: #d4af37;">Arquitectura Web</span>
-            </h3>
-          </div>
-
-          <div
-            style="position: relative; z-index: 12; font-family: 'Inter', sans-serif;"
-          >
-            <h4
-              style="font-family: 'Cinzel', serif; font-size: 1.1rem; color: #fbf0db; margin-bottom: 15px; letter-spacing: 0.5px; text-transform: uppercase;"
-            >
-              ¿Qué es una Landing Page o Página de Aterrizaje?
-            </h4>
-            <p
-              style="color: #cbd5e1; font-size: 1.05rem; line-height: 1.7; margin-bottom: 20px; font-weight: 300; text-align: justify;"
-            >
-              Es un development web estructurado en **una sola plana continua de
-              una sola hilera**, segmentada estratégicamente en subsecciones
-              según el requerimiento comercial de tu negocio. No diseñamos
-              plataformas genéricas con bases de datos móviles pesadas o
-              carritos internos complejos; modelamos código nativo puro en
-              **HTML5, CSS3 y JavaScript puro**, garantizando una velocidad de
-              carga inquebrantable a nivel de microsegundos y una tolerancia
-              cero a fugas de tráfico publicitario.
-            </p>
-            <p
-              style="color: #cbd5e1; font-size: 1.05rem; line-height: 1.7; font-weight: 300; text-align: justify; margin: 0;"
-            >
-              Nuestra arquitectura se modula a la medida de tu presupuesto.
-              Consiste en bloques de conversión elásticos: **secciones de
-              botones transaccionales, accesos relámpago a WhatsApp, formularios
-              encriptados de correo, imágenes interactivas, links de pago
-              seguros (Flow / Mercado Pago) y pasarelas de enrutamiento a tus
-              redes sociales**. Conforme a la complejidad técnica solicitada y
-              al costo final que decidas abonar por el proyecto, tu landing
-              incorporará más o menos secciones funcionales. Una estructura
-              básica representa una alternativa altamente económica, mientras
-              que a mayor cantidad de enlaces de cobro o módulos interactivos
-              integrados, mayor será el valor de la ingeniería aplicada.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- SECCIÓN: QUIÉNES SOMOS -->
-    <section
-      id="quienes-somos"
-      class="about-luxury-section"
-      style="padding: 90px 0; border-top: 1px solid rgba(212, 175, 55, 0.1);"
-    >
-      <div
-        class="container about-container"
-        style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center;"
-      >
-        <div style="flex: 1 1 500px; text-align: left;">
-          <span
-            style="color: #d4af37; font-size: 0.85rem; letter-spacing: 3px; font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 12px;"
-            >Alta Tradición Tecnológica</span
-          >
-          <h2
-            style="color: #ffffff; font-size: 2.3rem; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 20px; text-transform: uppercase;"
-          >
-            Ingeniería de
-            <span style="color: #d4af37;">Privilegio & Rigor</span>
-          </h2>
-          <p
-            style="color: #a0a0a0; font-size: 1.05rem; line-height: 1.7; margin-bottom: 15px;"
-          >
-            e-WEB nace bajo el estándar de la vieja escuela de arquitectura de
-            sistemas. No desarrollamos soluciones genéricas; modelamos
-            infraestructuras digitales exclusivas diseñadas para soportar altas
-            demandas comerciales bajo el dominio de economicaweb.cl.
-          </p>
-          <p style="color: #a0a0a0; font-size: 1.05rem; line-height: 1.7;">
-            Nuestros ingenieros operan bajo estrictos protocolos de
-            confidencialidad, garantizando una soberanía tecnológica absoluta
-            para marcas corporativas.
-          </p>
-        </div>
-        <div
-          style="flex: 1 1 400px; background-color: #050505; border: 1px solid rgba(212, 175, 55, 0.15); padding: 30px; border-radius: 4px;"
-        >
-          <ul
-            style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 20px;"
-          >
-            <li style="display: flex; gap: 15px; align-items: flex-start;">
-              <span
-                style="color: #d4af37; font-weight: bold; font-size: 1.2rem;"
-                >⚡</span
-              >
-              <div>
-                <strong
-                  style="color: #ffffff; display: block; margin-bottom: 4px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 0.5px;"
-                  >Velocidad Soberana</strong
-                >
-                <span style="color: #888888; font-size: 0.95rem;"
-                  >Código nativo optimizado a nivel de microsegundos sin
-                  sobrecarga.</span
-                >
-              </div>
-            </li>
-            <li style="display: flex; gap: 15px; align-items: flex-start;">
-              <span
-                style="color: #d4af37; font-weight: bold; font-size: 1.2rem;"
-                >🛡️</span
-              >
-              <div>
-                <strong
-                  style="color: #ffffff; display: block; margin-bottom: 4px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 0.5px;"
-                  >Seguridad Hermética</strong
-                >
-                <span style="color: #888888; font-size: 0.95rem;"
-                  >Blindaje activo y aislamiento inspirado en criptografía
-                  bancaria militar.</span
-                >
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================================================
-     SECCIÓN: GOBIERNO TÉCNICO Y ARQUITECTURA DE MARCA INTEGRADA
-     ======================================================== -->
-    <section
-      id="corporativo"
-      class="corporate-extended-section"
-      style="padding: 100px 0; border-top: 1px solid rgba(213, 175, 55, 0.15); border-bottom: 1px solid rgba(213, 175, 55, 0.15);"
-    >
-      <div class="container" style="text-align: center;">
-        <span
-          style="color: var(--gold-bronzite); font-size: 0.85rem; letter-spacing: 3px; font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 12px; font-family: 'Inter', sans-serif;"
-        >
-          Gobierno Técnico
-        </span>
-        <h2
-          style="color: #ffffff; font-size: 2.5rem; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 30px; text-transform: uppercase; font-family: 'Cinzel', serif; text-shadow: 0 2px 10px rgba(0,0,0,0.5);"
-        >
-          Sistemas & Redes
-          <span style="color: var(--gold-bronzite);">Corporativa Global</span>
-        </h2>
-
-        <!-- Contenedor con la clase restaurada -->
-        <div class="manifesto-box">
-          <p
-            style="color: #ffffff; font-size: 1.1rem; line-height: 1.8; font-weight: 600; text-align: justify; margin-bottom: 18px;"
-          >
-            e-WEB, economicaweb.cl, es una unidad estratégica de negocios y una
-            división independiente de FullWeb.cl, diseñada exclusivamente para
-            democratizar el acceso a Landing Pages ágiles de alta conversión y
-            rendimiento enfocado para emprendedores, pymes y persona natural o
-            jurídica.
-          </p>
-          <p
-            style="color: #cbd5e1; font-size: 0.98rem; line-height: 1.8; font-weight: 300; text-align: justify; margin: 0; padding-top: 18px; border-top: 1px solid rgba(223, 197, 159, 0.15);"
-          >
-            El ecosistema de
-            <span style="color: var(--gold-bright); font-weight: 600;"
-              >economicaweb.cl</span
-            >
-            opera bajo el respaldo tecnológico y el motor de infraestructura de
-            nuestra organización principal FullWeb.cl, garantizando un producto
-            altamente económico pero estructurado bajo los mismos principios de
-            rigor técnico, optimización de microsegundos y soberanía digital que
-            rigen nuestros desarrollos de software corporativos avanzados.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- PIE DE PÁGINA CORPORATIVO PREMIUM -->
-    <footer
-  class="footer-luxury-premium"
-  style="background: linear-gradient(145deg, rgba(15, 20, 28, 0.70) 0%, rgba(4, 6, 8, 0.65) 100%) !important; backdrop-filter: blur(15px) !important; -webkit-backdrop-filter: blur(25px) !important; border-top: 4px solid rgba(223, 197, 159, 0.45) !important; border-bottom: 1px solid rgba(223, 197, 159, 0.15) !important; padding: 40px 0 20px 0 !important; box-shadow: 0 -20px 50px rgba(0, 0, 0, 0.9) !important; position: relative !important; z-index: 5 !important;"
->
-      <div class="container">
-                  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; margin-bottom: 20px;">
-          <div style="flex: 1; min-width: 280px;">
-            <h4
-              style="font-family: 'Cinzel', serif; font-size: 1.4rem; color: #C8A73C; letter-spacing: 4px; margin-bottom: 20px; font-weight: 900;"
-            >
-              <span>e-WEB</span>
-            </h4>
-            <p
-              style="color: #a1b0cb; font-size: 0.95rem; line-height: 1.8; font-weight: 300; max-width: 320px;"
-            >
-              Ingeniería de software y arquitectura en infraestructura
-              digital. Soluciones a la medida a través del ecosistema de
-              economicaweb.cl, una división de FullWeb.cl
-            </p>
-          </div>
-          <div style="flex: 1; min-width: 200px;">
-            <ul style="list-style: none; padding: 0; margin: 0;">
-              <li style="margin-bottom: 12px;">
-                <a
-                  href="#"
-                  style="color: #a1b0cb; text-decoration: none; font-size: 0.95rem; font-weight: 600;"
-                  >Inicio</a
-                >
-              </li>
-              <li style="margin-bottom: 12px;">
-                <a
-                  href="#ingenieria"
-                  style="color: #a1b0cb; text-decoration: none; font-size: 0.95rem; font-weight: 600;"
-                  >Catálogo</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div style="flex: 1; min-width: 260px;">
-            <p
-              style="color: #a1b0cb; font-size: 0.95rem; margin-bottom: 12px; font-weight: 600;"
-            >
-              Enlace Oficial:
-              <a
-                href="mailto:contacto@economicaweb.cl?subject=Requerimiento%20Servicios"
-                style="color: #fbf0db !important; text-decoration: underline; font-weight: 700;"
-                >contacto@economicaweb.cl</a
-              >
-            </p>
-          </div>
-        </div>
-        <div
-          style="border-top: 1px solid rgba(223, 197, 159, 0.15); padding-top: 30px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px;"
-        >
-          <p
-            style="color: rgba(255, 255, 255, 0.35); font-size: 0.88rem; margin: 0;"
-          >
-            © 2026 e-WEB. Edición de Alta Soberanía.
-          </p>
-          <p
-            style="color: rgba(255, 255, 255, 0.35); font-size: 0.88rem; margin: 0;"
-          >
-            Ingeniería por
-            <a
-              href="https://economicaweb.cl"
-              target="_blank"
-              style="color: #dfc59f !important; text-decoration: underline; font-weight: 700;"
-              >www.economicaweb.cl</a
-            >
-          </p>
-        </div>
-      </div>
-    </footer>
-
-    <!-- CARTEL FLOTANTE DE ÉXITO CORPORATIVO (VIDRIO & BRONCE) -->
-    <div
-      id="custom-success-modal"
-      style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(4, 6, 8, 0.85); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); z-index: 999999; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.5s ease;"
-    >
-      <div
-        style="max-width: 550px; width: 90%; background-color: #050505; border: 2px solid #dfc59f; padding: 45px 40px; border-radius: 6px; box-shadow: 0 30px 60px rgba(0, 0, 0, 0.9); text-align: center; position: relative;"
-      >
-        <span style="font-size: 3rem; display: block; margin-bottom: 20px;"
-          >🔒</span
-        >
-                  <h3
-            style="font-family: 'Cinzel', serif; font-size: 1.6rem; color: #dfc59f; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 20px;"
-          >
-            Petición Recibida en la Bóveda
-          </h3>
-          
-          <div style="text-align: left; background: rgba(255,255,255,0.02); border: 1px solid rgba(223, 197, 159, 0.1); padding: 20px; border-radius: 4px; margin-bottom: 25px; font-family: 'Inter', sans-serif;">
-            <p style="font-size: 0.95rem; line-height: 1.6; color: #cbd5e1; margin-top: 0;">
-              <strong style="color: #ffffff; display: block; margin-bottom: 5px;">📋 PASO 1: Estudio de Viabilidad Gratuito</strong>
-              Sus datos técnicos han sido respaldados con éxito. Un ingeniero senior revisará la viabilidad de la infraestructura ...y lo contactará formalmente de manera estricta vía correo electrónico (abriendo un canal secundario por celular o WhatsApp únicamente si el caso técnico lo requiere). <span style="color: #22c55e; font-weight: 700;">No es obligatorio pagar en este momento.</span>
-            </p>
-            
-            <hr style="border: 0; border-top: 1px solid rgba(223, 197, 159, 0.1); margin: 15px 0;">
-            
-            <p style="font-size: 0.95rem; line-height: 1.6; color: #cbd5e1; margin-bottom: 0;">
-              <strong style="color: #dfc59f; display: block; margin-bottom: 5px;">⚡ PASO 2: Acelerador de Prioridad (Opcional)</strong>
-              Si desea congelar su tarifa y asegurar su cupo de inmediato para saltarse la fila de espera, la pasarela de <strong>Mercado Pago</strong> se ha habilitado abajo en la pantalla por si desea abonar el 50% o el total de forma voluntaria.
-            </p>
-          </div>
-        <button
-          onclick="closeSuccessModal()"
-          style="padding: 12px 35px; background: linear-gradient(135deg, #dfc59f 0%, #b3976f 100%); border: none; border-radius: 4px; color: #040608; font-family: 'Inter', sans-serif; font-weight: 700; font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase; cursor: pointer;"
-        >
-          Cerrar Credenciales
-        </button>
-      </div>
+  </div>
+</section>
+<section id="privacidad">
+  <div class="wrap">
+    <h2 class="reveal">Política de privacidad y protección de datos</h2>
+    <p class="lead reveal">Así cuidamos los datos que nos envías al cotizar. Resumen conforme a la Ley&nbsp;N°&nbsp;21.719.</p>
+    <div class="pv reveal">
+      <div><h3><i>1</i>Responsable</h3>e-WEB (economicaweb.cl) es responsable del tratamiento de los datos de este sitio. Para consultas formales escribe a <a href="mailto:privacidad@economicaweb.cl">privacidad@economicaweb.cl</a>.</div>
+      <div><h3><i>2</i>Datos y finalidad</h3>Solo pedimos lo necesario para evaluar tu proyecto (dominio, objetivos y material). Usamos tu nombre y correo únicamente para enviarte la propuesta. No pedimos datos financieros, RUT ni documentos de identidad, y nunca vendemos tu información ni enviamos spam.</div>
+      <div><h3><i>3</i>Cookies y navegación</h3>No usamos cookies de seguimiento, marketing ni analítica de terceros (como Google Analytics o Píxel de Meta). Los datos técnicos de red se usan solo para la seguridad del sitio: frenar ataques y bots y mantener la velocidad de carga.</div>
+      <div><h3><i>4</i>Seguridad</h3>Tu solicitud viaja por conexión cifrada HTTPS para que terceros no puedan interceptarla. En los correos corporativos que administramos aplicamos autenticación SPF, DKIM y DMARC contra suplantación, filtros antispam y antiphishing, cifrado en tránsito y verificación en dos pasos.</div>
+      <div><h3><i>5</i>Tus derechos (ARCO)</h3>Puedes ejercer tus derechos de Acceso, Rectificación, Cancelación y Oposición. Para que eliminemos o corrijamos tus datos, escribe desde el correo de tu consulta a <a href="mailto:privacidad@economicaweb.cl">privacidad@economicaweb.cl</a>.</div>
     </div>
-    <script>
+  </div>
+</section>
+</main>
 
-              // INTERCEPTOR INTELIGENTE DE FORMULARIO - e-WEB SOBERANO
-        const luxuryForm = document.querySelector('.luxury-form');
-        const successModal = document.getElementById('custom-success-modal');
+<footer>
+  <p class="flogo">e-<span>WEB</span></p>
+  <nav class="flinks" aria-label="Pie de página">
+    <a href="#servicios">Servicios</a><a href="#planes">Planes</a><a href="#cotizar">Cotizar</a><a href="#privacidad">Privacidad</a><a href="https://wa.me/56922133902?text=Hola%21%20Me%20interesa%20cotizar%20un%20proyecto%20web%20con%20ustedes.%20%C2%BFMe%20podr%C3%ADan%20dar%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" rel="noopener">WhatsApp</a><a href="mailto:contacto@economicaweb.cl">contacto@economicaweb.cl</a>
+  </nav>
+  <p>© <span id="y"></span> e-WEB · economicaweb.cl · Desarrollo web en Santiago, Chile</p>
+</footer>
 
-        if (luxuryForm) {
-            luxuryForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                const formData = new FormData(luxuryForm);
+<a class="wa" href="https://wa.me/56922133902?text=Hola%21%20Me%20interesa%20cotizar%20un%20proyecto%20web%20con%20ustedes.%20%C2%BFMe%20podr%C3%ADan%20dar%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">💬 <span>WhatsApp</span></a>
 
-                fetch('https://api.web3forms.com/submit', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.success) {
-                        successModal.style.opacity = '1';
-                        successModal.style.pointerEvents = 'auto';
-                        luxuryForm.reset();
+<script>
+document.documentElement.classList.add('js');
 
-                        // ACTIVACIÓN AUTOMÁTICA DE LA PASARELA DE COBROS
-                        formularioEnviadoExitosamente = true;
-                        if (typeof actualizarPasarelaDePago === 'function') {
-                            actualizarPasarelaDePago();
-                        }
-                    } else {
-                        alert('Error en los servidores de la Bóveda. Reintente por correo directo.');
-                    }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    alert('Fallo de conexión encriptada. Intente nuevamente.');
-                });
-            });
-        }
+// Aparición al hacer scroll
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+const mob=matchMedia('(max-width:640px)').matches;
+function mark(el,i){el.classList.add('rv');el.style.setProperty('--i',Math.min(i||0,6));io.observe(el)}
+document.querySelectorAll('.reveal').forEach(el=>{
+  el.classList.remove('reveal');
+  const stag=k=>[...k.children].forEach((c,i)=>mark(c,i));
+  if(el.matches('.grid,.plans,.pv,.faq>div')){mob&&el.matches('.grid')?mark(el,0):stag(el)}
+  else if(el.matches('.inc')){[...el.children].forEach(c=>c.matches('.grid')?(mob?mark(c,0):stag(c)):mark(c,0))}
+  else mark(el,0);
+});
+document.querySelectorAll('.hero-in>*').forEach((k,i)=>mark(k,i));
+mark(document.querySelector('footer'),0);
 
-      window.closeSuccessModal = function() {
-    if (typeof successModal !== 'undefined' && successModal) {
-        successModal.style.opacity = '0';
-        successModal.style.pointerEvents = 'none';
-        
-        // ANCLAJE DE CONVERSIÓN: Sube suavemente a la pasarela activa arriba
-        const targetPasarela = document.getElementById('pasarela-pagos');
-        if (targetPasarela) {
-            targetPasarela.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-    }
-};
+// Desplazamiento lento y suave entre secciones (siempre animado)
+const ease=k=>k<.5?4*k*k*k:1-Math.pow(-2*k+2,3)/2;
+let raf;
+function slideTo(y,d){
+  cancelAnimationFrame(raf);
+  const s=window.scrollY,t0=performance.now();
+  (function step(n){
+    const k=Math.min((n-t0)/d,1);
+    window.scrollTo({top:s+(y-s)*ease(k),left:0,behavior:'instant'});
+    if(k<1)raf=requestAnimationFrame(step);
+  })(t0);
+}
+['wheel','touchstart','keydown'].forEach(ev=>addEventListener(ev,()=>cancelAnimationFrame(raf),{passive:true}));
+document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{
+  const id=a.getAttribute('href'),el=id.length>1&&document.querySelector(id);
+  if(!el)return;
+  e.preventDefault();
+  const y=Math.max(0,el.getBoundingClientRect().top+window.scrollY-68);
+  slideTo(y,Math.min(2600,Math.max(1400,Math.abs(y-window.scrollY))));
+  try{history.pushState(null,'',id)}catch(_){}
+}));
 
-      // MOTOR DE CONSTELACIONES INTERACTIVAS EN 3D NATIVO (Grosor de líneas a 1.2px)
-      (function() {
-          const canvasGlobal = document.getElementById('constellationCanvas');
-          const canvasHeader = document.getElementById('headerConstellationCanvas');
-          if (!canvasGlobal || !canvasHeader) return;
+// Selección de plan
+const radios=[...document.querySelectorAll('input[name=plan]')],sel=document.getElementById('planSel'),sumTxt=document.getElementById('sumTxt');
+function setPlan(v){
+  radios.forEach(r=>{r.checked=r.value===v;r.closest('.plan').classList.toggle('sel',r.checked)});
+  sel.value=v;
+  const p=radios.find(r=>r.checked).closest('.plan');
+  sumTxt.innerHTML='Plan elegido: <b>'+v+'</b> · desde '+p.dataset.price+' IVA incluido';
+}
+radios.forEach(r=>r.addEventListener('change',()=>setPlan(r.value)));
+sel.addEventListener('change',()=>setPlan(sel.value));
+setPlan('Medium');
 
-          const ctxG = canvasGlobal.getContext('2d');
-          const ctxH = canvasHeader.getContext('2d');
-          const wrapG = canvasGlobal.parentElement;
-          const wrapH = canvasHeader.parentElement;
+// Menú móvil
+const menu=document.getElementById('menu'),mb=document.getElementById('mb');
+mb.addEventListener('click',()=>{const o=menu.classList.toggle('open');mb.setAttribute('aria-expanded',o)});
+menu.addEventListener('click',e=>{if(e.target.tagName==='A'){menu.classList.remove('open');mb.setAttribute('aria-expanded','false')}});
 
-          const orbsG = [], orbsH = [];
-          const numOrbsGlobal = 200; /* Densidad regulada para evitar lag en celulares */
-          const numOrbsHeader = 300;
-
-          function resizeCanvases() {
-              canvasGlobal.width = window.innerWidth;
-              canvasGlobal.height = window.innerHeight;
-              canvasHeader.width = wrapH.clientWidth;
-              canvasHeader.height = wrapH.clientHeight;
-          }
-
-          window.addEventListener('resize', resizeCanvases);
-          resizeCanvases();
-
-          for (let i = 0; i < numOrbsGlobal; i++) {
-              orbsG.push({ x: Math.random() * canvasGlobal.width, y: Math.random() * canvasGlobal.height, vx: (Math.random() - 0.5) * 0.4, vy: (Math.random() - 0.5) * 0.4, radius: Math.random() * 1.5 + 1 });
-          }
-          for (let i = 0; i < numOrbsHeader; i++) {
-              orbsH.push({ x: Math.random() * canvasHeader.width, y: Math.random() * canvasHeader.height, vx: (Math.random() - 0.5) * 0.85, vy: (Math.random() - 0.5) * 0.85, radius: Math.random() * 1.5 + 1 });
-          }
-
-          function runEngine(ctx, orbs, width, height) {
-              ctx.clearRect(0, 0, width, height);
-              orbs.forEach(function(orb) {
-                  orb.x += orb.vx; orb.y += orb.vy;
-                  if (orb.x < 0 || orb.x > width) orb.vx *= -1;
-                  if (orb.y < 0 || orb.y > height) orb.vy *= -1;
-                  ctx.beginPath(); ctx.arc(orb.x, orb.y, orb.radius, 0, Math.PI * 2);
-                  ctx.fillStyle = "rgba(223, 197, 159, 0.45)"; ctx.fill();
-              });
-              for (let i = 0; i < orbs.length; i++) {
-                  for (let j = i + 1; j < orbs.length; j++) {
-                      const dx = orbs[i].x - orbs[j].x; const dy = orbs[i].y - orbs[j].y;
-                      const dist = Math.sqrt(dx * dx + dy * dy);
-                      if (dist < 125) {
-                          ctx.beginPath(); ctx.moveTo(orbs[i].x, orbs[i].y); ctx.lineTo(orbs[j].x, orbs[j].y);
-                          const alpha = (1 - (dist / 125)) * 0.16;
-                          ctx.strokeStyle = "rgba(223, 197, 159, " + (alpha * 1.5) + ")"; ctx.lineWidth = 1.2; ctx.stroke();
-                      }
-                  }
-              }
-          }
-
-          function animate() {
-              runEngine(ctxG, orbsG, canvasGlobal.width, canvasGlobal.height);
-              runEngine(ctxH, orbsH, canvasHeader.width, canvasHeader.height);
-              window.requestAnimationFrame(animate);
-          }
-          animate();
-
-      // ========================================================
-      // MOTOR DE TARIFAS DINÁMICAS MERCADO PAGO - e-WEB SOBERANO
-      // ========================================================
-      const linksMercadoPago = {
-          plan1: { mp50: "LINK_CARD_1_MEDIO_PAGO", mp100: "LINK_CARD_1_TOTAL" },
-          plan2: { mp50: "LINK_CARD_2_MEDIO_PAGO", mp100: "LINK_CARD_2_TOTAL" },
-          plan3: { mp50: "LINK_CARD_3_MEDIO_PAGO", mp100: "LINK_CARD_3_TOTAL" },
-          plan4: { mp50: "LINK_CARD_4_MEDIO_PAGO", mp100: "LINK_CARD_4_TOTAL" },
-          plan5: { mp50: "LINK_CARD_5_MEDIO_PAGO", mp100: "LINK_CARD_5_TOTAL" },
-          plan6: { mp50: "LINK_CARD_6_MEDIO_PAGO", mp100: "LINK_CARD_6_TOTAL" }
-      };
-
-      let formularioEnviadoExitosamente = false;
-      const selectorPlanes = document.getElementById('selector-planes-pago');
-      const btnMp50 = document.getElementById('btn-mp-50');
-      const btnMp100 = document.getElementById('btn-mp-100');
-      const alertaForm = document.getElementById('alerta-formulario');
-
-      function actualizarPasarelaDePago() {
-          if (!selectorPlanes || !btnMp50 || !btnMp100) return;
-          const planSeleccionado = selectorPlanes.value;
-          const linksDelPlan = linksMercadoPago[planSeleccionado];
-
-          if (formularioEnviadoExitosamente) {
-              btnMp50.href = linksDelPlan.mp50;
-              btnMp50.target = "_blank";
-              btnMp50.style.border = "1px solid #dfc59f";
-              btnMp50.style.color = "#dfc59f";
-              btnMp50.innerText = "💳 Pagar Abono 50%";
-
-              btnMp100.href = linksDelPlan.mp100;
-              btnMp100.target = "_blank";
-              btnMp100.style.background = "linear-gradient(135deg, #d4af37 0%, #aa842c 100%)";
-              btnMp100.style.border = "none";
-              btnMp100.style.color = "#000000";
-              btnMp100.innerText = "⚡ Liquidar en 1 Clic";
-              
-              if (alertaForm) {
-                  alertaForm.style.color = "#22c55e";
-                  alertaForm.innerText = "✅ PASARELA ACTIVA: Enlaces actualizados para el plan seleccionado.";
-              }
-          } else {
-              btnMp50.href = "#boveda";
-              btnMp100.href = "#boveda";
-              btnMp50.removeAttribute('target');
-              btnMp100.removeAttribute('target');
-          }
-      }
-
-      if (selectorPlanes) {
-          selectorPlanes.addEventListener('change', actualizarPasarelaDePago);
-      }
-
-      // Conexión directa con el interceptor de Web3Forms existente
-      const formVault = document.querySelector('.luxury-form');
-      if (formVault) {
-          formVault.addEventListener('submit', function() {
-              // Una vez que pase las validaciones nativas y se ejecute el fetch con éxito:
-              setTimeout(() => {
-                  formularioEnviadoExitosamente = true;
-                  actualizarPasarelaDePago();
-              }, 1000); // Pequeño retraso para acoplarse al modal de éxito
-          });
-      }
-
-      })();
-    </script>
-  </body>
+// Envío del formulario con Web3Forms
+const f=document.getElementById('f'),msg=document.getElementById('msg');
+f.addEventListener('submit',async e=>{
+  e.preventDefault();const bt=f.querySelector('button');bt.disabled=true;msg.textContent='Enviando…';
+  try{
+    const r=await fetch('https://api.web3forms.com/submit',{method:'POST',body:new FormData(f)});
+    const d=await r.json();
+    if(!d.success)throw new Error();
+    msg.textContent='¡Solicitud recibida! Revisaremos tu proyecto y te contactaremos por correo. No tienes que pagar nada en este momento.';f.reset();setPlan('Medium');
+  }catch(_){msg.textContent='No pudimos enviar el formulario. Inténtalo de nuevo o escríbenos por WhatsApp.'}
+  finally{bt.disabled=false}
+});
+document.getElementById('y').textContent=new Date().getFullYear();
+</script>
+</body>
 </html>
