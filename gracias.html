@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>¡Solicitud Recibida! | e-WEB</title>
+    <style>
+        body { 
+            background-color: #0a2540; 
+            color: #ffffff; 
+            font-family: system-ui, -apple-system, sans-serif; 
+            padding: 40px 20px; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh;
+            margin: 0;
+        }
+        .card-gracias {
+            background-color: #0f2d4a;
+            padding: 40px 30px;
+            border-radius: 16px;
+            border: 1px solid rgba(0, 188, 255, 0.15);
+            text-align: center;
+            max-width: 500px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+        }
+        .icon-check {
+            width: 70px;
+            height: 70px;
+            background-color: rgba(0, 188, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            border: 2px solid #00bcff;
+        }
+        .icon-check svg {
+            width: 35px;
+            height: 35px;
+            fill: #00bcff;
+        }
+        h1 { 
+            color: #ffffff; 
+            font-size: 28px;
+            margin: 0 0 15px;
+            font-weight: 700;
+        }
+        p {
+            color: #a0aec0;
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 0 0 30px;
+        }
+        .btn-inicio { 
+            display: inline-block;
+            background-color: #00bcff;
+            color: #0a2540;
+            text-decoration: none; 
+            font-size: 15px;
+            font-weight: 600;
+            padding: 12px 28px;
+            border-radius: 8px;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+        .btn-inicio:hover {
+            background-color: #33ccff;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card-gracias">
+        <div class="icon-check">
+            <svg viewBox="0 0 24 24">
+                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+            </svg>
+        </div>
+        <h1>¡Todo listo!</h1>
+        <p>Hemos recibido tu solicitud de cotización correctamente. Nuestro equipo técnico evaluará tu infraestructura y te enviaremos la propuesta comercial a tu correo a la brevedad.</p>
+        <a href="/" class="btn-inicio">Volver al inicio</a>
+    </div>
+
+</body>
+</html>
