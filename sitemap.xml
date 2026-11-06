@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <!-- Página Principal -->
+    <!-- 1. Página Principal (Comercial) -->
     <url>
-        <loc>https://economicaweb.cl/</loc>
+        <loc>https://economicaweb.cl</loc>
         <lastmod>2026-11-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
-    <!-- Página de Privacidad Corregida -->
+    <!-- 2. Página Secundaria de Privacidad (Ley N° 21.719) -->
     <url>
         <loc>https://economicaweb.cl/privacidad</loc>
         <lastmod>2026-11-06</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
+    </url>
+    <!-- 3. Página Secundaria de Éxito (Gracias por Cotizar) -->
+    <url>
+        <loc>https://economicaweb.cl/gracias</loc>
+        <lastmod>2026-11-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
     </url>
 </urlset>
