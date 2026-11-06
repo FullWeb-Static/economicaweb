@@ -741,7 +741,7 @@ f.addEventListener('submit',async e=>{
     const r=await fetch('https://api.web3forms.com/submit',{method:'POST',body:new FormData(f)});
     const d=await r.json();
     if(!d.success)throw new Error();
-    msg.textContent='¡Solicitud recibida! Revisaremos tu proyecto y te contactaremos por correo. No tienes que pagar nada en este momento.';f.reset();setPlan('Medium');
+ window.location.href = '/gracias';
   }catch(_){msg.textContent='No pudimos enviar el formulario. Inténtalo de nuevo o escríbenos por WhatsApp.'}
   finally{bt.disabled=false}
 });
