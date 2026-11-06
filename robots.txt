@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Ruta del mapa del sitio para los motores de búsqueda
-Sitemap: https://economicaweb.cl
+Sitemap: https://economicaweb.cl/sitemap.xml
