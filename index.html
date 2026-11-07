@@ -571,8 +571,8 @@ html.intro-on,html.intro-on body{overflow:hidden}
 
 /* Animaciones por scroll (animation-timeline), con respaldo para navegadores sin soporte */
 @keyframes cardRise{from{opacity:0;translate:0 70px;scale:.94}to{opacity:1;translate:0 0;scale:1}}
-@keyframes slideSoftL{from{opacity:0;translate:-90px 0}to{opacity:1;translate:0 0}}
-@keyframes slideSoftR{from{opacity:0;translate:90px 0}to{opacity:1;translate:0 0}}
+@keyframes slideSoftL{from{opacity:0;translate:-50px 0}to{opacity:1;translate:0 0}}
+@keyframes slideSoftR{from{opacity:0;translate:50px 0}to{opacity:1;translate:0 0}}
 @keyframes faqExit{from{opacity:1;translate:0 0}to{opacity:.22;translate:0 -34px}}
 @supports (animation-timeline:view()){
   #adicionales .wrap{animation:slideSoftL linear both;animation-timeline:view();animation-range:entry 0% entry 70%}
@@ -584,6 +584,47 @@ html.intro-on,html.intro-on body{overflow:hidden}
     .js .card.rv,.js .card.rv.in{opacity:1;animation:cardRise linear both;animation-timeline:view();animation-range:entry calc(var(--i,0)*7%) entry calc(58% + var(--i,0)*6%)}
   }
 }
+
+/* Sin desborde horizontal en celulares (WhatsApp flotante y secciones) */
+section,footer,.hero{overflow-x:clip}
+.wa{right:max(20px,env(safe-area-inset-right));bottom:max(20px,env(safe-area-inset-bottom));animation:waIn .9s cubic-bezier(.2,.8,.2,1) 1.4s backwards,waFloat 5s ease-in-out 2.4s infinite}
+.wa:before{inset:auto;left:50%;top:50%;width:320px;height:320px;margin:-160px 0 0 -160px}
+@keyframes waFloat{0%,100%{translate:0 0}50%{translate:0 -7px}}
+@media(max-width:480px){.wa{right:max(14px,env(safe-area-inset-right));bottom:max(14px,env(safe-area-inset-bottom))}}
+
+/* Plan elegido: dorado más intenso, efecto 3D */
+#planes .plan.sel{border:2px solid #b88a36;background-image:linear-gradient(145deg,#f6e1a4cc 0%,#e6c274cc 36%,#d6aa58cc 68%,#c4923fcc 100%),url(marmol.jpg);background-size:auto,cover;background-position:center,var(--mp,50% 50%);box-shadow:0 5px 0 #8f5a3f,0 16px 0 #c99a5b,0 34px 58px #8f594755,inset 0 3px 0 #ffffffb8,inset 0 -18px 30px #a66b5238}
+#planes .plan.sel:hover{box-shadow:0 6px 0 #8f5a3f,0 20px 0 #c99a5b,0 46px 66px #8f594766,inset 0 3px 0 #ffffffb8,inset 0 -18px 30px #a66b5238}
+
+/* Pide tu cotización: fondo grafito claro con dorado para que el formulario resalte */
+#cotizar{background:radial-gradient(ellipse at 12% 8%,#f3dfa8b3 0,transparent 38%),radial-gradient(ellipse at 90% 92%,#e6c98a99 0,transparent 42%),linear-gradient(145deg,#cfd4dc 0%,#b3bac5 48%,#c6c2b6 100%)}
+#cotizar .lead{color:#1f3347}
+
+/* Segundo formulario de solicitudes adicionales */
+.af-wrap{margin-top:56px}
+.af{position:relative;display:grid;gap:26px;max-width:860px;margin-inline:auto;padding:clamp(22px,4vw,40px);border:1.5px solid #5a6572;border-radius:22px;background:linear-gradient(150deg,#fffffff0 0%,#f3f6fae8 100%),url(marmol.jpg) center/cover;box-shadow:0 4px 0 #3a424d,0 22px 50px #0a254026,inset 0 1px 0 #fff}
+.af:before{content:"";position:absolute;top:0;left:32px;right:32px;height:3px;border-radius:0 0 8px 8px;background:linear-gradient(90deg,transparent,#b76e79,#e8b4a0,#fff0e6,#e8b4a0,#b76e79,transparent)}
+.af-h{text-align:center}
+.af-h h3{font-size:clamp(1.25rem,2.6vw,1.6rem);line-height:1.25;color:#0a2540}
+.af-h p{margin-top:6px;color:#52677e}
+.af-s{display:grid;gap:14px;min-width:0}
+.af-s h4{display:flex;align-items:center;gap:10px;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:#713747}
+.af-s h4 i{flex:0 0 24px;width:24px;height:24px;display:grid;place-items:center;border-radius:7px;font-style:normal;font-size:.78rem;font-weight:700;color:#fff;background:linear-gradient(145deg,#c9956f,#a66b52);box-shadow:0 2px 0 #713747}
+.af .fl{color:#0a2540;font-weight:700}
+.af .fl em{font-style:normal;font-weight:600;color:#62758d}
+.af input:not([type=hidden]):not([type=checkbox]),.af select{border:1.5px solid #9fb0c6;background:#f1f5fa;color:#0a2540;font-weight:500;border-radius:11px;padding:13px 15px;transition:border-color .2s,box-shadow .2s,background .2s}
+.af input:not([type=hidden]):not([type=checkbox]):hover,.af select:hover{border-color:#7d90ab}
+.af input:not([type=hidden]):not([type=checkbox]):focus,.af select:focus{background:#fff;border-color:#a66b52;box-shadow:0 0 0 4px #c39a5b33;outline:none}
+.af ::placeholder{color:#62758d;opacity:1}
+.af .three{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:900px){.af .three{grid-template-columns:1fr}}
+.af .chk{display:flex;gap:12px;align-items:flex-start;font-size:.88rem;font-weight:500;line-height:1.5;color:#1f3347;background:linear-gradient(145deg,#fffdf7,#f8f4eb);border:1px solid #c4a05a;border-radius:11px;padding:14px 16px;cursor:pointer}
+.af .chk input{flex:0 0 20px;width:20px;height:20px;padding:0;margin:2px 0 0;accent-color:#a66b52;cursor:pointer}
+.af .chk b{color:#713747}
+.af .chk a{color:#713747;font-weight:600;text-decoration:underline}
+.af .chk:focus-within{border-color:#c39a5b;box-shadow:0 0 0 4px #c39a5b22}
+.af button.btn-gold{justify-content:center;width:100%;padding:15px 24px;font:inherit;font-size:1.02rem;font-weight:700;cursor:pointer}
+.af button.btn-gold:disabled{opacity:.7;cursor:progress}
 
 /* Política de privacidad (sección compacta) */
 #privacidad{padding:64px 0}
@@ -754,6 +795,43 @@ html.intro-on,html.intro-on body{overflow:hidden}
       <p class="note">Valores en pesos chilenos, IVA incluido. Referenciales, sujetos a cotización final.</p>
       <a class="btn-gold" href="mailto:contacto@economicaweb.cl?subject=Solicitud%20de%20adicional%20para%20mi%20plan&amp;body=Hola%2C%20necesito%20un%20adicional%20para%20mi%20plan.%20%C2%BFMe%20pueden%20cotizar%3F%0A%0ANombre%3A%0ASitio%20web%20o%20plan%20actual%3A%0A%C2%BFQu%C3%A9%20necesito%3F%3A%0A">Solicitar un adicional&nbsp;→</a>
     </div>
+
+    <div class="af-wrap reveal" id="solicitud">
+      <form class="af" id="f2" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="551beba8-acd8-4302-a343-a3fbc727c2fd">
+        <input type="hidden" name="subject" value="Nueva solicitud adicional desde e-WEB">
+        <input type="hidden" name="from_name" value="e-WEB">
+        <input type="hidden" name="resumen_solicitud" id="resumen2" value="">
+        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+        <div class="af-h">
+          <h3>Elige la solicitud adicional que requieres</h3>
+          <p>Completa estos 3 pasos y te enviaremos el link de pago.</p>
+        </div>
+        <div class="af-s" role="group" aria-labelledby="af1">
+          <h4 id="af1"><i>1</i>Tu sitio y tu contacto</h4>
+          <label class="fl">Dominio o sitio web<input type="text" name="dominio" placeholder="Ej: tuempresa.cl" required inputmode="url" autocomplete="url"></label>
+          <div class="two">
+            <label class="fl">Correo corporativo<input type="email" name="correo_corporativo" placeholder="Ej: contacto@tuempresa.cl" required autocomplete="email"></label>
+            <label class="fl">Correo alternativo <em>(por seguridad)</em><input type="email" name="correo_alternativo" placeholder="Ej: tunombre@gmail.com" required></label>
+          </div>
+        </div>
+        <div class="af-s" role="group" aria-labelledby="af2">
+          <h4 id="af2"><i>2</i>Elige hasta 3 solicitudes</h4>
+          <div class="three">
+            <label class="fl">Solicitud 1<select name="adicional_1" required><option value="">Selecciona una opción</option><option>Correo corporativo adicional</option><option>Más espacio de correo</option><option>Sección adicional</option><option>Cambio de textos y frases</option><option>Actualizar tu plan</option><option>Otro requerimiento</option></select></label>
+            <label class="fl">Solicitud 2 <em>(opcional)</em><select name="adicional_2"><option value="">Selecciona una opción</option><option>Correo corporativo adicional</option><option>Más espacio de correo</option><option>Sección adicional</option><option>Cambio de textos y frases</option><option>Actualizar tu plan</option><option>Otro requerimiento</option></select></label>
+            <label class="fl">Solicitud 3 <em>(opcional)</em><select name="adicional_3"><option value="">Selecciona una opción</option><option>Correo corporativo adicional</option><option>Más espacio de correo</option><option>Sección adicional</option><option>Cambio de textos y frases</option><option>Actualizar tu plan</option><option>Otro requerimiento</option></select></label>
+          </div>
+        </div>
+        <div class="af-s" role="group" aria-labelledby="af3">
+          <h4 id="af3"><i>3</i>Confirma y envía</h4>
+          <label class="chk"><input type="checkbox" name="aceptacion_ley_21719" value="Acepta tratamiento de datos (Ley N° 21.719)" required><span>Acepto el tratamiento de mis datos personales para atender mi solicitud, conforme a la <b>Ley&nbsp;N°&nbsp;21.719</b> sobre protección de datos personales. <a href="#privacidad">Ver política de privacidad</a>.</span></label>
+          <button class="btn-gold" type="submit">Enviar mi solicitud&nbsp;→</button>
+          <p class="note" style="margin:0;text-align:center">Te responderemos al correo corporativo, o al alternativo si estuviera bloqueado.</p>
+          <p class="msg" id="msg2" role="status" style="text-align:center"></p>
+        </div>
+      </form>
+    </div>
   </div>
 </section>
 
@@ -922,6 +1000,26 @@ f.addEventListener('submit',async e=>{
   }catch(_){msg.textContent='No pudimos enviar el formulario. Inténtalo de nuevo o escríbenos por WhatsApp.'}
   finally{bt.disabled=false}
 });
+// Segundo formulario: solicitudes adicionales
+const f2=document.getElementById('f2'),msg2=document.getElementById('msg2'),resumen2=document.getElementById('resumen2');
+const selsAd=[...f2.querySelectorAll('select[name^=adicional_]')];
+function syncAd(){
+  const usadas=selsAd.map(s=>s.value).filter(Boolean);
+  selsAd.forEach(s=>[...s.options].forEach(o=>{o.disabled=!!o.value&&usadas.includes(o.value)&&s.value!==o.value}));
+  resumen2.value=selsAd.map((s,i)=>s.value?(i+1)+') '+s.value:'').filter(Boolean).join('  |  ');
+}
+selsAd.forEach(s=>s.addEventListener('change',syncAd));
+f2.addEventListener('submit',async e=>{
+  e.preventDefault();syncAd();const bt=f2.querySelector('button[type=submit]');bt.disabled=true;msg2.textContent='Enviando…';
+  try{
+    const r=await fetch('https://api.web3forms.com/submit',{method:'POST',body:new FormData(f2)});
+    const d=await r.json();
+    if(!d.success)throw new Error();
+    msg2.textContent='¡Solicitud recibida! Revisaremos tu pedido y te enviaremos el link de pago a tu correo.';f2.reset();syncAd();
+    fetch(RUTA_GRACIAS,{method:'HEAD'}).then(g=>{if(g.ok)location.href=RUTA_GRACIAS}).catch(()=>{});
+  }catch(_){msg2.textContent='No pudimos enviar tu solicitud. Inténtalo de nuevo o escríbenos a contacto@economicaweb.cl.'}
+  finally{bt.disabled=false}
+});
 document.getElementById('y').textContent=new Date().getFullYear();
 </script>
 <script>
@@ -960,56 +1058,54 @@ document.getElementById('y').textContent=new Date().getFullYear();
   'float hash(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}',
   'float vnoise(vec2 p){vec2 i=floor(p);vec2 f=fract(p);f=f*f*(3.0-2.0*f);',
   ' return mix(mix(hash(i),hash(i+vec2(1.0,0.0)),f.x),mix(hash(i+vec2(0.0,1.0)),hash(i+vec2(1.0,1.0)),f.x),f.y);}',
-  'vec2 hexOff(vec2 p){',
-  ' vec2 s=vec2(1.0,1.7320508);',
-  ' vec4 hC=floor(vec4(p,p-vec2(0.5,1.0))/s.xyxy)+0.5;',
-  ' vec4 h=vec4(p-hC.xy*s,p-(hC.zw+0.5)*s);',
-  ' return dot(h.xy,h.xy)<dot(h.zw,h.zw)?h.xy:h.zw;}',
-  'float H(vec2 p){',
-  ' float r=length(p);',
-  ' float an=atan(p.y,p.x);',
-  ' float wob=1.0+0.06*sin(3.0*an+u_t*1.3)+0.04*sin(5.0*an-u_t*1.7);',
-  ' float env=1.0-smoothstep(0.25,1.08*wob,r);',
-  ' float c=cos(u_t*0.15);float s=sin(u_t*0.15);',
-  ' vec2 q=mat2(c,-s,s,c)*p*5.2;',
-  ' vec2 o=hexOff(q);',
-  ' float d=length(o);',
-  ' float cone=pow(max(0.0,1.0-d/0.62),1.6);',
-  ' float dm=dot(p-u_m,p-u_m);',
-  ' float mag=exp(-dm*0.9);',
-  ' float pulse=0.75+0.25*sin(u_t*2.1+r*4.0);',
-  ' float amp=(0.55+0.9*mag)*pulse*u_grow;',
-  ' return env*(0.35*u_grow+amp*cone);}',
+  'vec3 envMap(vec3 r){',
+  ' float y=r.y;',
+  ' vec3 sky=mix(vec3(0.62,0.70,0.82),vec3(1.0,0.99,0.97),smoothstep(0.0,0.9,y));',
+  ' vec3 gnd=mix(vec3(0.03,0.04,0.06),vec3(0.30,0.27,0.25),smoothstep(-1.0,-0.05,y));',
+  ' vec3 c=mix(gnd,sky,smoothstep(-0.03,0.06,y));',
+  ' c+=vec3(0.9,0.75,0.55)*exp(-abs(y-0.02)*60.0)*0.25;',
+  ' c+=vec3(1.0,0.72,0.58)*pow(max(dot(r,normalize(vec3(-0.6,0.5,0.6))),0.0),18.0)*1.3;',
+  ' c+=vec3(0.85,0.92,1.0)*pow(max(dot(r,normalize(vec3(0.7,0.35,0.6))),0.0),26.0)*1.2;',
+  ' c+=vec3(1.0,0.86,0.5)*pow(max(dot(r,normalize(vec3(0.0,-0.5,0.8))),0.0),14.0)*0.5;',
+  ' return c;}',
   'void main(){',
   ' vec2 p=v_p;',
   ' if(dot(p,p)>2.9){gl_FragColor=vec4(0.0);return;}',
-  ' float h0=H(p);',
-  ' float m=smoothstep(0.05,0.09,h0);',
-  ' if(m<=0.0){gl_FragColor=vec4(0.0);return;}',
-  ' float nz=vnoise(p*9.0+vec2(u_t*0.4,0.0))*0.65+vnoise(p*21.0)*0.35;',
+  ' float g=max(u_grow,0.001);',
+  ' vec2 c=vec2(0.0,0.06*sin(u_t*1.4))+u_m*0.12;',
+  ' vec2 q=(p-c)/g;',
+  ' float wob=0.05+0.07*(1.0-smoothstep(0.0,2.2,u_t));',
+  ' vec2 w=vec2(sin(q.y*2.3+u_t*0.9)+0.5*sin(q.y*4.1-u_t*1.2),cos(q.x*2.1-u_t*0.7)+0.5*cos(q.x*3.7+u_t*1.0));',
+  ' q+=w*wob*0.45;',
+  ' float r2=dot(q,q);',
+  ' float h=sqrt(max(0.0,1.0-r2));',
+  ' float m=smoothstep(0.0,0.12,h);',
+  ' float nz=vnoise(p*6.0+vec2(u_t*0.4,0.0))*0.7+vnoise(p*14.0)*0.3;',
   ' float thr=u_dis*1.15-0.1;',
   ' float alive=smoothstep(thr,thr+0.05,nz);',
   ' float edge=smoothstep(thr-0.07,thr,nz)*(1.0-alive);',
-  ' float a=m*clamp(alive+edge,0.0,1.0);',
-  ' if(a<=0.0){gl_FragColor=vec4(0.0);return;}',
-  ' float e=0.012;',
-  ' float gx=(H(p+vec2(e,0.0))-H(p-vec2(e,0.0)))/(2.0*e);',
-  ' float gy=(H(p+vec2(0.0,e))-H(p-vec2(0.0,e)))/(2.0*e);',
-  ' vec3 n=normalize(vec3(-gx*0.3,-gy*0.3,1.0));',
-  ' vec3 V=vec3(0.0,0.0,1.0);',
-  ' vec3 L1=normalize(vec3(-0.45,0.65,0.6));',
-  ' vec3 L2=normalize(vec3(0.6,-0.3,0.5));',
-  ' vec3 Rf=reflect(-V,n);',
-  ' float ey=Rf.y*0.5+0.5;',
-  ' vec3 env=mix(vec3(0.02,0.04,0.09),vec3(0.55,0.33,0.30),smoothstep(0.35,0.95,ey));',
-  ' env+=vec3(0.9,0.78,0.5)*pow(max(dot(Rf,L1),0.0),24.0)*1.2;',
-  ' env+=vec3(0.7,0.8,0.95)*pow(max(dot(Rf,L2),0.0),40.0)*0.8;',
-  ' float fres=pow(1.0-max(n.z,0.0),2.2);',
-  ' vec3 col=vec3(0.015,0.02,0.03)+env*(0.25+0.75*fres);',
-  ' vec3 hh=normalize(L1+V);',
-  ' col+=vec3(1.0,0.9,0.7)*pow(max(dot(n,hh),0.0),90.0)*1.4;',
-  ' col+=vec3(1.0,0.62,0.48)*edge*1.6;',
-  ' gl_FragColor=vec4(col*a,a);}'
+  ' float dd=length(q);',
+  ' float fade=1.0-u_dis;',
+  ' float halo=exp(-max(dd-1.0,0.0)*3.4)*0.22*(1.0-smoothstep(1.2,1.65,dd));',
+  ' float flo=exp(-((p.x*p.x)/0.5)-pow((p.y+1.48)/0.13,2.0))*0.20*(0.8+0.2*sin(u_t*1.4+3.1416));',
+  ' vec3 gcol=vec3(1.0,0.72,0.58)*(halo+flo)*fade;',
+  ' float ga=(halo+flo)*0.6*fade;',
+  ' vec3 col=vec3(0.0);',
+  ' if(m>0.0){',
+  '  vec2 rip=vec2(vnoise(q*3.0+u_t*0.5),vnoise(q*3.0+7.0-u_t*0.5))-0.5;',
+  '  vec3 n=normalize(vec3(q+0.05*rip,h+0.0001));',
+  '  vec3 V=vec3(0.0,0.0,1.0);',
+  '  vec3 R=reflect(-V,n);',
+  '  float ang=u_t*0.35+u_m.x*0.6;',
+  '  float ca=cos(ang);float sa=sin(ang);',
+  '  R=vec3(ca*R.x+sa*R.z,R.y,-sa*R.x+ca*R.z);',
+  '  col=envMap(R)*0.94*vec3(0.97,0.99,1.0);',
+  '  vec3 hh=normalize(normalize(vec3(-0.45,0.65,0.6))+V);',
+  '  col+=vec3(1.0)*pow(max(dot(n,hh),0.0),160.0)*1.6;',
+  ' }',
+  ' float ballA=m*clamp(alive+edge,0.0,1.0);',
+  ' vec3 ballRGB=col*m*alive+vec3(1.0,0.93,0.88)*1.1*m*edge;',
+  ' gl_FragColor=vec4(ballRGB+gcol*(1.0-ballA),ballA+ga*(1.0-ballA));}'
   ].join('\n');
 
   var VS2=[
@@ -1028,7 +1124,7 @@ document.getElementById('y').textContent=new Date().getFullYear();
   ' float dist=sp*(1.0-exp(-k*t))/k*1.35;',
   ' vec2 pos=p0+dir*dist+perp*(0.7*(s.w-0.5))*dist;',
   ' pos+=vec2(sin(t*2.0+s.w*40.0),cos(t*1.7+s.w*30.0))*0.05*min(t,1.5);',
-  ' pos.y+=0.12*t*t;',
+  ' pos.y-=0.25*t*t;',
   ' vec2 px=u_c+vec2(pos.x,-pos.y)*u_R;',
   ' vec2 cl=px/u_res*2.0-1.0;',
   ' gl_Position=vec4(cl.x,-cl.y,0.0,1.0);',
@@ -1036,8 +1132,9 @@ document.getElementById('y').textContent=new Date().getFullYear();
   ' float f=t/life;',
   ' v_a=(1.0-smoothstep(0.35,1.0,f))*smoothstep(0.0,0.08,t);',
   ' gl_PointSize=(1.4+2.6*s.z)*u_dpr*(1.0-0.6*smoothstep(0.0,1.0,f));',
-  ' vec3 gold=mix(vec3(0.95,0.78,0.45),vec3(0.9,0.58,0.5),s.w);',
-  ' v_col=mix(gold,vec3(0.85,0.9,1.0),step(0.82,fract(s.z*7.3)));}'
+  ' vec3 silver=mix(vec3(0.80,0.85,0.93),vec3(1.0,1.0,1.0),s.w);',
+  ' vec3 warm=mix(vec3(0.95,0.72,0.58),vec3(0.95,0.80,0.50),s.w);',
+  ' v_col=mix(silver,warm,step(0.78,fract(s.z*7.3)));}'
   ].join('\n');
 
   var FS2=[
@@ -1094,6 +1191,7 @@ document.getElementById('y').textContent=new Date().getFullYear();
     document.addEventListener('keydown',function(e){if(e.key==='Escape')skip()});
     cv.addEventListener('webglcontextlost',function(e){e.preventDefault();end()});
     var ease=function(x){x=Math.min(1,Math.max(0,x));return 1-Math.pow(1-x,3)};
+    var easeB=function(x){x=Math.min(1,Math.max(0,x));return 1+2.4*Math.pow(x-1,3)+1.4*Math.pow(x-1,2)};
 
     var frame=function(now){
       if(done||skipped)return;
@@ -1109,7 +1207,7 @@ document.getElementById('y').textContent=new Date().getFullYear();
         gl.useProgram(P1);gl.bindBuffer(gl.ARRAY_BUFFER,quad);
         gl.enableVertexAttribArray(a1);gl.vertexAttribPointer(a1,2,gl.FLOAT,false,0,0);
         gl.uniform2f(u1.res,W,Hh);gl.uniform2f(u1.c,cx,cy);gl.uniform1f(u1.R,R);
-        gl.uniform1f(u1.t,t);gl.uniform1f(u1.grow,ease(t/1.1));gl.uniform1f(u1.dis,dis);gl.uniform2f(u1.m,mx,my);
+        gl.uniform1f(u1.t,t);gl.uniform1f(u1.grow,easeB(t/1.3));gl.uniform1f(u1.dis,dis);gl.uniform2f(u1.m,mx,my);
         gl.drawArrays(gl.TRIANGLE_STRIP,0,4);
         gl.disableVertexAttribArray(a1);
       }
