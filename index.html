@@ -6,7 +6,7 @@
 <title>e-WEB | Creación de páginas web en Santiago, Chile</title>
 <meta name="description" content="Diseñamos y desarrollamos landing pages, sitios corporativos y tiendas online. Elige tu plan Basic, Medium o High y pide tu cotización.">
 <meta name="theme-color" content="#0a2540">
-    <!-- 1. Favicon (Ahora es PNG) -->
+ <!-- 1. Favicon (Ahora es PNG) -->
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="apple-touch-icon" href="/favicon.png">
     
@@ -21,10 +21,6 @@
     <meta property="og:image:alt" content="e-WEB | Landing pages y sitios web para tu negocio">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://economicaweb.cl/imagen-redes.jpg">
-<meta property="og:locale" content="es_CL">
-<meta property="og:site_name" content="e-WEB">
-<meta property="og:title" content="e-WEB | Creación de páginas web en Santiago, Chile">
-<meta property="og:description" content="Diseñamos y desarrollamos landing pages, sitios corporativos y tiendas online. Elige tu plan y pide tu cotización.">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"e-WEB","url":"https://economicaweb.cl","image":"https://economicaweb.cl/imagen.jpg?v=2","telephone":"+56922133902","email":"contacto@economicaweb.cl","description":"Agencia de desarrollo web: landing pages, sitios corporativos y tiendas online.","areaServed":"CL","address":{"@type":"PostalAddress","addressLocality":"Santiago","addressCountry":"CL"}}</script>
 <script>(function(){try{var d=document.documentElement,f=/[?&]intro\b/.test(location.search);if((f||(!sessionStorage.getItem('ewebIntro')&&location.hash.length<2))&&!matchMedia('(prefers-reduced-motion: reduce)').matches){d.classList.add('intro-on','intro-wait')}}catch(e){}})();</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -630,6 +626,79 @@ section,footer,.hero{overflow-x:clip}
 .af button.btn-gold{justify-content:center;width:100%;padding:15px 24px;font:inherit;font-size:1.02rem;font-weight:700;cursor:pointer}
 .af button.btn-gold:disabled{opacity:.7;cursor:progress}
 
+/* Resumen con total y desplegables en una columna */
+.af .three{grid-template-columns:1fr}
+.ad-cta{justify-content:center;text-align:center}
+.af-sum{position:relative;margin-top:6px;padding:20px 22px;border-radius:16px;color:#e9eef5;background:linear-gradient(150deg,#2d353f 0%,#222931 55%,#1a2027 100%);border:1px solid #4a5461;box-shadow:0 4px 0 #10151b,0 14px 30px #0a254030,inset 0 1px 0 #ffffff1a}
+.af-sum:before{content:"";position:absolute;top:0;left:22px;right:22px;height:2px;border-radius:0 0 6px 6px;background:linear-gradient(90deg,transparent,#b76e79,#e8b4a0,#fff0e6,#e8b4a0,#b76e79,transparent)}
+.af-sum .t{margin:0 0 12px;font-size:.74rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#aeb8c5}
+.af-sum ul{display:grid;gap:10px;margin:0;padding:0;list-style:none}
+.af-sum li{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;padding-bottom:10px;border-bottom:1px dashed #ffffff26;animation:afIn .35s ease backwards}
+@keyframes afIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.af-sum li span{display:grid;gap:2px;line-height:1.35;font-weight:600;min-width:0}
+.af-sum li span em{font-style:normal;font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#9fb0c8}
+.af-sum li b{flex:none;text-align:right;font-size:1.1rem;font-weight:800;white-space:nowrap;background:linear-gradient(110deg,#fff,#dfe6ef 45%,#b9c4d3);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.af-sum li b.q{font-size:.95rem}
+.af-sum li b small{display:block;margin-top:2px;font-size:.7rem;font-weight:600;color:#aeb8c5;-webkit-text-fill-color:#aeb8c5}
+.af-sum li.empty{display:block;padding:0;border:0;color:#aeb8c5;font-weight:500}
+.af-total{display:flex;justify-content:space-between;align-items:baseline;gap:14px;margin-top:14px}
+.af-total span{font-size:.8rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#f3e4bf}
+.af-total b{font-size:1.7rem;font-weight:800;line-height:1.1;text-align:right;background:linear-gradient(110deg,#f6e2a6,#e8c46e 40%,#f0c3a8 85%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.af-sum .af-nt{margin:8px 0 0;font-size:.78rem;color:#aeb8c5}
+
+/* Dominio incluido en los planes */
+#planes .plan li.dom{font-weight:700;color:#713747}
+
+/* Sección de solo correo electrónico (rectangular y horizontal) */
+#correo{padding:64px 0;background-image:linear-gradient(180deg,#fafbfdd9 0%,#eaeff5c4 100%),url(marmol.jpg);background-size:auto,cover;background-position:center,30% 70%}
+#correo h2{font-size:clamp(1.4rem,2.8vw,1.95rem);margin-bottom:22px}
+.ml{display:grid;gap:18px;padding:clamp(18px,3vw,28px);border:1.5px solid #5a6572;border-radius:20px;background:linear-gradient(150deg,#fffffff0 0%,#f3f6fae8 100%),url(marmol.jpg) center/cover;box-shadow:0 4px 0 #3a424d,0 20px 44px #0a254022,inset 0 1px 0 #fff}
+.ml-opts{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding-top:6px}
+.mo{position:relative;display:grid;gap:4px;align-content:start;padding:16px 18px;border-radius:14px;cursor:pointer;color:#e9eef5;background:linear-gradient(150deg,#2d353f 0%,#222931 55%,#1a2027 100%);border:1px solid #4a5461;box-shadow:0 3px 0 #10151b,inset 0 1px 0 #ffffff1a;transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s,border-color .3s}
+.mo input{position:absolute;opacity:0;pointer-events:none;width:1px;height:1px}
+.mo .mo-n{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#9fb0c8}
+.mo .mo-t{font-size:1.02rem;line-height:1.25;color:#f6f8fb}
+.mo .mo-d{font-size:.84rem;line-height:1.4;color:#aeb8c5}
+.mo .mo-p{margin-top:6px;font-size:1.5rem;font-weight:800;line-height:1.1;background:linear-gradient(110deg,#fff 0%,#dfe6ef 45%,#b9c4d3 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.mo:hover{transform:translateY(-4px)}
+.mo:focus-within{outline:2px solid #e8b4a0;outline-offset:2px}
+.mo.sel{transform:translateY(-6px);border-color:#e8b4a0;box-shadow:0 4px 0 #10151b,0 12px 0 #39424d,0 0 0 1px #e8b4a066,0 20px 36px #b76e7945,inset 0 1px 0 #ffffff26}
+.mo.sel .mo-p{background:linear-gradient(110deg,#f6e2a6 0%,#e8c46e 40%,#f0c3a8 85%);-webkit-background-clip:text;background-clip:text}
+.ml-sel{margin:0;text-align:center;font-weight:600;color:#33475b}
+.ml-inc{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:0;padding:0;list-style:none}
+.ml-inc li{padding:13px 15px;border:1px solid #c4a05a77;border-radius:12px;background:#ffffffb8;font-size:.85rem;line-height:1.5;color:#33475b}
+.ml-inc li b{display:block;margin-bottom:3px;font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:#713747}
+.ml-dom{display:flex;flex-wrap:wrap;align-items:center;gap:10px 12px}
+.ml-q{font-weight:700;color:#0a2540}
+.dp{position:relative;cursor:pointer}
+.dp input{position:absolute;opacity:0;pointer-events:none;width:1px;height:1px}
+.dp span{display:inline-block;padding:9px 16px;border:1.5px solid #9fb0c6;border-radius:99px;background:#f1f5fa;color:#0a2540;font-size:.88rem;font-weight:600;transition:border-color .2s,background .2s,box-shadow .2s}
+.dp input:checked+span{border-color:#a66b52;background:linear-gradient(145deg,#f6e3a8,#e6c274);box-shadow:0 2px 0 #8f5a3f}
+.dp input:focus-visible+span{outline:2px solid #e8b4a0;outline-offset:2px}
+.ml-f{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.ml .fl{color:#0a2540;font-weight:700}
+.ml input:not([type=hidden]):not([type=checkbox]):not([type=radio]){border:1.5px solid #9fb0c6;background:#f1f5fa;color:#0a2540;font-weight:500;border-radius:11px;padding:13px 15px;transition:border-color .2s,box-shadow .2s,background .2s}
+.ml input:not([type=hidden]):not([type=checkbox]):not([type=radio]):hover{border-color:#7d90ab}
+.ml input:not([type=hidden]):not([type=checkbox]):not([type=radio]):focus{background:#fff;border-color:#a66b52;box-shadow:0 0 0 4px #c39a5b33;outline:none}
+.ml ::placeholder{color:#62758d;opacity:1}
+.ml-f2{display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center}
+.ml .chk{display:flex;gap:12px;align-items:flex-start;font-size:.86rem;font-weight:500;line-height:1.5;color:#1f3347;background:linear-gradient(145deg,#fffdf7,#f8f4eb);border:1px solid #c4a05a;border-radius:11px;padding:12px 14px;cursor:pointer}
+.ml .chk input{flex:0 0 20px;width:20px;height:20px;padding:0;margin:2px 0 0;accent-color:#a66b52;cursor:pointer}
+.ml .chk b{color:#713747}
+.ml .chk a{color:#713747;font-weight:600;text-decoration:underline}
+.ml button.btn-gold{justify-content:center;padding:15px 26px;font:inherit;font-size:1.02rem;font-weight:700;cursor:pointer;white-space:nowrap}
+.ml button.btn-gold:disabled{opacity:.7;cursor:progress}
+.ml .msg{margin:0;text-align:center}
+@media(max-width:900px){.ml-opts,.ml-inc{grid-template-columns:1fr}.ml-f,.ml-f2{grid-template-columns:1fr}.ml button.btn-gold{width:100%}}
+@media(prefers-reduced-motion:reduce){.mo,.dp span{transition:none}}
+
+/* Detalles de la sección de correo */
+.ml-gb{margin:-6px 0 0;text-align:center;font-size:.88rem;color:#52677e}
+.ml-inc{grid-template-columns:repeat(4,1fr)}
+@media(max-width:1100px){.ml-inc{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.ml-inc{grid-template-columns:1fr}}
+.ml-desc{display:inline-flex;align-items:center;padding:8px 14px;border-radius:99px;font-size:.84rem;font-weight:700;color:#5b3a12;background:linear-gradient(115deg,#fff0bd 0%,#e8c46e 45%,#d9ad58 100%);border:1px solid #e8c46e;box-shadow:0 2px 0 #a66b52}
+
 /* Política de privacidad (sección compacta) */
 #privacidad{padding:64px 0}
 #privacidad h2{font-size:clamp(1.4rem,2.6vw,1.8rem);text-shadow:0 1px 0 #fff}
@@ -673,6 +742,7 @@ section,footer,.hero{overflow-x:clip}
     <li><a href="#servicios">Servicios</a></li>
     <li><a href="#proceso">Proceso</a></li>
     <li><a href="#planes">Planes</a></li>
+    <li><a href="#correo">Correo</a></li>
     <li><a href="#adicionales">Adicionales</a></li>
     <li><a href="#faq">Preguntas</a></li>
   </ul>
@@ -745,7 +815,7 @@ section,footer,.hero{overflow-x:clip}
         <input type="radio" name="plan" value="Basic">
         <p class="lvl">Nivel 1</p><h3>Basic</h3><p class="sub">Para empezar con presencia en la web</p>
         <p class="price">$150.000 <small>CLP</small></p><p class="iva">IVA incluido</p>
-        <ul><li>Landing de 1 página</li><li>1 correo corporativo de 5 GB</li><li>Hasta 2 alias de correo</li><li>Formulario de contacto</li><li>Botón de WhatsApp</li><li>SEO básico</li><li>Entrega en ~5 días hábiles</li></ul>
+        <ul><li class="dom">Dominio incluido</li><li>Landing de 1 página</li><li>1 correo corporativo de 5 GB</li><li>Hasta 2 alias de correo</li><li>Formulario de contacto</li><li>Botón de WhatsApp</li><li>SEO básico</li><li>Entrega en ~5 días hábiles</li></ul>
         <span class="pick"></span>
       </label>
       <label class="plan" data-price="$200.000">
@@ -753,14 +823,14 @@ section,footer,.hero{overflow-x:clip}
         <input type="radio" name="plan" value="Medium">
         <p class="lvl">Nivel 2</p><h3>Medium</h3><p class="sub">Para negocios que quieren crecer</p>
         <p class="price">$200.000 <small>CLP</small></p><p class="iva">IVA incluido</p>
-        <ul><li>Hasta 5 páginas</li><li>Todo lo del plan Basic, más:</li><li>2 correos corporativos de 5 GB cada uno</li><li>Hasta 4 alias (2 por correo)</li><li>Animaciones y diseño a medida</li><li>Google Analytics</li><li>Optimización de velocidad</li><li>Entrega en ~10 días hábiles</li></ul>
+        <ul><li class="dom">Dominio incluido</li><li>Hasta 5 páginas</li><li>Todo lo del plan Basic, más:</li><li>2 correos corporativos de 5 GB cada uno</li><li>Hasta 4 alias (2 por correo)</li><li>Animaciones y diseño a medida</li><li>Google Analytics</li><li>Optimización de velocidad</li><li>Entrega en ~10 días hábiles</li></ul>
         <span class="pick"></span>
       </label>
       <label class="plan" data-price="$250.000">
         <input type="radio" name="plan" value="High">
         <p class="lvl">Nivel 3</p><h3>High</h3><p class="sub">Para vender y escalar en serio</p>
         <p class="price">$250.000 <small>CLP</small></p><p class="iva">IVA incluido</p>
-        <ul><li>Hasta 10 páginas o tienda online</li><li>Todo lo del plan Medium, más:</li><li>4 correos corporativos de 5 GB cada uno</li><li>Hasta 6 alias (máximo 2 por correo)</li><li>Pagos y reservas integrados</li><li>SEO avanzado</li><li>Panel para editar contenido</li><li>3 meses de soporte</li></ul>
+        <ul><li class="dom">Dominio incluido</li><li>Hasta 10 páginas o tienda online</li><li>Todo lo del plan Medium, más:</li><li>4 correos corporativos de 5 GB cada uno</li><li>Hasta 6 alias (máximo 2 por correo)</li><li>Pagos y reservas integrados</li><li>SEO avanzado</li><li>Panel para editar contenido</li><li>3 meses de soporte</li></ul>
         <span class="pick"></span>
       </label>
     </div>
@@ -782,67 +852,9 @@ section,footer,.hero{overflow-x:clip}
 </section>
 
 <div class="rg" aria-hidden="true"></div>
-<section id="adicionales">
-  <!-- VALORES DE EJEMPLO: ajusta los montos a tus tarifas reales -->
-  <div class="wrap">
-    <h2 class="reveal">Solicitudes adicionales</h2>
-    <p class="lead reveal">¿Tu negocio creció o necesitas algo que no viene en tu plan? Estos son los valores de referencia para ampliarlo.</p>
-    <div class="grid reveal">
-      <article class="card"><div class="n">Correo</div><h3>Correo corporativo adicional</h3><p>Suma casillas con tu propio dominio para cada integrante de tu equipo.</p><div class="val"><small>desde</small><b>$12.000</b><span>por casilla</span></div></article>
-      <article class="card"><div class="n">Correo</div><h3>Más espacio de correo</h3><p>Amplía los GB de tus casillas para guardar más mensajes y archivos.</p><div class="val"><small>desde</small><b>$8.000</b><span>por cada +5 GB</span></div></article>
-      <article class="card"><div class="n">Sitio web</div><h3>Sección adicional</h3><p>Agrega una nueva sección o página interna con el mismo diseño de tu sitio.</p><div class="val"><small>desde</small><b>$25.000</b><span>por sección</span></div></article>
-      <article class="card"><div class="n">Contenido</div><h3>Cambio de textos y frases</h3><p>Actualizamos mensajes, precios o imágenes para mantener tu página al día.</p><div class="val"><small>desde</small><b>$10.000</b><span>por solicitud</span></div></article>
-      <article class="card"><div class="n">Plan</div><h3>Actualizar tu plan</h3><p>Pasa de Basic a Medium o High cuando necesites más funciones y más correos.</p><div class="val"><small>desde</small><b>$50.000</b><span>por nivel de plan</span></div></article>
-      <article class="card"><div class="n">A medida</div><h3>Otro requerimiento</h3><p>¿Necesitas algo que no está en esta lista? Lo evaluamos contigo y te cotizamos.</p><div class="val"><b>A medida</b><span>cotización personalizada</span></div></article>
-    </div>
-    <div class="ad-cta reveal">
-      <p class="note">Valores en pesos chilenos, IVA incluido. Referenciales, sujetos a cotización final.</p>
-      <a class="btn-gold" href="mailto:contacto@economicaweb.cl?subject=Solicitud%20de%20adicional%20para%20mi%20plan&amp;body=Hola%2C%20necesito%20un%20adicional%20para%20mi%20plan.%20%C2%BFMe%20pueden%20cotizar%3F%0A%0ANombre%3A%0ASitio%20web%20o%20plan%20actual%3A%0A%C2%BFQu%C3%A9%20necesito%3F%3A%0A">Solicitar un adicional&nbsp;→</a>
-    </div>
-
-    <div class="af-wrap reveal" id="solicitud">
-      <form class="af" id="f2" action="https://api.web3forms.com/submit" method="POST">
-        <input type="hidden" name="access_key" value="551beba8-acd8-4302-a343-a3fbc727c2fd">
-        <input type="hidden" name="subject" value="Nueva solicitud adicional desde e-WEB">
-        <input type="hidden" name="from_name" value="e-WEB">
-        <input type="hidden" name="resumen_solicitud" id="resumen2" value="">
-        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
-        <div class="af-h">
-          <h3>Elige la solicitud adicional que requieres</h3>
-          <p>Completa estos 3 pasos y te enviaremos el link de pago.</p>
-        </div>
-        <div class="af-s" role="group" aria-labelledby="af1">
-          <h4 id="af1"><i>1</i>Tu sitio y tu contacto</h4>
-          <label class="fl">Dominio o sitio web<input type="text" name="dominio" placeholder="Ej: tuempresa.cl" required inputmode="url" autocomplete="url"></label>
-          <div class="two">
-            <label class="fl">Correo corporativo<input type="email" name="correo_corporativo" placeholder="Ej: contacto@tuempresa.cl" required autocomplete="email"></label>
-            <label class="fl">Correo alternativo <em>(por seguridad)</em><input type="email" name="correo_alternativo" placeholder="Ej: tunombre@gmail.com" required></label>
-          </div>
-        </div>
-        <div class="af-s" role="group" aria-labelledby="af2">
-          <h4 id="af2"><i>2</i>Elige hasta 3 solicitudes</h4>
-          <div class="three">
-            <label class="fl">Solicitud 1<select name="adicional_1" required><option value="">Selecciona una opción</option><option>Correo corporativo adicional</option><option>Más espacio de correo</option><option>Sección adicional</option><option>Cambio de textos y frases</option><option>Actualizar tu plan</option><option>Otro requerimiento</option></select></label>
-            <label class="fl">Solicitud 2 <em>(opcional)</em><select name="adicional_2"><option value="">Selecciona una opción</option><option>Correo corporativo adicional</option><option>Más espacio de correo</option><option>Sección adicional</option><option>Cambio de textos y frases</option><option>Actualizar tu plan</option><option>Otro requerimiento</option></select></label>
-            <label class="fl">Solicitud 3 <em>(opcional)</em><select name="adicional_3"><option value="">Selecciona una opción</option><option>Correo corporativo adicional</option><option>Más espacio de correo</option><option>Sección adicional</option><option>Cambio de textos y frases</option><option>Actualizar tu plan</option><option>Otro requerimiento</option></select></label>
-          </div>
-        </div>
-        <div class="af-s" role="group" aria-labelledby="af3">
-          <h4 id="af3"><i>3</i>Confirma y envía</h4>
-          <label class="chk"><input type="checkbox" name="aceptacion_ley_21719" value="Acepta tratamiento de datos (Ley N° 21.719)" required><span>Acepto el tratamiento de mis datos personales para atender mi solicitud, conforme a la <b>Ley&nbsp;N°&nbsp;21.719</b> sobre protección de datos personales. <a href="#privacidad">Ver política de privacidad</a>.</span></label>
-          <button class="btn-gold" type="submit">Enviar mi solicitud&nbsp;→</button>
-          <p class="note" style="margin:0;text-align:center">Te responderemos al correo corporativo, o al alternativo si estuviera bloqueado.</p>
-          <p class="msg" id="msg2" role="status" style="text-align:center"></p>
-        </div>
-      </form>
-    </div>
-  </div>
-</section>
-
-<div class="rg" aria-hidden="true"></div>
 <section class="alt" id="cotizar">
   <div class="wrap">
-    <h2 class="reveal">Pide tu cotización</h2>
+    <h2 class="reveal">Pide tu cotización web</h2>
     <p class="lead reveal">Cuéntanos qué tienes en mente. En pocos pasos prepararemos una propuesta clara para tu negocio, sin compromiso.</p>
     <form class="f reveal" id="f" action="https://api.web3forms.com/submit" method="POST">
       <input type="hidden" name="access_key" value="551beba8-acd8-4302-a343-a3fbc727c2fd">
@@ -867,7 +879,7 @@ section,footer,.hero{overflow-x:clip}
         </label>
       </div>
       <label class="fl">Dominio y hosting
-        <select name="dominio_hosting"><option value="">Selecciona una opción</option><option>Ya tengo un dominio comprado</option><option>No tengo dominio, necesito comprar uno nuevo</option><option>Ya tengo dominio y hosting (alojamiento web)</option></select>
+        <select name="dominio_hosting"><option value="">Selecciona una opción</option><option>Ya tengo un dominio comprado (descuento de $10.000)</option><option>No tengo dominio, necesito comprar uno nuevo (incluido en tu plan)</option><option>Ya tengo dominio y hosting (alojamiento web) (descuento de $10.000)</option></select>
       </label>
       <div class="two">
         <label class="fl">Material para tu página
@@ -887,6 +899,112 @@ section,footer,.hero{overflow-x:clip}
 </section>
 
 <div class="rg" aria-hidden="true"></div>
+<section id="correo">
+  <div class="wrap">
+    <h2 class="reveal">¿Quieres solo correo electrónico? Aquí tienes las opciones</h2>
+    <form class="ml reveal" id="f3" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="551beba8-acd8-4302-a343-a3fbc727c2fd">
+      <input type="hidden" name="subject" value="Nueva solicitud de correo corporativo desde e-WEB">
+      <input type="hidden" name="from_name" value="e-WEB">
+      <input type="hidden" name="eleccion_correo" id="valor3" value="">
+      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+      <div class="ml-opts" role="radiogroup" aria-label="Opciones de correo corporativo">
+        <label class="mo"><input type="radio" name="opcion_correo" value="Opción 1 · Correo de entrada" required><span class="mo-n">Opción 1</span><b class="mo-t">Correo de entrada</b><span class="mo-d">1 correo + 2 alias</span><span class="mo-p">$45.000</span></label>
+        <label class="mo"><input type="radio" name="opcion_correo" value="Opción 2 · Correo corporativo"><span class="mo-n">Opción 2</span><b class="mo-t">Correo corporativo</b><span class="mo-d">2 correos + 4 alias (2 por cada uno)</span><span class="mo-p">$75.000</span></label>
+        <label class="mo"><input type="radio" name="opcion_correo" value="Opción 3 · Correo corporativo multifuncional"><span class="mo-n">Opción 3</span><b class="mo-t">Correo corporativo multifuncional</b><span class="mo-d">4 correos + 2 alias por cada uno</span><span class="mo-p">$90.000</span></label>
+      </div>
+      <p class="ml-sel" id="mlSel" role="status">Elige una de las 3 opciones.</p>
+      <p class="ml-gb">Cada correo incluye 5 GB y 2 alias que comparten ese mismo espacio. ¿Más GB? Se solicita como adicional y mantiene sus 2 alias.</p>
+      <ul class="ml-inc">
+        <li><b>Dominio incluido</b>Si no tienes, lo compramos en NIC Chile con el nombre de tu negocio (según disponibilidad). Queda a tu nombre y nosotros lo administramos.</li>
+        <li><b>Nosotros lo administramos</b>Somos los administradores, no los dueños: configuramos DNS, SMTP, SPF, DKIM y DMARC para que nada se rompa.</li>
+        <li><b>Correos privados</b>Cada correo tiene su usuario y contraseña personal, que cambias en tu primer ingreso. Administramos la plataforma, no leemos tus correos.</li>
+        <li><b>Soporte por correo</b>Desbloqueos, altas, bajas y reseteos se piden desde tu correo corporativo, para dejar registro. Primer año incluido; luego, renovación anual.</li>
+      </ul>
+      <div class="ml-dom" role="radiogroup" aria-label="¿Tienes dominio?">
+        <span class="ml-q">¿Tienes dominio?</span>
+        <label class="dp"><input type="radio" name="tiene_dominio" value="Ya tengo dominio al día (descuento $10.000)" checked><span>Ya tengo dominio al día</span></label>
+        <label class="dp"><input type="radio" name="tiene_dominio" value="No tengo dominio (incluido)"><span>No tengo · dominio incluido</span></label>
+        <span class="ml-desc">★ Con dominio propio al día: $10.000 de descuento</span>
+      </div>
+      <div class="ml-f">
+        <label class="fl">Nombre de tu negocio o dominio<input type="text" name="negocio_o_dominio" placeholder="Ej: tuempresa.cl o Mi Empresa" required></label>
+        <label class="fl">Correo de contacto<input type="email" name="correo_contacto" placeholder="Ej: tunombre@gmail.com" required autocomplete="email"></label>
+      </div>
+      <div class="ml-f2">
+        <label class="chk"><input type="checkbox" name="aceptacion_ley_21719" value="Acepta tratamiento de datos (Ley N° 21.719)" required><span>Acepto el tratamiento de mis datos personales para atender mi solicitud, conforme a la <b>Ley&nbsp;N°&nbsp;21.719</b> sobre protección de datos personales. <a href="#privacidad">Ver política de privacidad</a>.</span></label>
+        <button class="btn-gold" type="submit">Solicitar mi correo&nbsp;→</button>
+      </div>
+      <p class="msg" id="msg3" role="status"></p>
+    </form>
+  </div>
+</section>
+
+<div class="rg" aria-hidden="true"></div>
+<section id="adicionales">
+  <!-- VALORES DE EJEMPLO: ajusta los montos a tus tarifas reales -->
+  <div class="wrap">
+    <h2 class="reveal">Solicitudes adicionales</h2>
+    <p class="lead reveal">¿Tu negocio creció o necesitas algo que no viene en tu plan? Estos son los valores de referencia para ampliarlo.</p>
+    <div class="grid reveal">
+      <article class="card"><div class="n">Correo</div><h3>Correo corporativo adicional</h3><p>Suma casillas con tu propio dominio para cada integrante de tu equipo.</p><div class="val"><small>desde</small><b>$12.000</b><span>por casilla</span></div></article>
+      <article class="card"><div class="n">Correo</div><h3>Más espacio de correo</h3><p>Amplía los GB de tus casillas para guardar más mensajes y archivos.</p><div class="val"><small>desde</small><b>$8.000</b><span>por cada +5 GB</span></div></article>
+      <article class="card"><div class="n">Sitio web</div><h3>Sección adicional</h3><p>Agrega una nueva sección o página interna con el mismo diseño de tu sitio.</p><div class="val"><small>desde</small><b>$25.000</b><span>por sección</span></div></article>
+      <article class="card"><div class="n">Contenido</div><h3>Cambio de textos y frases</h3><p>Actualizamos mensajes, precios o imágenes para mantener tu página al día.</p><div class="val"><small>desde</small><b>$10.000</b><span>por solicitud</span></div></article>
+      <article class="card"><div class="n">Plan</div><h3>Actualizar tu plan</h3><p>Pasa de Basic a Medium o High cuando necesites más funciones y más correos.</p><div class="val"><small>desde</small><b>$50.000</b><span>por nivel de plan</span></div></article>
+      <article class="card"><div class="n">A medida</div><h3>Otro requerimiento</h3><p>¿Necesitas algo que no está en esta lista? Lo evaluamos contigo y te cotizamos.</p><div class="val"><b>A medida</b><span>cotización personalizada</span></div></article>
+    </div>
+    <div class="ad-cta reveal">
+      <p class="note">Valores en pesos chilenos, IVA incluido. Referenciales, sujetos a cotización final.</p>
+    </div>
+
+    <div class="af-wrap reveal" id="solicitud">
+      <form class="af" id="f2" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="551beba8-acd8-4302-a343-a3fbc727c2fd">
+        <input type="hidden" name="subject" value="Nueva solicitud adicional desde e-WEB">
+        <input type="hidden" name="from_name" value="e-WEB">
+        <input type="hidden" name="resumen_solicitud" id="resumen2" value="">
+        <input type="hidden" name="total_referencial" id="total2" value="">
+        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+        <div class="af-h">
+          <h3>Elige la solicitud adicional que requieres</h3>
+          <p>Completa estos 3 pasos y te enviaremos el link de pago.</p>
+        </div>
+        <div class="af-s" role="group" aria-labelledby="af1">
+          <h4 id="af1"><i>1</i>Tu sitio y tu contacto</h4>
+          <label class="fl">Dominio o sitio web<input type="text" name="dominio" placeholder="Ej: tuempresa.cl" required inputmode="url" autocomplete="url"></label>
+          <div class="two">
+            <label class="fl">Correo corporativo<input type="email" name="correo_corporativo" placeholder="Ej: contacto@tuempresa.cl" required autocomplete="email"></label>
+            <label class="fl">Correo alternativo <em>(por seguridad)</em><input type="email" name="correo_alternativo" placeholder="Ej: tunombre@gmail.com" required></label>
+          </div>
+        </div>
+        <div class="af-s" role="group" aria-labelledby="af2">
+          <h4 id="af2"><i>2</i>Elige hasta 3 solicitudes</h4>
+          <div class="three">
+            <label class="fl">Solicitud 1<select name="adicional_1" required><option value="">Selecciona una opción</option></select></label>
+            <label class="fl">Solicitud 2 <em>(opcional)</em><select name="adicional_2"><option value="">Selecciona una opción</option></select></label>
+            <label class="fl">Solicitud 3 <em>(opcional)</em><select name="adicional_3"><option value="">Selecciona una opción</option></select></label>
+          </div>
+          <div class="af-sum" aria-live="polite">
+            <p class="t">Resumen de tu solicitud</p>
+            <ul id="afList"><li class="empty">Aún no eliges ninguna solicitud.</li></ul>
+            <div class="af-total"><span>Total referencial</span><b id="afTotal">—</b></div>
+            <p class="af-nt">Valores en pesos chilenos, IVA incluido. Referenciales, sujetos a cotización final.</p>
+          </div>
+        </div>
+        <div class="af-s" role="group" aria-labelledby="af3">
+          <h4 id="af3"><i>3</i>Confirma y envía</h4>
+          <label class="chk"><input type="checkbox" name="aceptacion_ley_21719" value="Acepta tratamiento de datos (Ley N° 21.719)" required><span>Acepto el tratamiento de mis datos personales para atender mi solicitud, conforme a la <b>Ley&nbsp;N°&nbsp;21.719</b> sobre protección de datos personales. <a href="#privacidad">Ver política de privacidad</a>.</span></label>
+          <button class="btn-gold" type="submit">Enviar mi solicitud&nbsp;→</button>
+          <p class="note" style="margin:0;text-align:center">Te responderemos al correo corporativo, o al alternativo si estuviera bloqueado.</p>
+          <p class="msg" id="msg2" role="status" style="text-align:center"></p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<div class="rg" aria-hidden="true"></div>
 <section id="faq">
   <div class="wrap faq">
     <h2 class="reveal">Preguntas frecuentes</h2>
@@ -895,7 +1013,7 @@ section,footer,.hero{overflow-x:clip}
       <details><summary>¿Cuánto demora tener mi página lista?</summary><p>Depende del plan: desde cerca de una semana para una landing hasta unas semanas para un sitio o tienda más completos.</p></details>
       <details><summary>¿Puedo cambiar de plan más adelante?</summary><p>Sí. Podemos ampliar tu sitio con nuevas páginas o funciones cuando lo necesites.</p></details>
       <details><summary>¿Mi página se verá bien en el celular?</summary><p>Sí, todos los planes incluyen diseño responsive que se adapta a cualquier pantalla.</p></details>
-      <details><summary>¿Incluye dominio y hosting?</summary><p>Lo conversamos en la cotización: podemos usar los que ya tengas o ayudarte a contratarlos.</p></details>
+      <details><summary>¿Incluye dominio y hosting?</summary><p>El dominio va incluido en cada plan: si no tienes uno, lo compramos por ti en NIC Chile con el nombre de tu negocio (según disponibilidad). Si ya tienes dominio propio y está al día, tienes $10.000 de descuento. El hosting lo definimos contigo en la cotización.</p></details>
       <details><summary>¿Qué necesito para empezar?</summary><p>Solo contarnos sobre tu negocio. Si ya tienes logo, textos o fotos, los usamos; si no, te orientamos.</p></details>
       <details><summary>¿Qué incluye el correo corporativo?</summary><p>Casillas de 5 GB con tu propio dominio, alias, pie de firma y filtros de seguridad. Nosotros nos encargamos de la administración: desbloqueo de cuentas, altas y bajas de usuarios y restablecimiento de contraseñas.</p></details>
       <details><summary>¿Qué es un alias de correo?</summary><p>Es una dirección adicional (por ejemplo ventas@tuempresa.cl) que llega a la misma casilla, así separas consultas sin pagar otro usuario.</p></details>
@@ -1007,12 +1125,39 @@ f.addEventListener('submit',async e=>{
 // Segundo formulario: solicitudes adicionales
 const f2=document.getElementById('f2'),msg2=document.getElementById('msg2'),resumen2=document.getElementById('resumen2');
 const selsAd=[...f2.querySelectorAll('select[name^=adicional_]')];
+const fmt=n=>'$'+String(n).replace(/\B(?=(\d{3})+(?!\d))/g,'.');
+// Las opciones y sus valores se toman de las 6 tarjetas (una sola fuente de datos)
+const optsAd=[...document.querySelectorAll('#adicionales .card')].map(c=>{
+  const b=c.querySelector('.val b'),u=c.querySelector('.val span'),pr=parseInt(((b&&b.textContent)||'').replace(/\D/g,''),10);
+  return {n:c.querySelector('h3').textContent.trim(),b:b?b.textContent.trim():'',u:u?u.textContent.trim():'',p:isNaN(pr)?0:pr};
+});
+selsAd.forEach(s=>optsAd.forEach(o=>{
+  const op=document.createElement('option');op.value=o.n;
+  op.textContent=o.n+' — '+(o.p?o.b+(o.u?' '+o.u:''):'a cotizar');
+  if(o.p){op.dataset.p=o.p;op.dataset.u=o.u}
+  s.appendChild(op);
+}));
+const afList=document.getElementById('afList'),afTotal=document.getElementById('afTotal'),total2=document.getElementById('total2');
 function syncAd(){
   const usadas=selsAd.map(s=>s.value).filter(Boolean);
   selsAd.forEach(s=>[...s.options].forEach(o=>{o.disabled=!!o.value&&usadas.includes(o.value)&&s.value!==o.value}));
-  resumen2.value=selsAd.map((s,i)=>s.value?(i+1)+') '+s.value:'').filter(Boolean).join('  |  ');
+  let total=0,aCotizar=false;const lineas=[];afList.innerHTML='';
+  selsAd.forEach((s,i)=>{
+    if(!s.value)return;
+    const o=s.options[s.selectedIndex],p=o.dataset.p?parseInt(o.dataset.p,10):0,u=o.dataset.u||'';
+    const li=document.createElement('li'),sp=document.createElement('span'),em=document.createElement('em'),b=document.createElement('b');
+    em.textContent='Solicitud '+(i+1);sp.appendChild(em);sp.appendChild(document.createTextNode(s.value));
+    if(p){total+=p;b.textContent=fmt(p);if(u){const sm=document.createElement('small');sm.textContent=u;b.appendChild(sm)}lineas.push((i+1)+') '+s.value+' — '+fmt(p)+(u?' '+u:''))}
+    else{aCotizar=true;b.className='q';b.textContent='A cotizar';lineas.push((i+1)+') '+s.value+' — a cotizar')}
+    li.appendChild(sp);li.appendChild(b);afList.appendChild(li);
+  });
+  if(!lineas.length){const li=document.createElement('li');li.className='empty';li.textContent='Aún no eliges ninguna solicitud.';afList.appendChild(li)}
+  const totTxt=lineas.length?(total?fmt(total):'$0')+(aCotizar?' + a cotizar':''):'—';
+  afTotal.textContent=totTxt;total2.value=lineas.length?totTxt:'';
+  resumen2.value=lineas.length?lineas.join('  |  ')+'  |  TOTAL REFERENCIAL: '+totTxt:'';
 }
 selsAd.forEach(s=>s.addEventListener('change',syncAd));
+syncAd();
 f2.addEventListener('submit',async e=>{
   e.preventDefault();syncAd();const bt=f2.querySelector('button[type=submit]');bt.disabled=true;msg2.textContent='Enviando…';
   try{
@@ -1022,6 +1167,30 @@ f2.addEventListener('submit',async e=>{
     msg2.textContent='¡Solicitud recibida! Revisaremos tu pedido y te enviaremos el link de pago a tu correo.';f2.reset();syncAd();
     fetch(RUTA_GRACIAS,{method:'HEAD'}).then(g=>{if(g.ok)location.href=RUTA_GRACIAS}).catch(()=>{});
   }catch(_){msg2.textContent='No pudimos enviar tu solicitud. Inténtalo de nuevo o escríbenos a contacto@economicaweb.cl.'}
+  finally{bt.disabled=false}
+});
+// Formulario de solo correo electrónico
+const f3=document.getElementById('f3'),msg3=document.getElementById('msg3'),sel3=document.getElementById('mlSel'),val3=document.getElementById('valor3');
+const opcMl=[...f3.querySelectorAll('.mo input')];
+function syncMl(){
+  opcMl.forEach(i=>i.closest('.mo').classList.toggle('sel',i.checked));
+  const c=opcMl.find(i=>i.checked);
+  if(c){const l=c.closest('.mo'),tx=l.querySelector('.mo-n').textContent+' · '+l.querySelector('.mo-t').textContent+' — '+l.querySelector('.mo-p').textContent;
+    sel3.textContent='Tu elección: '+tx+' (IVA incluido, 5 GB por correo)';val3.value=tx}
+  else{sel3.textContent='Elige una de las 3 opciones.';val3.value=''}
+}
+opcMl.forEach(i=>i.addEventListener('change',syncMl));
+f3.addEventListener('reset',()=>setTimeout(syncMl,0));
+syncMl();
+f3.addEventListener('submit',async e=>{
+  e.preventDefault();syncMl();const bt=f3.querySelector('button[type=submit]');bt.disabled=true;msg3.textContent='Enviando…';
+  try{
+    const r=await fetch('https://api.web3forms.com/submit',{method:'POST',body:new FormData(f3)});
+    const d=await r.json();
+    if(!d.success)throw new Error();
+    msg3.textContent='¡Solicitud recibida! Te contactaremos con los siguientes pasos y el link de pago.';f3.reset();
+    fetch(RUTA_GRACIAS,{method:'HEAD'}).then(g=>{if(g.ok)location.href=RUTA_GRACIAS}).catch(()=>{});
+  }catch(_){msg3.textContent='No pudimos enviar tu solicitud. Inténtalo de nuevo o escríbenos a contacto@economicaweb.cl.'}
   finally{bt.disabled=false}
 });
 document.getElementById('y').textContent=new Date().getFullYear();
