@@ -763,46 +763,58 @@ section,footer,.hero{overflow-x:clip}
 .fmore{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:8px 22px;margin:4px 0 16px;font-size:.84rem;color:#aeb8c5}
 
 /* =========================================================
-   NUEVA SECCIÓN LANDING CON EFECTO VIDRIO Y FORMULARIO DESTACADO
+   SECCIÓN LANDING CON ONDAS VÍTREAS Y FORMULARIO SOBRESALIENTE
    ========================================================= */
 #landing {
     position: relative;
     overflow: hidden;
-    background-image: linear-gradient(160deg, rgba(249, 250, 252, 0.85) 0%, rgba(232, 237, 243, 0.85) 100%), url(marmol.jpg);
-    background-size: auto, cover;
-    background-position: center, 70% 20%;
+    background: linear-gradient(160deg, #f4f7fb 0%, #e8edf3 100%);
     padding: 80px 0;
-}
-
-/* Rayos de Sol / Reflejo de vidrio animado */
-#landing::before {
-    content: "";
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(45deg, transparent 40%, rgba(255, 255, 255, 0.7) 50%, transparent 60%);
-    transform: rotate(30deg);
-    animation: sunRaySweep 10s infinite linear;
-    pointer-events: none;
     z-index: 1;
-    opacity: 0.8;
-}
-@keyframes sunRaySweep {
-    0% { transform: translate(-50%, -50%) rotate(30deg); }
-    100% { transform: translate(50%, 50%) rotate(30deg); }
 }
 
-/* Reflejo estático de vidrio (espejo) */
-#landing::after {
-    content: "";
+/* Ondas Vítreas Animadas en el Fondo */
+.waves-container {
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at 80% 20%, rgba(255,255,255,0.6) 0%, transparent 40%),
-                radial-gradient(circle at 10% 80%, rgba(200, 220, 255, 0.4) 0%, transparent 50%);
+    overflow: hidden;
+    z-index: -1;
     pointer-events: none;
-    z-index: 1;
+}
+.wave {
+    position: absolute;
+    width: 80vw;
+    height: 80vw;
+    max-width: 800px;
+    max-height: 800px;
+    border-radius: 45% 55% 70% 30% / 45% 55% 45% 55%;
+    filter: blur(60px);
+    opacity: 0.6;
+    animation: waveFloat 15s infinite alternate ease-in-out;
+}
+.wave-1 {
+    background: radial-gradient(circle, rgba(232,180,160,0.6) 0%, rgba(255,255,255,0) 70%);
+    top: -20%; left: -10%;
+    animation-duration: 18s;
+}
+.wave-2 {
+    background: radial-gradient(circle, rgba(113,55,71,0.25) 0%, rgba(255,255,255,0) 70%);
+    bottom: -20%; right: -10%;
+    animation-duration: 22s;
+    animation-delay: -5s;
+}
+.wave-3 {
+    background: radial-gradient(circle, rgba(232,196,110,0.4) 0%, rgba(255,255,255,0) 70%);
+    top: 30%; left: 30%;
+    width: 60vw; height: 60vw;
+    animation-duration: 20s;
+    animation-delay: -10s;
+}
+
+@keyframes waveFloat {
+    0% { transform: translate(0, 0) rotate(0deg) scale(1); }
+    50% { transform: translate(5%, 10%) rotate(15deg) scale(1.05); border-radius: 55% 45% 40% 60% / 55% 45% 60% 40%; }
+    100% { transform: translate(-5%, -5%) rotate(-10deg) scale(0.95); border-radius: 45% 55% 60% 40% / 45% 55% 40% 60%; }
 }
 
 #landing .wrap {
@@ -823,11 +835,11 @@ section,footer,.hero{overflow-x:clip}
 .lp-included-list li::before { content: "✓"; color: #0f8a4f; font-weight: 800; font-size: 1.1rem; }
 .lp-included-list li b { color: #713747; }
 
-/* Formulario de Ejemplo (Glassmorphism + Bordó + Destello) */
+/* Formulario de Ejemplo (Contraste Sofisticado) */
 .lp-form-example {
-    background: rgba(255, 255, 255, 0.65);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    background: rgba(255, 255, 255, 0.85); /* Base más blanca para resaltar sobre las ondas */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.9);
     border-radius: 20px;
     padding: 32px;
@@ -836,29 +848,32 @@ section,footer,.hero{overflow-x:clip}
     transform: translateY(0);
     transition: transform 0.4s ease;
     
-    /* Destello / Resplandor (Glow) animado con tonos bordó */
-    animation: formPulse 4s infinite alternate;
+    /* Sombra profunda para que "flote" y destaque inmediatamente */
+    box-shadow: 0 30px 60px -12px rgba(10, 37, 64, 0.25), inset 0 1px 0 rgba(255, 255, 255, 1);
+    
+    /* Destello animado bordó */
+    animation: formPulse 3s infinite alternate;
 }
 
 @keyframes formPulse {
     0% { 
-        box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 1), 0 0 0 rgba(113, 55, 71, 0);
+        box-shadow: 0 30px 60px -12px rgba(10, 37, 64, 0.25), inset 0 1px 0 rgba(255, 255, 255, 1), 0 0 0 rgba(113, 55, 71, 0);
         border-color: rgba(255, 255, 255, 0.9);
     }
     100% { 
-        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 1), 0 0 25px rgba(113, 55, 71, 0.45);
-        border-color: rgba(113, 55, 71, 0.3);
+        box-shadow: 0 35px 70px -12px rgba(10, 37, 64, 0.3), inset 0 1px 0 rgba(255, 255, 255, 1), 0 0 35px rgba(113, 55, 71, 0.5);
+        border-color: rgba(113, 55, 71, 0.4);
     }
 }
 
 .lp-form-example:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
 }
 .lp-form-example::before {
     content: "";
     position: absolute;
     top: 0; left: 0; right: 0; height: 4px;
-    /* Cambio a tono más Bordó */
+    /* Borde superior bordó profundo */
     background: linear-gradient(90deg, transparent, #5c2a36, #9c4d5f, #713747, transparent);
 }
 .lp-form-example h3 {
@@ -892,7 +907,7 @@ section,footer,.hero{overflow-x:clip}
     padding: 12px 16px;
     border-radius: 10px;
     border: 1.5px solid #e8d8b4;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.95);
     font-family: inherit;
     font-size: 0.9rem;
     color: #0a2540;
@@ -1327,11 +1342,19 @@ section,footer,.hero{overflow-x:clip}
 
 <div class="rg" aria-hidden="true"></div>
 
-<!-- SECCIÓN LANDING CON FORMULARIO Y LISTA RECUPERADA -->
+<!-- SECCIÓN LANDING CON ONDAS VÍTREAS Y FORMULARIO DESTACADO -->
 <section id="landing">
+  
+  <!-- Contenedor de Ondas Vítreas -->
+  <div class="waves-container">
+    <div class="wave wave-1"></div>
+    <div class="wave wave-2"></div>
+    <div class="wave wave-3"></div>
+  </div>
+
   <div class="wrap lp">
     
-    <!-- Lado Izquierdo (Texto y Lista recuperada) -->
+    <!-- Lado Izquierdo (Texto y Lista) -->
     <div class="lp-t reveal">
       <p class="lp-k">EL PLAN MÁS SIMPLE Y DIRECTO</p>
       <h2>Landing One-Page: tu página en una sola pantalla, lista para recibir clientes</h2>
@@ -1350,7 +1373,7 @@ section,footer,.hero{overflow-x:clip}
       </div>
     </div>
     
-    <!-- Lado Derecho: Formulario de Ejemplo Mejorado -->
+    <!-- Lado Derecho: Formulario de Ejemplo Sobresaliente -->
     <div class="lp-form-example reveal">
       <h3>Ejemplo de Bóveda de Contacto</h3>
       
