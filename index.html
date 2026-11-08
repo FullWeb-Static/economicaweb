@@ -6,13 +6,13 @@
 <title>e-WEB | Creación de páginas web en Santiago, Chile</title>
 <meta name="description" content="Diseñamos y desarrollamos landing pages, sitios corporativos y tiendas online. Elige tu plan Basic, Medium o High y pide tu cotización.">
 <meta name="theme-color" content="#0a2540">
- <!-- 1. Favicon (Ahora es PNG) -->
+<!-- 1. Favicon (Ahora es PNG) -->
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="apple-touch-icon" href="/favicon.png">
-    
+
     <meta property="og:type" content="website">
     <link rel="canonical" href="https://economicaweb.cl/" />
-    
+
     <!-- 2. Imagen para Redes Sociales (Ahora es JPG) -->
     <meta property="og:url" content="https://economicaweb.cl/" />
     <meta property="og:image" content="https://economicaweb.cl/imagen-redes.jpg">
@@ -21,7 +21,11 @@
     <meta property="og:image:alt" content="e-WEB | Landing pages y sitios web para tu negocio">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://economicaweb.cl/imagen-redes.jpg">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"e-WEB","url":"https://economicaweb.cl","image":"https://economicaweb.cl/imagen.jpg?v=2","telephone":"+56922133902","email":"contacto@economicaweb.cl","description":"Agencia de desarrollo web: landing pages, sitios corporativos y tiendas online.","areaServed":"CL","address":{"@type":"PostalAddress","addressLocality":"Santiago","addressCountry":"CL"}}</script>
+<meta property="og:locale" content="es_CL">
+<meta property="og:site_name" content="e-WEB">
+<meta property="og:title" content="e-WEB | Creación de páginas web en Santiago, Chile">
+<meta property="og:description" content="Diseñamos y desarrollamos landing pages, sitios corporativos y tiendas online. Elige tu plan y pide tu cotización.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"e-WEB","url":"https://economicaweb.cl","image":"https://economicaweb.cl/imagen-redes.jpg","telephone":"+56922133902","email":"contacto@economicaweb.cl","description":"Agencia de desarrollo web: landing pages, sitios corporativos y tiendas online.","areaServed":"CL","address":{"@type":"PostalAddress","addressLocality":"Santiago","addressCountry":"CL"}}</script>
 <script>(function(){try{var d=document.documentElement,f=/[?&]intro\b/.test(location.search);if((f||(!sessionStorage.getItem('ewebIntro')&&location.hash.length<2))&&!matchMedia('(prefers-reduced-motion: reduce)').matches){d.classList.add('intro-on','intro-wait')}}catch(e){}})();</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -744,6 +748,57 @@ section,footer,.hero{overflow-x:clip}
 #cotizar .f .qs-tot b{font-size:1.45rem;font-weight:800;line-height:1.1;background:linear-gradient(110deg,#f6e2a6,#e8c46e 40%,#f0c3a8 85%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 #cotizar .f .qs-pz{margin:10px 0 0;font-size:.8rem;line-height:1.55;color:#aeb8c5}
 
+/* Enlaces "más información" a las páginas de detalle */
+.more{display:inline-flex;align-items:center;gap:6px;padding-bottom:1px;border-bottom:1px solid #b76e7966;font-size:.84rem;font-weight:700;line-height:1.3;color:#713747;text-decoration:none;transition:color .25s,border-color .25s,gap .25s}
+.more i{font-style:normal;transition:transform .25s}
+.more:hover,.more:focus-visible{gap:9px;color:#9c4d5f;border-color:#b76e79;outline:none}
+.more:hover i,.more:focus-visible i{transform:translate(2px,-2px)}
+.more.dk{color:#f0c3a8;border-bottom-color:#e8b4a066}
+.more.dk:hover,.more.dk:focus-visible{color:#fff;border-color:#e8b4a0}
+.card .more{margin-top:12px}
+.ml-inc li .more{display:flex;width:max-content;max-width:100%;margin-top:8px}
+.ml-renov a.more{text-decoration:none;font-size:.84rem}
+.pv .more{margin-top:8px;font-size:.78rem}
+.qs-more{margin:10px 0 0;font-size:.8rem;color:#aeb8c5}
+#cotizar .f .qs-more .more{margin-left:4px}
+.ad-links{margin:0;font-size:.95rem;color:#33475b}
+.ad-links .more{font-size:.92rem}
+.fmore{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:8px 22px;margin:4px 0 16px;font-size:.84rem;color:#aeb8c5}
+
+/* Sección Landing One-Page */
+#landing{padding:72px 0;background-image:linear-gradient(160deg,#f9fafcdb 0%,#e8edf3c9 100%),url(marmol.jpg);background-size:auto,cover;background-position:center,70% 20%}
+.lp{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.lp-k{margin:0 0 10px;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#9c4d5f}
+.lp-t h2{font-size:clamp(1.5rem,3vw,2.1rem);line-height:1.2}
+.lp-t .lead{margin-top:12px}
+.lp-a{display:flex;flex-wrap:wrap;align-items:center;gap:16px 26px;margin-top:22px}
+.lp-list{display:grid;gap:9px;margin:14px 0 0;padding:0;list-style:none}
+.lp-list li{position:relative;padding-left:26px;font-size:.95rem;font-weight:600;color:#e9eef5}
+.lp-list li:before{content:"✓";position:absolute;left:0;top:0;font-weight:800;background:linear-gradient(135deg,#f6e2a6,#e3a98d);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+@media(max-width:900px){.lp{grid-template-columns:1fr;gap:28px}}
+
+/* Sección "Conoce todo lo que hacemos": enlaces a las páginas de detalle */
+#explora{padding:84px 0;color:#e9eef5;background:radial-gradient(ellipse at 50% 0%,#e8b4a038 0,transparent 55%),radial-gradient(ellipse at 50% 100%,#8fb4ff1c 0,transparent 55%),linear-gradient(180deg,#2a313b 0%,#1c222a 100%)}
+#explora h2{color:#f6f8fb}
+#explora .lead{color:#aeb8c5}
+.ex{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:8px}
+.ex-t{position:relative;display:grid;justify-items:center;align-content:start;gap:10px;padding:28px 18px 22px;border:1px solid #ffffff22;border-radius:18px;text-align:center;text-decoration:none;color:#e9eef5;background:linear-gradient(150deg,#ffffff16,#ffffff06);box-shadow:inset 0 1px 0 #ffffff26,0 14px 30px #00000040;transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s,border-color .35s}
+.ex-t:hover,.ex-t:focus-visible{transform:translateY(-8px);border-color:#e8b4a0aa;box-shadow:inset 0 1px 0 #ffffff33,0 22px 40px #00000055,0 0 34px #e8b4a055;outline:none}
+.ex-i{position:relative;display:grid;place-items:center;width:76px;height:76px;border-radius:50%;color:#fff0e6;background:radial-gradient(circle at 30% 25%,#e8b4a0 0,#b76e79 45%,#7e3f4d 100%);box-shadow:inset 0 2px 0 #ffffff55,0 0 0 1px #e8b4a066,0 0 28px #e8b4a066}
+.ex-i:before{content:"";position:absolute;inset:-8px;border:1.5px solid #e8b4a0;border-radius:50%;opacity:0;animation:exPulse 3s ease-out infinite}
+.ex-t:nth-child(2n) .ex-i:before{animation-delay:1s}
+.ex-t:nth-child(3n) .ex-i:before{animation-delay:2s}
+@keyframes exPulse{0%{transform:scale(.9);opacity:.75}100%{transform:scale(1.4);opacity:0}}
+.ex-i svg{width:36px;height:36px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.ex-t b{font-size:1.02rem;line-height:1.25;color:#fff}
+.ex-d{font-size:.84rem;line-height:1.5;color:#aeb8c5}
+.ex-g{margin-top:2px;font-size:.78rem;font-weight:700;letter-spacing:.05em;color:#f0c3a8;transition:letter-spacing .25s}
+.ex-t:hover .ex-g{letter-spacing:.1em}
+@media(max-width:1000px){.ex{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.ex{gap:12px}.ex-t{padding:20px 12px 16px}.ex-i{width:60px;height:60px}.ex-i svg{width:30px;height:30px}.ex-t b{font-size:.92rem}.ex-d{font-size:.78rem}}
+.mig-hint{margin:10px 0 0;font-size:.95rem;color:#1f3347}
+@media(prefers-reduced-motion:reduce){.ex-t{transition:none}}
+
 /* Política de privacidad (sección compacta) */
 #privacidad{padding:64px 0}
 #privacidad h2{font-size:clamp(1.4rem,2.6vw,1.8rem);text-shadow:0 1px 0 #fff}
@@ -825,11 +880,11 @@ section,footer,.hero{overflow-x:clip}
 <section id="servicios">
   <div class="wrap">
     <h2 class="reveal">Todo lo que tu negocio necesita en&nbsp;la&nbsp;web</h2>
-    <p class="lead reveal">Desde una página simple hasta una tienda completa, con diseño a medida.</p>
+    <p class="lead reveal">Desde una página simple hasta una tienda online básica, con diseño a medida.</p>
     <div class="grid reveal">
-      <div class="card"><h3>Landing pages</h3><p>Una página enfocada en un objetivo: que tus visitas te contacten o compren.</p></div>
+      <div class="card"><h3>Landing pages</h3><p>Una página enfocada en un objetivo: que tus visitas te contacten o compren.</p><a class="more dk" href="landing-one-page.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva">Landing One-Page: más información<i aria-hidden="true">↗</i></a></div>
       <div class="card"><h3>Sitios corporativos</h3><p>Presencia profesional para tu empresa, con varias secciones y formulario.</p></div>
-      <div class="card"><h3>Tiendas online</h3><p>Catálogo, carrito y pagos para vender las 24 horas del día.</p></div>
+      <div class="card"><h3>Tiendas online básicas</h3><p>Catálogo fijo de tus productos o servicios para vender, sin cambios continuos.</p></div>
       <div class="card"><h3>Mantención y SEO</h3><p>Actualizaciones, velocidad y posicionamiento para seguir creciendo.</p></div>
     </div>
   </div>
@@ -845,6 +900,32 @@ section,footer,.hero{overflow-x:clip}
       <div class="card"><div class="n">Paso 2</div><h3>Diseñamos</h3><p>Te mostramos una propuesta visual para que la apruebes.</p></div>
       <div class="card"><div class="n">Paso 3</div><h3>Desarrollamos</h3><p>Programamos tu sitio rápido, seguro y adaptado a celulares.</p></div>
       <div class="card"><div class="n">Paso 4</div><h3>Publicamos</h3><p>Lo ponemos en línea y te acompañamos en los primeros pasos.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="rg" aria-hidden="true"></div>
+<section id="landing">
+  <div class="wrap lp">
+    <div class="lp-t reveal">
+      <p class="lp-k">Landing One-Page</p>
+      <h2>Tu página en una sola pantalla, lista para recibir clientes</h2>
+      <p class="lead">Una landing page enfocada en un objetivo: que tus visitas te contacten. Es el punto de partida del plan Basic.</p>
+      <div class="lp-a">
+        <a class="btn-gold" href="#planes">Ver plan Basic&nbsp;→</a>
+        <a class="more" href="landing-one-page.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva">Ver detalle de la Landing One-Page<i aria-hidden="true">↗</i></a>
+      </div>
+    </div>
+    <div class="card reveal lp-c">
+      <h3>Incluye</h3>
+      <ul class="lp-list">
+        <li>Landing de 1 página</li>
+        <li>Formulario de contacto básico (tu bóveda)</li>
+        <li>Botón de WhatsApp</li>
+        <li>SEO básico</li>
+        <li>Dominio incluido</li>
+        <li>1 correo corporativo de 5 GB</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -883,12 +964,12 @@ section,footer,.hero{overflow-x:clip}
       <h3>Incluido en todos los planes</h3>
       <p class="lead">Estas características vienen con Basic, Medium y High, sin costo adicional.</p>
       <div class="grid">
-        <div class="card"><h3>Conexión segura HTTPS</h3><p>Certificado de seguridad con candado en el navegador, conexión cifrada y protección frente a ataques y tráfico malicioso.</p></div>
+        <div class="card"><h3>Conexión segura HTTPS</h3><p>Certificado de seguridad con candado en el navegador, conexión cifrada y protección frente a ataques y tráfico malicioso.</p><a class="more dk" href="arquitectura-seguridad.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva">Arquitectura de seguridad<i aria-hidden="true">↗</i></a></div>
         <div class="card"><h3>Código 100% puro y responsive</h3><p>Desarrollado en HTML, CSS y JavaScript puros, sin plantillas pesadas. Se adapta a celular, tablet y computador.</p></div>
         <div class="card"><h3>Abre en menos de 1 segundo</h3><p>Alta velocidad de carga para que tus clientes no se vayan antes de ver tu oferta.</p></div>
         <div class="card"><h3>Visible en Google</h3><p>Indexación en buscadores y configuración de Google Search Console para que tu sitio sea encontrado.</p></div>
-        <div class="card"><h3>Correo corporativo seguro</h3><p>Casillas con tu propio dominio (contacto@tuempresa.cl), con filtros antispam y antiphishing, cifrado y verificación en dos pasos.</p></div>
-        <div class="card"><h3>Administración de correo incluida</h3><p>Nosotros nos encargamos de desbloquear cuentas, agregar o eliminar usuarios, restablecer contraseñas y configurar el pie de firma.</p></div>
+        <div class="card"><h3>Correo corporativo seguro</h3><p>Casillas con tu propio dominio (contacto@tuempresa.cl), con filtros antispam y antiphishing, cifrado y verificación en dos pasos.</p><a class="more dk" href="correo-corporativo.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva">Correo corporativo<i aria-hidden="true">↗</i></a></div>
+        <div class="card"><h3>Administración de correo incluida</h3><p>Nosotros nos encargamos de desbloquear cuentas, agregar o eliminar usuarios, restablecer contraseñas y configurar el pie de firma.</p><a class="more dk" href="soporte-ti.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva">Soporte TI web<i aria-hidden="true">↗</i></a></div>
       </div>
     </div>
     <div class="sum reveal"><span id="sumTxt"></span><a class="btn" href="#cotizar">Cotizar este plan</a></div>
@@ -901,6 +982,7 @@ section,footer,.hero{overflow-x:clip}
   <div class="wrap">
     <h2 class="reveal">Pide tu cotización web</h2>
     <p class="lead reveal">Cuéntanos qué tienes en mente. En pocos pasos prepararemos una propuesta clara para tu negocio, sin compromiso.</p>
+     <p class="mig-hint reveal">¿Ya tienes una web en otro lugar? <a class="more" href="migracion.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva">Conoce nuestra Migración<i aria-hidden="true">↗</i></a></p>
     <form class="f reveal" id="f" action="https://api.web3forms.com/submit" method="POST">
       <input type="hidden" name="access_key" value="551beba8-acd8-4302-a343-a3fbc727c2fd">
       <input type="hidden" name="subject" value="Nueva cotización desde e-WEB">
@@ -950,6 +1032,7 @@ section,footer,.hero{overflow-x:clip}
         <ul id="qsList"></ul>
         <div class="qs-tot"><span>Total referencial</span><b id="qsTotal">—</b></div>
         <p class="qs-pz" id="qsPz" hidden></p>
+        <p class="qs-more">¿Cómo se atienden las solicitudes? <a class="more dk" href="tickets.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva">Tickets<i aria-hidden="true">↗</i></a></p>
       </div>
       <textarea name="mensaje" rows="5" aria-label="Cuéntanos sobre tu proyecto" placeholder="Cuéntanos sobre tu proyecto" required></textarea>
       <label class="chk"><input type="checkbox" name="aceptacion_ley_21719" value="Acepta tratamiento de datos (Ley N° 21.719)" required><span>Acepto el tratamiento de mis datos personales para recibir mi cotización, conforme a la <b>Ley&nbsp;N°&nbsp;21.719</b> sobre protección de datos personales. <a href="#privacidad">Ver política de privacidad</a>.</span></label>
@@ -980,9 +1063,9 @@ section,footer,.hero{overflow-x:clip}
       <p class="ml-gb">Cada correo incluye 5 GB y 2 alias que comparten ese mismo espacio. ¿Más GB? Se solicita como adicional y mantiene sus 2 alias.</p>
       <ul class="ml-inc">
         <li><b>Dominio incluido</b>Si no tienes, lo compramos en NIC Chile con el nombre de tu negocio (según disponibilidad). Queda a tu nombre y nosotros lo administramos.</li>
-        <li><b>Nosotros lo administramos</b>Somos los administradores, no los dueños: configuramos DNS, SMTP, SPF, DKIM y DMARC para que nada se rompa.</li>
-        <li><b>Correos privados</b>Cada correo tiene su usuario y contraseña personal, que cambias en tu primer ingreso. Administramos la plataforma, no leemos tus correos.</li>
-        <li><b>Soporte por correo</b>Desbloqueos, altas, bajas y reseteos se piden desde tu correo corporativo, para dejar registro. Primer año incluido en las 3 opciones; luego, renovación anual.</li>
+        <li><b>Nosotros lo administramos</b>Somos los administradores, no los dueños: configuramos DNS, SMTP, SPF, DKIM y DMARC para que nada se rompa.<a class="more" href="arquitectura-seguridad.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva">Arquitectura de seguridad<i aria-hidden="true">↗</i></a></li>
+        <li><b>Correos privados</b>Cada correo tiene su usuario y contraseña personal, que cambias en tu primer ingreso. Administramos la plataforma, no leemos tus correos.<a class="more" href="correo-corporativo.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva">Correo corporativo<i aria-hidden="true">↗</i></a></li>
+        <li><b>Soporte por correo</b>Desbloqueos, altas, bajas y reseteos se piden desde tu correo corporativo, para dejar registro. Primer año incluido en las 3 opciones; luego, renovación anual.<a class="more" href="soporte-ti.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva">Soporte TI web<i aria-hidden="true">↗</i></a><a class="more" href="tickets.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva">Tickets<i aria-hidden="true">↗</i></a></li>
       </ul>
       <div class="ml-dom" role="radiogroup" aria-label="¿Tienes dominio?">
         <span class="ml-q">¿Tienes dominio?</span>
@@ -1001,7 +1084,7 @@ section,footer,.hero{overflow-x:clip}
       <div class="ml-renov">
         <b>Renovación anual: $50.000 (IVA incluido)</b>
         <span>Desde el segundo año, para cualquiera de las 3 opciones. Incluye la administración de los correos, el seguimiento, la revisión de seguridad y la mantención, más el soporte: 2 solicitudes al mes (Opción 1), 4 (Opción 2) o 6 (Opción 3), siempre desde tu correo corporativo. Si necesitas más, se piden como solicitudes adicionales.</span>
-        <a href="condiciones.html" target="_blank" rel="noopener">Revisar condiciones →</a>
+        <a class="more" href="portal-renovacion.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva">Portal de renovación: más información<i aria-hidden="true">↗</i></a>
       </div>
       <p class="msg" id="msg3" role="status"></p>
     </form>
@@ -1024,6 +1107,7 @@ section,footer,.hero{overflow-x:clip}
     </div>
     <div class="ad-cta reveal">
       <p class="note">Valores en pesos chilenos, IVA incluido. Referenciales, sujetos a cotización final.</p>
+      <p class="ad-links">Conoce nuestro <a class="more" href="soporte-ti.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva">Soporte TI web<i aria-hidden="true">↗</i></a> y cómo funcionan los <a class="more" href="tickets.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva">Tickets<i aria-hidden="true">↗</i></a>.</p>
     </div>
 
     <div class="af-wrap reveal" id="solicitud">
@@ -1097,8 +1181,26 @@ section,footer,.hero{overflow-x:clip}
       <div><h3><i>1</i>Responsable</h3>e-WEB (economicaweb.cl) es responsable del tratamiento de los datos de este sitio. Para consultas formales escribe a <a href="mailto:privacidad@economicaweb.cl">privacidad@economicaweb.cl</a>.</div>
       <div><h3><i>2</i>Datos y finalidad</h3>Solo pedimos lo necesario para evaluar tu proyecto (dominio, objetivos y material). Usamos tu nombre y correo únicamente para enviarte la propuesta. No pedimos datos financieros, RUT ni documentos de identidad, y nunca vendemos tu información ni enviamos spam.</div>
       <div><h3><i>3</i>Cookies y navegación</h3>No usamos cookies de seguimiento, marketing ni analítica de terceros (como Google Analytics o Píxel de Meta). Los datos técnicos de red se usan solo para la seguridad del sitio: frenar ataques y bots y mantener la velocidad de carga.</div>
-      <div><h3><i>4</i>Seguridad</h3>Tu solicitud viaja por conexión cifrada HTTPS para que terceros no puedan interceptarla. En los correos corporativos que administramos aplicamos autenticación SPF, DKIM y DMARC contra suplantación, filtros antispam y antiphishing, cifrado en tránsito y verificación en dos pasos.</div>
+      <div><h3><i>4</i>Seguridad</h3>Tu solicitud viaja por conexión cifrada HTTPS para que terceros no puedan interceptarla. En los correos corporativos que administramos aplicamos autenticación SPF, DKIM y DMARC contra suplantación, filtros antispam y antiphishing, cifrado en tránsito y verificación en dos pasos.<br><a class="more" href="arquitectura-seguridad.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva">Arquitectura de seguridad<i aria-hidden="true">↗</i></a></div>
       <div><h3><i>5</i>Tus derechos (ARCO)</h3>Puedes ejercer tus derechos de Acceso, Rectificación, Cancelación y Oposición. Para que eliminemos o corrijamos tus datos, escribe desde el correo de tu consulta a <a href="mailto:privacidad@economicaweb.cl">privacidad@economicaweb.cl</a>.</div>
+    </div>
+  </div>
+</section>
+
+<div class="rg" aria-hidden="true"></div>
+<section id="explora">
+  <div class="wrap">
+    <h2 class="reveal">Conoce todo lo que hacemos, en detalle</h2>
+    <p class="lead reveal">Haz clic en cada logo para abrir su página con la explicación completa.</p>
+    <div class="ex reveal">
+      <a class="ex-t" href="arquitectura-seguridad.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva"><span class="ex-i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></span><b>Arquitectura de seguridad</b><span class="ex-d">Cómo protegemos tu web y tu correo: HTTPS, SPF, DKIM y DMARC.</span><span class="ex-g" aria-hidden="true">Abrir ↗</span></a>
+      <a class="ex-t" href="correo-corporativo.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva"><span class="ex-i"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><b>Correo corporativo</b><span class="ex-d">Correos con tu dominio, 5 GB por correo y 2 alias.</span><span class="ex-g" aria-hidden="true">Abrir ↗</span></a>
+      <a class="ex-t" href="portal-renovacion.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva"><span class="ex-i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11a8 8 0 00-14.5-4.5M4 13a8 8 0 0014.5 4.5"/><path d="M20 4v5h-5M4 20v-5h5"/></svg></span><b>Portal de renovación</b><span class="ex-d">Todo sobre tu renovación anual y lo que incluye.</span><span class="ex-g" aria-hidden="true">Abrir ↗</span></a>
+      <a class="ex-t" href="soporte-ti.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva"><span class="ex-i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0116 0v1"/><rect x="3" y="13" width="4" height="6" rx="1.5"/><rect x="17" y="13" width="4" height="6" rx="1.5"/><path d="M19 19c0 1.5-2 2.5-5 2.5"/></svg></span><b>Soporte TI web</b><span class="ex-d">Desbloqueos, altas, bajas y reseteos de tus correos.</span><span class="ex-g" aria-hidden="true">Abrir ↗</span></a>
+      <a class="ex-t" href="tickets.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva"><span class="ex-i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8a2 2 0 012-2h12a2 2 0 012 2v1.5a2.5 2.5 0 000 5V16a2 2 0 01-2 2H6a2 2 0 01-2-2v-1.5a2.5 2.5 0 000-5V8z"/><path d="M14 6v12" stroke-dasharray="2 2"/></svg></span><b>Tickets</b><span class="ex-d">Cómo se piden y se atienden tus solicitudes de soporte.</span><span class="ex-g" aria-hidden="true">Abrir ↗</span></a>
+      <a class="ex-t" href="landing-one-page.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva"><span class="ex-i"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M4 8h16M8 12h8M8 16h5"/></svg></span><b>Landing One-Page</b><span class="ex-d">Tu página en una sola pantalla, con formulario de contacto básico.</span><span class="ex-g" aria-hidden="true">Abrir ↗</span></a>
+      <a class="ex-t" href="migracion.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva"><span class="ex-i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6v12"/><path d="M7 12h12M15 8l4 4-4 4"/></svg></span><b>Migración</b><span class="ex-d">Evaluamos y corregimos tu web actual y la trasladamos a e-WEB. Solo landing y sitios de varias páginas, sin tienda ni base de datos.</span><span class="ex-g" aria-hidden="true">Abrir ↗</span></a>
+      <a class="ex-t" href="nosotros.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva"><span class="ex-i"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6"/><circle cx="17" cy="9" r="2.4"/><path d="M16 14.3c3 0 5 2 5 5"/></svg></span><b>Nosotros</b><span class="ex-d">Quiénes somos y cómo trabajamos.</span><span class="ex-g" aria-hidden="true">Abrir ↗</span></a>
     </div>
   </div>
 </section>
@@ -1107,7 +1209,7 @@ section,footer,.hero{overflow-x:clip}
 <footer>
   <p class="flogo">e-<span>WEB</span></p>
   <nav class="flinks" aria-label="Pie de página">
-    <a href="#servicios">Servicios</a><a href="#planes">Planes</a><a href="#cotizar">Cotizar</a><a href="#privacidad">Privacidad</a><a class="ley" href="privacidad.html" target="_blank" rel="noopener">Ley&nbsp;N°&nbsp;21.719</a><a href="https://wa.me/56922133902?text=Hola%21%20Me%20interesa%20cotizar%20un%20proyecto%20web%20con%20ustedes.%20%C2%BFMe%20podr%C3%ADan%20dar%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" rel="noopener">WhatsApp</a><a href="mailto:contacto@economicaweb.cl">contacto@economicaweb.cl</a>
+    <a href="#servicios">Servicios</a><a href="#planes">Planes</a><a href="#cotizar">Cotizar</a><a href="nosotros.html" target="_blank" rel="noopener">Nosotros</a><a href="#privacidad">Privacidad</a><a class="ley" href="privacidad.html" target="_blank" rel="noopener">Ley&nbsp;N°&nbsp;21.719</a><a href="https://wa.me/56922133902?text=Hola%21%20Me%20interesa%20cotizar%20un%20proyecto%20web%20con%20ustedes.%20%C2%BFMe%20podr%C3%ADan%20dar%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" rel="noopener">WhatsApp</a><a href="mailto:contacto@economicaweb.cl">contacto@economicaweb.cl</a>
   </nav>
   <p>© <span id="y"></span> e-WEB · economicaweb.cl · Desarrollo web en Santiago, Chile</p>
 </footer>
@@ -1124,7 +1226,7 @@ function mark(el,i){el.classList.add('rv');el.style.setProperty('--i',Math.min(i
 document.querySelectorAll('.reveal').forEach(el=>{
   el.classList.remove('reveal');
   const stag=k=>[...k.children].forEach((c,i)=>mark(c,i));
-  if(el.matches('.grid,.plans,.pv,.faq>div')){mob&&el.matches('.grid')?mark(el,0):stag(el)}
+  if(el.matches('.grid,.plans,.pv,.ex,.faq>div')){mob&&el.matches('.grid')?mark(el,0):stag(el)}
   else if(el.matches('.inc')){[...el.children].forEach(c=>c.matches('.grid')?(mob?mark(c,0):stag(c)):mark(c,0))}
   else mark(el,0);
 });
