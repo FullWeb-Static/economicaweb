@@ -6,14 +6,10 @@
 <title>e-WEB | Creación de páginas web en Santiago, Chile</title>
 <meta name="description" content="Diseñamos y desarrollamos landing pages, sitios corporativos y tiendas online. Elige tu plan Basic, Medium o High y pide tu cotización.">
 <meta name="theme-color" content="#0a2540">
-<!-- 1. Favicon (Ahora es PNG) -->
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="apple-touch-icon" href="/favicon.png">
-
     <meta property="og:type" content="website">
     <link rel="canonical" href="https://economicaweb.cl/" />
-
-    <!-- 2. Imagen para Redes Sociales (Ahora es JPG) -->
     <meta property="og:url" content="https://economicaweb.cl/" />
     <meta property="og:image" content="https://economicaweb.cl/imagen-redes.jpg">
     <meta property="og:image:secure_url" content="https://economicaweb.cl/imagen-redes.jpg">
@@ -182,7 +178,6 @@ h2{font-size:clamp(1.7rem,3.2vw,2.3rem);line-height:1.2;letter-spacing:-.02em;co
   transform:translate3d(0,-6px,0) scale(1.04);
   background:linear-gradient(115deg,#fff2c9 0%,#f0d58c 18%,#d7ad58 38%,#bd8734 55%,#f4dca0 76%,#d6a84f 100%);
   border-color:#f4dca0;color:#102b45;
-  /* Elevación hacia afuera + halo rosa únicamente alrededor */
   box-shadow:0 4px 0 #713747,0 14px 0 #a66b52,
     0 24px 34px #8f594755,
     0 0 0 2px #9b654f,
@@ -527,11 +522,13 @@ html.intro-on,html.intro-on body{overflow:hidden}
 .intro-skip{position:absolute;top:max(18px,env(safe-area-inset-top));right:18px;z-index:2;padding:8px 16px;border-radius:99px;border:1px solid #e8b4a066;background:linear-gradient(145deg,#ffffff1f,#ffffff08);color:#f3e4bf;font-family:inherit;font-size:.82rem;font-weight:600;line-height:1;letter-spacing:.04em;cursor:pointer;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);transition:transform .3s,border-color .3s,box-shadow .3s}
 .intro-skip:hover,.intro-skip:focus-visible{transform:translateY(-2px);border-color:#f1c9b8cc;box-shadow:0 0 16px #e8b4a055;outline:none}
 
-/* Mármol de fondo con degradé (RESTAURADO EN TODAS LAS SECCIONES) */
-#servicios{background-image:linear-gradient(180deg,#ffffffd6 0%,#f1f4f8b8 100%),url(marmol.jpg);background-size:auto,cover;background-position:center,18% 30%}
-#proceso{background-image:linear-gradient(180deg,#e8edf3d9 0%,#f8fafcc4 100%),url(marmol.jpg);background-size:auto,cover;background-position:center,82% 60%}
-#adicionales{background-image:linear-gradient(160deg,#f8fafde0 0%,#e3e9f1c4 100%),url(marmol.jpg);background-size:auto,cover;background-position:center,50% 92%}
-#faq{background-image:radial-gradient(ellipse at 8% 0%,#fff8e8 0,transparent 32%),linear-gradient(145deg,#f8fbffdb 0%,#edf2f8c4 58%,#f7f9fcdb 100%),url(marmol.jpg);background-size:auto,auto,cover;background-position:center,center,35% 15%}
+/* Mármol de fondo con degradé (RESTAURADO Y CON MENOS OPACIDAD PARA QUE SE VEA) */
+#servicios{background-image:linear-gradient(180deg,#ffffffcc 0%,#f1f4f8aa 100%),url(marmol.jpg);background-size:auto,cover;background-position:center,18% 30%}
+#proceso{background-image:linear-gradient(180deg,#e8edf3cc 0%,#f8fafcaa 100%),url(marmol.jpg);background-size:auto,cover;background-position:center,82% 60%}
+#adicionales{background-image:linear-gradient(160deg,#f8fafdcc 0%,#e3e9f1aa 100%),url(marmol.jpg);background-size:auto,cover;background-position:center,50% 92%}
+#faq{background-image:radial-gradient(ellipse at 8% 0%,#fff8e8 0,transparent 32%),linear-gradient(145deg,#f8fbffcc 0%,#edf2f8aa 58%,#f7f9fccc 100%),url(marmol.jpg);background-size:auto,auto,cover;background-position:center,center,35% 15%}
+#correo{padding:64px 0;background-image:linear-gradient(180deg,#fafbfdcc 0%,#eaeff5aa 100%),url(marmol.jpg);background-size:auto,cover;background-position:center,30% 70%}
+#privacidad{padding:64px 0; background-image:linear-gradient(180deg,#ffffffcc 0%,#f1f4f8aa 100%),url(marmol.jpg); background-size:auto,cover; background-position:center,30% 70%}
 
 /* Formulario con más contraste */
 #cotizar .f{border-color:#c4a05a}
@@ -765,50 +762,211 @@ section,footer,.hero{overflow-x:clip}
 .ad-links .more{font-size:.92rem}
 .fmore{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:8px 22px;margin:4px 0 16px;font-size:.84rem;color:#aeb8c5}
 
-/* Sección Landing One-Page CON SU MÁRMOL ORIGINAL */
-#landing{padding:72px 0;background-image:linear-gradient(160deg,#f9fafcdb 0%,#e8edf3c9 100%),url(marmol.jpg);background-size:auto,cover;background-position:center,70% 20%}
-.lp{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
-.lp-k{margin:0 0 10px;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#9c4d5f}
-.lp-t h2{font-size:clamp(1.5rem,3vw,2.1rem);line-height:1.2}
-.lp-t .lead{margin-top:12px}
-.lp-a{display:flex;flex-wrap:wrap;align-items:center;gap:16px 26px;margin-top:22px}
-.lp-list{display:grid;gap:9px;margin:14px 0 0;padding:0;list-style:none}
-.lp-list li{position:relative;padding-left:26px;font-size:.95rem;font-weight:600;color:#e9eef5}
-.lp-list li:before{content:"✓";position:absolute;left:0;top:0;font-weight:800;background:linear-gradient(135deg,#f6e2a6,#e3a98d);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-@media(max-width:900px){.lp{grid-template-columns:1fr;gap:28px}}
-
-/* Nueva tarjeta clara para Landing */
-.lp-c.light {
-    background: #fff;
-    border: 1px solid #d8c18a;
-    border-radius: 16px;
-    padding: 32px 28px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+/* =========================================================
+   NUEVA SECCIÓN LANDING CON EFECTO VIDRIO Y FORMULARIO DESTACADO
+   ========================================================= */
+#landing {
     position: relative;
-    isolation: auto;
-    overflow: visible;
+    overflow: hidden;
+    background-image: linear-gradient(160deg, rgba(249, 250, 252, 0.85) 0%, rgba(232, 237, 243, 0.85) 100%), url(marmol.jpg);
+    background-size: auto, cover;
+    background-position: center, 70% 20%;
+    padding: 80px 0;
 }
-.lp-c.light:before, .lp-c.light:after { display: none; } 
-.lp-c.light h3 {
-    background: none;
-    border: none;
-    box-shadow: none;
+
+/* Rayos de Sol / Reflejo de vidrio animado */
+#landing::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent 40%, rgba(255, 255, 255, 0.7) 50%, transparent 60%);
+    transform: rotate(30deg);
+    animation: sunRaySweep 10s infinite linear;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.8;
+}
+@keyframes sunRaySweep {
+    0% { transform: translate(-50%, -50%) rotate(30deg); }
+    100% { transform: translate(50%, 50%) rotate(30deg); }
+}
+
+/* Reflejo estático de vidrio (espejo) */
+#landing::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 80% 20%, rgba(255,255,255,0.6) 0%, transparent 40%),
+                radial-gradient(circle at 10% 80%, rgba(200, 220, 255, 0.4) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+#landing .wrap {
+    position: relative;
+    z-index: 2;
+}
+
+.lp{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
+.lp-k{margin:0 0 10px;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#9c4d5f}
+.lp-t h2{font-size:clamp(1.6rem,3vw,2.2rem);line-height:1.2}
+.lp-t .lead{margin-top:12px; margin-bottom: 20px;}
+.lp-a{display:flex;flex-wrap:wrap;align-items:center;gap:16px 26px;margin-top:22px}
+@media(max-width:900px){.lp{grid-template-columns:1fr;gap:40px}}
+
+/* Lista recuperada en el lado izquierdo */
+.lp-included-list { list-style: none; padding: 0; margin: 20px 0; display: grid; gap: 10px; }
+.lp-included-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.95rem; font-weight: 500; color: #33475b; line-height: 1.4; }
+.lp-included-list li::before { content: "✓"; color: #0f8a4f; font-weight: 800; font-size: 1.1rem; }
+.lp-included-list li b { color: #713747; }
+
+/* Formulario de Ejemplo (Glassmorphism + Bordó + Destello) */
+.lp-form-example {
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 32px;
+    position: relative;
+    overflow: hidden;
+    transform: translateY(0);
+    transition: transform 0.4s ease;
+    
+    /* Destello / Resplandor (Glow) animado con tonos bordó */
+    animation: formPulse 4s infinite alternate;
+}
+
+@keyframes formPulse {
+    0% { 
+        box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 1), 0 0 0 rgba(113, 55, 71, 0);
+        border-color: rgba(255, 255, 255, 0.9);
+    }
+    100% { 
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 1), 0 0 25px rgba(113, 55, 71, 0.45);
+        border-color: rgba(113, 55, 71, 0.3);
+    }
+}
+
+.lp-form-example:hover {
+    transform: translateY(-5px);
+}
+.lp-form-example::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; height: 4px;
+    /* Cambio a tono más Bordó */
+    background: linear-gradient(90deg, transparent, #5c2a36, #9c4d5f, #713747, transparent);
+}
+.lp-form-example h3 {
     color: #713747;
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     font-weight: 800;
-    padding: 0 0 12px 0;
-    margin: 0 0 16px 0;
-    border-bottom: 1px solid #e8d8b4;
-    max-width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.lp-form-example h3::before {
+    content: "✨";
+    font-size: 1.1rem;
+}
+
+.lp-form-example .f-field {
+    margin-bottom: 16px;
+}
+.lp-form-example label {
     display: block;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #52677e;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
-.lp-c.light h3:before { display: none; }
-.lp-c.light .lp-list li {
+.lp-form-example input, .lp-form-example textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 10px;
+    border: 1.5px solid #e8d8b4;
+    background: rgba(255, 255, 255, 0.8);
+    font-family: inherit;
+    font-size: 0.9rem;
+    color: #0a2540;
+    transition: all 0.3s ease;
+}
+.lp-form-example input:focus, .lp-form-example textarea:focus {
+    outline: none;
+    border-color: #b88a36;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(184, 138, 54, 0.15);
+}
+.lp-form-example .f-btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(115deg, #fff0bd, #e8c46e 50%, #d9ad58);
+    color: #142b43;
+    font-weight: 800;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 0 #a66b52, 0 8px 16px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-top: 8px;
+}
+.lp-form-example .f-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0 #a66b52, 0 12px 20px rgba(0,0,0,0.15);
+}
+
+/* Nuevo Mock de Pie de Firma y Carpeta 3D */
+.lp-mock-footer {
+    margin-top: 24px;
+    padding-top: 18px;
+    border-top: 1px dashed #c4a05a;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    text-align: center;
+}
+
+.lp-mock-contact {
+    display: flex;
+    gap: 20px;
+    font-size: 0.85rem;
     color: #33475b;
-    font-weight: 500;
+    font-weight: 700;
 }
-.lp-c.light .lp-list li:before {
-    color: #0f8a4f; 
+.lp-mock-contact span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Etiqueta 3D oscura para la carpeta exclusiva */
+.folder-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(145deg, #3a4350 0%, #1a2027 100%);
+    color: #f6e2a6;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    box-shadow: 0 4px 0 #10151b, 0 8px 16px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.1);
+    border: 1px solid #4a5461;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+.folder-badge::before {
+    content: "📁";
+    font-size: 1rem;
 }
 
 /* Sección "Conoce todo lo que hacemos": enlaces a las páginas de detalle */
@@ -838,7 +996,7 @@ section,footer,.hero{overflow-x:clip}
 .card .val b.q a:hover,.card .val b.q a:focus-visible{border-bottom-color:#e8b4a0;outline:none}
 
 /* Política de privacidad (sección compacta) CON MÁRMOL */
-#privacidad{padding:64px 0; background-image:linear-gradient(180deg,#ffffffd6 0%,#f1f4f8b8 100%),url(marmol.jpg); background-size:auto,cover; background-position:center,30% 70%}
+#privacidad{padding:64px 0; background-image:linear-gradient(180deg,#ffffffcc 0%,#f1f4f8aa 100%),url(marmol.jpg); background-size:auto,cover; background-position:center,30% 70%}
 #privacidad h2{font-size:clamp(1.4rem,2.6vw,1.8rem);text-shadow:0 1px 0 #fff}
 #privacidad h2:after{content:"";display:block;width:76px;height:3px;margin:16px 0 0;border-radius:9px;background:linear-gradient(90deg,#9b742b,#f1d58b,#b88a36);box-shadow:0 2px 7px #b88a3633}
 #privacidad .lead{margin:12px 0 26px;font-size:.98rem;max-width:780px}
@@ -994,7 +1152,6 @@ section,footer,.hero{overflow-x:clip}
   <div class="wrap">
     <h2 class="reveal">Pide tu cotización web</h2>
     <p class="lead reveal">Cuéntanos qué tienes en mente. En pocos pasos prepararemos una propuesta clara para tu negocio, sin compromiso.</p>
-     <p class="mig-hint reveal">¿Ya tienes una web en otro lugar? <a class="more" href="migracion.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva">Conoce nuestra Migración<i aria-hidden="true">↗</i></a></p>
     <form class="f reveal" id="f" action="https://api.web3forms.com/submit" method="POST">
       <input type="hidden" name="access_key" value="551beba8-acd8-4302-a343-a3fbc727c2fd">
       <input type="hidden" name="subject" value="Nueva cotización desde e-WEB">
@@ -1170,30 +1327,62 @@ section,footer,.hero{overflow-x:clip}
 
 <div class="rg" aria-hidden="true"></div>
 
-<!-- SECCIÓN LANDING MOVIDA Y REDISEÑADA -->
+<!-- SECCIÓN LANDING CON FORMULARIO Y LISTA RECUPERADA -->
 <section id="landing">
   <div class="wrap lp">
+    
+    <!-- Lado Izquierdo (Texto y Lista recuperada) -->
     <div class="lp-t reveal">
-      <p class="lp-k" style="color:#9c4d5f; font-weight:800; letter-spacing:.14em; font-size:.78rem;">EL PLAN MÁS SIMPLE Y DIRECTO</p>
+      <p class="lp-k">EL PLAN MÁS SIMPLE Y DIRECTO</p>
       <h2>Landing One-Page: tu página en una sola pantalla, lista para recibir clientes</h2>
-      <p class="lead">¿Solo necesitas que te contacten? La Landing One-Page es un producto independiente enfocado 100% en la <strong>bóveda de contacto (el formulario)</strong>. Tus clientes llenan sus datos, los envías y te llegan directo a tu correo. Sin páginas extra, sin complicaciones.</p>
+      <p class="lead">¿Solo necesitas que te contacten? Esta landing es un producto independiente enfocado 100% en la <b>bóveda de contacto (el formulario)</b>. Sin páginas extra, sin complicaciones.</p>
+      
+      <ul class="lp-included-list">
+        <li>Dominio incluido (12 meses).</li>
+        <li>1 correo corporativo (5 GB) + 1 alias.</li>
+        <li>Seguridad SSL + Cloudflare.</li>
+        <li><b>Privacidad total:</b> Si tus clientes no quieren hablar por WhatsApp o teléfono, les mandas el enlace. Llenan el formulario de forma rápida, privada y directa a tu correo.</li>
+      </ul>
+
       <div class="lp-a">
-        <a class="btn-gold" href="landing-one-page.html">Landing One-Page Formulario &nbsp;→</a>
+        <a class="btn-gold" href="#cotizar">Landing One-Page Formulario &nbsp;→</a>
         <span style="color: #52677e; font-weight: 600; font-size: .95rem;">Precio base: $65.000 IVA incl.</span>
       </div>
     </div>
-    <div class="lp-c light reveal">
-      <h3>¿Qué incluye exactamente?</h3>
-      <ul class="lp-list">
-        <li>Dominio propio (12 meses)</li>
-        <li>1 correo madre + 1 alias</li>
-        <li>Landing de 1 página</li>
-        <li><strong>Bóveda de contacto (3 campos)</strong></li>
-        <li>Pie de firma con WhatsApp y correo</li>
-        <li>SSL + Cloudflare</li>
-        <li>1 ticket/mes de soporte</li>
-      </ul>
+    
+    <!-- Lado Derecho: Formulario de Ejemplo Mejorado -->
+    <div class="lp-form-example reveal">
+      <h3>Ejemplo de Bóveda de Contacto</h3>
+      
+      <div class="f-field">
+        <label>Nombre completo</label>
+        <input type="text" placeholder="Ej: María González" disabled>
+      </div>
+      <div class="f-field">
+        <label>Correo electrónico</label>
+        <input type="email" placeholder="Ej: maria@correo.cl" disabled>
+      </div>
+      <div class="f-field">
+        <label>WhatsApp / Celular</label>
+        <input type="tel" placeholder="+56 9 1234 5678" disabled>
+      </div>
+      <div class="f-field">
+        <label>Mensaje (Opcional)</label>
+        <textarea rows="2" placeholder="¿En qué te podemos ayudar?" disabled></textarea>
+      </div>
+      
+      <button class="f-btn" disabled>Enviar Solicitud →</button>
+
+      <!-- MOCK DEL PIE DE FIRMA -->
+      <div class="lp-mock-footer">
+        <div class="folder-badge">Los datos caen en: Bóveda de Contacto</div>
+        <div class="lp-mock-contact">
+          <span>✉️ contacto@miempresa.cl</span>
+          <span>📱 WhatsApp</span>
+        </div>
+      </div>
     </div>
+
   </div>
 </section>
 
