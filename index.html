@@ -527,7 +527,7 @@ html.intro-on,html.intro-on body{overflow:hidden}
 .intro-skip{position:absolute;top:max(18px,env(safe-area-inset-top));right:18px;z-index:2;padding:8px 16px;border-radius:99px;border:1px solid #e8b4a066;background:linear-gradient(145deg,#ffffff1f,#ffffff08);color:#f3e4bf;font-family:inherit;font-size:.82rem;font-weight:600;line-height:1;letter-spacing:.04em;cursor:pointer;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);transition:transform .3s,border-color .3s,box-shadow .3s}
 .intro-skip:hover,.intro-skip:focus-visible{transform:translateY(-2px);border-color:#f1c9b8cc;box-shadow:0 0 16px #e8b4a055;outline:none}
 
-/* Mármol de fondo con degradé */
+/* Mármol de fondo con degradé (RESTAURADO EN TODAS LAS SECCIONES) */
 #servicios{background-image:linear-gradient(180deg,#ffffffd6 0%,#f1f4f8b8 100%),url(marmol.jpg);background-size:auto,cover;background-position:center,18% 30%}
 #proceso{background-image:linear-gradient(180deg,#e8edf3d9 0%,#f8fafcc4 100%),url(marmol.jpg);background-size:auto,cover;background-position:center,82% 60%}
 #adicionales{background-image:linear-gradient(160deg,#f8fafde0 0%,#e3e9f1c4 100%),url(marmol.jpg);background-size:auto,cover;background-position:center,50% 92%}
@@ -765,7 +765,7 @@ section,footer,.hero{overflow-x:clip}
 .ad-links .more{font-size:.92rem}
 .fmore{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:8px 22px;margin:4px 0 16px;font-size:.84rem;color:#aeb8c5}
 
-/* Sección Landing One-Page */
+/* Sección Landing One-Page CON SU MÁRMOL ORIGINAL */
 #landing{padding:72px 0;background-image:linear-gradient(160deg,#f9fafcdb 0%,#e8edf3c9 100%),url(marmol.jpg);background-size:auto,cover;background-position:center,70% 20%}
 .lp{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
 .lp-k{margin:0 0 10px;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#9c4d5f}
@@ -776,6 +776,40 @@ section,footer,.hero{overflow-x:clip}
 .lp-list li{position:relative;padding-left:26px;font-size:.95rem;font-weight:600;color:#e9eef5}
 .lp-list li:before{content:"✓";position:absolute;left:0;top:0;font-weight:800;background:linear-gradient(135deg,#f6e2a6,#e3a98d);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 @media(max-width:900px){.lp{grid-template-columns:1fr;gap:28px}}
+
+/* Nueva tarjeta clara para Landing */
+.lp-c.light {
+    background: #fff;
+    border: 1px solid #d8c18a;
+    border-radius: 16px;
+    padding: 32px 28px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    position: relative;
+    isolation: auto;
+    overflow: visible;
+}
+.lp-c.light:before, .lp-c.light:after { display: none; } 
+.lp-c.light h3 {
+    background: none;
+    border: none;
+    box-shadow: none;
+    color: #713747;
+    font-size: 1.2rem;
+    font-weight: 800;
+    padding: 0 0 12px 0;
+    margin: 0 0 16px 0;
+    border-bottom: 1px solid #e8d8b4;
+    max-width: 100%;
+    display: block;
+}
+.lp-c.light h3:before { display: none; }
+.lp-c.light .lp-list li {
+    color: #33475b;
+    font-weight: 500;
+}
+.lp-c.light .lp-list li:before {
+    color: #0f8a4f; 
+}
 
 /* Sección "Conoce todo lo que hacemos": enlaces a las páginas de detalle */
 #explora{padding:84px 0;color:#e9eef5;background:radial-gradient(ellipse at 50% 0%,#e8b4a038 0,transparent 55%),radial-gradient(ellipse at 50% 100%,#8fb4ff1c 0,transparent 55%),linear-gradient(180deg,#2a313b 0%,#1c222a 100%)}
@@ -803,8 +837,8 @@ section,footer,.hero{overflow-x:clip}
 .card .val b.q a{color:inherit;-webkit-text-fill-color:inherit;text-decoration:none;border-bottom:1px dashed #ffffff66;transition:border-color .25s}
 .card .val b.q a:hover,.card .val b.q a:focus-visible{border-bottom-color:#e8b4a0;outline:none}
 
-/* Política de privacidad (sección compacta) */
-#privacidad{padding:64px 0}
+/* Política de privacidad (sección compacta) CON MÁRMOL */
+#privacidad{padding:64px 0; background-image:linear-gradient(180deg,#ffffffd6 0%,#f1f4f8b8 100%),url(marmol.jpg); background-size:auto,cover; background-position:center,30% 70%}
 #privacidad h2{font-size:clamp(1.4rem,2.6vw,1.8rem);text-shadow:0 1px 0 #fff}
 #privacidad h2:after{content:"";display:block;width:76px;height:3px;margin:16px 0 0;border-radius:9px;background:linear-gradient(90deg,#9b742b,#f1d58b,#b88a36);box-shadow:0 2px 7px #b88a3633}
 #privacidad .lead{margin:12px 0 26px;font-size:.98rem;max-width:780px}
@@ -909,32 +943,6 @@ section,footer,.hero{overflow-x:clip}
 </section>
 
 <div class="rg" aria-hidden="true"></div>
-<section id="landing">
-  <div class="wrap lp">
-    <div class="lp-t reveal">
-      <p class="lp-k">Landing One-Page</p>
-      <h2>Tu página en una sola pantalla, lista para recibir clientes</h2>
-      <p class="lead">Una landing page enfocada en un objetivo: que tus visitas te contacten. Es el punto de partida del plan Basic.</p>
-      <div class="lp-a">
-        <a class="btn-gold" href="#planes">Ver plan Basic&nbsp;→</a>
-        <a class="more" href="landing-one-page.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva">Ver detalle de la Landing One-Page<i aria-hidden="true">↗</i></a>
-      </div>
-    </div>
-    <div class="card reveal lp-c">
-      <h3>Incluye</h3>
-      <ul class="lp-list">
-        <li>Landing de 1 página</li>
-        <li>Formulario de contacto básico (tu bóveda)</li>
-        <li>Botón de WhatsApp</li>
-        <li>SEO básico</li>
-        <li>Dominio incluido</li>
-        <li>1 correo corporativo de 5 GB</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<div class="rg" aria-hidden="true"></div>
 <section id="planes">
   <div class="wrap">
     <h2 class="reveal">Elige tu plan</h2>
@@ -960,7 +968,7 @@ section,footer,.hero{overflow-x:clip}
         <input type="radio" name="plan" value="High">
         <p class="lvl">Nivel 3</p><h3>High</h3><p class="sub">Para vender y escalar en serio</p>
         <p class="price">$250.000 <small>CLP</small></p><p class="iva">IVA incluido</p>
-        <ul><li class="dom">Dominio incluido</li><li>Hasta 10 páginas o tienda online básica</li><li>Todo lo del plan Medium, más:</li><li>4 correos corporativos de 5 GB cada uno</li><li>Hasta 6 alias (máximo 2 por correo)</li><li>Pagos y reservas integrados</li><li>SEO avanzado</li><li>Panel para editar contenido</li><li>3 meses de soporte</li></ul>
+        <ul><li class="dom">Dominio incluido</li><li>Hasta 10 páginas o tienda online básica</li><li>Todo lo del plan Medium, más:</li><li>4 correos corporativos de 5 GB cada uno</li><li>Hasta 8 alias (máximo 2 por correo)</li><li>Pagos y reservas integrados</li><li>SEO avanzado</li><li>Panel para editar contenido</li><li>3 meses de soporte</li></ul>
         <span class="pick"></span>
       </label>
     </div>
@@ -1161,6 +1169,35 @@ section,footer,.hero{overflow-x:clip}
 </section>
 
 <div class="rg" aria-hidden="true"></div>
+
+<!-- SECCIÓN LANDING MOVIDA Y REDISEÑADA -->
+<section id="landing">
+  <div class="wrap lp">
+    <div class="lp-t reveal">
+      <p class="lp-k" style="color:#9c4d5f; font-weight:800; letter-spacing:.14em; font-size:.78rem;">EL PLAN MÁS SIMPLE Y DIRECTO</p>
+      <h2>Landing One-Page: tu página en una sola pantalla, lista para recibir clientes</h2>
+      <p class="lead">¿Solo necesitas que te contacten? La Landing One-Page es un producto independiente enfocado 100% en la <strong>bóveda de contacto (el formulario)</strong>. Tus clientes llenan sus datos, los envías y te llegan directo a tu correo. Sin páginas extra, sin complicaciones.</p>
+      <div class="lp-a">
+        <a class="btn-gold" href="landing-one-page.html">Landing One-Page Formulario &nbsp;→</a>
+        <span style="color: #52677e; font-weight: 600; font-size: .95rem;">Precio base: $65.000 IVA incl.</span>
+      </div>
+    </div>
+    <div class="lp-c light reveal">
+      <h3>¿Qué incluye exactamente?</h3>
+      <ul class="lp-list">
+        <li>Dominio propio (12 meses)</li>
+        <li>1 correo madre + 1 alias</li>
+        <li>Landing de 1 página</li>
+        <li><strong>Bóveda de contacto (3 campos)</strong></li>
+        <li>Pie de firma con WhatsApp y correo</li>
+        <li>SSL + Cloudflare</li>
+        <li>1 ticket/mes de soporte</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="rg" aria-hidden="true"></div>
 <section id="faq">
   <div class="wrap faq">
     <h2 class="reveal">Preguntas frecuentes</h2>
@@ -1176,21 +1213,6 @@ section,footer,.hero{overflow-x:clip}
     </div>
   </div>
 </section>
-<div class="rg" aria-hidden="true"></div>
-<section id="privacidad">
-  <div class="wrap">
-    <h2 class="reveal">Política de privacidad y protección de datos</h2>
-    <p class="lead reveal">Así cuidamos los datos que nos envías al cotizar. Resumen conforme a la Ley&nbsp;N°&nbsp;21.719.</p>
-    <div class="pv reveal">
-      <div><h3><i>1</i>Responsable</h3>e-WEB (economicaweb.cl) es responsable del tratamiento de los datos de este sitio. Para consultas formales escribe a <a href="mailto:privacidad@economicaweb.cl">privacidad@economicaweb.cl</a>.</div>
-      <div><h3><i>2</i>Datos y finalidad</h3>Solo pedimos lo necesario para evaluar tu proyecto (dominio, objetivos y material). Usamos tu nombre y correo únicamente para enviarte la propuesta. No pedimos datos financieros, RUT ni documentos de identidad, y nunca vendemos tu información ni enviamos spam.</div>
-      <div><h3><i>3</i>Cookies y navegación</h3>No usamos cookies de seguimiento, marketing ni analítica de terceros (como Google Analytics o Píxel de Meta). Los datos técnicos de red se usan solo para la seguridad del sitio: frenar ataques y bots y mantener la velocidad de carga.</div>
-      <div><h3><i>4</i>Seguridad</h3>Tu solicitud viaja por conexión cifrada HTTPS para que terceros no puedan interceptarla. En los correos corporativos que administramos aplicamos autenticación SPF, DKIM y DMARC contra suplantación, filtros antispam y antiphishing, cifrado en tránsito y verificación en dos pasos.<br><a class="more" href="arquitectura-seguridad.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva">Arquitectura de seguridad<i aria-hidden="true">↗</i></a></div>
-      <div><h3><i>5</i>Tus derechos (ARCO)</h3>Puedes ejercer tus derechos de Acceso, Rectificación, Cancelación y Oposición. Para que eliminemos o corrijamos tus datos, escribe desde el correo de tu consulta a <a href="mailto:privacidad@economicaweb.cl">privacidad@economicaweb.cl</a>.</div>
-    </div>
-  </div>
-</section>
-
 <div class="rg" aria-hidden="true"></div>
 <section id="explora">
   <div class="wrap">
@@ -1208,6 +1230,29 @@ section,footer,.hero{overflow-x:clip}
     </div>
   </div>
 </section>
+
+<div class="rg" aria-hidden="true"></div>
+<!-- SECCIÓN PRIVACIDAD CON MARMOL RESTAURADO -->
+<section id="privacidad">
+  <div class="wrap">
+    <h2 class="reveal">Política de privacidad y protección de datos</h2>
+    <p class="lead reveal">Así cuidamos los datos que nos envías al cotizar. Resumen conforme a la Ley&nbsp;N°&nbsp;21.719.</p>
+    <div class="pv reveal">
+      <div><h3><i>1</i>Responsable</h3>e-WEB (economicaweb.cl) es responsable del tratamiento de los datos de este sitio. Para consultas formales escribe a <a href="mailto:privacidad@economicaweb.cl">privacidad@economicaweb.cl</a>.</div>
+      <div><h3><i>2</i>Datos y finalidad</h3>Solo pedimos lo necesario para evaluar tu proyecto (dominio, objetivos y material). Usamos tu nombre y correo únicamente para enviarte la propuesta. No pedimos datos financieros, RUT ni documentos de identidad, y nunca vendemos tu información ni enviamos spam.</div>
+      <div><h3><i>3</i>Cookies y navegación</h3>No usamos cookies de seguimiento, marketing ni analítica de terceros (como Google Analytics o Píxel de Meta). Los datos técnicos de red se usan solo para la seguridad del sitio: frenar ataques y bots y mantener la velocidad de carga.</div>
+      <div><h3><i>4</i>Seguridad</h3>Tu solicitud viaja por conexión cifrada HTTPS para que terceros no puedan interceptarla. En los correos corporativos que administramos aplicamos autenticación SPF, DKIM y DMARC contra suplantación, filtros antispam y antiphishing, cifrado en tránsito y verificación en dos pasos.<br><a class="more" href="arquitectura-seguridad.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva">Arquitectura de seguridad<i aria-hidden="true">↗</i></a></div>
+      <div><h3><i>5</i>Tus derechos (ARCO)</h3>Puedes ejercer tus derechos de Acceso, Rectificación, Cancelación y Oposición. Para que eliminemos o corrijamos tus datos, escribe desde el correo de tu consulta a <a href="mailto:privacidad@economicaweb.cl">privacidad@economicaweb.cl</a>.</div>
+    </div>
+    
+    <!-- BOTÓN DESTACADO DE PRIVACIDAD -->
+    <div class="reveal" style="text-align: center; margin-top: 36px;">
+      <a href="privacidad.html" target="_blank" rel="noopener" class="btn-gold" style="display: inline-flex; padding: 14px 28px; font-size: 1.05rem;">Leer Política de Privacidad completa (Ley 21.719) ↗</a>
+    </div>
+
+  </div>
+</section>
+
 </main>
 
 <footer>
