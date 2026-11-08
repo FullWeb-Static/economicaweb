@@ -825,58 +825,82 @@ section,footer,.hero{overflow-x:clip}
 .lp{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
 .lp-k{margin:0 0 10px;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#9c4d5f}
 .lp-t h2{font-size:clamp(1.6rem,3vw,2.2rem);line-height:1.2}
-.lp-t .lead{margin-top:12px; margin-bottom: 20px;}
-.lp-a{display:flex;flex-wrap:wrap;align-items:center;gap:16px 26px;margin-top:22px}
+.lp-t .lead{margin-top:12px; margin-bottom: 24px;}
+.lp-a{display:flex;flex-wrap:wrap;align-items:center;gap:16px 26px;margin-top:28px}
 @media(max-width:900px){.lp{grid-template-columns:1fr;gap:40px}}
 
 /* Lista recuperada en el lado izquierdo */
-.lp-included-list { list-style: none; padding: 0; margin: 20px 0; display: grid; gap: 10px; }
+.lp-included-list { list-style: none; padding: 0; margin: 24px 0; display: grid; gap: 10px; }
 .lp-included-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.95rem; font-weight: 500; color: #33475b; line-height: 1.4; }
 .lp-included-list li::before { content: "✓"; color: #0f8a4f; font-weight: 800; font-size: 1.1rem; }
 .lp-included-list li b { color: #713747; }
 
-/* Formulario de Ejemplo (Contraste Sofisticado) */
+/* Texto de Privacidad Elegante */
+.privacy-box {
+    background: rgba(255, 255, 255, 0.6);
+    border-left: 3px solid #713747;
+    padding: 16px 20px;
+    border-radius: 0 10px 10px 0;
+    margin: 24px 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+.privacy-box p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #33475b;
+}
+.privacy-box b { color: #713747; }
+
+
+/* 
+   FORMULARIO DE EJEMPLO CON BORDE BORDÓ METALIZADO Y BRILLO CIRCULANTE
+*/
 .lp-form-example {
-    background: rgba(255, 255, 255, 0.85); /* Base más blanca para resaltar sobre las ondas */
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.9);
-    border-radius: 20px;
-    padding: 32px;
     position: relative;
+    border-radius: 20px;
+    padding: 3px; /* Grosor del borde metálico */
     overflow: hidden;
+    isolation: isolate;
     transform: translateY(0);
     transition: transform 0.4s ease;
-    
-    /* Sombra profunda para que "flote" y destaque inmediatamente */
-    box-shadow: 0 30px 60px -12px rgba(10, 37, 64, 0.25), inset 0 1px 0 rgba(255, 255, 255, 1);
-    
-    /* Destello animado bordó */
-    animation: formPulse 3s infinite alternate;
+    /* Sombra flotante */
+    box-shadow: 0 30px 60px -12px rgba(10, 37, 64, 0.25);
 }
 
-@keyframes formPulse {
-    0% { 
-        box-shadow: 0 30px 60px -12px rgba(10, 37, 64, 0.25), inset 0 1px 0 rgba(255, 255, 255, 1), 0 0 0 rgba(113, 55, 71, 0);
-        border-color: rgba(255, 255, 255, 0.9);
-    }
-    100% { 
-        box-shadow: 0 35px 70px -12px rgba(10, 37, 64, 0.3), inset 0 1px 0 rgba(255, 255, 255, 1), 0 0 35px rgba(113, 55, 71, 0.5);
-        border-color: rgba(113, 55, 71, 0.4);
-    }
+/* El pseudo-elemento que crea el borde giratorio */
+.lp-form-example::before {
+    content: "";
+    position: absolute;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: conic-gradient(transparent 0deg, #5c2a36 60deg, #9c4d5f 120deg, #713747 180deg, transparent 240deg, transparent 360deg);
+    animation: rotateMetallic 4s linear infinite;
+    z-index: -1;
+}
+
+@keyframes rotateMetallic {
+    100% { transform: rotate(360deg); }
 }
 
 .lp-form-example:hover {
     transform: translateY(-8px);
+    box-shadow: 0 35px 70px -12px rgba(10, 37, 64, 0.35), 0 0 30px rgba(113, 55, 71, 0.3);
 }
-.lp-form-example::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; right: 0; height: 4px;
-    /* Borde superior bordó profundo */
-    background: linear-gradient(90deg, transparent, #5c2a36, #9c4d5f, #713747, transparent);
+
+/* El contenedor interno donde va el formulario real (glassmorphism) */
+.lp-form-inner {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 17px; /* Un poco menos para que calce con el padding */
+    padding: 32px;
+    position: relative;
+    z-index: 1;
+    height: 100%;
 }
-.lp-form-example h3 {
+
+.lp-form-inner h3 {
     color: #713747;
     font-size: 1.15rem;
     font-weight: 800;
@@ -885,15 +909,15 @@ section,footer,.hero{overflow-x:clip}
     align-items: center;
     gap: 8px;
 }
-.lp-form-example h3::before {
+.lp-form-inner h3::before {
     content: "✨";
     font-size: 1.1rem;
 }
 
-.lp-form-example .f-field {
+.lp-form-inner .f-field {
     margin-bottom: 16px;
 }
-.lp-form-example label {
+.lp-form-inner label {
     display: block;
     font-size: 0.78rem;
     font-weight: 700;
@@ -902,24 +926,29 @@ section,footer,.hero{overflow-x:clip}
     text-transform: uppercase;
     letter-spacing: 0.05em;
 }
-.lp-form-example input, .lp-form-example textarea {
+
+/* 
+   ESTILO CROMO METÁLICO PARA LOS INPUTS
+*/
+.lp-form-inner input, .lp-form-inner textarea {
     width: 100%;
     padding: 12px 16px;
     border-radius: 10px;
-    border: 1.5px solid #e8d8b4;
-    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid #cbd5e1;
+    background: linear-gradient(to bottom, #ffffff, #f1f5f9);
     font-family: inherit;
     font-size: 0.9rem;
     color: #0a2540;
     transition: all 0.3s ease;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.02), 0 1px 0 #ffffff;
 }
-.lp-form-example input:focus, .lp-form-example textarea:focus {
+.lp-form-inner input:focus, .lp-form-inner textarea:focus {
     outline: none;
     border-color: #b88a36;
     background: #fff;
-    box-shadow: 0 0 0 3px rgba(184, 138, 54, 0.15);
+    box-shadow: 0 0 0 3px rgba(184, 138, 54, 0.15), inset 0 1px 3px rgba(0,0,0,0.05);
 }
-.lp-form-example .f-btn {
+.lp-form-inner .f-btn {
     width: 100%;
     padding: 14px;
     border: none;
@@ -932,22 +961,44 @@ section,footer,.hero{overflow-x:clip}
     box-shadow: 0 4px 0 #a66b52, 0 8px 16px rgba(0,0,0,0.1);
     transition: transform 0.2s, box-shadow 0.2s;
     margin-top: 8px;
+    margin-bottom: 24px;
 }
-.lp-form-example .f-btn:hover {
+.lp-form-inner .f-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 0 #a66b52, 0 12px 20px rgba(0,0,0,0.15);
 }
 
-/* Nuevo Mock de Pie de Firma y Carpeta 3D */
+/* 
+   FRANJA ROJA (Pie de firma) Y AZUL (Contacto)
+*/
 .lp-mock-footer {
-    margin-top: 24px;
-    padding-top: 18px;
-    border-top: 1px dashed #c4a05a;
     display: flex;
     flex-direction: column;
     gap: 12px;
     align-items: center;
     text-align: center;
+}
+
+/* Contenedor Franja Roja */
+.mock-footer-area {
+    border: 1px solid #b76e79; /* Borde bordó/rojo */
+    border-radius: 10px;
+    padding: 10px 16px;
+    background: rgba(232, 180, 160, 0.05);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Contenedor Franja Azul */
+.mock-contact-area {
+    border: 1px solid #9fb0c6; /* Borde cromo/azul */
+    border-radius: 10px;
+    padding: 10px 16px;
+    background: rgba(159, 176, 198, 0.05);
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .lp-mock-contact {
@@ -970,18 +1021,18 @@ section,footer,.hero{overflow-x:clip}
     gap: 8px;
     background: linear-gradient(145deg, #3a4350 0%, #1a2027 100%);
     color: #f6e2a6;
-    padding: 8px 16px;
-    border-radius: 8px;
-    font-size: 0.8rem;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.78rem;
     font-weight: 700;
     letter-spacing: 0.02em;
-    box-shadow: 0 4px 0 #10151b, 0 8px 16px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.1);
+    box-shadow: 0 3px 0 #10151b, 0 6px 12px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.1);
     border: 1px solid #4a5461;
     text-shadow: 0 1px 2px rgba(0,0,0,0.5);
 }
 .folder-badge::before {
     content: "📁";
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 /* Sección "Conoce todo lo que hacemos": enlaces a las páginas de detalle */
@@ -1342,7 +1393,7 @@ section,footer,.hero{overflow-x:clip}
 
 <div class="rg" aria-hidden="true"></div>
 
-<!-- SECCIÓN LANDING CON ONDAS VÍTREAS Y FORMULARIO DESTACADO -->
+<!-- SECCIÓN LANDING CON NUEVOS ESTILOS METÁLICOS -->
 <section id="landing">
   
   <!-- Contenedor de Ondas Vítreas -->
@@ -1356,7 +1407,7 @@ section,footer,.hero{overflow-x:clip}
     
     <!-- Lado Izquierdo (Texto y Lista) -->
     <div class="lp-t reveal">
-      <p class="lp-k">EL PLAN MÁS SIMPLE Y DIRECTO</p>
+      <p class="lp-k">EL PLAN MÁS SIMPLE, ECONÓMICO Y DIRECTO</p>
       <h2>Landing One-Page: tu página en una sola pantalla, lista para recibir clientes</h2>
       <p class="lead">¿Solo necesitas que te contacten? Esta landing es un producto independiente enfocado 100% en la <b>bóveda de contacto (el formulario)</b>. Sin páginas extra, sin complicaciones.</p>
       
@@ -1364,8 +1415,11 @@ section,footer,.hero{overflow-x:clip}
         <li>Dominio incluido (12 meses).</li>
         <li>1 correo corporativo (5 GB) + 1 alias.</li>
         <li>Seguridad SSL + Cloudflare.</li>
-        <li><b>Privacidad total:</b> Si tus clientes no quieren hablar por WhatsApp o teléfono, les mandas el enlace. Llenan el formulario de forma rápida, privada y directa a tu correo.</li>
       </ul>
+
+      <div class="privacy-box">
+        <p><b>Privacidad total y directa:</b> Si tus clientes prefieren no hablar por teléfono, solo les envías el enlace. Llenan el formulario de forma rápida y privada. Los datos llegan directo a tu correo en la carpeta exclusiva <b>"Formulario Web"</b>, liberando tu bandeja de entrada.</p>
+      </div>
 
       <div class="lp-a">
         <a class="btn-gold" href="#cotizar">Landing One-Page Formulario &nbsp;→</a>
@@ -1373,35 +1427,50 @@ section,footer,.hero{overflow-x:clip}
       </div>
     </div>
     
-    <!-- Lado Derecho: Formulario de Ejemplo Sobresaliente -->
+    <!-- Lado Derecho: Formulario de Ejemplo con Borde Giratorio -->
     <div class="lp-form-example reveal">
-      <h3>Ejemplo de Bóveda de Contacto</h3>
       
-      <div class="f-field">
-        <label>Nombre completo</label>
-        <input type="text" placeholder="Ej: María González" disabled>
-      </div>
-      <div class="f-field">
-        <label>Correo electrónico</label>
-        <input type="email" placeholder="Ej: maria@correo.cl" disabled>
-      </div>
-      <div class="f-field">
-        <label>WhatsApp / Celular</label>
-        <input type="tel" placeholder="+56 9 1234 5678" disabled>
-      </div>
-      <div class="f-field">
-        <label>Mensaje (Opcional)</label>
-        <textarea rows="2" placeholder="¿En qué te podemos ayudar?" disabled></textarea>
-      </div>
-      
-      <button class="f-btn" disabled>Enviar Solicitud →</button>
+      <!-- Contenedor Interno del Formulario -->
+      <div class="lp-form-inner">
+        <h3>Ejemplo de Bóveda de Contacto</h3>
+        
+        <div class="f-field">
+          <label>Nombre completo</label>
+          <input type="text" placeholder="Ej: María González" disabled>
+        </div>
+        <div class="f-field">
+          <label>Correo electrónico</label>
+          <input type="email" placeholder="Ej: maria@correo.cl" disabled>
+        </div>
+        <div class="f-field">
+          <label>WhatsApp / Celular</label>
+          <input type="tel" placeholder="+56 9 1234 5678" disabled>
+        </div>
+        <div class="f-field">
+          <label>Consultas</label>
+          <input type="text" placeholder="Ej: Quiero agendar una reunión" disabled>
+        </div>
+        <div class="f-field">
+          <label>Mensaje (Opcional)</label>
+          <textarea rows="2" placeholder="¿En qué te podemos ayudar?" disabled></textarea>
+        </div>
+        
+        <button class="f-btn" disabled>Enviar Solicitud →</button>
 
-      <!-- MOCK DEL PIE DE FIRMA -->
-      <div class="lp-mock-footer">
-        <div class="folder-badge">Los datos caen en: Bóveda de Contacto</div>
-        <div class="lp-mock-contact">
-          <span>✉️ contacto@miempresa.cl</span>
-          <span>📱 WhatsApp</span>
+        <!-- PIE DE FIRMA FULL WIDTH (Como solicitaste) -->
+        <div class="lp-mock-footer">
+          
+          <div class="mock-footer-area">
+            <div class="folder-badge">📁 Los datos caen en: Bóveda de Contacto</div>
+          </div>
+          
+          <div class="mock-contact-area">
+            <div class="lp-mock-contact">
+              <span>✉️ contacto@miempresa.cl</span>
+              <span>📱 WhatsApp</span>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
