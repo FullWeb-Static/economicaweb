@@ -1,0 +1,1627 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Correo Corporativo Profesional | e-WEB — Solo correo, sin página web</title>
+<meta name="description" content="Correo corporativo con tu propio dominio. Webmail, app nativa de Zoho Mail, SPF/DKIM/DMARC, carpetas automáticas, alias con storage compartido y soporte por tickets.">
+<meta name="theme-color" content="#0a2540">
+<link rel="icon" type="image/jpeg" href="favicon.jpg?v=2">
+<link rel="apple-touch-icon" href="favicon.jpg?v=2">
+<link rel="canonical" href="https://economicaweb.cl/correo-corporativo.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://economicaweb.cl/correo-corporativo.html">
+<meta property="og:title" content="Correo Corporativo Profesional | e-WEB">
+<meta property="og:description" content="Correo profesional con tu dominio, seguridad empresarial y soporte por tickets.">
+<meta property="og:locale" content="es_CL">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0a2540;--txt:#33475b;--mut:#6b7c93;--bg:#f6f9fc;--line:#dfe6ee;--a:#0b5cff;--a2:#0847c4;
+  --gold-1:#fff0bd;--gold-2:#e8c46e;--gold-3:#c9953d;--gold-4:#f2d99b;--gold-5:#d9ad58;
+  --rose-1:#e8b4a0;--rose-2:#b76e79;--rose-3:#fff0e6;
+  --bordo-1:#713747;--bordo-2:#a66b52;--bordo-3:#c39a5b;
+  --gph-1:#2d353f;--gph-2:#222931;--gph-3:#1a2027;--gph-b:#4a5461;
+  --r:14px;--nav:68px;
+}
+*{box-sizing:border-box;margin:0}
+/* ⬇️ CAMBIO: scroll-behavior:auto para que el scroll custom tome el control */
+html{scroll-behavior:auto}
+body{font:16px/1.65 "Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--txt);background:#fff;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{width:min(1180px,92vw);margin:auto}
+a{color:inherit}
+img{max-width:100%;display:block}
+section{scroll-margin-top:calc(var(--nav) + 60px)}
+
+/* ====== NAV ====== */
+.nav{position:fixed;inset:0 0 auto;z-index:20;height:var(--nav);display:flex;justify-content:space-between;align-items:center;padding:0 5vw;
+  background:linear-gradient(180deg,#ffffff2e 0%,#ffffff0d 45%,#0000001f 100%),#2c333dbd;
+  -webkit-backdrop-filter:blur(18px) saturate(1.5);backdrop-filter:blur(18px) saturate(1.5);
+  border-bottom:1px solid #ffffff26;box-shadow:inset 0 1px 0 #ffffff33,0 10px 30px #0a254033;color:#e9eef5}
+.nav:after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;pointer-events:none;
+  background:linear-gradient(90deg,transparent 0%,#b68a37 18%,#f4dda0 48%,#d9ad58 62%,#c18a6e 80%,transparent 100%)}
+.nav a{text-decoration:none}
+.nav ul{display:flex;gap:2px;list-style:none;padding:0;font-size:.88rem;font-weight:600}
+.nav ul a{position:relative;display:block;padding:10px 10px;color:#e9eef5;transition:color .3s,text-shadow .3s}
+.nav ul a:after{content:"";position:absolute;left:10px;right:10px;bottom:2px;height:2px;border-radius:3px;
+  background:linear-gradient(90deg,#9b742b,#f4dda0,#c18a6e);box-shadow:0 0 10px #e4c16a99;
+  transform:scaleX(0);transform-origin:center;transition:transform .38s cubic-bezier(.2,.8,.2,1)}
+.nav ul a:hover,.nav ul a:focus-visible{color:#f6e2a6;text-shadow:0 0 16px #e4c16a88;outline:none}
+.nav ul a:hover:after,.nav ul a:focus-visible:after{transform:scaleX(1)}
+.logo{font-weight:800;font-size:1.45rem;letter-spacing:-.02em;
+  background:linear-gradient(110deg,#8a6420 0%,#c9953d 22%,#f6e2a6 44%,#d9ad58 62%,#c9956f 84%,#a66b52 100%);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;
+  filter:drop-shadow(0 2px 10px #00000066);display:flex;align-items:center;gap:10px}
+.logo .back{font-size:.85rem;font-weight:600;padding:6px 12px;border-radius:8px;border:1px solid #e8c46e55;
+  background:linear-gradient(145deg,#ffffff1a,#ffffff08);color:#f3e4bf;letter-spacing:.02em;
+  -webkit-text-fill-color:#f3e4bf;transition:transform .25s,border-color .25s,box-shadow .25s}
+.logo .back:hover{transform:translateY(-2px);border-color:#f4dda0;box-shadow:0 0 12px #e4c16a44}
+.nav-r{display:flex;gap:10px;align-items:center}
+.menu{display:none;background:linear-gradient(115deg,#ffffff 0%,#e3e8ef 26%,#aeb9c8 54%,#f4f7fb 78%,#cfd6e0 100%);
+  border:1px solid #e9eef5;color:#142b43;border-radius:8px;padding:9px 18px;font:inherit;font-size:.9rem;font-weight:700;cursor:pointer;
+  box-shadow:0 3px 0 #6f7c8e,0 8px 18px #00000033,inset 0 1px 0 #ffffffaa}
+@media(max-width:1180px){
+  .nav ul{display:none}
+  .menu{display:block}
+  .nav ul.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;gap:8px;padding:20px 5vw 24px;
+    background:#262d37f2;-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);
+    border-bottom:1px solid #e8b4a066;box-shadow:0 14px 30px #0a254040}
+  .nav ul.open a{padding:10px 0}
+  .nav ul.open a:after{left:0;right:auto;width:44px;transform-origin:left}
+}
+
+/* ====== SUB-NAV ====== */
+.subnav{position:sticky;top:var(--nav);z-index:15;margin-top:var(--nav);padding:14px 0;
+  background:linear-gradient(180deg,#ffffffe6 0%,#ffffffdd 100%);
+  -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);box-shadow:0 4px 20px #0a254010}
+.subnav .wrap{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding-bottom:2px}
+.subnav .wrap::-webkit-scrollbar{display:none}
+.subnav a{flex:none;padding:8px 16px;border-radius:99px;font-size:.82rem;font-weight:700;text-decoration:none;color:#52677e;
+  border:1px solid #d8c18a55;background:linear-gradient(145deg,#ffffff 0%,#fbf8f0 100%);
+  transition:transform .25s,border-color .25s,color .25s,box-shadow .25s}
+.subnav a:hover,.subnav a:focus-visible{transform:translateY(-2px);color:#713747;border-color:#c9953d;box-shadow:0 4px 12px #b58b3c22;outline:none}
+
+/* ====== HERO ====== */
+.hero{position:relative;overflow:hidden;padding:80px 0 100px;color:#fff;
+  background:
+    radial-gradient(ellipse at 10% 12%,#e8b4a038 0,transparent 42%),
+    radial-gradient(ellipse at 88% 88%,#c9953d33 0,transparent 46%),
+    linear-gradient(160deg,#3a4350 0%,#272e38 56%,#1a2027 100%)}
+.hero:before{content:"";position:absolute;left:0;right:0;top:0;height:3px;z-index:1;pointer-events:none;
+  background:linear-gradient(90deg,transparent 0%,#b76e79 14%,#e8b4a0 32%,#fff0e6 50%,#e8b4a0 68%,#b76e79 86%,transparent 100%);
+  box-shadow:0 0 14px #e8b4a066}
+.hero-in{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+@media(max-width:960px){.hero-in{grid-template-columns:1fr;gap:44px}}
+.kicker{display:inline-flex;align-items:center;gap:8px;padding:7px 16px;border-radius:99px;font-size:.78rem;font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase;color:#f3e4bf;
+  background:linear-gradient(145deg,#ffffff1f,#ffffff08);border:1px solid #e8c46e55;
+  box-shadow:inset 0 1px 0 #ffffff2e;margin-bottom:22px}
+.kicker:before{content:"✦";color:#f6e2a6}
+.hero h1{font-size:clamp(2.1rem,4.8vw,3.4rem);line-height:1.1;letter-spacing:-.025em;font-weight:800;margin-bottom:20px;
+  background:linear-gradient(110deg,#fff 0%,#f6e2a6 38%,#e8b4a0 72%,#fff 100%);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero p.lead{color:#c4cfdd;font-size:1.12rem;max-width:560px;margin-bottom:30px}
+.hero .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero .badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:34px}
+.hero .badges span{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:99px;
+  font-size:.85rem;font-weight:600;color:#f3e4bf;letter-spacing:.01em;
+  background:linear-gradient(145deg,#ffffff1a,#ffffff08);border:1px solid #e8c46e40;
+  box-shadow:inset 0 1px 0 #ffffff26,0 6px 16px #00000026}
+.hero .badges span:before{content:"✓";font-weight:800;background:linear-gradient(135deg,#f6e2a6,#e3a98d);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+
+/* ====== MOCK CORREO ====== */
+.mail-mock{position:relative;background:linear-gradient(160deg,#fff 0%,#f4f7fb 100%);
+  border:1px solid #ffffff55;border-radius:14px;padding:0;overflow:hidden;
+  box-shadow:0 30px 60px #00000055,0 0 0 1px #e8b4a033,0 0 40px #e8b4a022;
+  transform:perspective(1400px) rotateY(-6deg) rotateX(2deg)}
+.js .mail-mock{opacity:0;animation:mockIn 1.1s cubic-bezier(.2,.8,.2,1) .4s forwards,floaty 7s ease-in-out 1.6s infinite}
+@keyframes mockIn{from{opacity:0;transform:perspective(1400px) rotateY(-6deg) rotateX(2deg) translateY(70px) scale(.94)}to{opacity:1;transform:perspective(1400px) rotateY(-6deg) rotateX(2deg)}}
+@keyframes floaty{0%,100%{translate:0 0}50%{translate:0 -12px}}
+@media(prefers-reduced-motion:reduce){.js .mail-mock{opacity:1}}
+.mm-bar{display:flex;align-items:center;gap:8px;padding:12px 16px;background:linear-gradient(180deg,#f1f4f9,#e6ecf3);border-bottom:1px solid #d8e2ef}
+.mm-bar i{width:11px;height:11px;border-radius:50%;background:#d5dde8}
+.mm-bar i:nth-child(1){background:#e8b4a0}
+.mm-bar i:nth-child(2){background:#f2d99b}
+.mm-bar i:nth-child(3){background:#a8d4ae}
+.mm-bar b{margin-left:auto;font-size:.75rem;color:#52677e;font-weight:600;letter-spacing:.06em}
+.mm-body{padding:16px 18px 20px;background:#fff}
+.mm-title{font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#9b742b;margin-bottom:10px}
+.mm-folder{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:6px;font-size:.7rem;font-weight:800;
+  background:linear-gradient(145deg,#fff8e8,#fbf3dd);color:#713747;border:1px solid #e8d8b4;margin-bottom:10px;margin-right:6px}
+.mm-folder:before{content:"📂";font-size:.85rem}
+.mm-row{display:flex;align-items:flex-start;gap:12px;padding:12px 10px;border-radius:10px;margin-bottom:6px;
+  border:1px solid transparent;transition:background .3s}
+.mm-row.unread{background:linear-gradient(145deg,#fffbf0,#fdf4d8);border-color:#e8d8b4}
+.mm-av{flex:none;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:800;font-size:.85rem;
+  background:linear-gradient(145deg,#c9956f,#a66b52);box-shadow:0 2px 0 #713747}
+.mm-av.g2{background:linear-gradient(145deg,#e8c46e,#c9953d);box-shadow:0 2px 0 #a66b52}
+.mm-av.g3{background:linear-gradient(145deg,#3df08a,#16b358);box-shadow:0 2px 0 #0e8a43}
+.mm-info{flex:1;min-width:0}
+.mm-from{font-weight:700;color:#0a2540;font-size:.85rem;line-height:1.2;margin-bottom:2px}
+.mm-sub{color:#52677e;font-size:.8rem;line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mm-time{flex:none;color:#9fb0c8;font-size:.72rem;font-weight:600}
+.mm-foot{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:14px;padding-top:12px;border-top:1px dashed #d8c18a;
+  font-size:.75rem;font-weight:600;color:#6b7c93}
+.mm-foot span{display:inline-flex;align-items:center;gap:6px}
+.mm-foot span:before{content:"●";color:#0f8a4f;font-size:.6rem}
+
+/* ====== BOTONES ====== */
+.btn-gold{position:relative;overflow:hidden;isolation:isolate;display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:14px 26px;border-radius:11px;font:inherit;font-weight:700;font-size:1rem;cursor:pointer;text-decoration:none;
+  color:#142b43;border:1px solid #e8c46e;
+  background:linear-gradient(115deg,#fff0bd 0%,#e8c46e 26%,#c9953d 54%,#f2d99b 78%,#d9ad58 100%);
+  box-shadow:0 4px 0 #a66b52,0 12px 24px #b58b3c33,inset 0 1px 0 #ffffff88;
+  transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s}
+.btn-gold:before{content:"";position:absolute;inset:0;z-index:-1;transform:translateX(-140%) skewX(-20deg);
+  background:linear-gradient(90deg,transparent,#ffffffaa,transparent);transition:transform .7s ease}
+.btn-gold:hover,.btn-gold:focus-visible{transform:translateY(-4px);outline:none;
+  box-shadow:0 6px 0 #a66b52,0 18px 30px #b58b3c55,0 0 22px #e4c16a77}
+.btn-gold:hover:before,.btn-gold:focus-visible:before{transform:translateX(140%) skewX(-20deg)}
+.btn-gold:disabled{opacity:.7;cursor:progress;transform:none}
+.btn-ghost{position:relative;display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:11px;font:inherit;font-weight:700;
+  text-decoration:none;color:#f3e4bf;border:1px solid #e8c46e55;background:linear-gradient(145deg,#ffffff1f,#ffffff08);
+  box-shadow:inset 0 1px 0 #ffffff2e,0 8px 20px #00000026;
+  transition:transform .3s,border-color .3s,box-shadow .3s,color .3s}
+.btn-ghost:hover{transform:translateY(-3px);color:#fff4cf;border-color:#f4dda0aa;box-shadow:inset 0 1px 0 #ffffff44,0 12px 24px #00000033,0 0 18px #e4c16a55}
+
+/* ====== SECCIONES BASE ====== */
+.sec{padding:88px 0}
+.sec-title{font-size:clamp(1.7rem,3.4vw,2.3rem);color:#0a2540;font-weight:800;letter-spacing:-.02em;text-align:center;line-height:1.2;text-shadow:0 1px 0 #fff}
+.sec-title:after{content:"";display:block;width:80px;height:3px;margin:18px auto 0;border-radius:9px;
+  background:linear-gradient(90deg,#9b742b,#f1d58b,#b88a36);box-shadow:0 2px 7px #b88a3633}
+.sec-lead{text-align:center;color:#52677e;margin:16px auto 46px;max-width:800px;font-size:1.04rem;line-height:1.6}
+.sec-lead b{color:#713747}
+
+/* ====== INTRO ====== */
+#intro{padding:64px 0;background-image:linear-gradient(180deg,#fafbfdd9 0%,#eaeff5c4 100%),url(marmol.jpg);
+  background-size:auto,cover;background-position:center,30% 70%}
+.intro-card{max-width:900px;margin:0 auto;padding:34px 38px;border-radius:20px;
+  background:linear-gradient(150deg,#fffdf7 0%,#fbf3dd 100%);
+  border:1.5px solid #c9953d;
+  box-shadow:0 4px 0 #b58b3c,0 22px 46px #b58b3c22,inset 0 1px 0 #fff;
+  position:relative}
+.intro-card:before{content:"";position:absolute;top:0;left:26px;right:26px;height:2px;border-radius:0 0 6px 6px;
+  background:linear-gradient(90deg,transparent,#b76e79,#e8b4a0,#fff0e6,#e8b4a0,#b76e79,transparent)}
+.intro-card h2{font-size:1.35rem;color:#713747;margin-bottom:14px;line-height:1.3}
+.intro-card p{margin:0 0 14px;font-size:1rem;line-height:1.7;color:#33475b}
+.intro-card p:last-child{margin-bottom:0}
+.intro-card p b{color:#713747}
+
+/* ====== POR QUÉ ====== */
+#porque{padding:88px 0;background-image:linear-gradient(180deg,#ffffffd6 0%,#f1f4f8b8 100%),url(marmol.jpg);
+  background-size:auto,cover;background-position:center,18% 30%}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;max-width:1100px;margin:0 auto}
+.why-card{position:relative;padding:26px 24px;border-radius:16px;color:#c4cfdd;
+  background:linear-gradient(150deg,#2d353f 0%,#222931 55%,#1a2027 100%);
+  border:1px solid #4a5461;
+  box-shadow:0 3px 0 #10151b,0 14px 30px #0a254026,inset 0 1px 0 #ffffff1a;
+  transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s}
+.why-card:hover{transform:translateY(-6px);box-shadow:0 4px 0 #0b0f14,0 14px 0 #39424d,0 26px 40px #0a254040,0 0 20px #e8b4a033}
+.why-ico{display:inline-grid;place-items:center;width:50px;height:50px;border-radius:14px;font-size:24px;margin-bottom:14px;
+  background:linear-gradient(145deg,#f6e1a4,#c9953d);box-shadow:0 3px 0 #8f5a3f,inset 0 1px 0 #fff8}
+.why-card h3{color:#f6e2a6;font-size:1.08rem;margin-bottom:10px;line-height:1.3;letter-spacing:-.01em}
+.why-card p{margin:0;color:#aeb8c5;font-size:.92rem;line-height:1.6}
+.why-card p b{color:#f3e4bf}
+
+/* ====== ALIAS - INFOGRAFÍA ====== */
+#alias{padding:100px 0;background:
+  radial-gradient(ellipse at 15% 8%,#f3dfa8b3 0,transparent 40%),
+  radial-gradient(ellipse at 85% 92%,#e6c98a99 0,transparent 46%),
+  linear-gradient(145deg,#f8fbff 0%,#eef3f9 55%,#f5f9fd 100%)}
+#alias .sec-title:after{width:110px}
+#alias .sec-lead{max-width:820px}
+.alias-diagram{
+  max-width:980px;margin:0 auto;
+  padding:clamp(24px,4vw,42px);
+  border-radius:24px;
+  background:linear-gradient(160deg,#fffffff5 0%,#fbf8f0f5 100%);
+  border:1.5px solid #c9a45b;
+  box-shadow:0 6px 0 #b58b3c,0 24px 60px #b58b3c33,inset 0 1px 0 #fff;
+  position:relative;isolation:isolate;overflow:hidden}
+.alias-diagram:before{content:"";position:absolute;top:0;left:32px;right:32px;height:3px;border-radius:0 0 8px 8px;
+  background:linear-gradient(90deg,transparent,#b76e79,#e8b4a0,#fff0e6,#e8b4a0,#b76e79,transparent)}
+.alias-diagram:after{content:"";position:absolute;inset:0;pointer-events:none;z-index:-1;
+  background:radial-gradient(ellipse at 50% 0%,#f6e1a433 0,transparent 60%)}
+
+.alias-node{position:relative;border-radius:18px;padding:26px 24px;
+  box-shadow:0 4px 0 #a66b52,0 14px 30px #b58b3c25,inset 0 1px 0 #fff;
+  transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s}
+.alias-node:hover{transform:translateY(-4px)}
+.alias-node.mother{
+  background:linear-gradient(145deg,#fffdf7 0%,#f6e1a4 100%);
+  border:2px solid #b88a36;
+  box-shadow:0 6px 0 #8f5a3f,0 22px 48px #8f594755,inset 0 2px 0 #fff8}
+.alias-node.child{
+  background:linear-gradient(145deg,#fff 0%,#fbf8f0 100%);
+  border:1.5px solid #d8c18a;
+  box-shadow:0 4px 0 #c4a05a,0 14px 30px #b58b3c22,inset 0 1px 0 #fff}
+
+.alias-node-header{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+.alias-ico{flex:none;width:54px;height:54px;display:grid;place-items:center;border-radius:14px;font-size:24px;
+  background:linear-gradient(145deg,#fff0bd,#e8c46e);box-shadow:0 3px 0 #a66b52,inset 0 1px 0 #fff8}
+.alias-node.mother .alias-ico{background:linear-gradient(145deg,#713747,#a66b52);color:#fff;box-shadow:0 3px 0 #59303b,inset 0 1px 0 #ffffff33}
+.alias-node.child:nth-child(1) .alias-ico{background:linear-gradient(145deg,#f6e1a4,#c9953d)}
+.alias-node.child:nth-child(2) .alias-ico{background:linear-gradient(145deg,#e8c46e,#a66b52);color:#fff}
+.alias-role{font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#713747;
+  padding:4px 10px;border-radius:99px;background:#fff8e8;border:1px solid #e8d8b4;display:inline-block}
+.alias-node.mother .alias-role{background:linear-gradient(125deg,#713747,#a66b52);color:#fff;border-color:#d9b875}
+.alias-email{font-size:1.15rem;font-weight:800;color:#0a2540;letter-spacing:-.015em;line-height:1.25;
+  margin:0 0 12px;word-break:break-all}
+.alias-node.mother .alias-email{font-size:1.3rem;color:#713747}
+
+.alias-features{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:.88rem;line-height:1.5;color:#52677e}
+.alias-features li{display:flex;align-items:flex-start;gap:10px}
+.alias-features li .ico{flex:none;width:22px;text-align:center;font-size:1.05rem}
+.alias-features li b{color:#713747}
+.alias-node.mother .alias-features li b{color:#713747}
+
+.alias-tree{display:grid;gap:0}
+.alias-mother-wrap{display:flex;justify-content:center}
+.alias-mother-wrap .alias-node{max-width:420px;width:100%}
+
+.alias-connector{position:relative;height:80px;max-width:760px;margin:0 auto}
+.alias-connector .line-v-top{position:absolute;top:0;left:50%;width:2px;height:40px;
+  background:linear-gradient(180deg,#e8c46e,#c9953d);transform:translateX(-50%)}
+.alias-connector .line-h{position:absolute;top:40px;left:25%;right:25%;height:2px;
+  background:linear-gradient(90deg,transparent,#c9953d 15%,#f4dda0 50%,#c9953d 85%,transparent)}
+.alias-connector .line-v-left{position:absolute;top:40px;left:25%;width:2px;height:40px;
+  background:linear-gradient(180deg,#c9953d,#e8c46e);transform:translateX(-1px)}
+.alias-connector .line-v-right{position:absolute;top:40px;left:75%;width:2px;height:40px;
+  background:linear-gradient(180deg,#c9953d,#e8c46e);transform:translateX(-1px)}
+@media(max-width:720px){.alias-connector{height:20px}.alias-connector .line-v-top{height:20px}
+  .alias-connector .line-h,.alias-connector .line-v-left,.alias-connector .line-v-right{display:none}}
+
+.alias-children{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:760px;margin:0 auto}
+@media(max-width:720px){.alias-children{grid-template-columns:1fr;max-width:420px}}
+
+.alias-storage{max-width:760px;margin:32px auto 0;padding:22px 26px;border-radius:16px;
+  background:linear-gradient(145deg,#2d353f 0%,#222931 55%,#1a2027 100%);
+  border:1px solid #4a5461;box-shadow:0 4px 0 #10151b,0 16px 34px #0a254030,inset 0 1px 0 #ffffff1a;
+  position:relative}
+.alias-storage:before{content:"";position:absolute;top:0;left:22px;right:22px;height:2px;border-radius:0 0 6px 6px;
+  background:linear-gradient(90deg,transparent,#b76e79,#e8b4a0,#fff0e6,#e8b4a0,#b76e79,transparent)}
+.alias-storage .st-title{display:flex;align-items:center;gap:10px;margin:0 0 14px;
+  font-size:.78rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#f6e2a6}
+.alias-storage .st-title .st-ico{width:26px;height:26px;display:grid;place-items:center;border-radius:8px;font-size:14px;
+  background:linear-gradient(145deg,#f6e1a4,#c9953d);box-shadow:0 2px 0 #8f5a3f}
+.alias-storage .st-bar{position:relative;height:16px;border-radius:99px;background:#1a2027;overflow:hidden;
+  border:1px solid #4a5461;box-shadow:inset 0 2px 4px #00000066}
+.alias-storage .st-fill{position:absolute;inset:0;width:100%;border-radius:99px;
+  background:linear-gradient(90deg,#713747,#a66b52 30%,#c9953d 65%,#f2d99b 100%);
+  box-shadow:0 0 12px #e8b4a066;animation:stShine 4s ease-in-out infinite}
+@keyframes stShine{0%,100%{filter:brightness(1)}50%{filter:brightness(1.15)}}
+.alias-storage .st-labels{display:flex;justify-content:space-between;margin-top:10px;font-size:.78rem;color:#aeb8c5;font-weight:600}
+.alias-storage .st-labels b{color:#f3e4bf}
+.alias-storage .st-note{margin:12px 0 0;padding-top:12px;border-top:1px dashed #ffffff26;
+  font-size:.86rem;color:#c4cfdd;line-height:1.6}
+.alias-storage .st-note b{color:#f3e4bf}
+
+.alias-scenario{max-width:980px;margin:36px auto 0;padding:26px 30px;border-radius:16px;
+  background:linear-gradient(145deg,#fffdf7 0%,#fbf3dd 100%);
+  border:1.5px solid #c9953d;box-shadow:0 4px 0 #b58b3c,0 16px 34px #b58b3c22;
+  position:relative}
+.alias-scenario:before{content:"";position:absolute;top:0;left:24px;right:24px;height:2px;border-radius:0 0 6px 6px;
+  background:linear-gradient(90deg,transparent,#b76e79,#e8b4a0,#fff0e6,#e8b4a0,#b76e79,transparent)}
+.alias-scenario h3{font-size:1.15rem;color:#713747;margin-bottom:12px;line-height:1.3;display:flex;align-items:center;gap:10px}
+.alias-scenario h3 .ico{width:30px;height:30px;display:grid;place-items:center;border-radius:9px;font-size:16px;
+  background:linear-gradient(145deg,#f6e1a4,#c9953d);box-shadow:0 2px 0 #8f5a3f}
+.alias-scenario p{margin:0 0 12px;font-size:.94rem;line-height:1.7;color:#33475b}
+.alias-scenario p:last-child{margin-bottom:0}
+.alias-scenario p b{color:#713747}
+.alias-scenario .sc-row{display:flex;align-items:center;gap:8px;padding:10px 14px;border-radius:10px;
+  background:#fff;border:1px solid #e8d8b4;margin:8px 0;font-size:.88rem;color:#52677e}
+.alias-scenario .sc-row .sc-av{flex:none;width:28px;height:28px;display:grid;place-items:center;border-radius:50%;
+  color:#fff;font-weight:800;font-size:.78rem;background:linear-gradient(145deg,#c9956f,#a66b52);box-shadow:0 2px 0 #713747}
+.alias-scenario .sc-row .sc-av.g2{background:linear-gradient(145deg,#e8c46e,#c9953d);box-shadow:0 2px 0 #a66b52}
+.alias-scenario .sc-row .sc-av.g3{background:linear-gradient(145deg,#3df08a,#16b358);box-shadow:0 2px 0 #0e8a43}
+.alias-scenario .sc-row b{color:#0a2540}
+.alias-scenario .sc-row .sc-badge{margin-left:auto;padding:3px 10px;border-radius:99px;font-size:.7rem;font-weight:800;
+  letter-spacing:.06em;text-transform:uppercase;background:#fff8e8;color:#713747;border:1px solid #e8d8b4;white-space:nowrap}
+.alias-scenario .sc-row .sc-badge.full{background:linear-gradient(125deg,#713747,#a66b52);color:#fff;border-color:#d9b875}
+
+/* ====== PLANES ====== */
+#planes{padding:96px 0;background:
+  radial-gradient(ellipse at 8% 4%,#f3dfa8b3 0,transparent 38%),
+  radial-gradient(ellipse at 92% 96%,#e6c98a99 0,transparent 42%),
+  linear-gradient(145deg,#cfd4dc 0%,#b3bac5 48%,#c6c2b6 100%)}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;perspective:1400px;padding-top:32px;align-items:start}
+@media(max-width:960px){.plans{grid-template-columns:1fr;max-width:520px;margin:0 auto}}
+.plan{position:relative;isolation:isolate;display:flex;flex-direction:column;
+  border-radius:18px;
+  background-color:#f6f8fb;
+  background-image:linear-gradient(145deg,#ffffffa6 0%,#f7f9fcb3 55%,#eceff4a6 100%),url(marmol.jpg);
+  background-size:auto,cover;background-position:center,var(--mp,50% 50%);
+  border:1.5px solid #d8c18a;
+  box-shadow:0 4px 0 #c4a05a,0 14px 32px #0a254018,inset 0 1px 0 #fff;
+  transform:translate3d(0,0,0);
+  transition:transform .4s cubic-bezier(.2,.8,.2,1),box-shadow .4s,border-color .3s}
+.plan:nth-child(1){--mp:12% 20%}
+.plan:nth-child(2){--mp:55% 60%}
+.plan:nth-child(3){--mp:90% 35%}
+.plan:hover{transform:translate3d(0,-10px,0) scale(1.01);border-color:#bd9850;
+  box-shadow:0 6px 0 #a66b52,0 18px 0 #d2a66a,0 40px 60px #8f594738,0 0 0 1px #c39a5b44}
+.plan.featured{border:2px solid #b88a36;box-shadow:0 5px 0 #8f5a3f,0 16px 0 #c99a5b,0 34px 58px #8f594755,inset 0 3px 0 #ffffffb8}
+.plan-top{position:relative;overflow:hidden;border-radius:18px 18px 0 0;
+  padding:32px 26px 24px;border-bottom:1px dashed #d8c18a;text-align:center}
+.plan-top:before{content:"";position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,transparent,#b68a37,#f4dda0,#b68a37,transparent)}
+.plan .tag{position:absolute;top:-16px;left:50%;z-index:10;
+  padding:5px 18px;border-radius:99px;font-size:.72rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;
+  color:#fff;white-space:nowrap;
+  background:linear-gradient(125deg,#713747,#a66b52,#c39a5b);
+  border:1px solid #d9b875;
+  animation:tagPulse 3.5s ease-in-out infinite}
+@keyframes tagPulse{
+  0%,100%{transform:translateX(-50%) translateY(0);box-shadow:0 3px 0 #59303b,0 8px 18px #8f594733}
+  50%{transform:translateX(-50%) translateY(-4px);box-shadow:0 5px 0 #59303b,0 12px 24px #8f594755,0 0 18px #e8b4a088}
+}
+.plan .lvl{display:inline-flex;padding:6px 12px;border-radius:10px;margin-bottom:10px;
+  font-size:.74rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#9b742b;
+  background:linear-gradient(115deg,#ffffffb8,#f7edda88 42%,#e9f2ff88 72%,#ffffffa8);
+  border:1px solid #d8c18a55;box-shadow:inset 0 1px 0 #ffffffd9}
+.plan h3{font-size:1.45rem;color:#0a2540;letter-spacing:-.015em;margin-bottom:6px;line-height:1.2}
+.plan .sub{color:#6b7c93;font-size:.9rem;margin-bottom:16px}
+.plan .price{font-size:2.2rem;font-weight:800;color:#0a2540;letter-spacing:-.02em;line-height:1.05}
+.plan .price small{font-size:.85rem;color:#6b7c93;font-weight:500;margin-left:4px}
+.plan .iva{color:#9b742b;font-size:.78rem;font-weight:600;letter-spacing:.02em;margin-top:6px}
+.plan-body{padding:22px 26px 26px;display:flex;flex-direction:column;gap:16px;flex:1}
+.plan-group ul{list-style:none;margin:0;padding:0;display:grid;gap:10px;font-size:.9rem;color:#52677e}
+.plan-group ul li{padding-left:24px;position:relative;line-height:1.5}
+.plan-group ul li::before{content:"✓";position:absolute;left:0;color:#a66b52;font-weight:800}
+.plan-group ul li.dom{font-weight:700;color:#713747}
+.plan-group ul li.dom::before{content:"★";color:#c9953d}
+.plan-cta{margin-top:auto;padding-top:16px;border-top:1px dashed #d8c18a}
+.plan-cta .btn-gold{width:100%;padding:13px 20px;font-size:.95rem}
+.plan-note{margin-top:10px;font-size:.76rem;text-align:center;color:#62758d;line-height:1.4}
+
+/* ====== ZOHO ====== */
+#zoho{padding:88px 0;background-image:linear-gradient(180deg,#f8fafde0 0%,#e3e9f1c4 100%),url(marmol.jpg);
+  background-size:auto,cover;background-position:center,50% 92%}
+.zoho-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:1080px;margin:0 auto}
+@media(max-width:960px){.zoho-grid{grid-template-columns:1fr;max-width:520px}}
+.zoho-card{position:relative;padding:30px 26px;border-radius:18px;
+  background:linear-gradient(145deg,#fff 0%,#fbf8f0 100%);
+  border:1.5px solid #d8c18a;
+  box-shadow:0 4px 0 #c4a05a,0 16px 34px #b58b3c22,inset 0 1px 0 #fff;
+  transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s}
+.zoho-card:hover{transform:translateY(-8px);box-shadow:0 6px 0 #b58b3c,0 22px 44px #b58b3c33}
+.zoho-card:before{content:"";position:absolute;top:0;left:22px;right:22px;height:2px;border-radius:0 0 6px 6px;
+  background:linear-gradient(90deg,transparent,#b76e79,#e8b4a0,#fff0e6,#e8b4a0,#b76e79,transparent)}
+.zoho-card.highlight{border:2px solid #c9953d;background:linear-gradient(145deg,#fffdf7 0%,#fbf3dd 100%);
+  box-shadow:0 5px 0 #b58b3c,0 18px 40px #b58b3c2a,inset 0 1px 0 #fff}
+.zoho-card.warn{border-color:#c98a7a;background:linear-gradient(145deg,#fff 0%,#fdece8 100%);
+  box-shadow:0 4px 0 #a66b52,0 16px 34px #8f4a3c22,inset 0 1px 0 #fff}
+.zoho-ico{display:inline-grid;place-items:center;width:56px;height:56px;border-radius:16px;font-size:26px;margin-bottom:16px;
+  background:linear-gradient(145deg,#f6e1a4,#c9953d);box-shadow:0 4px 0 #8f5a3f,inset 0 1px 0 #fff8}
+.zoho-card h3{font-size:1.15rem;color:#713747;margin-bottom:10px;line-height:1.3}
+.zoho-card p{margin:0 0 12px;font-size:.93rem;line-height:1.65;color:#52677e}
+.zoho-card p:last-child{margin-bottom:0}
+.zoho-card p b{color:#713747}
+.zoho-badge{display:inline-flex;padding:4px 12px;border-radius:99px;font-size:.7rem;font-weight:800;
+  letter-spacing:.08em;text-transform:uppercase;color:#fff;margin-bottom:12px;
+  background:linear-gradient(125deg,#0f8a4f,#0a7f3f);border:1px solid #0f8a4f;
+  box-shadow:0 2px 0 #075a2c}
+.zoho-badge.gold{background:linear-gradient(125deg,#713747,#a66b52,#c39a5b);border-color:#d9b875;box-shadow:0 2px 0 #59303b}
+.zoho-badge.warn{background:linear-gradient(125deg,#d9a0a0,#9c4d5f);border-color:#b8727c;box-shadow:0 2px 0 #5c2a36}
+.zoho-note{margin:36px auto 0;max-width:900px;padding:22px 28px;border-radius:14px;
+  background:linear-gradient(145deg,#fffdf7 0%,#fbf3dd 100%);
+  border:1.5px solid #c9953d;box-shadow:0 3px 0 #b58b3c,0 14px 32px #b58b3c22;
+  color:#52677e;font-size:.94rem;line-height:1.65;text-align:center}
+.zoho-note b{color:#713747}
+.zoho-note.warn{background:linear-gradient(145deg,#fff 0%,#fdece8 100%);
+  border-color:#c98a7a;box-shadow:0 3px 0 #a66b52,0 14px 32px #8f4a3c22}
+.zoho-note.warn b{color:#713747}
+
+/* ====== CARPETAS ====== */
+#carpetas{padding:88px 0;background-image:linear-gradient(180deg,#f8fafde0 0%,#e3e9f1c4 100%),url(marmol.jpg);
+  background-size:auto,cover;background-position:center,40% 60%}
+.carpetas-hero{max-width:960px;margin:0 auto 42px;padding:32px 38px;border-radius:20px;text-align:center;
+  background:linear-gradient(150deg,#fffdf7 0%,#fbf3dd 100%);
+  border:2px solid #c9953d;
+  box-shadow:0 5px 0 #b58b3c,0 20px 44px #b58b3c22;
+  position:relative}
+.carpetas-hero:before{content:"";position:absolute;top:0;left:28px;right:28px;height:3px;border-radius:0 0 8px 8px;
+  background:linear-gradient(90deg,transparent,#b76e79,#e8b4a0,#fff0e6,#e8b4a0,#b76e79,transparent)}
+.carpetas-hero h2{font-size:clamp(1.4rem,3vw,1.9rem);color:#0a2540;font-weight:800;line-height:1.2;
+  letter-spacing:-.02em;margin-bottom:14px}
+.carpetas-hero p{color:#33475b;font-size:1rem;line-height:1.7;margin:0}
+.carpetas-hero p b{color:#713747}
+.carpetas-diagram{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:1000px;margin:0 auto}
+@media(max-width:860px){.carpetas-diagram{grid-template-columns:1fr}}
+.carpeta-card{position:relative;padding:28px 26px;border-radius:18px;
+  background:linear-gradient(145deg,#fff 0%,#fbf8f0 100%);
+  border:1.5px solid #d8c18a;box-shadow:0 4px 0 #c4a05a,0 16px 34px #b58b3c22,inset 0 1px 0 #fff}
+.carpeta-card:before{content:"";position:absolute;top:0;left:22px;right:22px;height:2px;border-radius:0 0 6px 6px;
+  background:linear-gradient(90deg,transparent,#b76e79,#e8b4a0,#fff0e6,#e8b4a0,#b76e79,transparent)}
+.carpeta-card.no{border:2px solid #c98a7a;background:linear-gradient(145deg,#fff 0%,#fdece8 100%);
+  box-shadow:0 5px 0 #a66b52,0 18px 40px #8f4a3c22,inset 0 1px 0 #fff}
+.carpeta-card.no:before{background:linear-gradient(90deg,transparent,#b76e79,#e8b4a0,#b76e79,transparent)}
+.carpeta-card h3{color:#713747;font-size:1.15rem;margin-bottom:14px;line-height:1.3}
+.carpeta-card .cc-tag{display:inline-flex;align-items:center;gap:6px;padding:5px 14px;border-radius:99px;
+  font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:16px;
+  background:linear-gradient(125deg,#0f8a4f,#0a7f3f);color:#fff;border:1px solid #0f8a4f;
+  box-shadow:0 2px 0 #075a2c}
+.carpeta-card.no .cc-tag{background:linear-gradient(125deg,#d9a0a0,#9c4d5f);border-color:#b8727c;box-shadow:0 2px 0 #5c2a36}
+.carpeta-card ul{margin:0;padding:0;list-style:none;display:grid;gap:10px;font-size:.92rem;line-height:1.55;color:#52677e}
+.carpeta-card ul li{padding-left:26px;position:relative}
+.carpeta-card ul li::before{content:"✓";position:absolute;left:0;font-weight:800;color:#a66b52}
+.carpeta-card.no ul li::before{content:"✕";color:#9c4d5f}
+.carpeta-card ul li b{color:#713747}
+.carpeta-card p{margin:14px 0 0;font-size:.9rem;line-height:1.65;color:#52677e}
+.carpeta-card p b{color:#713747}
+
+/* ====== SEGURIDAD ====== */
+#seguridad{padding:88px 0;background-image:linear-gradient(180deg,#ffffffd6 0%,#f1f4f8b8 100%),url(marmol.jpg);
+  background-size:auto,cover;background-position:center,65% 40%}
+.sec-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;max-width:1080px;margin:0 auto}
+.sec-item{position:relative;padding:22px 22px 20px;border-radius:14px;
+  background:linear-gradient(145deg,#fff 0%,#fbf8f0 100%);
+  border:1px solid #d8c18a;
+  box-shadow:0 3px 0 #c4a05a,0 12px 26px #0a254012;
+  transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s}
+.sec-item:hover{transform:translateY(-4px);box-shadow:0 4px 0 #b58b3c,0 16px 30px #b58b3c22}
+.sec-item h3{font-size:1rem;color:#142b43;margin-bottom:8px;display:flex;align-items:center;gap:8px;line-height:1.3}
+.sec-item h3 .dot{flex:none;width:8px;height:8px;border-radius:50%;
+  background:linear-gradient(145deg,#c9956f,#a66b52);box-shadow:0 0 0 3px #c9956f33}
+.sec-item p{margin:0;font-size:.88rem;line-height:1.6;color:#52677e}
+.sec-item p b{color:#713747}
+
+/* ====== SOPORTE ====== */
+#soporte{padding:88px 0;background-image:linear-gradient(180deg,#e8edf3d9 0%,#f8fafcc4 100%),url(marmol.jpg);
+  background-size:auto,cover;background-position:center,82% 60%}
+.sup-hero{max-width:960px;margin:0 auto 40px;padding:28px 34px;border-radius:20px;text-align:center;
+  background:linear-gradient(150deg,#fffdf7 0%,#fbf3dd 100%);
+  border:2px solid #c9953d;
+  box-shadow:0 5px 0 #b58b3c,0 20px 44px #b58b3c22;
+  position:relative}
+.sup-hero:before{content:"";position:absolute;top:0;left:28px;right:28px;height:3px;border-radius:0 0 8px 8px;
+  background:linear-gradient(90deg,transparent,#b76e79,#e8b4a0,#fff0e6,#e8b4a0,#b76e79,transparent)}
+.sup-hero h2{font-size:clamp(1.4rem,3vw,1.9rem);color:#0a2540;font-weight:800;line-height:1.2;
+  letter-spacing:-.02em;margin-bottom:14px}
+.sup-hero p{color:#33475b;font-size:1rem;line-height:1.7;margin:0}
+.sup-hero p b{color:#713747}
+.sup-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:1000px;margin:0 auto}
+@media(max-width:800px){.sup-grid{grid-template-columns:1fr}}
+.sup-card{position:relative;padding:30px 28px;border-radius:18px;
+  background:linear-gradient(145deg,#2d353f 0%,#222931 55%,#1a2027 100%);
+  border:1px solid #4a5461;color:#c4cfdd;
+  box-shadow:0 4px 0 #10151b,0 16px 34px #0a254030,inset 0 1px 0 #ffffff1a}
+.sup-card:before{content:"";position:absolute;top:0;left:24px;right:24px;height:2px;border-radius:0 0 6px 6px;
+  background:linear-gradient(90deg,transparent,#b76e79,#e8b4a0,#fff0e6,#e8b4a0,#b76e79,transparent)}
+.sup-card h3{color:#f6e2a6;font-size:1.2rem;margin-bottom:16px;line-height:1.3;letter-spacing:-.01em}
+.sup-card ul{list-style:none;margin:0;padding:0;display:grid;gap:10px;font-size:.92rem}
+.sup-card ul li{padding-left:26px;position:relative;line-height:1.55}
+.sup-card ul li::before{content:"✓";position:absolute;left:0;
+  font-weight:800;background:linear-gradient(135deg,#f6e2a6,#e3a98d);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.sup-card ul li b{color:#f3e4bf}
+.sup-card p{margin:16px 0 0;padding-top:14px;border-top:1px solid #ffffff1f;
+  font-size:.88rem;line-height:1.6;color:#aeb8c5}
+.sup-card p b{color:#f3e4bf}
+
+/* Tabla tickets */
+.tk-compare{max-width:1000px;margin:36px auto 0;border-radius:16px;overflow:hidden;
+  border:1.5px solid #d8c18a;
+  box-shadow:0 4px 0 #c4a05a,0 18px 40px #b58b3c22,inset 0 1px 0 #fff;
+  background:linear-gradient(145deg,#fff 0%,#fcfdff 62%,#f6f8fc 100%)}
+.tk-compare .cmp-head{padding:20px 24px;background:linear-gradient(90deg,#2d353f,#222931);color:#f6e2a6;
+  text-align:center;font-weight:800;font-size:1rem;letter-spacing:.02em}
+.tk-compare table{width:100%;border-collapse:collapse;font-size:.9rem}
+.tk-compare th{padding:14px 18px;text-align:left;font-weight:800;letter-spacing:.04em;font-size:.76rem;
+  text-transform:uppercase;background:#fbf8f0;color:#713747;border-bottom:2px solid #b58b3c}
+.tk-compare th:nth-child(2),.tk-compare th:nth-child(3){text-align:center;width:140px}
+.tk-compare td{padding:12px 18px;border-bottom:1px solid #e8d8b4;color:#52677e;line-height:1.5;vertical-align:middle}
+.tk-compare td:nth-child(2),.tk-compare td:nth-child(3){text-align:center;font-weight:800}
+.tk-compare tr:last-child td{border-bottom:none}
+.tk-compare tr:nth-child(even) td{background:#fbf8f0}
+.tk-compare td.yes{color:#0f8a4f}
+.tk-compare td.no{color:#9c4d5f}
+.tk-compare td b{color:#713747}
+@media(max-width:600px){
+  .tk-compare{overflow-x:auto;border-radius:12px}
+  .tk-compare table{min-width:520px;font-size:.82rem}
+  .tk-compare th,.tk-compare td{padding:10px 12px}
+}
+
+/* ====== DESBLOQUEO ====== */
+#desbloqueo{padding:96px 0;background:
+  radial-gradient(ellipse at 12% 8%,#fff8e8 0,transparent 38%),
+  radial-gradient(ellipse at 88% 92%,#fdece8 0,transparent 42%),
+  linear-gradient(145deg,#f8fbff 0%,#eef3f9 55%,#f5f9fd 100%)}
+.db-hero{max-width:900px;margin:0 auto 44px;padding:28px 32px;border-radius:18px;
+  background:linear-gradient(145deg,#fffdf7 0%,#fbf3dd 100%);
+  border:1.5px solid #c9953d;box-shadow:0 4px 0 #b58b3c,0 18px 40px #b58b3c22;
+  text-align:center;position:relative}
+.db-hero:before{content:"";position:absolute;top:0;left:26px;right:26px;height:2px;border-radius:0 0 6px 6px;
+  background:linear-gradient(90deg,transparent,#b76e79,#e8b4a0,#fff0e6,#e8b4a0,#b76e79,transparent)}
+.db-hero p{margin:0;font-size:1rem;line-height:1.7;color:#33475b}
+.db-hero p b{color:#713747}
+.db-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:1080px;margin:0 auto}
+@media(max-width:860px){.db-grid{grid-template-columns:1fr}}
+.db-card{position:relative;padding:28px 28px 26px;border-radius:18px;
+  background:linear-gradient(145deg,#fff 0%,#fbf8f0 100%);
+  border:1.5px solid #d8c18a;
+  box-shadow:0 4px 0 #c4a05a,0 16px 34px #b58b3c22,inset 0 1px 0 #fff;
+  display:flex;flex-direction:column}
+.db-card:before{content:"";position:absolute;top:0;left:22px;right:22px;height:2px;border-radius:0 0 6px 6px;
+  background:linear-gradient(90deg,transparent,#b76e79,#e8b4a0,#fff0e6,#e8b4a0,#b76e79,transparent)}
+.db-card.urgent{border:2px solid #c98a7a;
+  background:linear-gradient(145deg,#fff 0%,#fdece8 100%);
+  box-shadow:0 5px 0 #a66b52,0 20px 44px #8f4a3c33,inset 0 1px 0 #fff}
+.db-card.urgent:before{background:linear-gradient(90deg,transparent,#b76e79,#e8b4a0,#b76e79,transparent)}
+.db-badge{display:inline-flex;align-items:center;gap:6px;padding:5px 14px;border-radius:99px;
+  font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;
+  margin-bottom:14px;align-self:flex-start;
+  background:linear-gradient(125deg,#0f8a4f,#0a7f3f);color:#fff;border:1px solid #0f8a4f;
+  box-shadow:0 2px 0 #075a2c}
+.db-badge.warn{background:linear-gradient(125deg,#d9a0a0,#9c4d5f);border-color:#b8727c;
+  box-shadow:0 2px 0 #5c2a36}
+.db-card h3{font-size:1.15rem;color:#713747;margin-bottom:12px;line-height:1.3;letter-spacing:-.01em}
+.db-card p{margin:0 0 12px;font-size:.93rem;line-height:1.65;color:#52677e}
+.db-card p:last-child{margin-bottom:0}
+.db-card p b{color:#713747}
+.db-card ol,.db-card ul{margin:8px 0 14px;padding:0 0 0 22px;display:grid;gap:8px;
+  font-size:.9rem;line-height:1.55;color:#52677e}
+.db-card ol li::marker{color:#a66b52;font-weight:800}
+.db-card ul{padding:0;list-style:none}
+.db-card ul li{padding-left:24px;position:relative}
+.db-card ul li::before{content:"✓";position:absolute;left:0;color:#a66b52;font-weight:800}
+.db-example{margin-top:14px;padding:16px 18px;border-radius:12px;
+  background:linear-gradient(145deg,#2d353f 0%,#222931 55%,#1a2027 100%);
+  border:1px solid #4a5461;color:#c4cfdd;
+  box-shadow:0 3px 0 #10151b,inset 0 1px 0 #ffffff1a}
+.db-example .ex-label{display:block;font-size:.7rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;
+  color:#f6e2a6;margin-bottom:8px}
+.db-example p{margin:0;font-size:.85rem;line-height:1.6;color:#c4cfdd;font-style:italic}
+.db-example p b{color:#f3e4bf;font-style:normal}
+.db-warn{max-width:1080px;margin:32px auto 0;padding:22px 28px;border-radius:14px;
+  background:linear-gradient(145deg,#fffdf7 0%,#fbf3dd 100%);
+  border:1.5px solid #c9953d;box-shadow:0 3px 0 #b58b3c,0 14px 32px #b58b3c22;
+  display:flex;align-items:flex-start;gap:16px;color:#33475b;font-size:.94rem;line-height:1.65}
+.db-warn .warn-ico{flex:none;width:44px;height:44px;display:grid;place-items:center;border-radius:12px;font-size:22px;
+  background:linear-gradient(145deg,#f6e1a4,#c9953d);box-shadow:0 3px 0 #8f5a3f}
+.db-warn p{margin:0}
+.db-warn p b{color:#713747}
+
+/* ====== RENOVACIÓN ====== */
+#renovacion{padding:88px 0;background:
+  radial-gradient(ellipse at 12% 8%,#f3dfa8b3 0,transparent 38%),
+  radial-gradient(ellipse at 90% 92%,#e6c98a99 0,transparent 42%),
+  linear-gradient(145deg,#cfd4dc 0%,#b3bac5 48%,#c6c2b6 100%)}
+.ren-card{max-width:900px;margin:0 auto;padding:36px 38px;border-radius:20px;text-align:center;
+  background:linear-gradient(150deg,#fffdf7 0%,#fbf3dd 100%);
+  border:1.5px solid #c9953d;
+  box-shadow:0 4px 0 #b58b3c,0 22px 46px #b58b3c22,inset 0 1px 0 #fff;
+  position:relative}
+.ren-card:before{content:"";position:absolute;top:0;left:26px;right:26px;height:2px;border-radius:0 0 6px 6px;
+  background:linear-gradient(90deg,transparent,#b76e79,#e8b4a0,#fff0e6,#e8b4a0,#b76e79,transparent)}
+.ren-card .badge{display:inline-flex;padding:6px 16px;border-radius:99px;font-size:.74rem;font-weight:800;
+  letter-spacing:.08em;text-transform:uppercase;color:#fff;margin-bottom:16px;
+  background:linear-gradient(125deg,#713747,#a66b52,#c39a5b);border:1px solid #d9b875;
+  box-shadow:0 3px 0 #59303b}
+.ren-card h2{font-size:clamp(1.4rem,3vw,1.9rem);color:#713747;margin-bottom:14px;line-height:1.25;letter-spacing:-.015em}
+.ren-card .price-big{font-size:2.6rem;font-weight:800;color:#0a2540;letter-spacing:-.025em;line-height:1.05;margin-bottom:6px}
+.ren-card .price-big small{font-size:1rem;color:#6b7c93;font-weight:500;margin-left:6px}
+.ren-card p{max-width:660px;margin:0 auto 14px;color:#52677e;font-size:.96rem;line-height:1.65}
+.ren-card p b{color:#713747}
+.ren-card .ren-note{margin-top:20px;padding:14px 20px;border-radius:12px;
+  background:linear-gradient(145deg,#fff,#fbf8f0);border:1px solid #d8c18a;
+  font-size:.86rem;color:#713747;line-height:1.55}
+.ren-card .ren-note b{color:#713747}
+
+/* ====== FORM ====== */
+#form{padding:88px 0;background-image:linear-gradient(180deg,#fafbfdd9 0%,#eaeff5c4 100%),url(marmol.jpg);
+  background-size:auto,cover;background-position:center,30% 70%}
+.form-card{max-width:860px;margin:0 auto;padding:clamp(28px,4vw,46px);border-radius:22px;
+  background:linear-gradient(145deg,#fff 0%,#fcfdff 58%,#f5f8fc 100%);
+  border:1px solid #d8c18a;
+  box-shadow:0 3px 0 #b58b3c,0 8px 0 #e6d5ad,0 30px 70px #0a254025,0 48px 90px #0a254012,inset 0 1px 0 #fff;
+  position:relative}
+.form-card:before{content:"";position:absolute;inset:9px;border:1px solid #d7b66d66;border-radius:15px;pointer-events:none}
+.form-card:after{content:"";position:absolute;top:0;left:32px;right:32px;height:3px;border-radius:0 0 8px 8px;
+  background:linear-gradient(90deg,transparent,#b68a37,#f4dda0,#b68a37,transparent)}
+.form-card h2{text-align:center;font-size:clamp(1.4rem,3vw,1.9rem);line-height:1.2;color:#0a2540;margin-bottom:10px;letter-spacing:-.015em}
+.form-card h2:after{content:"";display:block;width:76px;height:3px;margin:16px auto 0;border-radius:9px;
+  background:linear-gradient(90deg,#9b742b,#f1d58b,#b88a36);box-shadow:0 2px 7px #b88a3633}
+.form-card .lead{text-align:center;color:#52677e;margin:14px auto 28px;max-width:620px;font-size:1rem}
+.f{display:grid;gap:16px}
+.fl{display:grid;gap:7px;font-size:.88rem;font-weight:700;color:#0a2540;letter-spacing:.01em}
+.f input:not([type=hidden]):not([type=checkbox]):not([type=radio]),.f select,.f textarea{font:inherit;font-weight:500;padding:14px 16px;border:1.5px solid #9fb0c6;border-radius:11px;
+  background:#f1f5fa;color:#0a2540;width:100%;
+  transition:border-color .2s,box-shadow .2s,background .2s}
+.f input:not([type=hidden]):not([type=checkbox]):not([type=radio]):hover,.f select:hover,.f textarea:hover{border-color:#7d90ab}
+.f input:not([type=hidden]):not([type=checkbox]):not([type=radio]):focus,.f select:focus,.f textarea:focus{background:#fff;border-color:#a66b52;box-shadow:0 0 0 4px #c39a5b33;outline:none}
+.f ::placeholder{color:#62758d;opacity:1}
+
+.ml-opts{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:6px}
+@media(max-width:900px){.ml-opts{grid-template-columns:1fr}}
+.mo{position:relative;display:grid;gap:4px;align-content:start;padding:16px 18px;border-radius:14px;cursor:pointer;color:#e9eef5;
+  background:linear-gradient(150deg,#2d353f 0%,#222931 55%,#1a2027 100%);
+  border:1px solid #4a5461;box-shadow:0 3px 0 #10151b,inset 0 1px 0 #ffffff1a;
+  transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s,border-color .3s}
+.mo input{position:absolute;opacity:0;pointer-events:none;width:1px;height:1px}
+.mo .mo-n{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#9fb0c8}
+.mo .mo-t{font-size:1rem;line-height:1.25;color:#f6f8fb}
+.mo .mo-d{font-size:.82rem;line-height:1.4;color:#aeb8c5}
+.mo .mo-s{margin-top:2px;font-size:.78rem;font-weight:600;color:#f0c3a8}
+.mo .mo-p{margin-top:6px;font-size:1.4rem;font-weight:800;line-height:1.1;
+  background:linear-gradient(110deg,#fff 0%,#dfe6ef 45%,#b9c4d3 100%);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.mo:hover{transform:translateY(-4px)}
+.mo:focus-within{outline:2px solid #e8b4a0;outline-offset:2px}
+.mo.sel{transform:translateY(-6px);border-color:#e8b4a0;
+  box-shadow:0 4px 0 #10151b,0 12px 0 #39424d,0 0 0 1px #e8b4a066,0 20px 36px #b76e7945,inset 0 1px 0 #ffffff26}
+.mo.sel .mo-p{background:linear-gradient(110deg,#f6e2a6 0%,#e8c46e 40%,#f0c3a8 85%);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.mo .mo-x{display:none;margin-top:2px;font-size:.76rem;font-weight:700;color:#e8b4a0}
+.mo .mo-x.on{display:block}
+
+.ml-dom{display:flex;flex-wrap:wrap;align-items:center;gap:10px 12px;margin-top:8px}
+.ml-q{font-weight:700;color:#0a2540;font-size:.9rem}
+.dp{position:relative;cursor:pointer}
+.dp input{position:absolute;opacity:0;pointer-events:none;width:1px;height:1px}
+.dp span{display:inline-block;padding:9px 16px;border:1.5px solid #9fb0c6;border-radius:99px;background:#f1f5fa;color:#0a2540;
+  font-size:.86rem;font-weight:600;transition:border-color .2s,background .2s,box-shadow .2s}
+.dp input:checked+span{border-color:#a66b52;background:linear-gradient(145deg,#f6e3a8,#e6c274);box-shadow:0 2px 0 #8f5a3f}
+.dp input:focus-visible+span{outline:2px solid #e8b4a0;outline-offset:2px}
+.ml-desc{display:none;padding:9px 16px;border-radius:99px;font-size:.84rem;font-weight:700;color:#1f2a37;
+  background:linear-gradient(115deg,#fff0bd,#e8c46e 45%,#d9ad58);border:1px solid #e8c46e;
+  box-shadow:0 2px 0 #a66b52}
+.ml-desc.show{display:inline-flex}
+.ml-sel{margin:4px 0 0;text-align:center;font-weight:600;color:#33475b;font-size:.9rem}
+
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:640px){.two{grid-template-columns:1fr}}
+
+.chk{display:flex;gap:12px;align-items:flex-start;font-size:.87rem;font-weight:500;line-height:1.5;color:#1f3347;
+  background:linear-gradient(145deg,#fffdf7,#f8f4eb);border:1px solid #c4a05a;border-radius:11px;padding:14px 16px;cursor:pointer}
+.chk input{flex:0 0 20px;width:20px;height:20px;padding:0;margin:2px 0 0;accent-color:#a66b52;cursor:pointer}
+.chk b{color:#713747}
+.chk a{color:#713747;font-weight:600;text-decoration:underline}
+.chk:focus-within{border-color:#c39a5b;box-shadow:0 0 0 4px #c39a5b22}
+
+.form-note{display:flex;align-items:flex-start;gap:12px;padding:14px 18px;border-radius:12px;
+  background:linear-gradient(145deg,#fff8e8,#fffdf9);border:1px solid #e8d8b4;
+  font-size:.86rem;line-height:1.55;color:#713747}
+.form-note .fn-ico{flex:none;width:28px;height:28px;display:grid;place-items:center;border-radius:8px;font-size:14px;
+  background:linear-gradient(145deg,#f6e1a4,#c9953d);box-shadow:0 2px 0 #8f5a3f}
+
+.f button.btn-gold{width:100%;padding:15px 24px;font-size:1.02rem;font-weight:700;cursor:pointer}
+.f button.btn-gold:disabled{opacity:.7;cursor:progress}
+.f .msg{margin:4px 0 0;text-align:center;font-weight:600;font-size:.92rem;min-height:1.6em;color:#52677e}
+
+/* ====== FAQ ====== */
+#faq{padding:88px 0;background:
+  radial-gradient(ellipse at 8% 0%,#fff8e8 0,transparent 32%),
+  linear-gradient(145deg,#f8fbffdb 0%,#edf2f8c4 58%,#f7f9fcdb 100%),url(marmol.jpg);
+  background-size:auto,auto,cover;background-position:center,center,35% 15%}
+#faq .wrap{max-width:920px}
+.faq details{position:relative;isolation:isolate;overflow:hidden;margin:0 0 14px;border-radius:13px;
+  background:linear-gradient(145deg,#fff 0%,#fcfdff 62%,#f6f8fc 100%);
+  border:1px solid #d8c18a;
+  box-shadow:0 3px 0 #c4a05a,0 9px 22px #0a254010,inset 0 1px 0 #fff;
+  transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s,border-color .3s}
+.faq details:before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;
+  background:linear-gradient(180deg,#fff0bd,#d6ad58,#a66b52,#713747);z-index:-1;opacity:.9}
+.faq details:hover{transform:translateY(-3px);border-color:#c9a45b;box-shadow:0 4px 0 #b58b3c,0 14px 28px #b58b3c22,0 0 0 1px #d6ad5833}
+.faq summary{list-style:none;display:flex;align-items:center;gap:13px;padding:18px 24px 18px 26px;
+  font-weight:700;color:#0a2540;cursor:pointer;transition:color .25s,background .25s}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:before{content:"＋";flex:0 0 26px;width:26px;height:26px;display:grid;place-items:center;border-radius:7px;
+  color:#8d622b;font-size:18px;font-weight:700;
+  background:linear-gradient(145deg,#fff4d5,#e7c879);box-shadow:0 2px 0 #b58b3c;border:1px solid #d8b96c;
+  transition:transform .3s,background .3s,color .3s}
+.faq details[open] summary{color:#713747;background:linear-gradient(90deg,#fff8e8,#fff 65%,#fffaf4);border-bottom:1px solid #e8d8b4}
+.faq details[open] summary:before{content:"−";transform:rotate(180deg);color:#fff;
+  background:linear-gradient(145deg,#a66b52,#713747);border-color:#a66b52;box-shadow:0 2px 0 #59303b}
+.faq details p{margin:0;padding:16px 26px 22px 62px;color:#52677e;line-height:1.72;background:linear-gradient(180deg,#fffdf9,#fff)}
+.faq details p a{color:#713747;font-weight:600;text-decoration:underline}
+.faq details p b{color:#713747}
+@media(max-width:560px){.faq summary{padding:16px 18px;gap:10px}.faq details p{padding:14px 18px 18px 50px}}
+
+/* ====== CTA FINAL ====== */
+#cta-final{padding:80px 0;text-align:center;color:#fff;
+  background:
+    radial-gradient(ellipse at 12% 8%,#e8b4a038 0,transparent 42%),
+    radial-gradient(ellipse at 88% 92%,#c9953d33 0,transparent 46%),
+    linear-gradient(160deg,#3a4350 0%,#272e38 56%,#1a2027 100%)}
+#cta-final h2{font-size:clamp(1.6rem,3.4vw,2.3rem);font-weight:800;letter-spacing:-.02em;line-height:1.2;margin-bottom:14px;
+  background:linear-gradient(110deg,#fff 0%,#f6e2a6 40%,#e8b4a0 80%);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+#cta-final p{color:#c4cfdd;font-size:1.05rem;max-width:660px;margin:0 auto 28px;line-height:1.65}
+#cta-final .cta-row{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+
+/* ====== FOOTER ====== */
+footer{position:relative;overflow:hidden;padding:44px 5vw;text-align:center;font-size:.9rem;color:#c4cfdd;
+  background:
+    radial-gradient(ellipse at 12% 0%,#e8b4a038 0,transparent 46%),
+    radial-gradient(ellipse at 88% 100%,#8fb4ff26 0,transparent 52%),
+    linear-gradient(160deg,#3a4350 0%,#272e38 56%,#1e242c 100%);
+  box-shadow:inset 0 1px 0 #ffffff29}
+footer:before{content:"";position:absolute;left:0;right:0;top:0;height:3px;
+  background:linear-gradient(90deg,transparent 0%,#b76e79 14%,#e8b4a0 32%,#fff0e6 50%,#e8b4a0 68%,#b76e79 86%,transparent 100%);
+  box-shadow:0 0 14px #e8b4a066}
+.flogo{display:inline-block;font-weight:800;font-size:1.25rem;
+  background:linear-gradient(110deg,#8a6420 0%,#c9953d 22%,#f6e2a6 44%,#d9ad58 62%,#c9956f 84%,#a66b52 100%);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.flinks{display:flex;gap:22px;justify-content:center;flex-wrap:wrap;margin:14px 0 20px}
+.flinks a{text-decoration:none;transition:color .3s,text-shadow .3s}
+.flinks a:hover{color:#f6e2a6;text-shadow:0 0 14px #e4c16a66}
+
+/* ====== WHATSAPP ====== */
+.wa{position:fixed;right:max(20px,env(safe-area-inset-right));bottom:max(20px,env(safe-area-inset-bottom));z-index:30;
+  display:flex;align-items:center;gap:12px;padding:7px 22px 7px 7px;border-radius:99px;overflow:hidden;isolation:isolate;
+  text-decoration:none;color:#f3e4bf;border:1px solid #4a5461;
+  box-shadow:0 12px 30px #0a254055,0 0 0 1px #ffffff0d;
+  animation:waIn .9s cubic-bezier(.2,.8,.2,1) .6s backwards,waFloat 5s ease-in-out 1.8s infinite}
+.wa:before{content:"";position:absolute;z-index:-2;left:50%;top:50%;width:320px;height:320px;margin:-160px 0 0 -160px;
+  background:conic-gradient(from 0deg,#4a5461 0deg,#4a5461 235deg,#b76e79 280deg,#e8b4a0 312deg,#fff0e6 330deg,#e8b4a0 345deg,#4a5461 360deg);
+  animation:ringSpin 5s linear infinite;will-change:transform}
+@keyframes ringSpin{to{transform:rotate(360deg)}}
+.wa:after{content:"";position:absolute;z-index:-1;inset:2px;border-radius:99px;
+  background:linear-gradient(150deg,#2d353f 0%,#222931 55%,#1a2027 100%);box-shadow:inset 0 1px 0 #ffffff1f}
+.wa .wa-ico{position:relative;flex:none;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;
+  background:linear-gradient(145deg,#3df08a 0%,#16b358 55%,#0e8a43 100%);
+  box-shadow:inset 0 1px 0 #ffffff77,0 4px 12px #0e8a4366}
+.wa .wa-ico svg{width:26px;height:26px;fill:#fff;filter:drop-shadow(0 1px 1px #00000040)}
+.wa .wa-txt{display:flex;flex-direction:column;line-height:1.15;text-align:left}
+.wa .wa-txt small{font-size:.7rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#aeb8c5}
+.wa .wa-txt b{font-size:1rem;font-weight:800;
+  background:linear-gradient(110deg,#f6e2a6,#e8c46e 40%,#f0c3a8 80%);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.wa:hover,.wa:focus-visible{transform:translateY(-5px);box-shadow:0 18px 38px #0a254066,0 0 24px #e8b4a055;outline:none}
+@keyframes waIn{from{opacity:0;transform:translateY(40px) scale(.9)}to{opacity:1;transform:none}}
+@keyframes waFloat{0%,100%{translate:0 0}50%{translate:0 -7px}}
+@media(max-width:480px){.wa{padding:6px;gap:0;right:max(14px,env(safe-area-inset-right));bottom:max(14px,env(safe-area-inset-bottom))}.wa .wa-txt{display:none}}
+
+/* ====== REVEAL ====== */
+.js .rv{opacity:0}
+.js .rv.in{opacity:1;animation:riseIn .9s cubic-bezier(.2,.8,.2,1) backwards;animation-delay:calc(var(--i,0)*80ms)}
+@keyframes riseIn{from{opacity:0;transform:translate3d(0,42px,0)}to{opacity:1;transform:translate3d(0,0,0)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .rv{opacity:1}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a class="logo" href="index.html" aria-label="Volver al inicio de e-WEB">
+    e-<span style="background:inherit;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">WEB</span>
+    <span class="back">← Inicio</span>
+  </a>
+  <ul id="menu">
+    <li><a href="#porque">Por qué</a></li>
+    <li><a href="#alias">Alias</a></li>
+    <li><a href="#planes">Opciones</a></li>
+    <li><a href="#zoho">Zoho</a></li>
+    <li><a href="#carpetas">Carpetas</a></li>
+    <li><a href="#seguridad">Seguridad</a></li>
+    <li><a href="#soporte">Soporte</a></li>
+    <li><a href="#desbloqueo">Desbloqueo</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+  <div class="nav-r">
+    <a class="btn-ghost" href="#form">Contratar</a>
+    <button class="menu" id="mb" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">Menú</button>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-in">
+      <div>
+        <span class="kicker">Correo corporativo</span>
+        <h1>Correo profesional con tu propio dominio</h1>
+        <p class="lead">Presencia seria y profesional sin necesidad de una página web. Tu marca en cada correo, con la seguridad corporativa de Zoho Mail, alias con storage compartido, carpetas automáticas y soporte por tickets.</p>
+        <div class="hero-cta">
+          <a class="btn-gold" href="#planes">Ver opciones &nbsp;→</a>
+          <a class="btn-ghost" href="#alias">Cómo funcionan los alias</a>
+        </div>
+        <div class="badges">
+          <span>Webmail Zoho</span>
+          <span>App nativa Zoho</span>
+          <span>Alias independientes</span>
+          <span>5 GB compartidos</span>
+          <span>Tickets mensuales</span>
+          <span>Desde $45.000/año</span>
+        </div>
+      </div>
+      <div class="mail-mock" aria-hidden="true">
+        <div class="mm-bar"><i></i><i></i><i></i><b>ZOHO MAIL</b></div>
+        <div class="mm-body">
+          <p class="mm-title">Bandeja de entrada · juan@tuempresa.cl</p>
+          <div>
+            <span class="mm-folder">Ventas</span>
+            <span class="mm-folder">Despacho</span>
+            <span class="mm-folder">Cotización</span>
+          </div>
+          <div class="mm-row unread">
+            <div class="mm-av">M</div>
+            <div class="mm-info"><div class="mm-from">María González</div><div class="mm-sub">Re: Cotización proyecto de mayo</div></div>
+            <div class="mm-time">10:42</div>
+          </div>
+          <div class="mm-row unread">
+            <div class="mm-av g2">J</div>
+            <div class="mm-info"><div class="mm-from">Juan Pérez · Proveedor</div><div class="mm-sub">Factura N° 3847 adjunta</div></div>
+            <div class="mm-time">09:15</div>
+          </div>
+          <div class="mm-row">
+            <div class="mm-av g3">V</div>
+            <div class="mm-info"><div class="mm-from">Ventas</div><div class="mm-sub">Nuevo pedido — despacho confirmado</div></div>
+            <div class="mm-time">Ayer</div>
+          </div>
+          <div class="mm-foot">
+            <span>SPF</span><span>DKIM</span><span>DMARC</span><span>2FA</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="subnav">
+  <div class="wrap">
+    <a href="#porque">💡 Por qué</a>
+    <a href="#alias">🔗 Alias</a>
+    <a href="#planes">📬 Opciones</a>
+    <a href="#zoho">📱 Zoho</a>
+    <a href="#carpetas">📂 Carpetas</a>
+    <a href="#seguridad">🛡 Seguridad</a>
+    <a href="#soporte">🎫 Soporte</a>
+    <a href="#desbloqueo">🚨 Desbloqueo</a>
+    <a href="#faq">❓ Preguntas</a>
+  </div>
+</div>
+
+<main>
+
+  <!-- INTRO -->
+  <section id="intro">
+    <div class="wrap">
+      <div class="intro-card reveal">
+        <h2>¿Por qué un correo corporativo?</h2>
+        <p>Un correo <b>contacto@tuempresa.cl</b> dice mucho de ti antes de que escribas la primera palabra. Genera confianza, profesionalismo y protege tu marca. Un correo <b>tuempresa2024@gmail.com</b> no da el mismo mensaje.</p>
+        <p>Nuestro <b>correo corporativo</b> te da una dirección profesional en tu propio dominio, con seguridad de nivel empresarial, webmail y aplicación nativa de <b>Zoho Mail</b>, y toda la administración a cargo de nuestro equipo. Tú solo te preocupas de escribir.</p>
+        <p><b>No necesitas una página web para tener correo corporativo.</b> Puedes contratar solo el servicio de correo y quedar operativo en 24 horas.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- POR QUÉ -->
+  <section id="porque" class="sec">
+    <div class="wrap">
+      <h2 class="sec-title reveal">Lo que ganas con un correo profesional</h2>
+      <p class="sec-lead reveal">No es solo estética: es funcionalidad, seguridad y una marca sólida.</p>
+      <div class="why-grid">
+        <div class="why-card reveal">
+          <div class="why-ico">🎯</div>
+          <h3>Credibilidad inmediata</h3>
+          <p>Un correo con tu dominio genera <b>confianza en clientes y proveedores</b>. La primera impresión importa, y un @gmail.com no siempre juega a tu favor.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-ico">🔐</div>
+          <h3>Seguridad empresarial</h3>
+          <p>Protección contra <b>phishing, spam, suplantación de identidad</b> y accesos no autorizados. Todo con <b>SPF, DKIM, DMARC y verificación en 2 pasos</b>.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-ico">⚙️</div>
+          <h3>Administración incluida</h3>
+          <p>Nosotros hacemos las <b>altas, bajas, reseteos, desbloqueos y configuraciones</b> con tus tickets mensuales. Tú no te preocupas de nada técnico.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-ico">📱</div>
+          <h3>Entorno 100% Zoho</h3>
+          <p>Accede desde el <b>webmail Zoho Mail</b> o la <b>app nativa Zoho Mail</b>. Ambas de alta seguridad corporativa, integradas perfectamente entre sí. Sin salir del ecosistema seguro.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-ico">📂</div>
+          <h3>Carpetas automáticas</h3>
+          <p>Si pides tus alias al inicio, configuramos <b>carpetas automáticas</b> (Ventas, Despacho, Cotización) para que no se mezclen los correos. Solo al inicio, sin costo extra.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-ico">🎫</div>
+          <h3>Soporte por tickets</h3>
+          <p>Respuesta por correo corporativo con cupo mensual: <b>2 en Opción 1, 4 en Opción 2, 6 en Opción 3</b>. Somos personas reales, no bots.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ALIAS - INFOGRAFÍA -->
+  <section id="alias" class="sec">
+    <div class="wrap">
+      <h2 class="sec-title reveal">Interconexiones: la magia de los alias</h2>
+      <p class="sec-lead reveal">Aquí está el corazón de lo que hacemos por ti. Cada cuenta madre puede alojar <b>alias con identidad propia</b>: cada uno con su usuario, su contraseña y su propia bandeja, pero todos viviendo dentro del mismo espacio de <b>5 GB compartidos</b>. Es como tener varias oficinas dentro de un mismo edificio.</p>
+
+      <div class="alias-diagram reveal">
+        <div class="alias-tree">
+          <div class="alias-mother-wrap">
+            <div class="alias-node mother">
+              <div class="alias-node-header">
+                <div class="alias-ico">📬</div>
+                <div><span class="alias-role">Cuenta madre</span></div>
+              </div>
+              <p class="alias-email">juan@miempresa.cl</p>
+              <ul class="alias-features">
+                <li><span class="ico">🔑</span><span><b>Contraseña principal</b> — sólo la sabe el dueño.</span></li>
+                <li><span class="ico">👁</span><span><b>Ve TODO</b> lo que entra: ventas, despacho, cotización.</span></li>
+                <li><span class="ico">💾</span><span><b>Dueña del almacenamiento</b> de 5 GB.</span></li>
+                <li><span class="ico">⚙️</span><span><b>Administra desde aquí</b> alias, contraseñas y carpetas.</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="alias-connector" aria-hidden="true">
+            <span class="line-v-top"></span>
+            <span class="line-h"></span>
+            <span class="line-v-left"></span>
+            <span class="line-v-right"></span>
+          </div>
+
+          <div class="alias-children">
+            <div class="alias-node child">
+              <div class="alias-node-header">
+                <div class="alias-ico">💰</div>
+                <div><span class="alias-role">Alias 1</span></div>
+              </div>
+              <p class="alias-email">ventas@miempresa.cl</p>
+              <ul class="alias-features">
+                <li><span class="ico">👤</span><span>Usuario propio: <b>ventas@miempresa.cl</b></span></li>
+                <li><span class="ico">🔑</span><span>Contraseña inicial: la de la cuenta madre. Cambio por ticket.</span></li>
+                <li><span class="ico">👁</span><span><b>Solo ve ventas</b>. No ve despacho ni la cuenta madre.</span></li>
+                <li><span class="ico">💾</span><span>Comparte los <b>5 GB</b> de la cuenta madre.</span></li>
+              </ul>
+            </div>
+            <div class="alias-node child">
+              <div class="alias-node-header">
+                <div class="alias-ico">🚚</div>
+                <div><span class="alias-role">Alias 2</span></div>
+              </div>
+              <p class="alias-email">despacho@miempresa.cl</p>
+              <ul class="alias-features">
+                <li><span class="ico">👤</span><span>Usuario propio: <b>despacho@miempresa.cl</b></span></li>
+                <li><span class="ico">🔑</span><span>Contraseña inicial: la de la cuenta madre. Cambio por ticket.</span></li>
+                <li><span class="ico">👁</span><span><b>Solo ve despacho</b>. No ve ventas ni la cuenta madre.</span></li>
+                <li><span class="ico">💾</span><span>Comparte los <b>5 GB</b> de la cuenta madre.</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="alias-storage">
+          <div class="st-title"><span class="st-ico">💾</span>Almacenamiento compartido · 5 GB</div>
+          <div class="st-bar"><div class="st-fill"></div></div>
+          <div class="st-labels"><span>Uso combinado: <b>juan@ + ventas@ + despacho@</b></span><span><b>5 GB</b> totales</span></div>
+          <p class="st-note">Los correos que llegan a <b>juan@</b>, <b>ventas@</b> y <b>despacho@</b> se suman y comparten el mismo espacio de 5 GB. Si una casilla crece mucho, reduce el espacio disponible para las otras. Por eso ofrecemos ampliar por tramos de 5 GB (solicitud adicional).</p>
+        </div>
+      </div>
+
+      <div class="alias-scenario reveal">
+        <h3><span class="ico">💡</span>Escenario real: cómo lo usa un negocio</h3>
+        <p>Imagina que <b>Juan</b> tiene una tienda y su correo madre es <b>juan@mitienda.cl</b>. Contrató la <b>Opción 1</b> (1 correo + 2 alias) y quiere delegar ventas y despacho a dos personas de confianza.</p>
+        <div class="sc-row"><span class="sc-av">J</span><div><b>Juan</b> — juan@mitienda.cl</div><span class="sc-badge full">Ve TODO</span></div>
+        <div class="sc-row"><span class="sc-av g2">V</span><div><b>María</b> — ventas@mitienda.cl (alias)</div><span class="sc-badge">Solo ventas</span></div>
+        <div class="sc-row"><span class="sc-av g3">D</span><div><b>Pedro</b> — despacho@mitienda.cl (alias)</div><span class="sc-badge">Solo despacho</span></div>
+        <p style="margin-top:14px">Cada uno entra desde su propio Zoho Mail (o la app) con su usuario y contraseña. María solo ve correos de ventas. Pedro solo ve despachos. <b>Juan, en cambio, ve todo</b> desde su cuenta madre. Es la forma más eficiente y económica de tener correos profesionales separados sin pagar tres casillas completas.</p>
+        <p><b>¿Quieres que cada uno tenga su propia contraseña, distinta a la de Juan?</b> Se puede, pero <b>debe pedirse por ticket</b>. Cada cambio de contraseña de alias consume 1 ticket de tu cupo mensual (2/4/6 según plan).</p>
+        <p><b>¿Quieres además que los correos de ventas y despacho se ordenen automáticamente en carpetas separadas en la cuenta madre?</b> Sí, pero <b>solo si pides los alias al inicio</b>. Después ya no podemos entrar a la cuenta madre por privacidad. Ver <a href="#carpetas" style="color:#713747;text-decoration:underline;font-weight:600">Carpetas automáticas</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLANES -->
+  <section id="planes" class="sec">
+    <div class="wrap">
+      <h2 class="sec-title reveal">Las 3 opciones de correo corporativo</h2>
+      <p class="sec-lead reveal">Todas incluyen dominio, seguridad completa, administración y soporte. Elige según cuántos correos y alias necesites. <b>Descuento de $10.000 por dominio propio al día SOLO en la primera contratación, NO en renovaciones.</b></p>
+
+      <div class="plans">
+        <article class="plan reveal">
+          <div class="plan-top">
+            <span class="lvl">Opción 1</span>
+            <h3>Correo de entrada</h3>
+            <p class="sub">Para empezar con presencia profesional</p>
+            <p class="price">$45.000 <small>CLP</small></p>
+            <p class="iva">IVA incluido · 12 meses</p>
+          </div>
+          <div class="plan-body">
+            <div class="plan-group">
+              <ul>
+                <li class="dom">Dominio incluido (12 meses)</li>
+                <li><b>1 correo</b> (casilla madre) de 5 GB</li>
+                <li><b>2 alias</b> independientes (comparten 5 GB)</li>
+                <li><b>2 tickets/mes</b></li>
+                <li>Webmail + app nativa Zoho</li>
+                <li><b>Carpetas automáticas</b> si pides alias al inicio</li>
+                <li>Pie de firma corporativo</li>
+              </ul>
+            </div>
+            <div class="plan-cta">
+              <a class="btn-gold" href="#form">Contratar Opción 1</a>
+              <p class="plan-note">Ideal si eres tú el único que responde</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="plan featured reveal">
+          <span class="tag">Más popular</span>
+          <div class="plan-top">
+            <span class="lvl">Opción 2</span>
+            <h3>Correo corporativo</h3>
+            <p class="sub">Para equipos pequeños</p>
+            <p class="price">$75.000 <small>CLP</small></p>
+            <p class="iva">IVA incluido · 12 meses</p>
+          </div>
+          <div class="plan-body">
+            <div class="plan-group">
+              <ul>
+                <li class="dom">Dominio incluido (12 meses)</li>
+                <li><b>2 correos</b> (casillas madre) de 5 GB c/u</li>
+                <li><b>4 alias</b> independientes (2 por correo, 5 GB compartidos)</li>
+                <li><b>4 tickets/mes</b></li>
+                <li>Webmail + app nativa Zoho</li>
+                <li><b>Carpetas automáticas</b> si pides alias al inicio</li>
+                <li>Pie de firma corporativo</li>
+              </ul>
+            </div>
+            <div class="plan-cta">
+              <a class="btn-gold" href="#form">Contratar Opción 2</a>
+              <p class="plan-note">Ideal para socios o duplas</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="plan reveal">
+          <div class="plan-top">
+            <span class="lvl">Opción 3</span>
+            <h3>Correo multifuncional</h3>
+            <p class="sub">Para negocios con más equipo</p>
+            <p class="price">$90.000 <small>CLP</small></p>
+            <p class="iva">IVA incluido · 12 meses</p>
+          </div>
+          <div class="plan-body">
+            <div class="plan-group">
+              <ul>
+                <li class="dom">Dominio incluido (12 meses)</li>
+                <li><b>4 correos</b> (casillas madre) de 5 GB c/u</li>
+                <li><b>8 alias</b> independientes (2 por correo, 5 GB compartidos)</li>
+                <li><b>6 tickets/mes</b></li>
+                <li>Webmail + app nativa Zoho</li>
+                <li><b>Carpetas automáticas</b> si pides alias al inicio</li>
+                <li>Pie de firma corporativo</li>
+              </ul>
+            </div>
+            <div class="plan-cta">
+              <a class="btn-gold" href="#form">Contratar Opción 3</a>
+              <p class="plan-note">Ideal si tienes varias áreas</p>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <p class="sec-lead reveal" style="margin-top:36px;margin-bottom:0;font-size:.9rem;color:#713747;font-weight:600">
+        ¿Más espacio? Puedes ampliar por tramos de 5 GB. ¿Más correos o alias? Solicítalos desde <a href="index.html#adicionales" style="color:#713747;text-decoration:underline">solicitudes adicionales</a> (pago aparte).
+      </p>
+    </div>
+  </section>
+
+  <!-- ZOHO -->
+  <section id="zoho" class="sec">
+    <div class="wrap">
+      <h2 class="sec-title reveal">La tecnología detrás: Zoho Mail</h2>
+      <p class="sec-lead reveal">Para entregar un correo profesional, seguro y confiable, trabajamos con <b>Zoho Mail</b>, uno de los servicios de correo empresarial más usados del mundo. Tú no tienes que saber nada técnico: nosotros configuramos todo.</p>
+
+      <div class="zoho-grid">
+        <div class="zoho-card highlight reveal">
+          <div class="zoho-ico">🌐</div>
+          <span class="zoho-badge gold">Recomendado</span>
+          <h3>Webmail Zoho Mail</h3>
+          <p>Entras desde cualquier navegador (Chrome, Safari, Edge, Firefox) a tu correo en el dominio de Zoho. <b>Todo tu correo vive dentro del entorno seguro de Zoho.</b></p>
+          <p>Funciona en computador, tablet o celular, sin instalar nada. Recibe, envía, organiza carpetas y administra contactos desde la interfaz profesional de Zoho.</p>
+        </div>
+        <div class="zoho-card highlight reveal">
+          <div class="zoho-ico">📱</div>
+          <span class="zoho-badge">Recomendado</span>
+          <h3>App nativa Zoho Mail</h3>
+          <p>Descarga la app oficial <b>Zoho Mail</b> desde la App Store (iPhone) o Google Play (Android). Inicias sesión con las mismas credenciales del webmail.</p>
+          <p><b>Alta seguridad corporativa</b> diseñada y auditada por Zoho. Notificaciones push, cifrado y sincronización perfecta con el webmail. <b>Es el entorno ideal para tu correo profesional.</b></p>
+        </div>
+        <div class="zoho-card warn reveal">
+          <div class="zoho-ico">⚠️</div>
+          <span class="zoho-badge warn">No recomendado</span>
+          <h3>Salir a Gmail, Outlook o terceros</h3>
+          <p><b>No recomendamos salir del entorno de Zoho Mail.</b> El webmail y la app nativa son de alta seguridad corporativa; usar Gmail, Outlook, Thunderbird u otras apps de terceros te expone a configuraciones inestables y posibles rechazos.</p>
+          <p>Algunos clientes de terceros <b>rechazan las conexiones</b> por las políticas de seguridad de Zoho. Por eso <b>NO damos soporte técnico</b> para apps de terceros.</p>
+        </div>
+      </div>
+
+      <div class="zoho-note warn reveal">
+        <b>Si aún así necesitas conectar tu correo a una app de terceros:</b> debes <b>solicitárnoslo explícitamente</b>. Nosotros registramos la solicitud en nuestra base de datos, configuramos una <b>contraseña de aplicación de terceros</b> y te entregamos las instrucciones. <b>Al salir del entorno seguro de Zoho, e-WEB deslinda toda responsabilidad sobre la seguridad de tu correo</b>: cualquier incidencia en esa app externa queda fuera de nuestra administración. Nosotros siempre recomendamos quedarte en el webmail o en la app nativa.
+      </div>
+    </div>
+  </section>
+
+  <!-- CARPETAS AUTOMÁTICAS -->
+  <section id="carpetas" class="sec">
+    <div class="wrap">
+      <div class="carpetas-hero reveal">
+        <h2>Carpetas automáticas: organización premium sin costo</h2>
+        <p>Si nos pides tus <b>alias al inicio</b> (cuando contratas el plan), integramos automáticamente <b>carpetas de filtro</b> en tu cuenta madre: "Ventas", "Despacho", "Cotización", etc. Así los correos de cada alias caen directo en su carpeta. <b>Este plus viene sin costo adicional</b>, pero solo se puede configurar al inicio.</p>
+      </div>
+
+      <div class="carpetas-diagram">
+        <div class="carpeta-card reveal">
+          <span class="cc-tag">Sí se puede al inicio</span>
+          <h3>Cuando contratas y pides los alias de inmediato</h3>
+          <ul>
+            <li>Configuramos las <b>carpetas automáticas</b> en tu cuenta madre: Ventas, Despacho, Cotización, etc.</li>
+            <li>Cada correo que llega a un alias cae directo en su carpeta.</li>
+            <li><b>Sin costo adicional</b>, es parte del servicio premium.</li>
+            <li>Debes <b>solicitarlo explícitamente</b> al contratar (en el formulario de inicio).</li>
+          </ul>
+          <p><b>¿Por qué solo al inicio?</b> Porque una vez que entregamos tu cuenta madre, <b>nosotros NO volvemos a entrar</b> por privacidad. Configuramos todo antes de entregarte el correo.</p>
+        </div>
+
+        <div class="carpeta-card no reveal">
+          <span class="cc-tag">No se puede después</span>
+          <h3>Si pides los alias más adelante (por ticket)</h3>
+          <ul>
+            <li>Creamos los alias y te enviamos las credenciales.</li>
+            <li>Pero <b>NO configuramos carpetas automáticas</b>: tendrías que crearlas tú dentro del webmail.</li>
+            <li>La automatización premium solo se entrega al inicio, no después.</li>
+          </ul>
+          <p><b>Recomendación:</b> si vas a tener varios alias (ventas, despacho, cotización), <b>pide la creación y las carpetas al inicio</b>. Es más limpio y te ahorra trabajo después.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEGURIDAD -->
+  <section id="seguridad" class="sec">
+    <div class="wrap">
+      <h2 class="sec-title reveal">Seguridad de nivel empresarial</h2>
+      <p class="sec-lead reveal">Cada capa protege algo distinto. Juntas, forman un escudo completo para tu correo y tu marca.</p>
+
+      <div class="sec-grid">
+        <div class="sec-item reveal">
+          <h3><span class="dot"></span>HTTPS / Cifrado en tránsito</h3>
+          <p>Tus correos viajan <b>cifrados</b> entre tu dispositivo y los servidores. Nadie puede interceptarlos ni leerlos en el camino.</p>
+        </div>
+        <div class="sec-item reveal">
+          <h3><span class="dot"></span>SPF</h3>
+          <p>Registro DNS que autoriza qué servidores pueden enviar correos en nombre de tu dominio. <b>Bloquea la suplantación de identidad</b>.</p>
+        </div>
+        <div class="sec-item reveal">
+          <h3><span class="dot"></span>DKIM</h3>
+          <p>Firma digital que se agrega a cada correo. Comprueba que el correo realmente salió de tu servidor y <b>no fue alterado</b>.</p>
+        </div>
+        <div class="sec-item reveal">
+          <h3><span class="dot"></span>DMARC</h3>
+          <p>Le dice a Gmail, Outlook, etc. qué hacer cuando alguien intenta suplantar tu dominio. Configuramos en <b>cuarentena</b>. <b>Protege la reputación de tu marca</b>.</p>
+        </div>
+        <div class="sec-item reveal">
+          <h3><span class="dot"></span>Verificación en 2 pasos</h3>
+          <p>Además de la contraseña, un <b>código adicional</b> (app o SMS). Aunque alguien descubra tu clave, no puede entrar sin el código.</p>
+        </div>
+        <div class="sec-item reveal">
+          <h3><span class="dot"></span>Antispam</h3>
+          <p>Filtros inteligentes que detectan correos basura. <b>No ves publicidad no deseada ni cadenas</b> en tu bandeja.</p>
+        </div>
+        <div class="sec-item reveal">
+          <h3><span class="dot"></span>Antiphishing</h3>
+          <p>Detecta correos que intentan imitar a tu banco, Mercado Pago u otra entidad para robarte datos. <b>Los bloquea antes de que lleguen</b>.</p>
+        </div>
+        <div class="sec-item reveal">
+          <h3><span class="dot"></span>Entorno cerrado Zoho</h3>
+          <p>Tu correo vive dentro del <b>ecosistema seguro de Zoho</b> (webmail + app nativa). No lo expones a aplicaciones externas que podrían ser vulneradas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOPORTE Y TICKETS -->
+  <section id="soporte" class="sec">
+    <div class="wrap">
+      <div class="sup-hero reveal">
+        <h2>Soporte técnico con personas reales</h2>
+        <p>Detrás de tu correo hay un equipo de técnicos e ingenieros que responde. No hay bots. El modelo es por <b>tickets mensuales</b>: 2 en Opción 1, 4 en Opción 2, 6 en Opción 3. Cada ticket sirve para <b>modificar</b> lo que ya tienes. <b>Agregar algo nuevo</b> (más correos, más alias, más espacio) se compra aparte.</p>
+      </div>
+
+      <div class="sup-grid">
+        <div class="sup-card reveal">
+          <h3>🔧 Administración incluida con tickets</h3>
+          <ul>
+            <li>Altas de nuevas casillas o alias <b>dentro de tu cupo</b>.</li>
+            <li>Bajas de usuarios (con respaldo previo).</li>
+            <li>Restablecimiento de contraseñas.</li>
+            <li>Desbloqueo de cuentas bloqueadas.</li>
+            <li>Cambio de contraseña de alias.</li>
+            <li>Configuración del pie de firma.</li>
+          </ul>
+          <p>Las solicitudes normales se hacen desde tu <b>correo corporativo</b> para dejar registro y responderte ordenado. Existe una vía especial de urgencia para cuentas bloqueadas (ver <a href="#desbloqueo" style="color:#f6e2a6;text-decoration:underline">Desbloqueo</a>).</p>
+        </div>
+        <div class="sup-card reveal">
+          <h3>🎫 Tickets mensuales por opción</h3>
+          <ul>
+            <li><b>Opción 1:</b> 2 tickets al mes.</li>
+            <li><b>Opción 2:</b> 4 tickets al mes.</li>
+            <li><b>Opción 3:</b> 6 tickets al mes.</li>
+            <li>Los tickets se renuevan al inicio de cada ciclo mensual.</li>
+            <li>Si se acaban, puedes <b>comprar tickets adicionales</b> o esperar al próximo mes.</li>
+            <li>Cada ticket cubre <b>una modificación</b> de lo ya contratado.</li>
+          </ul>
+          <p><b>Regla de oro:</b> MODIFICAR (cambiar contraseña de alias, dar de baja y alta dentro del cupo, desbloquear) = <b>ticket ✅</b>. AGREGAR algo nuevo (más correos, más alias, más espacio) = <b>se paga aparte 💰</b>.</p>
+        </div>
+      </div>
+
+      <div class="tk-compare reveal">
+        <div class="cmp-head">📋 Modificación vs. Agregado: qué cubre tu ticket</div>
+        <table>
+          <thead>
+            <tr>
+              <th>Acción solicitada</th>
+              <th>¿Con ticket?</th>
+              <th>¿Requiere pago?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Cambiar contraseña de un alias (deja de ser la madre)</td><td class="yes">✅ Sí</td><td class="no">❌ No</td></tr>
+            <tr><td>Desbloquear una cuenta</td><td class="yes">✅ Sí</td><td class="no">❌ No</td></tr>
+            <tr><td>Restablecer contraseña de casilla</td><td class="yes">✅ Sí</td><td class="no">❌ No</td></tr>
+            <tr><td>Dar de baja un correo y crear otro (mismo cupo)</td><td class="yes">✅ Sí</td><td class="no">❌ No</td></tr>
+            <tr><td>Actualizar el pie de firma</td><td class="yes">✅ Sí</td><td class="no">❌ No</td></tr>
+            <tr><td>Crear un <b>alias nuevo</b> (sin cupo disponible)</td><td class="no">❌ No</td><td class="yes">💰 Sí</td></tr>
+            <tr><td>Agregar un <b>correo nuevo</b> (sin cupo disponible)</td><td class="no">❌ No</td><td class="yes">💰 Sí</td></tr>
+            <tr><td>Ampliar <b>espacio</b> (+5 GB)</td><td class="no">❌ No</td><td class="yes">💰 Sí</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESBLOQUEO -->
+  <section id="desbloqueo" class="sec">
+    <div class="wrap">
+      <h2 class="sec-title reveal">Desbloqueo de urgencia</h2>
+      <p class="sec-lead reveal">¿Se te bloqueó tu correo y ya no puedes escribirnos desde él? Aquí te explicamos <b>exactamente</b> qué hacer. Tenemos un protocolo de seguridad estricto: no desbloqueamos a cualquiera, solo al dueño legítimo.</p>
+
+      <div class="db-hero reveal">
+        <p>La forma normal de pedir soporte es <b>desde tu correo corporativo activo</b>. Pero si el único correo que tienes está bloqueado, no puedes escribirnos desde él. Por eso diseñamos <b>dos rutas seguras</b>. Elige la que corresponda a tu caso.</p>
+      </div>
+
+      <div class="db-grid">
+        <div class="db-card reveal">
+          <span class="db-badge">✅ Ruta rápida</span>
+          <h3>Tienes otro correo activo en tu empresa</h3>
+          <p>Si el bloqueo es solo de <b>una</b> casilla o alias, y otra persona de tu equipo tiene su correo activo, esta es la vía más rápida.</p>
+          <ol>
+            <li>Pídele a la persona con correo activo que nos escriba <b>desde su correo corporativo</b>.</li>
+            <li>En el mensaje, que indique el nombre completo de la casilla o alias bloqueado (ej: <b>ventas@mitienda.cl</b>).</li>
+            <li>Nosotros verificamos que el remitente es del mismo dominio y procedemos con el desbloqueo.</li>
+            <li>Te enviamos las nuevas credenciales al correo activo.</li>
+          </ol>
+          <div class="db-example">
+            <span class="ex-label">Ejemplo de mensaje</span>
+            <p>"Hola, se bloqueó el correo de <b>ventas@mitienda.cl</b>. Les escribo desde <b>despacho@mitienda.cl</b> porque es el correo que tengo activo. ¿Me pueden enviar la nueva contraseña?"</p>
+          </div>
+          <p style="margin-top:14px"><b>¿Por qué es más seguro?</b> Porque se hace dentro del ecosistema corporativo. Confirmamos que el remitente pertenece al mismo dominio, así que la probabilidad de suplantación es prácticamente nula.</p>
+        </div>
+
+        <div class="db-card urgent reveal">
+          <span class="db-badge warn">🚨 Ruta de urgencia</span>
+          <h3>Todos tus correos corporativos están bloqueados</h3>
+          <p>Si eres el único usuario o se bloquearon todas tus casillas, no puedes escribirnos desde el entorno corporativo. Aquí activamos el protocolo de <b>validación de identidad</b>.</p>
+          <p><b>Escríbenos desde tu correo personal</b> (el que registramos como respaldo al contratar), con estos 3 datos:</p>
+          <ul>
+            <li><b>El correo secundario</b> que dejaste registrado en nuestra base de datos.</li>
+            <li><b>El nombre completo</b> del correo o los correos bloqueados.</li>
+            <li><b>El nombre del dueño del dominio</b> (la persona que registró el dominio en NIC Chile).</li>
+            <li><b>El número de WhatsApp</b> registrado en tu ficha de cliente.</li>
+          </ul>
+          <div class="db-example">
+            <span class="ex-label">Ejemplo de mensaje</span>
+            <p>"Se me bloquearon todos los correos. Les escribo desde mi correo personal porque ya no puedo entrar al corporativo. Mi correo registrado en su base de datos es <b>mi.nombre@gmail.com</b>. Los correos bloqueados son <b>juan@mitienda.cl</b>, <b>ventas@mitienda.cl</b> y <b>despacho@mitienda.cl</b>. El dueño del dominio es <b>Juan Pérez González</b>. Mi WhatsApp registrado es <b>+56 9 XXXX XXXX</b>."</p>
+          </div>
+          <p style="margin-top:14px"><b>Verificamos los 3 datos</b> contra nuestra base de datos. Solo si todos coinciden con la ficha original del cliente, procedemos con el desbloqueo y te enviamos nuevas credenciales al correo personal.</p>
+          <p><b>Este protocolo es estricto</b>: si falta un dato o no coincide, no podemos desbloquear. Es la forma de proteger tu correo de intentos de suplantación.</p>
+        </div>
+      </div>
+
+      <div class="db-warn reveal">
+        <div class="warn-ico">⚠️</div>
+        <p><b>Guarda tu contraseña nueva.</b> Cuando te enviemos las credenciales nuevas, guárdalas en un lugar seguro. Cada desbloqueo cuenta como <b>un ticket</b> dentro de tu cupo mensual (2, 4 o 6 según tu opción). Si no guardas la contraseña y se vuelve a bloquear, gastas otro ticket. Un gesto simple te ahorra tiempo y tickets.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- RENOVACIÓN -->
+  <section id="renovacion" class="sec">
+    <div class="wrap">
+      <div class="ren-card reveal">
+        <span class="badge">Renovación anual</span>
+        <h2>Tu correo sigue activo año tras año</h2>
+        <p class="price-big">$50.000 <small>CLP · IVA incluido</small></p>
+        <p>Desde el segundo año, para cualquiera de las 3 opciones. Incluye la <b>administración de los correos</b>, el <b>seguimiento</b>, la <b>revisión de seguridad</b> y la <b>mantención</b>, más el soporte con tu cupo mensual de tickets (2, 4 o 6 según tu opción).</p>
+        <div class="ren-note">
+          <b>El descuento de $10.000 por dominio propio al día solo aplica en la PRIMERA CONTRATACIÓN, no en renovaciones.</b> En renovaciones el valor es el anual de $50.000. Te avisamos con tiempo: 30 días antes y 7 días antes del vencimiento. Si no se renueva dentro del plazo, tienes <b>7 días de prórroga gratis</b> para ponerte al día. Pasado ese plazo, el correo se suspende hasta regularizar.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORM -->
+  <section id="form" class="sec">
+    <div class="wrap">
+      <div class="form-card">
+        <h2>Contrata tu correo corporativo</h2>
+        <p class="lead">Elige tu opción, completa tus datos y te enviamos el link de pago con los siguientes pasos.</p>
+
+        <form class="f" id="fm" novalidate>
+          <input type="hidden" name="access_key" value="551beba8-acd8-4302-a343-a3fbc727c2fd">
+          <input type="hidden" name="subject" value="Nueva contratación de correo corporativo — e-WEB">
+          <input type="hidden" name="from_name" value="e-WEB · Correo Corporativo">
+          <input type="hidden" name="origen" value="correo-corporativo.html">
+          <input type="hidden" name="eleccion_correo" id="valor3" value="">
+          <input type="hidden" name="total_correo" id="total3" value="">
+          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+
+          <div>
+            <p class="fl" style="margin-bottom:10px">Elige tu opción</p>
+            <div class="ml-opts" role="radiogroup" aria-label="Opciones de correo corporativo">
+              <label class="mo"><input type="radio" name="opcion_correo" value="Opción 1 · Correo de entrada" required><span class="mo-n">Opción 1</span><b class="mo-t">Correo de entrada</b><span class="mo-d">1 correo + 2 alias</span><span class="mo-s">2 tickets/mes</span><span class="mo-p">$45.000</span><span class="mo-x"></span></label>
+              <label class="mo"><input type="radio" name="opcion_correo" value="Opción 2 · Correo corporativo"><span class="mo-n">Opción 2</span><b class="mo-t">Correo corporativo</b><span class="mo-d">2 correos + 4 alias (2 por cada uno)</span><span class="mo-s">4 tickets/mes</span><span class="mo-p">$75.000</span><span class="mo-x"></span></label>
+              <label class="mo"><input type="radio" name="opcion_correo" value="Opción 3 · Correo corporativo multifuncional"><span class="mo-n">Opción 3</span><b class="mo-t">Correo corporativo multifuncional</b><span class="mo-d">4 correos + 2 alias por cada uno</span><span class="mo-s">6 tickets/mes</span><span class="mo-p">$90.000</span><span class="mo-x"></span></label>
+            </div>
+          </div>
+
+          <p class="ml-sel" id="mlSel" role="status">Elige una de las 3 opciones.</p>
+
+          <div class="ml-dom" role="radiogroup" aria-label="¿Tienes dominio?">
+            <span class="ml-q">¿Tienes dominio?</span>
+            <label class="dp"><input type="radio" name="tiene_dominio" value="No tengo dominio (incluido)" required><span>No tengo · dominio incluido</span></label>
+            <label class="dp"><input type="radio" name="tiene_dominio" value="Ya tengo dominio al día (descuento $10.000 SOLO primera contratación)"><span>Ya tengo dominio al día</span></label>
+            <span class="ml-desc" id="mlDesc" role="status">★ Con dominio propio al día: $10.000 de descuento (solo primera contratación)</span>
+          </div>
+
+          <div class="two">
+            <label class="fl">Nombre de tu negocio o dominio
+              <input type="text" name="negocio_o_dominio" placeholder="Ej: tuempresa.cl o Mi Empresa" required>
+            </label>
+            <label class="fl">Correo de contacto (personal)
+              <input type="email" name="correo_contacto" placeholder="Ej: tunombre@gmail.com" required autocomplete="email">
+            </label>
+          </div>
+
+          <div class="form-note">
+            <div class="fn-ico">📂</div>
+            <div><b>¿Quieres carpetas automáticas al inicio?</b> Indícanos qué alias necesitas y te configuramos las carpetas (Ventas, Despacho, Cotización) sin costo extra. <b>Solo se puede hacer al inicio</b>, no después.</div>
+          </div>
+
+          <label class="fl">¿Algo que debamos saber? (opcional)
+            <textarea name="notas" rows="3" placeholder="Ej: quiero crear 2 alias al inicio (ventas@ y despacho@) y configurar carpetas automáticas para cada uno."></textarea>
+          </label>
+
+          <label class="chk"><input type="checkbox" name="aceptacion_ley_21719" value="Acepta tratamiento de datos (Ley N° 21.719)" required><span>Acepto el tratamiento de mis datos personales para atender mi solicitud, conforme a la <b>Ley&nbsp;N°&nbsp;21.719</b> sobre protección de datos personales. <a href="index.html#privacidad">Ver política de privacidad</a>.</span></label>
+
+          <button type="submit" class="btn-gold">Solicitar mi correo corporativo &nbsp;→</button>
+
+          <p style="margin:0;font-size:.82rem;color:#62758d;text-align:center;line-height:1.5">Al enviar, te contactaremos al correo de contacto con los pasos para activar tu servicio. No se cobra nada en este formulario.</p>
+          <p class="msg" id="fmMsg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="sec">
+    <div class="wrap">
+      <h2 class="sec-title reveal">Preguntas frecuentes del correo corporativo</h2>
+      <p class="sec-lead reveal">Lo que más nos consultan quienes contratan solo correo.</p>
+      <div class="faq">
+        <details class="reveal"><summary>¿Puedo tener solo correo sin página web?</summary><p>Sí. Este servicio es <b>solo correo corporativo</b>. No incluye página web, y no la necesitas para tener una dirección profesional como <b>contacto@tuempresa.cl</b>.</p></details>
+        <details class="reveal"><summary>¿Necesito dominio propio?</summary><p>No necesariamente. Si no tienes dominio, lo compramos por ti en NIC Chile a tu nombre y queda incluido en la opción que elijas. Si ya tienes uno al día, tienes <b>$10.000 de descuento en la PRIMERA contratación</b>. <b>En renovaciones NO aplica este descuento</b> porque el dominio ya viene incluido en el valor del plan.</p></details>
+        <details class="reveal"><summary>¿Qué es un alias y cuántos tengo?</summary><p>Un <b>alias</b> es una dirección adicional (por ejemplo <b>ventas@tuempresa.cl</b>) que llega a la misma casilla madre. Opción 1: 2 alias · Opción 2: 4 alias · Opción 3: 8 alias. Todos comparten los 5 GB de su casilla madre.</p></details>
+        <details class="reveal"><summary>¿Los alias tienen su propia contraseña?</summary><p>Al inicio se entregan con <b>la contraseña de la casilla madre</b>. Si quieres una contraseña distinta para cada alias, puedes solicitarlo con un <b>ticket</b>. Cada cambio de contraseña de alias consume 1 ticket. El alias <b>solo ve su propia bandeja</b>, mientras la casilla madre ve todo.</p></details>
+        <details class="reveal"><summary>¿Qué son las carpetas automáticas y por qué solo al inicio?</summary><p>Si pides tus <b>alias al inicio</b>, configuramos automáticamente <b>carpetas de filtro en tu cuenta madre</b>: "Ventas", "Despacho", "Cotización". Así los correos de cada alias caen directo en su carpeta. <b>Este plus viene sin costo adicional.</b> <b>Solo se puede hacer al inicio</b>: una vez entregada la cuenta, no volvemos a entrar (por privacidad). Si pides los alias después con un ticket, no incluyen carpetas automáticas.</p></details>
+        <details class="reveal"><summary>¿Cuántos tickets tengo y para qué sirven?</summary><p>Según tu opción: <b>2 tickets en Opción 1, 4 en Opción 2, 6 en Opción 3</b>. Los tickets sirven <b>exclusivamente para MODIFICAR</b> lo que ya tienes: cambiar contraseña de un alias, desbloquear una cuenta, restablecer contraseña, dar de baja y alta dentro del cupo, o actualizar el pie de firma. <b>AGREGAR algo nuevo</b> (más correos, más alias, más espacio) se paga aparte desde <a href="index.html#adicionales">solicitudes adicionales</a>.</p></details>
+        <details class="reveal"><summary>¿Qué es Zoho Mail?</summary><p>Es el proveedor de correo empresarial que usamos por su seguridad, estabilidad y funciones profesionales. Tú no interactúas directamente con Zoho: nosotros configuramos todo y tú accedes con tu usuario y contraseña desde el <b>webmail Zoho Mail</b> o la <b>app nativa Zoho Mail</b>.</p></details>
+        <details class="reveal"><summary>¿Cómo entro a mi correo?</summary><p>Te recomendamos <b>dos vías, ambas de alta seguridad</b>: <b>(1)</b> el <b>webmail Zoho Mail</b> desde cualquier navegador; <b>(2)</b> la <b>app nativa Zoho Mail</b> en tu celular (iPhone o Android). Ambas se sincronizan perfectamente entre sí.</p></details>
+        <details class="reveal"><summary>¿Puedo usar Gmail, Outlook o Thunderbird?</summary><p><b>No lo recomendamos.</b> Algunos clientes de terceros rechazan las conexiones por políticas de seguridad de Zoho, y sacan tu correo del entorno seguro corporativo. <b>NO damos soporte técnico para apps de terceros</b>. Si aun así lo necesitas, debes <b>solicitárnoslo explícitamente</b>: registramos la solicitud, configuramos una <b>contraseña de aplicación de terceros</b> y te entregamos las instrucciones. <b>Al salir del entorno Zoho, e-WEB deslinda toda responsabilidad sobre la seguridad de tu correo.</b></p></details>
+        <details class="reveal"><summary>¿Qué pasa si olvido mi contraseña?</summary><p>Escríbenos desde tu correo personal o WhatsApp y te la reseteamos con verificación de identidad. Consume 1 ticket. Si tu cuenta está bloqueada, revisa el protocolo de <a href="#desbloqueo">desbloqueo de urgencia</a>.</p></details>
+        <details class="reveal"><summary>Se me bloqueó el correo y no puedo escribirles. ¿Qué hago?</summary><p>Depende de tu caso: <b>(1)</b> si tienes otra casilla activa en tu empresa, pídele a esa persona que nos escriba desde su correo corporativo indicando cuál se bloqueó (ruta rápida). <b>(2)</b> si se bloquearon todos tus correos, escríbenos desde tu <b>correo personal registrado</b> con el nombre completo del correo bloqueado, el dueño del dominio y tu WhatsApp registrado. Ver el detalle en <a href="#desbloqueo">Desbloqueo de urgencia</a>.</p></details>
+        <details class="reveal"><summary>¿Puedo agregar más correos o más espacio?</summary><p>Sí. Puedes contratar <b>casillas adicionales</b> o ampliar el espacio en <b>tramos de 5 GB</b>. Cada casilla adicional mantiene sus 2 alias. Los valores están en <a href="index.html#adicionales">solicitudes adicionales</a>. <b>No es un ticket, es un agregado nuevo que se paga aparte</b>.</p></details>
+        <details class="reveal"><summary>¿Qué pasa si no renuevo?</summary><p>El servicio se suspende: los correos se bloquean hasta que pagues la renovación. Te damos <b>7 días de prórroga gratis</b> desde el vencimiento para ponerte al día. Te avisamos <b>30 días antes y 7 días antes</b>. El valor de la renovación es <b>$50.000</b> (sin descuento de dominio, porque ese descuento solo aplica en la primera contratación).</p></details>
+        <details class="reveal"><summary>¿Me entregan mis correos si cierro la cuenta?</summary><p>Sí. Antes de eliminar definitivamente tu cuenta, te entregamos un <b>respaldo completo</b> en formato <b>MBOX</b> (recomendado, conserva todo en un archivo) o <b>.EML</b> (un archivo por correo). Todo lo demás (Cloudflare, administración de Zoho, código) queda con e-WEB.</p></details>
+        <details class="reveal"><summary>¿La contraseña es solo mía?</summary><p>Sí. En tu primer ingreso la cambias por una que solo tú conozcas. Nosotros administramos la plataforma pero <b>no leemos tus correos</b>. La privacidad es total.</p></details>
+        <details class="reveal"><summary>¿En cuánto tiempo queda activo?</summary><p>Una vez confirmado el pago, activamos el correo en <b>24 horas hábiles</b>. Te enviamos las credenciales a tu correo de contacto personal para que hagas el primer ingreso.</p></details>
+        <details class="reveal"><summary>¿Puedo pedir factura?</summary><p>Sí. Escríbenos a <a href="mailto:contacto@economicaweb.cl">contacto@economicaweb.cl</a> con los datos tributarios después de pagar.</p></details>
+        <details class="reveal"><summary>¿Únicamente el dominio propio al día da descuento?</summary><p>Sí. El <b>único descuento</b> es <b>$10.000</b> cuando contratas por primera vez con un dominio propio al día. <b>En renovaciones NO aplica</b> porque el dominio ya viene incluido en el valor del plan. No hay otros descuentos.</p></details>
+        <details class="reveal"><summary>¿Necesito cuenta de Mercado Pago para pagar?</summary><p><b>No.</b> Los links de pago de Mercado Pago aceptan <b>cualquier tarjeta de crédito o débito</b> sin necesidad de tener cuenta.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section id="cta-final">
+    <div class="wrap reveal">
+      <h2>Da el paso a un correo profesional</h2>
+      <p>Sin página web, sin complicaciones. Tu marca en cada correo, con la seguridad de Zoho Mail, alias con storage compartido, carpetas automáticas y el soporte de e-WEB.</p>
+      <div class="cta-row">
+        <a class="btn-gold" href="#form">Contratar ahora &nbsp;→</a>
+        <a class="btn-ghost" href="soporte-ti.html">Ver planes completos</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p class="flogo">e-WEB</p>
+  <nav class="flinks" aria-label="Pie de página">
+    <a href="index.html">Inicio</a>
+    <a href="soporte-ti.html">Soporte TI</a>
+    <a href="renovacion.html">Renovación</a>
+    <a href="correo-corporativo.html">Correo corporativo</a>
+    <a href="seguridad-tecnica.html">Seguridad técnica</a>
+    <a href="index.html#privacidad">Privacidad</a>
+    <a href="mailto:contacto@economicaweb.cl">contacto@economicaweb.cl</a>
+    <a href="https://wa.me/56922133902" target="_blank" rel="noopener">WhatsApp</a>
+  </nav>
+  <p>© <span id="y"></span> e-WEB · economicaweb.cl · Correo corporativo</p>
+</footer>
+
+<a class="wa" href="https://wa.me/56922133902?text=Hola%2C%20quiero%20contratar%20correo%20corporativo%20con%20e-WEB." target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+  <span class="wa-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></span>
+  <span class="wa-txt"><small>¿Hablamos?</small><b>WhatsApp</b></span>
+</a>
+
+<script>
+document.documentElement.classList.add('js');
+document.getElementById('y').textContent = new Date().getFullYear();
+
+/* ====== MENÚ MÓVIL ====== */
+const menu=document.getElementById('menu'),mb=document.getElementById('mb');
+mb.addEventListener('click',()=>{const o=menu.classList.toggle('open');mb.setAttribute('aria-expanded',o)});
+menu.addEventListener('click',e=>{if(e.target.tagName==='A'){menu.classList.remove('open');mb.setAttribute('aria-expanded','false')}});
+
+/* ====== REVEAL ON SCROLL ====== */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+document.querySelectorAll('.reveal').forEach((el,i)=>{el.classList.add('rv');el.style.setProperty('--i',Math.min(i,6));io.observe(el)});
+
+/* ============================================================
+   SCROLL LENTO Y ELEGANTE
+   ============================================================ */
+let scrollAnimId = null;
+
+function easeInOutCubic(t){
+  return t < 0.5 ? 4*t*t*t : 1 - Math.pow(-2*t + 2, 3) / 2;
+}
+
+function cancelScrollAnim(){
+  if(scrollAnimId){
+    cancelAnimationFrame(scrollAnimId);
+    scrollAnimId = null;
+  }
+}
+
+function slowScrollTo(targetY){
+  cancelScrollAnim();
+
+  const startY = window.scrollY;
+  const distance = targetY - startY;
+
+  const duration = Math.min(2600, Math.max(1400, Math.abs(distance) * 1.4));
+  const startTime = performance.now();
+
+  function step(now){
+    const elapsed = now - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const eased = easeInOutCubic(progress);
+
+    window.scrollTo(0, startY + distance * eased);
+
+    if(progress < 1){
+      scrollAnimId = requestAnimationFrame(step);
+    } else {
+      scrollAnimId = null;
+    }
+  }
+
+  scrollAnimId = requestAnimationFrame(step);
+}
+
+['wheel','touchstart','keydown'].forEach(ev=>{
+  window.addEventListener(ev, cancelScrollAnim, {passive:true});
+});
+
+/* ====== SMOOTH SCROLL EN ENLACES ANCLA ====== */
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const id=a.getAttribute('href');
+    if(id.length<2) return;
+    const el=document.querySelector(id);
+    if(!el) return;
+
+    e.preventDefault();
+
+    const offset = 130;
+    const targetY = Math.max(0, el.getBoundingClientRect().top + window.scrollY - offset);
+
+    slowScrollTo(targetY);
+    try{history.pushState(null,'',id)}catch(_){}
+  });
+});
+
+/* ====== FORMULARIO ====== */
+const fm=document.getElementById('fm'),fmMsg=document.getElementById('fmMsg');
+const sel3=document.getElementById('mlSel'),val3=document.getElementById('valor3'),tot3=document.getElementById('total3');
+const opcMl=[...fm.querySelectorAll('.mo input')];
+const domRad=[...fm.querySelectorAll('input[name=tiene_dominio]')],mlDesc=document.getElementById('mlDesc');
+const fmt=n=>'$'+String(n).replace(/\B(?=(\d{3})+(?!\d))/g,'.');
+
+function syncMl(){
+  opcMl.forEach(i=>i.closest('.mo').classList.toggle('sel',i.checked));
+  const tiene=domRad.some(i=>i.checked&&i.value.indexOf('Ya tengo')===0);
+  fm.querySelectorAll('.mo-x').forEach(x=>{x.textContent='';x.classList.remove('on')});
+  const c=opcMl.find(i=>i.checked);
+  if(c){
+    const l=c.closest('.mo');
+    const n=l.querySelector('.mo-n').textContent+' · '+l.querySelector('.mo-t').textContent;
+    const pTxt=l.querySelector('.mo-p').textContent;
+    const p=parseInt(pTxt.replace(/\D/g,''),10)||0;
+    let txt=n+' — '+pTxt, tot=p;
+    if(tiene&&p){
+      tot=p-10000;
+      const x=l.querySelector('.mo-x');
+      x.textContent='− $10.000 por dominio propio = '+fmt(tot);
+      x.classList.add('on');
+      txt+=' − $10.000 (dominio propio al día) = '+fmt(tot);
+      val3.value=n+' — '+pTxt+' | Descuento dominio propio al día (solo primera contratación): −$10.000 | TOTAL: '+fmt(tot);
+    }else{
+      val3.value=n+' — '+pTxt+' | TOTAL: '+pTxt;
+    }
+    tot3.value=fmt(tot);
+    sel3.textContent='Tu elección: '+txt+' (IVA incluido, 5 GB por correo)';
+  }else{
+    sel3.textContent='Elige una de las 3 opciones.';
+    val3.value='';tot3.value='';
+  }
+}
+opcMl.forEach(i=>i.addEventListener('change',syncMl));
+function syncDom(){const c=domRad.find(i=>i.checked);mlDesc.classList.toggle('show',!!c&&c.value.indexOf('Ya tengo')===0)}
+domRad.forEach(i=>i.addEventListener('change',()=>{syncDom();syncMl()}));
+syncMl();syncDom();
+
+fm.addEventListener('submit',async e=>{
+  e.preventDefault();
+  if(!fm.checkValidity()){fm.reportValidity();return}
+  syncMl();
+  const bt=fm.querySelector('button[type=submit]');
+  bt.disabled=true;
+  const orig=bt.textContent;
+  bt.textContent='Enviando…';
+  fmMsg.textContent='Enviando tu solicitud…';
+  fmMsg.style.color='#52677e';
+  try{
+    const r=await fetch('https://api.web3forms.com/submit',{method:'POST',body:new FormData(fm)});
+    const d=await r.json();
+    if(!d.success)throw new Error();
+    fmMsg.textContent='✓ ¡Solicitud recibida! Te contactaremos a tu correo personal con los pasos para activar tu correo corporativo.';
+    fmMsg.style.color='#0a7f3f';
+    fm.reset();
+    syncMl();syncDom();
+  }catch(_){
+    fmMsg.textContent='No pudimos enviar tu solicitud. Inténtalo de nuevo o escríbenos por WhatsApp.';
+    fmMsg.style.color='#a66b52';
+  }finally{
+    bt.disabled=false;
+    bt.textContent=orig;
+  }
+});
+fm.addEventListener('input',()=>{if(fmMsg.textContent)fmMsg.textContent=''});
+</script>
+</body>
+</html>
