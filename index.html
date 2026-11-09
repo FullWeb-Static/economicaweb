@@ -1088,6 +1088,35 @@ section,footer,.hero{overflow-x:clip}
 .js .rv.in{opacity:1;animation:riseIn .95s cubic-bezier(.2,.8,.2,1) backwards;animation-delay:calc(var(--i,0)*90ms)}
 @keyframes riseIn{from{opacity:0;transform:translate3d(0,48px,0)}to{opacity:1;transform:translate3d(0,0,0)}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .rv{opacity:1}}
+
+/* === Landing One-Page: pie de firma de ejemplo === */
+.lp-mock-footer .mock-contact-area{justify-content:flex-start;text-align:left;padding:12px 16px}
+.lp-mock-footer .sig{display:flex;gap:12px;align-items:stretch;width:100%}
+.lp-mock-footer .sig-bar{flex:none;width:3px;border-radius:3px;background:linear-gradient(180deg,#f1d58b,#b76e79)}
+.lp-mock-footer .sig-n{font-size:.95rem;font-weight:800;line-height:1.3;color:#0a2540}
+.lp-mock-footer .sig-r{font-size:.8rem;line-height:1.4;color:#52677e}
+.lp-mock-footer .sig-c{display:flex;flex-wrap:wrap;gap:2px 16px;margin-top:5px;font-size:.82rem;font-weight:700;color:#33475b}
+.lp-mock-footer .sig-w{margin-top:2px;font-size:.78rem;font-weight:700;color:#8a5563}
+
+/* === Pide tu cotización web: mármol negro === */
+#cotizar{background:radial-gradient(ellipse at 12% 8%,#c69b4b30 0,transparent 40%),radial-gradient(ellipse at 90% 92%,#b76e7926 0,transparent 42%),linear-gradient(180deg,#0a0b0dc4 0%,#101216a8 100%),url(marmol-negro.jpg) 50% 40%/cover,#0b0c0f}
+#cotizar h2{color:#f6f8fb;text-shadow:0 2px 14px #000a}
+#cotizar .lead{color:#c9d0da}
+
+/* === Explora: entran desde la izquierda, flotan y tienen ondas con brillo === */
+.ex-t{overflow:hidden;isolation:isolate}
+.ex-t>.ex-i,.ex-t>b,.ex-t>.ex-d,.ex-t>.ex-g{position:relative;z-index:1}
+.ex-t:before,.ex-w{content:"";position:absolute;left:0;bottom:0;width:200%;height:52%;z-index:0;pointer-events:none;background-repeat:repeat-x;background-position:0 100%;background-size:25% 100%}
+.ex-t:before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60' preserveAspectRatio='none'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23f0c3a8' stop-opacity='.30'/%3E%3Cstop offset='1' stop-color='%23b76e79' stop-opacity='.04'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M0 26C25 6 75 6 100 26S175 46 200 26V60H0Z' fill='url(%23g)'/%3E%3Cpath d='M0 26C25 6 75 6 100 26S175 46 200 26' fill='none' stroke='%23ffe3d2' stroke-opacity='.6' stroke-width='1.2' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");animation:exWaveL 11s linear infinite}
+.ex-w{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60' preserveAspectRatio='none'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23e8b4a0' stop-opacity='.2'/%3E%3Cstop offset='1' stop-color='%237e3f4d' stop-opacity='.03'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M0 34C40 54 60 54 100 34S160 14 200 34V60H0Z' fill='url(%23g)'/%3E%3Cpath d='M0 34C40 54 60 54 100 34S160 14 200 34' fill='none' stroke='%23f6d2c0' stroke-opacity='.4' stroke-width='1' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");height:62%;animation:exWaveR 15s linear infinite}
+.ex-t:after{content:"";position:absolute;top:0;bottom:0;left:0;width:46%;z-index:2;pointer-events:none;background:linear-gradient(105deg,transparent 0,#ffe9dc00 22%,#ffe9dc3d 50%,#ffe9dc00 78%,transparent 100%);transform:translateX(-140%) skewX(-18deg);animation:exShine 7s ease-in-out calc(var(--i,0)*.8s) infinite}
+@keyframes exWaveL{to{transform:translateX(-50%)}}
+@keyframes exWaveR{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+@keyframes exShine{0%,55%{transform:translateX(-140%) skewX(-18deg)}100%{transform:translateX(340%) skewX(-18deg)}}
+@keyframes exIn{from{opacity:0;translate:-90px 0}to{opacity:1;translate:0 0}}
+@keyframes exFloat{0%,100%{translate:0 0}50%{translate:0 -7px}}
+.js .ex-t.rv.in{animation:exIn 1s cubic-bezier(.2,.8,.2,1) calc(var(--i,0)*120ms) backwards,exFloat calc(5.5s + var(--i,0)*.35s) ease-in-out calc(1.2s + var(--i,0)*120ms) infinite}
+@media(prefers-reduced-motion:reduce){.ex-t:before,.ex-w,.ex-t:after{animation:none!important}}
 </style>
 </head>
 <body>
@@ -1414,6 +1443,7 @@ section,footer,.hero{overflow-x:clip}
       <ul class="lp-included-list">
         <li>Dominio incluido (12 meses).</li>
         <li>1 correo corporativo (5 GB) + 1 alias.</li>
+        <li>1 ticket de soporte al mes.</li>
         <li>Seguridad SSL + Cloudflare.</li>
       </ul>
 
@@ -1471,9 +1501,14 @@ section,footer,.hero{overflow-x:clip}
           </div>
           
           <div class="mock-contact-area">
-            <div class="lp-mock-contact">
-              <span>✉️ contacto@miempresa.cl</span>
-              <span>📱 WhatsApp</span>
+            <div class="sig">
+              <span class="sig-bar" aria-hidden="true"></span>
+              <div class="sig-body">
+                <p class="sig-n">María González</p>
+                <p class="sig-r">Gerente comercial · Mi Empresa SpA</p>
+                <p class="sig-c"><span>✉️ contacto@miempresa.cl</span><span>📱 +56 9 1234 5678</span></p>
+                <p class="sig-w">www.miempresa.cl</p>
+              </div>
             </div>
           </div>
 
@@ -1506,14 +1541,14 @@ section,footer,.hero{overflow-x:clip}
     <h2 class="reveal">Conoce todo lo que hacemos, en detalle</h2>
     <p class="lead reveal">Haz clic en cada logo para abrir su página con la explicación completa.</p>
     <div class="ex reveal">
-      <a class="ex-t" href="arquitectura-seguridad.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva"><span class="ex-i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></span><b>Arquitectura de seguridad</b><span class="ex-d">Cómo protegemos tu web y tu correo: HTTPS, SPF, DKIM y DMARC.</span><span class="ex-g" aria-hidden="true">Abrir ↗</span></a>
-      <a class="ex-t" href="correo-corporativo.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva"><span class="ex-i"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><b>Correo corporativo</b><span class="ex-d">Correos con tu dominio, 5 GB por correo y 2 alias.</span><span class="ex-g" aria-hidden="true">Abrir ↗</span></a>
-      <a class="ex-t" href="portal-renovacion.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva"><span class="ex-i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11a8 8 0 00-14.5-4.5M4 13a8 8 0 0014.5 4.5"/><path d="M20 4v5h-5M4 20v-5h5"/></svg></span><b>Portal de renovación</b><span class="ex-d">Todo sobre tu renovación anual y lo que incluye.</span><span class="ex-g" aria-hidden="true">Abrir ↗</span></a>
-      <a class="ex-t" href="soporte-ti.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva"><span class="ex-i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0116 0v1"/><rect x="3" y="13" width="4" height="6" rx="1.5"/><rect x="17" y="13" width="4" height="6" rx="1.5"/><path d="M19 19c0 1.5-2 2.5-5 2.5"/></svg></span><b>Soporte TI web</b><span class="ex-d">Desbloqueos, altas, bajas y reseteos de tus correos.</span><span class="ex-g" aria-hidden="true">Abrir ↗</span></a>
-      <a class="ex-t" href="tickets.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva"><span class="ex-i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8a2 2 0 012-2h12a2 2 0 012 2v1.5a2.5 2.5 0 000 5V16a2 2 0 01-2 2H6a2 2 0 01-2-2v-1.5a2.5 2.5 0 000-5V8z"/><path d="M14 6v12" stroke-dasharray="2 2"/></svg></span><b>Tickets</b><span class="ex-d">Cómo se piden y se atienden tus solicitudes de soporte.</span><span class="ex-g" aria-hidden="true">Abrir ↗</span></a>
-      <a class="ex-t" href="landing-one-page.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva"><span class="ex-i"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M4 8h16M8 12h8M8 16h5"/></svg></span><b>Landing One-Page</b><span class="ex-d">Tu página en una sola pantalla, con formulario de contacto básico.</span><span class="ex-g" aria-hidden="true">Abrir ↗</span></a>
-      <a class="ex-t" href="migracion.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva"><span class="ex-i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6v12"/><path d="M7 12h12M15 8l4 4-4 4"/></svg></span><b>Migración</b><span class="ex-d">Evaluamos y corregimos tu web actual y la trasladamos a e-WEB. Solo landing y sitios de varias páginas, sin tienda ni base de datos.</span><span class="ex-g" aria-hidden="true">Abrir ↗</span></a>
-      <a class="ex-t" href="nosotros.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva"><span class="ex-i"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6"/><circle cx="17" cy="9" r="2.4"/><path d="M16 14.3c3 0 5 2 5 5"/></svg></span><b>Nosotros</b><span class="ex-d">Quiénes somos y cómo trabajamos.</span><span class="ex-g" aria-hidden="true">Abrir ↗</span></a>
+      <a class="ex-t" href="arquitectura-seguridad.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva"><i class="ex-w" aria-hidden="true"></i><span class="ex-i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></span><b>Arquitectura de seguridad</b><span class="ex-d">Cómo protegemos tu web y tu correo: HTTPS, SPF, DKIM y DMARC.</span><span class="ex-g" aria-hidden="true">Abrir ↗</span></a>
+      <a class="ex-t" href="correo-corporativo.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva"><i class="ex-w" aria-hidden="true"></i><span class="ex-i"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><b>Correo corporativo</b><span class="ex-d">Correos con tu dominio, 5 GB por correo y 2 alias.</span><span class="ex-g" aria-hidden="true">Abrir ↗</span></a>
+      <a class="ex-t" href="portal-renovacion.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva"><i class="ex-w" aria-hidden="true"></i><span class="ex-i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11a8 8 0 00-14.5-4.5M4 13a8 8 0 0014.5 4.5"/><path d="M20 4v5h-5M4 20v-5h5"/></svg></span><b>Portal de renovación</b><span class="ex-d">Todo sobre tu renovación anual y lo que incluye.</span><span class="ex-g" aria-hidden="true">Abrir ↗</span></a>
+      <a class="ex-t" href="soporte-ti.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva"><i class="ex-w" aria-hidden="true"></i><span class="ex-i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13v-1a8 8 0 0116 0v1"/><rect x="3" y="13" width="4" height="6" rx="1.5"/><rect x="17" y="13" width="4" height="6" rx="1.5"/><path d="M19 19c0 1.5-2 2.5-5 2.5"/></svg></span><b>Soporte TI web</b><span class="ex-d">Desbloqueos, altas, bajas y reseteos de tus correos.</span><span class="ex-g" aria-hidden="true">Abrir ↗</span></a>
+      <a class="ex-t" href="tickets.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva"><i class="ex-w" aria-hidden="true"></i><span class="ex-i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8a2 2 0 012-2h12a2 2 0 012 2v1.5a2.5 2.5 0 000 5V16a2 2 0 01-2 2H6a2 2 0 01-2-2v-1.5a2.5 2.5 0 000-5V8z"/><path d="M14 6v12" stroke-dasharray="2 2"/></svg></span><b>Tickets</b><span class="ex-d">Cómo se piden y se atienden tus solicitudes de soporte.</span><span class="ex-g" aria-hidden="true">Abrir ↗</span></a>
+      <a class="ex-t" href="landing-one-page.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva"><i class="ex-w" aria-hidden="true"></i><span class="ex-i"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M4 8h16M8 12h8M8 16h5"/></svg></span><b>Landing One-Page</b><span class="ex-d">Tu página en una sola pantalla, con formulario de contacto básico.</span><span class="ex-g" aria-hidden="true">Abrir ↗</span></a>
+      <a class="ex-t" href="migracion.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva"><i class="ex-w" aria-hidden="true"></i><span class="ex-i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6v12"/><path d="M7 12h12M15 8l4 4-4 4"/></svg></span><b>Migración</b><span class="ex-d">Evaluamos y corregimos tu web actual y la trasladamos a e-WEB. Solo landing y sitios de varias páginas, sin tienda ni base de datos.</span><span class="ex-g" aria-hidden="true">Abrir ↗</span></a>
+      <a class="ex-t" href="nosotros.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva"><i class="ex-w" aria-hidden="true"></i><span class="ex-i"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6"/><circle cx="17" cy="9" r="2.4"/><path d="M16 14.3c3 0 5 2 5 5"/></svg></span><b>Nosotros</b><span class="ex-d">Quiénes somos y cómo trabajamos.</span><span class="ex-g" aria-hidden="true">Abrir ↗</span></a>
     </div>
   </div>
 </section>
