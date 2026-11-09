@@ -77,11 +77,4 @@
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
-    <!-- 12. Página de error personalizada -->
-   <url>
-        <loc>https://economicaweb.cl/404.html</loc>
-        <lastmod>2026-11-09</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.3</priority>
-  </url>
 </urlset>
