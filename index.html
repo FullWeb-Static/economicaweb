@@ -1128,6 +1128,42 @@ section,footer,.hero{overflow-x:clip}
 @keyframes exIn{0%{opacity:0;transform:translate3d(var(--dx),40px,-280px) rotateY(var(--ry)) scale(.7)}55%{opacity:1}100%{opacity:1;transform:none}}
 @keyframes exFloat{0%,100%{translate:0 0}50%{translate:0 -7px}}
 .js .ex-t.rv.in{animation:exIn 1.15s cubic-bezier(.2,.9,.25,1.05) calc(var(--i,0)*110ms) backwards,exFloat calc(5.5s + var(--i,0)*.35s) ease-in-out calc(1.5s + var(--i,0)*110ms) infinite}
+
+/* === Inicio: la tarjeta cae desde arriba, rebota y queda flotando en 3D === */
+.hero-in{perspective:1400px}
+.mock{--drop:-440px;box-shadow:0 1px 0 #e6ebf2,0 2px 0 #d8dfea,0 3px 0 #cad3e0,0 4px 0 #bcc7d7,0 44px 70px #00000066,0 0 0 1px #e8b4a033,0 0 48px #e8b4a030}
+.js .mock{opacity:0;animation:mockDrop 1.7s linear 1.8s forwards,mockFloat 8s ease-in-out 3.5s infinite}
+@keyframes mockDrop{
+ 0%{opacity:0;transform:translateY(var(--drop)) rotateX(42deg) scale(.9);animation-timing-function:cubic-bezier(.5,0,1,.5)}
+ 12%{opacity:1}
+ 44%{opacity:1;transform:translateY(0) rotateX(-8deg) scale(1.03,.96);animation-timing-function:cubic-bezier(0,.5,.5,1)}
+ 58%{transform:translateY(-58px) rotateX(5deg) scale(.99,1.02);animation-timing-function:cubic-bezier(.5,0,1,.5)}
+ 70%{transform:translateY(0) rotateX(-3.5deg) scale(1.015,.985);animation-timing-function:cubic-bezier(0,.5,.5,1)}
+ 82%{transform:translateY(-20px) rotateX(2deg) scale(1);animation-timing-function:cubic-bezier(.5,0,1,.5)}
+ 91%{transform:translateY(0) rotateX(-1deg) scale(1);animation-timing-function:cubic-bezier(0,.5,.5,1)}
+ 96%{transform:translateY(-5px) rotateX(.4deg) scale(1)}
+ 100%{opacity:1;transform:none}
+}
+@keyframes mockFloat{
+ 0%,100%{translate:0 0;rotate:.35 1 0 0deg}
+ 25%{translate:0 -13px;rotate:.35 1 0 -4.5deg}
+ 50%{translate:0 -26px;rotate:.35 1 0 0deg}
+ 75%{translate:0 -13px;rotate:.35 1 0 4.5deg}
+}
+@media(max-width:900px){.mock{--drop:-260px}}
+@media(prefers-reduced-motion:reduce){.js .mock{opacity:1}}
+
+/* === Servicios y Así trabajamos: aparición mágica === */
+@media(min-width:641px){#servicios .grid,#proceso .grid{perspective:1100px}}
+@keyframes magicIn{
+ 0%{opacity:0;scale:.5;translate:0 46px;rotate:0 1 0 -75deg;filter:blur(16px) brightness(2.2) drop-shadow(0 0 0 #e8b4a000)}
+ 45%{opacity:1;scale:1.07;translate:0 -10px;rotate:0 1 0 9deg;filter:blur(0px) brightness(1.2) drop-shadow(0 0 28px #e8b4a0d0)}
+ 72%{scale:.985;translate:0 2px;rotate:0 1 0 -2deg;filter:blur(0px) brightness(1.05) drop-shadow(0 0 16px #e8b4a066)}
+ 100%{opacity:1;scale:1;translate:0 0;rotate:0 1 0 0deg;filter:blur(0px) brightness(1) drop-shadow(0 0 0 #e8b4a000)}
+}
+.js #servicios .card.rv:not(.in),.js #proceso .card.rv:not(.in){opacity:0;animation:none}
+.js #servicios .card.rv.in,.js #proceso .card.rv.in,.js #servicios .grid.rv.in,.js #proceso .grid.rv.in{opacity:1;animation:magicIn 1.25s cubic-bezier(.22,1,.36,1) calc(var(--i,0)*150ms) backwards;animation-timeline:auto;animation-range:normal}
+@media(prefers-reduced-motion:reduce){.js #servicios .card.rv:not(.in),.js #proceso .card.rv:not(.in){opacity:1}}
 </style>
 </head>
 <body>
