@@ -2,8 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <!-- 1. Página Principal (Comercial) -->
     <url>
-        <loc>https://economicaweb.cl</loc>
-        <lastmod>2026-11-06</lastmod>
+        <loc>https://economicaweb.cl/</loc>
+        <lastmod>2026-11-09</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -18,6 +18,62 @@
     <url>
         <loc>https://economicaweb.cl/gracias</loc>
         <lastmod>2026-11-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <!-- 4. Soporte TI Web (detalle de los planes) -->
+    <url>
+        <loc>https://economicaweb.cl/soporte-ti</loc>
+        <lastmod>2026-11-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- 5. Correo Corporativo -->
+    <url>
+        <loc>https://economicaweb.cl/correo-corporativo</loc>
+        <lastmod>2026-11-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <!-- 6. Landing One-Page -->
+    <url>
+        <loc>https://economicaweb.cl/landing-one-page</loc>
+        <lastmod>2026-11-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <!-- 7. Arquitectura y Seguridad -->
+    <url>
+        <loc>https://economicaweb.cl/arquitectura-seguridad</loc>
+        <lastmod>2026-11-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <!-- 8. Migración de sitios web -->
+    <url>
+        <loc>https://economicaweb.cl/migracion</loc>
+        <lastmod>2026-11-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <!-- 9. Nosotros -->
+    <url>
+        <loc>https://economicaweb.cl/nosotros</loc>
+        <lastmod>2026-11-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <!-- 10. Tickets de soporte -->
+    <url>
+        <loc>https://economicaweb.cl/tickets</loc>
+        <lastmod>2026-11-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <!-- 11. Portal de Renovación -->
+    <url>
+        <loc>https://economicaweb.cl/portal-renovacion</loc>
+        <lastmod>2026-11-09</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
