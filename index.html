@@ -1164,6 +1164,28 @@ section,footer,.hero{overflow-x:clip}
 .js #servicios .card.rv:not(.in),.js #proceso .card.rv:not(.in){opacity:0;animation:none}
 .js #servicios .card.rv.in,.js #proceso .card.rv.in,.js #servicios .grid.rv.in,.js #proceso .grid.rv.in{opacity:1;animation:magicIn 1.25s cubic-bezier(.22,1,.36,1) calc(var(--i,0)*150ms) backwards;animation-timeline:auto;animation-range:normal}
 @media(prefers-reduced-motion:reduce){.js #servicios .card.rv:not(.in),.js #proceso .card.rv:not(.in){opacity:1}}
+
+/* === Incluido en todos los planes: aparición mágica === */
+@media(min-width:641px){.inc .grid{perspective:1100px}}
+.js .inc .card.rv:not(.in){opacity:0;animation:none}
+.js .inc .card.rv.in,.js .inc .grid.rv.in{opacity:1;animation:magicIn 1.25s cubic-bezier(.22,1,.36,1) calc(var(--i,0)*150ms) backwards;animation-timeline:auto;animation-range:normal}
+
+/* === Solicitudes adicionales: entran en 3D desde ambos lados (como "Conoce todo lo que hacemos") === */
+@media(min-width:641px){#adicionales .grid{perspective:1100px}}
+@supports (animation-timeline:view()){#adicionales .wrap{animation:none}}
+#adicionales .card:nth-child(3n+1){--dx:-180px;--ry:-62deg}
+#adicionales .card:nth-child(3n+2){--dx:0px;--ry:0deg}
+#adicionales .card:nth-child(3n+3){--dx:180px;--ry:62deg}
+@media(max-width:900px){#adicionales .card:nth-child(odd){--dx:-130px;--ry:-62deg}#adicionales .card:nth-child(even){--dx:130px;--ry:62deg}}
+.js #adicionales .card.rv:not(.in){opacity:0;animation:none}
+.js #adicionales .card.rv.in{opacity:1;animation:exIn 1.15s cubic-bezier(.2,.9,.25,1.05) calc(var(--i,0)*110ms) backwards;animation-timeline:auto;animation-range:normal}
+@media(prefers-reduced-motion:reduce){.js .inc .card.rv:not(.in),.js #adicionales .card.rv:not(.in){opacity:1}}
+
+/* === Conoce todo lo que hacemos: subtítulo, raya dorada y botones "Abrir" cromados === */
+#explora .lead{color:#d9e0ea}
+#explora .lead:after{content:"";display:block;width:130px;height:2px;margin-top:18px;border-radius:2px;background:linear-gradient(90deg,transparent 0,#b88a36 14%,#f6e2a6 50%,#b88a36 86%,transparent 100%);box-shadow:0 0 10px #e8c46e44}
+.ex-g{display:inline-flex;align-items:center;gap:6px;margin-top:6px;padding:6px 16px;border-radius:999px;color:#f6d9c9;border:1px solid #d3dae5b0;background:linear-gradient(180deg,#ffffff38 0%,#ffffff12 46%,#9aa6b61f 54%,#ffffff1a 100%);box-shadow:inset 0 1px 0 #ffffff80,inset 0 -1px 0 #0000004d,0 3px 8px #00000045,0 0 0 3px #ffffff0d;text-shadow:0 1px 1px #0006;transition:border-color .25s,box-shadow .25s,letter-spacing .25s}
+.ex-t:hover .ex-g,.ex-t:focus-visible .ex-g{letter-spacing:.08em;border-color:#f0c3a8;box-shadow:inset 0 1px 0 #fff,inset 0 -1px 0 #0000004d,0 4px 12px #00000055,0 0 16px #e8b4a055}
 </style>
 </head>
 <body>
