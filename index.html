@@ -118,7 +118,7 @@
               "itemOffered": {
                 "@type": "Service",
                 "name": "Plan High (Nivel 3)",
-                "description": "Sitio web de hasta 5 páginas o tienda online básica (3 secciones + pie de firma cada una) con dominio incluido, 4 correos corporativos de 5 GB, 3 bóvedas de formulario con confirmación de envío, links de pago y redes sociales ilimitados, SEO avanzado e indexación optimizada y 6 tickets de soporte al mes.",
+                "description": "Sitio web de hasta 5 páginas o tienda online básica (3 secciones + pie de firma cada una) con dominio incluido, 4 correos corporativos de 5 GB, 3 bóvedas de formulario con confirmación de envío, links de pago ilimitados, 6 enlaces a redes sociales, SEO avanzado e indexación optimizada y 6 tickets de soporte al mes.",
                 "provider": {
                   "@id": "https://economicaweb.cl/#organization"
                 },
@@ -1388,8 +1388,11 @@ section,footer,.hero{overflow-x:clip}
 #adicionales .card:nth-child(3n+2){--dx:0px;--ry:0deg}
 #adicionales .card:nth-child(3n+3){--dx:180px;--ry:62deg}
 @media(max-width:900px){#adicionales .card:nth-child(odd){--dx:-130px;--ry:-62deg}#adicionales .card:nth-child(even){--dx:130px;--ry:62deg}}
-/* Con 7 tarjetas, la última queda centrada en la fila de abajo (escritorio) */
-@media(min-width:901px){#adicionales .grid>.card:last-child:nth-child(3n+1){grid-column:2;--dx:0px;--ry:0deg}}
+/* Solicitudes adicionales: 10 tarjetas → 5 columnas (2 filas) en pantallas anchas, 2 columnas en medianas */
+@media(min-width:901px) and (max-width:1179px){#adicionales .grid{grid-template-columns:repeat(2,1fr)}#adicionales .card:nth-child(odd){--dx:-130px;--ry:-62deg}#adicionales .card:nth-child(even){--dx:130px;--ry:62deg}}
+@media(min-width:1180px){#adicionales .wrap{width:min(1280px,94vw)}#adicionales .grid{grid-template-columns:repeat(5,1fr)}#adicionales .card:nth-child(5n+1){--dx:-220px;--ry:-62deg}#adicionales .card:nth-child(5n+2){--dx:-110px;--ry:-40deg}#adicionales .card:nth-child(5n+3){--dx:0px;--ry:0deg}#adicionales .card:nth-child(5n+4){--dx:110px;--ry:40deg}#adicionales .card:nth-child(5n+5){--dx:220px;--ry:62deg}}
+.tk-more{display:block;margin-top:10px;font-size:.78rem;font-weight:600;line-height:1.35;color:#713747;text-decoration:underline;text-underline-offset:2px}
+.tk-more:hover,.tk-more:focus-visible{color:#a66b52;outline:none}
 .js #adicionales .card.rv:not(.in){opacity:0;animation:none}
 .js #adicionales .card.rv.in{opacity:1;animation:exIn 1.15s cubic-bezier(.2,.9,.25,1.05) calc(var(--i,0)*110ms) backwards;animation-timeline:auto;animation-range:normal}
 @media(prefers-reduced-motion:reduce){.js .inc .card.rv:not(.in),.js #adicionales .card.rv:not(.in){opacity:1}}
@@ -1399,6 +1402,86 @@ section,footer,.hero{overflow-x:clip}
 #explora .lead:after{content:"";display:block;width:130px;height:2px;margin-top:18px;border-radius:2px;background:linear-gradient(90deg,transparent 0,#b88a36 14%,#f6e2a6 50%,#b88a36 86%,transparent 100%);box-shadow:0 0 10px #e8c46e44}
 .ex-g{display:inline-flex;align-items:center;gap:6px;margin-top:6px;padding:6px 16px;border-radius:999px;color:#f6d9c9;border:1px solid #d3dae5b0;background:linear-gradient(180deg,#ffffff38 0%,#ffffff12 46%,#9aa6b61f 54%,#ffffff1a 100%);box-shadow:inset 0 1px 0 #ffffff80,inset 0 -1px 0 #0000004d,0 3px 8px #00000045,0 0 0 3px #ffffff0d;text-shadow:0 1px 1px #0006;transition:border-color .25s,box-shadow .25s,letter-spacing .25s}
 .ex-t:hover .ex-g,.ex-t:focus-visible .ex-g{letter-spacing:.08em;border-color:#f0c3a8;box-shadow:inset 0 1px 0 #fff,inset 0 -1px 0 #0000004d,0 4px 12px #00000055,0 0 16px #e8b4a055}
+
+/* ===== Franja ADN + carrusel de resumen ===== */
+.quick{padding:28px 0 0}
+.qk{position:relative;overflow:hidden;border-radius:18px;padding:14px 16px 14px;background:linear-gradient(160deg,#2d353f 0%,#222931 60%,#1a2027 100%);border:1px solid #e8b4a04d;box-shadow:0 18px 40px #0a254026,inset 0 1px 0 #ffffff1f}
+.qk:before{content:"";position:absolute;left:0;right:0;top:0;height:2px;pointer-events:none;background:linear-gradient(90deg,transparent,#b76e79 16%,#e8b4a0 38%,#fff0e6 50%,#e8b4a0 62%,#b76e79 84%,transparent)}
+.qk-top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 16px;margin-bottom:12px}
+.qk-k{font-size:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#e8b4a0}
+.qk-adn{position:relative;overflow:hidden;isolation:isolate;display:inline-flex;align-items:center;gap:9px;max-width:100%;padding:6px 7px 6px 12px;border-radius:999px;text-decoration:none;font-size:.82rem;line-height:1.3;color:#d8e1ee;border:1px solid #e8c46e88;background:linear-gradient(115deg,#ffffff1a,#ffffff08);box-shadow:inset 0 1px 0 #ffffff26;transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s,border-color .3s}
+.qk-adn b{color:#f6e2a6}
+.qk-adn i{flex:none;font-style:normal;font-weight:700;font-size:.76rem;padding:4px 11px;border-radius:999px;color:#142b43;background:linear-gradient(115deg,#fff0bd 0%,#e8c46e 30%,#c9953d 58%,#f2d99b 82%,#d9ad58 100%);box-shadow:0 2px 0 #a66b52,inset 0 1px 0 #ffffff88}
+.qk-adn:before{content:"";position:absolute;inset:0;z-index:-1;transform:translateX(-140%) skewX(-20deg);background:linear-gradient(90deg,transparent,#ffffff40,transparent);animation:qkShine 5.5s ease-in-out infinite}
+.qk-adn:hover,.qk-adn:focus-visible{transform:translateY(-2px);border-color:#e8c46e;box-shadow:inset 0 1px 0 #ffffff33,0 8px 20px #00000040,0 0 18px #e4c16a55;outline:none}
+.qk-view{overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-webkit-overflow-scrolling:touch;margin:0 -16px;padding:3px 16px 8px;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 26px,#000 calc(100% - 26px),transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 26px,#000 calc(100% - 26px),transparent 100%)}
+.qk-view::-webkit-scrollbar{display:none}
+.qk-view:focus-visible{outline:2px solid #e8b4a0;outline-offset:-2px;border-radius:12px}
+.qk-track{display:flex;gap:12px;width:max-content}
+.qk-c{position:relative;overflow:hidden;isolation:isolate;display:flex;flex-direction:column;gap:2px;width:184px;padding:12px 14px 11px;border-radius:13px;text-decoration:none;color:#e9eef5;background:linear-gradient(150deg,#ffffff1c,#ffffff08);border:1px solid #ffffff22;box-shadow:inset 0 1px 0 #ffffff2e,0 8px 18px #00000033;transition:transform .35s cubic-bezier(.2,.8,.2,1),border-color .3s,box-shadow .3s}
+.qk-c:before{content:"";position:absolute;inset:0;z-index:-1;transform:translateX(-140%) skewX(-20deg);background:linear-gradient(90deg,transparent,#ffffff38,transparent);animation:qkShine 6.5s ease-in-out infinite;animation-delay:calc(var(--i,0)*.8s)}
+.qk-c:hover,.qk-c:focus-visible{transform:translateY(-4px);border-color:#e8b4a0cc;box-shadow:inset 0 1px 0 #ffffff33,0 14px 26px #00000055,0 0 22px #e8b4a044;outline:none}
+.qk-ic{font-size:1.1rem;line-height:1.1}
+.qk-t{font-weight:700;font-size:.93rem;line-height:1.2;color:#fff}
+.qk-p{font-size:.74rem;line-height:1.3;color:#b9c7dc}
+.qk-p b,.qk-t b{color:#f6e2a6;font-weight:700}
+.qk-m{margin-top:5px;display:flex;align-items:center;gap:4px;font-size:.7rem;font-weight:700;color:#e8b4a0}
+.qk-m span{transition:transform .3s}
+.qk-c:hover .qk-m span,.qk-c:focus-visible .qk-m span{transform:translateX(3px)}
+@keyframes qkShine{0%,68%{transform:translateX(-140%) skewX(-20deg)}100%{transform:translateX(140%) skewX(-20deg)}}
+@media(max-width:520px){.qk-adn{font-size:.78rem}.qk-c{width:168px}}
+@media(prefers-reduced-motion:reduce){.qk-adn:before,.qk-c:before{animation:none}}
+
+/* ===== Menú "Saber más" ===== */
+.sm{position:relative}
+.sm-btn{display:inline-flex;align-items:center;gap:6px;padding:9px 15px;border-radius:8px;font:inherit;font-size:.9rem;font-weight:700;color:#f6e2a6;cursor:pointer;border:1px solid #e8b4a0aa;background:linear-gradient(145deg,#ffffff24,#ffffff0a);box-shadow:inset 0 1px 0 #ffffff33,0 3px 0 #4a5461;transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s,border-color .3s,color .3s}
+.sm-btn svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;transition:transform .3s}
+.sm-btn:hover,.sm-btn:focus-visible,.sm-btn[aria-expanded="true"]{transform:translateY(-2px);border-color:#e8b4a0;color:#fff0e6;box-shadow:inset 0 1px 0 #ffffff44,0 5px 0 #4a5461,0 0 18px #e8b4a055;outline:none}
+.sm-btn[aria-expanded="true"] svg{transform:rotate(180deg)}
+.sm-short{display:none}
+.sm-panel{position:absolute;right:0;top:calc(100% + 14px);width:min(470px,92vw);padding:12px;border-radius:18px;background:linear-gradient(160deg,#2d353f 0%,#222931 55%,#1a2027 100%);border:1px solid #e8b4a055;box-shadow:0 26px 54px #00000066,inset 0 1px 0 #ffffff1f;opacity:0;visibility:hidden;transform:translateY(-8px) scale(.985);transform-origin:top right;transition:opacity .25s ease,transform .3s cubic-bezier(.2,.8,.2,1),visibility .25s}
+.sm-panel:before{content:"";position:absolute;left:14px;right:14px;top:0;height:2px;background:linear-gradient(90deg,transparent,#b76e79 20%,#e8b4a0 40%,#fff0e6 50%,#e8b4a0 60%,#b76e79 80%,transparent)}
+.sm.open .sm-panel{opacity:1;visibility:visible;transform:none}
+.sm-h{margin:2px 4px 10px;font-size:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#e8b4a0}
+.sm-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.sm-i{display:flex;align-items:center;gap:10px;min-width:0;padding:9px 10px;border-radius:12px;text-decoration:none;color:#e9eef5;border:1px solid #ffffff14;background:#ffffff0a;transition:transform .25s cubic-bezier(.2,.8,.2,1),border-color .25s,background .25s}
+.sm-i:hover,.sm-i:focus-visible{transform:translateX(3px);border-color:#e8b4a0aa;background:#ffffff14;outline:none}
+.sm-ic{flex:0 0 36px;width:36px;height:36px;border-radius:10px;display:grid;place-items:center;font-size:1.05rem;background:var(--c);box-shadow:inset 0 1px 0 #ffffff66,0 4px 10px #00000040}
+.sm-t{min-width:0}
+.sm-t b{display:block;font-size:.84rem;line-height:1.2;color:#fff}
+.sm-t small{display:block;font-size:.7rem;line-height:1.25;color:#9fb0c7}
+@media(max-width:760px){.sm{position:static}.sm-panel{left:3vw;right:3vw;width:auto;top:calc(100% + 8px);max-height:calc(100vh - var(--nav) - 24px);overflow-y:auto;-webkit-overflow-scrolling:touch;transform-origin:top center}.sm-btn{padding:9px 12px;font-size:.84rem}.nav-r{gap:8px}}
+@media(max-width:520px){.sm-grid{grid-template-columns:1fr}}
+@media(max-width:430px){.sm-long{display:none}.sm-short{display:inline}.nav .btn{padding:9px 13px}.nav .menu{padding:9px 12px}}
+@media(prefers-reduced-motion:reduce){.sm-panel,.sm-btn,.sm-i{transition:none}}
+
+/* ===== Privacidad: carrusel 3D ===== */
+.pv3{position:relative;max-width:620px;margin:0 auto}
+.pv3-stage{--w:min(330px,78vw);position:relative;height:310px;perspective:1300px;touch-action:pan-y;cursor:grab;user-select:none;-webkit-user-select:none}
+.pv3-stage:focus-visible{outline:2px solid #c9953d;outline-offset:4px;border-radius:16px}
+.pv3-stage.dr{cursor:grabbing}
+.pv3-ring{position:absolute;left:50%;top:0;width:var(--w);height:100%;margin-left:calc(var(--w)/-2);transform-style:preserve-3d;transition:transform .7s cubic-bezier(.2,.8,.2,1);will-change:transform}
+.pv3-stage.dr .pv3-ring{transition:none}
+.pv3-card{position:absolute;inset:0;display:flex;flex-direction:column;padding:20px 20px 18px;border-radius:16px;background:linear-gradient(145deg,#fff 0%,#fbf8f0 100%);border:1px solid #e3d3ab;box-shadow:0 2px 0 #c4a05a,0 16px 32px #0a254024;font-size:.9rem;line-height:1.6;color:#52677e;overflow:hidden;-webkit-backface-visibility:hidden;backface-visibility:hidden;transition:opacity .5s}
+.pv3-card:before{content:"";position:absolute;top:0;left:18px;right:18px;height:2px;border-radius:0 0 6px 6px;background:linear-gradient(90deg,transparent,#b68a37,#f4dda0,#b68a37,transparent)}
+.pv3-card:not(.on){opacity:.5}
+.pv3-card h3{display:flex;align-items:center;gap:10px;font-size:1.05rem;line-height:1.3;color:#713747;margin-bottom:10px}
+.pv3-card h3 i{flex:0 0 26px;width:26px;height:26px;display:grid;place-items:center;border-radius:7px;font-style:normal;font-size:.8rem;font-weight:700;color:#8d622b;background:linear-gradient(145deg,#fff4d5,#e7c879);border:1px solid #d8b96c;box-shadow:0 2px 0 #b58b3c}
+.pv3-card a{color:#713747;font-weight:600;text-decoration:underline;overflow-wrap:anywhere}
+.pv3-card .more{margin-top:auto;font-size:.82rem}
+.pv3-nav{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:20px}
+.pv3-b{width:42px;height:42px;border-radius:50%;border:1px solid #d8b96c;background:linear-gradient(145deg,#fff4d5,#e7c879);color:#713747;font-size:1.25rem;font-weight:800;line-height:1;cursor:pointer;box-shadow:0 3px 0 #b58b3c;transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s}
+.pv3-b:hover,.pv3-b:focus-visible{transform:translateY(-2px);box-shadow:0 5px 0 #b58b3c,0 0 16px #e4c16a66;outline:none}
+.pv3-dots{display:flex;align-items:center;gap:8px}
+.pv3-dots button{width:9px;height:9px;padding:0;border:0;border-radius:50%;background:#d8c9a6;cursor:pointer;transition:width .3s,background .3s}
+.pv3-dots button[aria-current="true"]{width:26px;border-radius:6px;background:linear-gradient(90deg,#b68a37,#f4dda0,#b68a37)}
+.pv3-hint{text-align:center;margin-top:10px;font-size:.78rem;color:#6b7c93}
+html:not(.js) .pv3-stage{height:auto;perspective:none;cursor:auto}
+html:not(.js) .pv3-ring{position:static;width:auto;margin:0;display:grid;gap:12px;transform:none!important}
+html:not(.js) .pv3-card{position:relative;opacity:1}
+html:not(.js) .pv3-nav,html:not(.js) .pv3-hint{display:none}
+@media(max-width:420px){.pv3-stage{height:330px}.pv3-card{padding:18px 16px 16px;font-size:.86rem}}
+@media(prefers-reduced-motion:reduce){.pv3-ring{transition-duration:.01s}}
 </style>
 </head>
 <body>
@@ -1420,7 +1503,8 @@ section,footer,.hero{overflow-x:clip}
     <li><a href="#faq">Preguntas</a></li>
   </ul>
   <div class="nav-r">
-    <a class="btn" href="#cotizar">Cotizar</a>
+    <div class="sm" id="sm"><button class="sm-btn" id="smb" type="button" aria-expanded="false" aria-controls="smp" aria-haspopup="true"><span class="sm-long">Saber más</span><span class="sm-short">Más</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button><div class="sm-panel" id="smp" aria-hidden="true"><p class="sm-h">Todas las páginas de e-WEB</p><div class="sm-grid"><a class="sm-i" href="adn.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva" style="--c:linear-gradient(145deg,#f6e2a6,#c9953d)"><span class="sm-ic" aria-hidden="true">🧬</span><span class="sm-t"><b>ADN e-WEB</b><small>Quiénes somos, en resumen</small></span></a><a class="sm-i" href="soporte-ti.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva" style="--c:linear-gradient(145deg,#8fc0ff,#2f6fe0)"><span class="sm-ic" aria-hidden="true">💻</span><span class="sm-t"><b>Soporte TI y planes</b><small>Todo lo que incluye cada plan</small></span></a><a class="sm-i" href="correo-corporativo.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva" style="--c:linear-gradient(145deg,#86e6d6,#16917f)"><span class="sm-ic" aria-hidden="true">📧</span><span class="sm-t"><b>Correo corporativo</b><small>Con tu propio dominio</small></span></a><a class="sm-i" href="landing-one-page.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva" style="--c:linear-gradient(145deg,#f6b9a6,#b76e79)"><span class="sm-ic" aria-hidden="true">🎯</span><span class="sm-t"><b>Landing One-Page</b><small>Tu página en una sola vista</small></span></a><a class="sm-i" href="tickets.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva" style="--c:linear-gradient(145deg,#ffd48f,#e08a2b)"><span class="sm-ic" aria-hidden="true">🎫</span><span class="sm-t"><b>Tickets y compras</b><small>Modificaciones y solicitudes</small></span></a><a class="sm-i" href="portal-renovacion.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva" style="--c:linear-gradient(145deg,#aeeaa8,#2f9e4f)"><span class="sm-ic" aria-hidden="true">🔄</span><span class="sm-t"><b>Portal de renovación</b><small>Renueva o mejora tu plan</small></span></a><a class="sm-i" href="arquitectura-seguridad.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva" style="--c:linear-gradient(145deg,#ffa3ab,#c23a4b)"><span class="sm-ic" aria-hidden="true">🛡️</span><span class="sm-t"><b>Seguridad técnica</b><small>Cómo protegemos tu sitio</small></span></a><a class="sm-i" href="migracion.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva" style="--c:linear-gradient(145deg,#d2bcff,#7a4fd6)"><span class="sm-ic" aria-hidden="true">🚚</span><span class="sm-t"><b>Migración y auditoría</b><small>Trae tu web actual</small></span></a><a class="sm-i" href="nosotros.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva" style="--c:linear-gradient(145deg,#a3dcff,#2a8bd1)"><span class="sm-ic" aria-hidden="true">👥</span><span class="sm-t"><b>Nosotros</b><small>Conócenos y escríbenos</small></span></a><a class="sm-i" href="privacidad.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva" style="--c:linear-gradient(145deg,#e1aebb,#713747)"><span class="sm-ic" aria-hidden="true">📜</span><span class="sm-t"><b>Privacidad · Ley 21.719</b><small>Cómo cuidamos tus datos</small></span></a></div></div></div>
+<a class="btn" href="#cotizar">Cotizar</a>
     <button class="menu" id="mb" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">Menú</button>
   </div>
 </nav>
@@ -1450,6 +1534,15 @@ section,footer,.hero{overflow-x:clip}
 
 <main>
 <div class="rg" aria-hidden="true"></div>
+<section class="quick" id="resumen" aria-label="Resumen rápido de e-WEB">
+<div class="wrap">
+<div class="qk reveal">
+<div class="qk-top"><span class="qk-k">Resumen rápido</span><a class="qk-adn" href="adn.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva"><span aria-hidden="true">🧬</span><span>Somos el <b>resumen ágil y didáctico</b> · conoce nuestro ADN</span><i>Danos clic →</i></a></div>
+<div class="qk-view" id="qkv" role="region" aria-label="Accesos rápidos a planes y servicios" tabindex="0"><div class="qk-track"><a class="qk-c" href="#planes" style="--i:0"><span class="qk-ic" aria-hidden="true">🚀</span><span class="qk-t">Plan Basic</span><span class="qk-p"><b>$150.000</b> · 1 página que vende</span><span class="qk-m">¿Quieres saber más? <span aria-hidden="true">→</span></span></a><a class="qk-c" href="#planes" style="--i:1"><span class="qk-ic" aria-hidden="true">⭐</span><span class="qk-t">Plan Medium</span><span class="qk-p"><b>$200.000</b> · hasta 3 páginas</span><span class="qk-m">¿Quieres saber más? <span aria-hidden="true">→</span></span></a><a class="qk-c" href="#planes" style="--i:2"><span class="qk-ic" aria-hidden="true">👑</span><span class="qk-t">Plan High</span><span class="qk-p"><b>$250.000</b> · hasta 5 páginas</span><span class="qk-m">¿Quieres saber más? <span aria-hidden="true">→</span></span></a><a class="qk-c" href="#correo" style="--i:3"><span class="qk-ic" aria-hidden="true">📧</span><span class="qk-t">Correo corporativo</span><span class="qk-p">Con tu propio dominio</span><span class="qk-m">¿Quieres saber más? <span aria-hidden="true">→</span></span></a><a class="qk-c" href="#landing" style="--i:4"><span class="qk-ic" aria-hidden="true">🎯</span><span class="qk-t">Landing One-Page</span><span class="qk-p">Una página, tu formulario</span><span class="qk-m">¿Quieres saber más? <span aria-hidden="true">→</span></span></a><a class="qk-c" href="#adicionales" style="--i:5"><span class="qk-ic" aria-hidden="true">🎫</span><span class="qk-t">Tickets <b>$5.000</b></span><span class="qk-p">Modificaciones al instante</span><span class="qk-m">¿Quieres saber más? <span aria-hidden="true">→</span></span></a><a class="qk-c" href="#adicionales" style="--i:6"><span class="qk-ic" aria-hidden="true">🛒</span><span class="qk-t">Compras extra</span><span class="qk-p">Secciones, correos y enlaces</span><span class="qk-m">¿Quieres saber más? <span aria-hidden="true">→</span></span></a><a class="qk-c" href="soporte-ti.html#comparativa" target="_blank" rel="noopener" title="Se abre en una pestaña nueva" style="--i:7"><span class="qk-ic" aria-hidden="true">📋</span><span class="qk-t">Planes en detalle</span><span class="qk-p">Todo explicado, sin letra chica</span><span class="qk-m">¿Quieres saber más? <span aria-hidden="true">→</span></span></a><a class="qk-c" href="migracion.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva" style="--i:8"><span class="qk-ic" aria-hidden="true">🩺</span><span class="qk-t">Auditoría gratis</span><span class="qk-p">Revisamos tu web actual</span><span class="qk-m">¿Quieres saber más? <span aria-hidden="true">→</span></span></a></div></div>
+</div>
+</div>
+</section>
+
 <section id="servicios">
   <div class="wrap">
     <h2 class="reveal">Todo lo que tu negocio necesita en&nbsp;la&nbsp;web</h2>
@@ -1503,7 +1596,7 @@ section,footer,.hero{overflow-x:clip}
         <input type="radio" name="plan" value="High">
         <p class="lvl">Nivel 3</p><h3>High</h3><p class="sub">Para vender y escalar en serio</p>
         <p class="price">$250.000 <small>CLP</small></p><p class="iva">IVA incluido</p>
-        <ul><li class="dom">Dominio incluido</li><li>Hasta 5 páginas o tienda online básica: 3 secciones + pie de firma cada una</li><li>Todo lo del plan Medium, más:</li><li>4 correos corporativos de 5 GB cada uno</li><li>Hasta 8 alias (máximo 2 por correo)</li><li>3 bóvedas de formulario con confirmación de envío</li><li>Links de pago y redes sociales ilimitados</li><li>Pagos y reservas integrados</li><li>SEO avanzado e indexación optimizada</li><li>Panel para editar contenido</li><li>6 tickets de soporte al mes</li><li>3 meses de soporte</li></ul>
+        <ul><li class="dom">Dominio incluido</li><li>Hasta 5 páginas o tienda online básica: 3 secciones + pie de firma cada una</li><li>Todo lo del plan Medium, más:</li><li>4 correos corporativos de 5 GB cada uno</li><li>Hasta 8 alias (máximo 2 por correo)</li><li>3 bóvedas de formulario con confirmación de envío</li><li>Links de pago ilimitados y 6 enlaces a redes sociales</li><li>Pagos y reservas integrados</li><li>SEO avanzado e indexación optimizada</li><li>Panel para editar contenido</li><li>6 tickets de soporte al mes</li><li>3 meses de soporte</li></ul>
         <span class="pick"></span>
       </label>
     </div>
@@ -1649,8 +1742,11 @@ section,footer,.hero{overflow-x:clip}
       <article class="card"><div class="n">Correo</div><h3>Más espacio de correo</h3><p>Amplía los GB de tus casillas para guardar más mensajes y archivos.</p><div class="val"><small>desde</small><b>$8.000</b><span>por cada +5 GB</span></div></article>
       <article class="card"><div class="n">Sitio web</div><h3>Sección adicional</h3><p>Agrega una nueva sección o página interna con el mismo diseño de tu sitio.</p><div class="val"><small>desde</small><b>$25.000</b><span>por sección</span></div></article>
 <article class="card"><div class="n">Formulario</div><h3>Bóveda de formulario adicional</h3><p>¿Quieres una bóveda de formulario? Suma un formulario más a tu sitio: lo que tus visitas envían llega directo a tu correo, ordenado en una carpeta.</p><div class="val"><small>desde</small><b>$25.000</b><span>por bóveda</span></div></article>
+<article class="card"><div class="n">Redes sociales</div><h3>Enlace a red social adicional</h3><p>¿Necesitas más enlaces que los de tu plan? Suma otra red (Instagram, Facebook, TikTok, LinkedIn…) a tu sitio, con su ícono y su enlace.</p><div class="val"><b>$10.000</b><span>por enlace</span></div></article>
       <article class="card"><div class="n">Contenido</div><h3>Cambio de textos y frases</h3><p>Actualizamos mensajes, precios o imágenes para mantener tu página al día.</p><div class="val"><small>desde</small><b>$10.000</b><span>por solicitud</span></div></article>
-      <article class="card"><div class="n">Plan</div><h3>Actualizar tu plan</h3><p>Pasa de Basic a Medium o High cuando necesites más funciones y más correos.</p><div class="val"><b class="q"><a href="portal-renovacion.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva">Cotiza aquí ↗</a></b><span>en el portal de renovación</span></div></article>
+      <article class="card"><div class="n">Tickets</div><h3>Ticket adicional</h3><p>¿Se te acabaron los tickets del mes? Compra uno solo para pedir modificaciones a lo que ya tienes (textos, imágenes, colores), sin agregar cosas nuevas.</p><div class="val"><b>$5.000</b><span>por ticket</span></div><a class="tk-more" href="tickets.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva">¿Quieres saber más sobre los tickets? ↗</a></article>
+<article class="card"><div class="n">Tickets</div><h3>Pack de 3 tickets</h3><p>Más tickets por el mismo precio: en vez de pagar 2 por $10.000, llévate 3 por $10.000.</p><div class="val"><b>$10.000</b><span>por 3 tickets</span></div><a class="tk-more" href="tickets.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva">¿Quieres saber más sobre los tickets? ↗</a></article>
+<article class="card"><div class="n">Plan</div><h3>Actualizar tu plan</h3><p>Pasa de Basic a Medium o High cuando necesites más funciones y más correos.</p><div class="val"><b class="q"><a href="portal-renovacion.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva">Cotiza aquí ↗</a></b><span>en el portal de renovación</span></div></article>
       <article class="card"><div class="n">A medida</div><h3>Otro requerimiento</h3><p>¿Necesitas algo que no está en esta lista? Lo evaluamos contigo y te cotizamos.</p><div class="val"><b class="q"><a href="nosotros.html#contacto" target="_blank" rel="noopener" title="Se abre en una pestaña nueva">A medida ↗</a></b><span>Hablemos de tu proyecto</span></div></article>
     </div>
     <div class="ad-cta reveal">
@@ -1832,15 +1928,15 @@ section,footer,.hero{overflow-x:clip}
   <div class="wrap">
     <h2 class="reveal">Política de privacidad y protección de datos</h2>
     <p class="lead reveal">Así cuidamos los datos que nos envías al cotizar. Resumen conforme a la Ley&nbsp;N°&nbsp;21.719.</p>
-    <div class="pv reveal">
-      <div><h3><i>1</i>Responsable</h3>e-WEB (economicaweb.cl) es responsable del tratamiento de los datos de este sitio. Para consultas formales escribe a <a href="mailto:privacidad@economicaweb.cl">privacidad@economicaweb.cl</a>.</div>
-      <div><h3><i>2</i>Datos y finalidad</h3>Solo pedimos lo necesario para evaluar tu proyecto (dominio, objetivos y material). Usamos tu nombre y correo únicamente para enviarte la propuesta. No pedimos datos financieros, RUT ni documentos de identidad, y nunca vendemos tu información ni enviamos spam.</div>
-      <div><h3><i>3</i>Cookies y navegación</h3>No usamos cookies de seguimiento, marketing ni analítica de terceros (como Google Analytics o Píxel de Meta). Los datos técnicos de red se usan solo para la seguridad del sitio: frenar ataques y bots y mantener la velocidad de carga.</div>
-      <div><h3><i>4</i>Seguridad</h3>Tu solicitud viaja por conexión cifrada HTTPS para que terceros no puedan interceptarla. En los correos corporativos que administramos aplicamos autenticación SPF, DKIM y DMARC contra suplantación, filtros antispam y antiphishing, cifrado en tránsito y verificación en dos pasos.<br><a class="more" href="arquitectura-seguridad.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva">Arquitectura de seguridad<i aria-hidden="true">↗</i></a></div>
-      <div><h3><i>5</i>Tus derechos (ARCO)</h3>Puedes ejercer tus derechos de Acceso, Rectificación, Cancelación y Oposición. Para que eliminemos o corrijamos tus datos, escribe desde el correo de tu consulta a <a href="mailto:privacidad@economicaweb.cl">privacidad@economicaweb.cl</a>.</div>
-    </div>
-    
-    <!-- BOTÓN DESTACADO DE PRIVACIDAD -->
+    <div class="pv3 reveal">
+<div class="pv3-stage" id="pv3s" role="group" aria-roledescription="carrusel" aria-label="Resumen de la política de privacidad, 5 puntos" tabindex="0">
+<div class="pv3-ring" id="pv3r"><div class="pv3-card"><h3><i>1</i>Responsable</h3><p>e-WEB (economicaweb.cl) es responsable de los datos de este sitio. Consultas formales: <a href="mailto:privacidad@economicaweb.cl">privacidad@economicaweb.cl</a>.</p></div><div class="pv3-card"><h3><i>2</i>Datos y finalidad</h3><p>Solo pedimos lo necesario para evaluar tu proyecto. Tu nombre y correo se usan únicamente para enviarte la propuesta. Sin RUT ni datos financieros, sin venta de datos y sin spam.</p></div><div class="pv3-card"><h3><i>3</i>Cookies y navegación</h3><p>Sin cookies de seguimiento, marketing ni analítica de terceros. Los datos técnicos de red se usan solo para proteger el sitio y mantener su velocidad.</p></div><div class="pv3-card"><h3><i>4</i>Seguridad</h3><p>Tu solicitud viaja cifrada por HTTPS. En los correos que administramos usamos SPF, DKIM y DMARC, antispam y verificación en dos pasos.</p><a class="more" href="arquitectura-seguridad.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva">Ver arquitectura de seguridad ↗</a></div><div class="pv3-card"><h3><i>5</i>Tus derechos (ARCO)</h3><p>Puedes ejercer tus derechos de Acceso, Rectificación, Cancelación y Oposición. Escribe desde el correo de tu consulta a <a href="mailto:privacidad@economicaweb.cl">privacidad@economicaweb.cl</a>.</p></div></div>
+</div>
+<div class="pv3-nav"><button class="pv3-b" id="pv3p" type="button" aria-label="Punto anterior">‹</button><div class="pv3-dots" id="pv3d"><button type="button" aria-label="Ir al punto 1"></button><button type="button" aria-label="Ir al punto 2"></button><button type="button" aria-label="Ir al punto 3"></button><button type="button" aria-label="Ir al punto 4"></button><button type="button" aria-label="Ir al punto 5"></button></div><button class="pv3-b" id="pv3n" type="button" aria-label="Punto siguiente">›</button></div>
+<p class="pv3-hint">Desliza con el dedo para girar ↔</p>
+</div>
+
+<!-- BOTÓN DESTACADO DE PRIVACIDAD -->
     <div class="reveal" style="text-align: center; margin-top: 36px;">
       <a href="privacidad.html" target="_blank" rel="noopener" class="btn-gold" style="display: inline-flex; padding: 14px 28px; font-size: 1.05rem;">Leer Política de Privacidad completa (Ley 21.719) ↗</a>
     </div>
@@ -1853,7 +1949,7 @@ section,footer,.hero{overflow-x:clip}
 <footer>
   <p class="flogo">e-<span>WEB</span></p>
   <nav class="flinks" aria-label="Pie de página">
-    <a href="#servicios">Servicios</a><a href="#planes">Planes</a><a href="#cotizar">Cotizar</a><a href="nosotros.html" target="_blank" rel="noopener">Nosotros</a><a href="#privacidad">Privacidad</a><a class="ley" href="privacidad.html" target="_blank" rel="noopener">Ley&nbsp;N°&nbsp;21.719</a><a href="https://wa.me/56922133902?text=Hola%21%20Me%20interesa%20cotizar%20un%20proyecto%20web%20con%20ustedes.%20%C2%BFMe%20podr%C3%ADan%20dar%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" rel="noopener">WhatsApp</a><a href="mailto:contacto@economicaweb.cl">contacto@economicaweb.cl</a>
+    <a href="#servicios">Servicios</a><a href="#planes">Planes</a><a href="#cotizar">Cotizar</a><a href="nosotros.html" target="_blank" rel="noopener">Nosotros</a><a href="adn.html" target="_blank" rel="noopener">ADN</a><a href="#privacidad">Privacidad</a><a class="ley" href="privacidad.html" target="_blank" rel="noopener">Ley&nbsp;N°&nbsp;21.719</a><a href="https://wa.me/56922133902?text=Hola%21%20Me%20interesa%20cotizar%20un%20proyecto%20web%20con%20ustedes.%20%C2%BFMe%20podr%C3%ADan%20dar%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" rel="noopener">WhatsApp</a><a href="mailto:contacto@economicaweb.cl">contacto@economicaweb.cl</a>
   </nav>
   <p>© <span id="y"></span> e-WEB · economicaweb.cl · Desarrollo web en Santiago, Chile</p>
 </footer>
@@ -2266,6 +2362,99 @@ document.getElementById('y').textContent=new Date().getFullYear();
   }catch(err){
     try{console.warn('Intro omitida:',err&&err.message)}catch(e){}
     end();
+  }
+})();
+</script>
+<script>
+(function(){
+  /* Menú "Saber más" */
+  var sm=document.getElementById('sm'),btn=document.getElementById('smb'),pan=document.getElementById('smp');
+  if(sm&&btn&&pan){
+    var menu=document.getElementById('menu'),mb=document.getElementById('mb');
+    var setO=function(o){sm.classList.toggle('open',o);btn.setAttribute('aria-expanded',o?'true':'false');pan.setAttribute('aria-hidden',o?'false':'true')};
+    btn.addEventListener('click',function(e){e.stopPropagation();var o=!sm.classList.contains('open');setO(o);if(o&&menu){menu.classList.remove('open');if(mb)mb.setAttribute('aria-expanded','false')}});
+    document.addEventListener('click',function(e){if(!sm.contains(e.target))setO(false)});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'&&sm.classList.contains('open')){setO(false);btn.focus()}});
+    pan.addEventListener('click',function(e){if(e.target.closest&&e.target.closest('a'))setO(false)});
+    if(mb)mb.addEventListener('click',function(){setO(false)});
+  }
+
+  /* Carrusel de resumen: avanza de derecha a izquierda y vuelve; se pausa al tocarlo */
+  var v=document.getElementById('qkv');
+  if(v){
+    var rm=window.matchMedia&&matchMedia('(prefers-reduced-motion:reduce)').matches;
+    var pos=0,dir=1,paused=false,hold=1.2,last=0,speed=34,vis=true,rs=0;
+    var mx=function(){return v.scrollWidth-v.clientWidth};
+    var tick=function(t){
+      if(!last)last=t;
+      var dt=Math.min(.05,(t-last)/1000);last=t;
+      if(vis&&!paused&&!rm&&!document.hidden){
+        var m=mx();
+        if(m>4){
+          if(hold>0){hold-=dt}
+          else{
+            pos+=dir*speed*dt;
+            if(pos>=m){pos=m;dir=-1;hold=1.4}
+            else if(pos<=0){pos=0;dir=1;hold=1.4}
+            v.scrollLeft=pos;
+          }
+        }
+      }
+      requestAnimationFrame(tick);
+    };
+    var pause=function(){paused=true;clearTimeout(rs)};
+    var resume=function(){clearTimeout(rs);rs=setTimeout(function(){pos=v.scrollLeft;paused=false},2000)};
+    v.addEventListener('pointerenter',pause);v.addEventListener('pointerleave',resume);
+    v.addEventListener('focusin',pause);v.addEventListener('focusout',resume);
+    v.addEventListener('touchstart',pause,{passive:true});v.addEventListener('touchend',resume,{passive:true});
+    v.addEventListener('wheel',function(){pause();resume()},{passive:true});
+    if('IntersectionObserver' in window){new IntersectionObserver(function(es){vis=es[0].isIntersecting},{threshold:.01}).observe(v)}
+    requestAnimationFrame(tick);
+  }
+
+  /* Carrusel 3D de privacidad */
+  var st=document.getElementById('pv3s'),ring=document.getElementById('pv3r');
+  if(st&&ring){
+    var cards=[].slice.call(ring.children),n=cards.length,step=360/n,ang=0,R=0;
+    var dots=[].slice.call(document.querySelectorAll('#pv3d button'));
+    var cur=function(){return((Math.round(ang/step)%n)+n)%n};
+    var apply=function(){
+      ring.style.transform='translateZ('+(-R)+'px) rotateY('+(-ang)+'deg)';
+      var c=cur();
+      cards.forEach(function(el,i){
+        var on=i===c;
+        el.classList.toggle('on',on);
+        el.setAttribute('aria-hidden',on?'false':'true');
+        [].forEach.call(el.querySelectorAll('a'),function(a){a.tabIndex=on?0:-1});
+      });
+      dots.forEach(function(d,i){d.setAttribute('aria-current',i===c?'true':'false')});
+    };
+    var layout=function(){
+      var w=cards[0].offsetWidth||300;
+      R=Math.round((w/2)/Math.tan(Math.PI/n))+16;
+      cards.forEach(function(el,i){el.style.transform='rotateY('+(i*step)+'deg) translateZ('+R+'px)'});
+      apply();
+    };
+    var go=function(k){ang=k*step;apply()};
+    var base=function(){return Math.round(ang/step)};
+    document.getElementById('pv3p').addEventListener('click',function(){go(base()-1)});
+    document.getElementById('pv3n').addEventListener('click',function(){go(base()+1)});
+    dots.forEach(function(d,i){d.addEventListener('click',function(){var diff=((i-cur())%n+n)%n;if(diff>n/2)diff-=n;go(base()+diff)})});
+    st.addEventListener('keydown',function(e){if(e.key==='ArrowLeft'){e.preventDefault();go(base()-1)}else if(e.key==='ArrowRight'){e.preventDefault();go(base()+1)}});
+    var dr=false,x0=0,a0=0,moved=0;
+    st.addEventListener('pointerdown',function(e){if(e.button>0)return;dr=true;x0=e.clientX;a0=ang;moved=0;st.classList.add('dr')});
+    window.addEventListener('pointermove',function(e){if(!dr)return;var dx=e.clientX-x0;moved=Math.max(moved,Math.abs(dx));ang=a0-dx*.5;apply()});
+    var end=function(){
+      if(!dr)return;dr=false;st.classList.remove('dr');
+      var k=Math.round(ang/step),k0=Math.round(a0/step);
+      if(k===k0&&moved>36)k+=(ang>a0)?1:-1;
+      go(k);
+    };
+    window.addEventListener('pointerup',end);window.addEventListener('pointercancel',end);
+    st.addEventListener('click',function(e){if(moved>6){e.preventDefault();e.stopPropagation()}},true);
+    window.addEventListener('resize',layout);
+    window.addEventListener('load',layout);
+    layout();
   }
 })();
 </script>
