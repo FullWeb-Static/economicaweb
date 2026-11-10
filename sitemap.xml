@@ -3,7 +3,7 @@
     <!-- 1. Página Principal (Comercial) -->
     <url>
         <loc>https://economicaweb.cl/</loc>
-        <lastmod>2026-11-09</lastmod>
+        <lastmod>2026-11-10</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -24,7 +24,7 @@
     <!-- 4. Soporte TI Web (detalle de los planes) -->
     <url>
         <loc>https://economicaweb.cl/soporte-ti</loc>
-        <lastmod>2026-11-09</lastmod>
+        <lastmod>2026-11-10</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -66,15 +66,22 @@
     <!-- 10. Tickets de soporte -->
     <url>
         <loc>https://economicaweb.cl/tickets</loc>
-        <lastmod>2026-11-09</lastmod>
+        <lastmod>2026-11-10</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
     <!-- 11. Portal de Renovación -->
     <url>
         <loc>https://economicaweb.cl/portal-renovacion</loc>
-        <lastmod>2026-11-09</lastmod>
+        <lastmod>2026-11-10</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
+    </url>
+    <!-- 12. ADN e-WEB (manifiesto) -->
+    <url>
+        <loc>https://economicaweb.cl/adn</loc>
+        <lastmod>2026-11-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
     </url>
 </urlset>
