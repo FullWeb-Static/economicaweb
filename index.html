@@ -243,7 +243,7 @@ a{color:inherit}
 .logo{font-weight:800;font-size:1.3rem;letter-spacing:-.02em}.logo span{color:var(--a)}
 .nav-r{display:flex;gap:10px;align-items:center}
 .menu{display:none;background:#fff;border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:8px 14px;font:inherit;font-size:.9rem;font-weight:600;cursor:pointer}
-@media(max-width:760px){.nav ul{display:none}.menu{display:block}.nav ul.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;gap:18px;padding:22px 5vw 26px;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 12px 24px #0a254014}}
+@media(max-width:1180px){.nav ul{display:none}.menu{display:block}.nav ul.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;gap:18px;padding:22px 5vw 26px;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 12px 24px #0a254014}}
 
 /* Botones */
 .btn{display:inline-block;padding:12px 26px;border-radius:8px;background:var(--a);color:#fff;font-family:inherit;font-weight:600;font-size:1rem;text-decoration:none;border:1px solid var(--a);cursor:pointer;transition:background .25s,border-color .25s}
@@ -628,7 +628,7 @@ footer{background:var(--ink);color:#9fb0c8;text-align:center;padding:40px 5vw;fo
 .menu:before{content:"";position:absolute;inset:0;z-index:-1;transform:translateX(-140%) skewX(-20deg);background:linear-gradient(90deg,transparent,#ffffffcc,transparent);transition:transform .7s ease}
 .menu:hover,.menu:focus-visible{transform:translateY(-3px);box-shadow:0 5px 0 #6f7c8e,0 14px 26px #00000044,0 0 18px #dfe6efaa;filter:saturate(1.05);outline:none}
 .menu:hover:before,.menu:focus-visible:before{transform:translateX(140%) skewX(-20deg)}
-@media(max-width:760px){.nav ul a{padding:8px 0}.nav ul a:after{left:0;right:auto;width:44px;transform-origin:left}.nav ul.open{background:#262d37f2;-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);border-bottom:1px solid #e8b4a066;box-shadow:0 14px 30px #0a254040}}
+@media(max-width:1180px){.nav ul a{padding:8px 0}.nav ul a:after{left:0;right:auto;width:44px;transform-origin:left}.nav ul.open{background:#262d37f2;-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);border-bottom:1px solid #e8b4a066;box-shadow:0 14px 30px #0a254040}}
 
 /* Tarjetas grafito con línea rose gold giratoria */
 .card{position:relative;isolation:isolate;overflow:hidden;background:transparent;border:1px solid #4a5461;border-radius:17px;padding:30px 26px 28px;box-shadow:0 3px 0 #10151b,0 14px 30px #0a254026;transform:translate3d(0,0,0);transition:transform .38s cubic-bezier(.2,.8,.2,1),box-shadow .38s}
@@ -1408,7 +1408,8 @@ section,footer,.hero{overflow-x:clip}
 .qk{position:relative;overflow:hidden;border-radius:18px;padding:14px 16px 14px;background:linear-gradient(160deg,#2d353f 0%,#222931 60%,#1a2027 100%);border:1px solid #e8b4a04d;box-shadow:0 18px 40px #0a254026,inset 0 1px 0 #ffffff1f}
 .qk:before{content:"";position:absolute;left:0;right:0;top:0;height:2px;pointer-events:none;background:linear-gradient(90deg,transparent,#b76e79 16%,#e8b4a0 38%,#fff0e6 50%,#e8b4a0 62%,#b76e79 84%,transparent)}
 .qk-top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 16px;margin-bottom:12px}
-.qk-k{font-size:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#e8b4a0}
+.qk-k{display:inline-flex;align-items:center;gap:9px;font-size:1.35rem;font-weight:800;line-height:1.1;letter-spacing:-.015em;background:linear-gradient(110deg,#c9953d 0%,#f6e2a6 34%,#fff0e6 50%,#e8b4a0 68%,#b76e79 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;filter:drop-shadow(0 2px 12px #00000066)}
+.qk-k b{font-size:1.15rem;-webkit-text-fill-color:initial;filter:drop-shadow(0 0 10px #e8c46e99)}
 .qk-adn{position:relative;overflow:hidden;isolation:isolate;display:inline-flex;align-items:center;gap:9px;max-width:100%;padding:6px 7px 6px 12px;border-radius:999px;text-decoration:none;font-size:.82rem;line-height:1.3;color:#d8e1ee;border:1px solid #e8c46e88;background:linear-gradient(115deg,#ffffff1a,#ffffff08);box-shadow:inset 0 1px 0 #ffffff26;transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s,border-color .3s}
 .qk-adn b{color:#f6e2a6}
 .qk-adn i{flex:none;font-style:normal;font-weight:700;font-size:.76rem;padding:4px 11px;border-radius:999px;color:#142b43;background:linear-gradient(115deg,#fff0bd 0%,#e8c46e 30%,#c9953d 58%,#f2d99b 82%,#d9ad58 100%);box-shadow:0 2px 0 #a66b52,inset 0 1px 0 #ffffff88}
@@ -1482,6 +1483,35 @@ html:not(.js) .pv3-card{position:relative;opacity:1}
 html:not(.js) .pv3-nav,html:not(.js) .pv3-hint{display:none}
 @media(max-width:420px){.pv3-stage{height:330px}.pv3-card{padding:18px 16px 16px;font-size:.86rem}}
 @media(prefers-reduced-motion:reduce){.pv3-ring{transition-duration:.01s}}
+
+/* ===== Resumen rápido v2: tarjetas grandes tipo ADN, flechas y entrada con rebote ===== */
+.qk-wrap{position:relative}
+.js .qk-wrap{opacity:0;animation:qkShow 0s linear 6s forwards}
+.js .qk-wrap.qk-go{animation:qkBounce 1.05s ease-out forwards}
+@keyframes qkShow{to{opacity:1}}
+@keyframes qkBounce{0%{opacity:0;transform:translateX(-130px)}45%{opacity:1;transform:translateX(20px)}62%{transform:translateX(-10px)}78%{transform:translateX(5px)}90%{transform:translateX(-2px)}100%{opacity:1;transform:none}}
+.qk-ar{display:none}
+@media(min-width:1100px){
+.qk-ar{display:grid;place-items:center;position:absolute;top:50%;margin-top:-22px;z-index:3;width:42px;height:44px;padding:0 0 3px;border-radius:12px;border:1px solid #e8b4a0aa;background:linear-gradient(145deg,#3a4350 0%,#222931 100%);color:#f6e2a6;font-size:1.7rem;font-weight:800;line-height:1;cursor:pointer;box-shadow:0 4px 0 #14191f,0 12px 22px #0a254033,inset 0 1px 0 #ffffff33;transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s,border-color .3s,color .3s}
+.qk-ar-l{left:-56px}
+.qk-ar-r{right:-56px}
+.qk-ar:hover,.qk-ar:focus-visible{transform:translateY(-3px);border-color:#e8b4a0;color:#fff0e6;box-shadow:0 7px 0 #14191f,0 16px 26px #0a254044,0 0 20px #e8b4a066,inset 0 1px 0 #ffffff44;outline:none}
+.qk-ar:active{transform:translateY(1px);box-shadow:0 2px 0 #14191f,inset 0 1px 0 #ffffff33}
+}
+.qk-track{align-items:center}
+.qk-sep{flex:none;align-self:center;width:1px;height:130px;margin:0 4px;background:linear-gradient(180deg,transparent,#e8b4a099,transparent)}
+.qk-b{position:relative;overflow:hidden;isolation:isolate;flex:none;display:flex;flex-direction:column;gap:6px;width:300px;min-height:196px;padding:18px 18px 14px;border-radius:16px;text-decoration:none;text-align:left;color:#e9eef5;background:linear-gradient(150deg,#e8b4a024,#ffffff08);border:1.5px solid #e8b4a04d;box-shadow:0 14px 30px #00000040,inset 0 1px 0 #ffffff26;transition:transform .35s cubic-bezier(.2,.8,.2,1),border-color .3s,box-shadow .35s}
+.qk-b:before{content:"";position:absolute;inset:0;z-index:-1;transform:translateX(-140%) skewX(-20deg);background:linear-gradient(90deg,transparent,#ffffff30,transparent);animation:qkShine 7s ease-in-out infinite;animation-delay:calc(var(--i,0)*.9s)}
+.qk-b:hover,.qk-b:focus-visible{transform:translateY(-5px);border-color:#e8b4a0b3;box-shadow:0 22px 40px #00000055,0 0 28px #e8b4a044,inset 0 1px 0 #ffffff33;outline:none}
+.qk-bi{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;font-size:1.2rem;background:linear-gradient(145deg,#e8b4a04d,#b76e7922);border:1px solid #e8b4a066;box-shadow:0 4px 14px #e8b4a033}
+.qk-b h4{margin:2px 0 0;font-size:1.04rem;font-weight:700;line-height:1.25;color:#fff}
+.qk-b p{margin:0 0 8px;font-size:.82rem;line-height:1.5;color:#b9c7dc}
+.qk-b p b{color:#f6e2a6;font-weight:600}
+.qk-bm{display:flex;align-items:center;gap:6px;margin-top:auto;padding-top:10px;border-top:1px dashed #ffffff22;font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#e8b4a0}
+.qk-bm .arw{margin-left:auto;font-size:1.05rem;color:#f6e2a6;transition:transform .3s}
+.qk-b:hover .arw,.qk-b:focus-visible .arw{transform:translateX(4px)}
+@media(max-width:520px){.qk-k{font-size:1.15rem}.qk-b{width:262px;min-height:206px}}
+@media(prefers-reduced-motion:reduce){.qk-b:before{animation:none}.js .qk-wrap{opacity:1;animation:none!important}}
 </style>
 </head>
 <body>
@@ -1501,6 +1531,7 @@ html:not(.js) .pv3-nav,html:not(.js) .pv3-hint{display:none}
     <li><a href="#correo">Correo</a></li>
     <li><a href="#adicionales">Adicionales</a></li>
     <li><a href="#faq">Preguntas</a></li>
+<li><a href="#explora">En detalle</a></li>
   </ul>
   <div class="nav-r">
     <div class="sm" id="sm"><button class="sm-btn" id="smb" type="button" aria-expanded="false" aria-controls="smp" aria-haspopup="true"><span class="sm-long">Saber más</span><span class="sm-short">Más</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button><div class="sm-panel" id="smp" aria-hidden="true"><p class="sm-h">Todas las páginas de e-WEB</p><div class="sm-grid"><a class="sm-i" href="adn.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva" style="--c:linear-gradient(145deg,#f6e2a6,#c9953d)"><span class="sm-ic" aria-hidden="true">🧬</span><span class="sm-t"><b>ADN e-WEB</b><small>Quiénes somos, en resumen</small></span></a><a class="sm-i" href="soporte-ti.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva" style="--c:linear-gradient(145deg,#8fc0ff,#2f6fe0)"><span class="sm-ic" aria-hidden="true">💻</span><span class="sm-t"><b>Soporte TI y planes</b><small>Todo lo que incluye cada plan</small></span></a><a class="sm-i" href="correo-corporativo.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva" style="--c:linear-gradient(145deg,#86e6d6,#16917f)"><span class="sm-ic" aria-hidden="true">📧</span><span class="sm-t"><b>Correo corporativo</b><small>Con tu propio dominio</small></span></a><a class="sm-i" href="landing-one-page.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva" style="--c:linear-gradient(145deg,#f6b9a6,#b76e79)"><span class="sm-ic" aria-hidden="true">🎯</span><span class="sm-t"><b>Landing One-Page</b><small>Tu página en una sola vista</small></span></a><a class="sm-i" href="tickets.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva" style="--c:linear-gradient(145deg,#ffd48f,#e08a2b)"><span class="sm-ic" aria-hidden="true">🎫</span><span class="sm-t"><b>Tickets y compras</b><small>Modificaciones y solicitudes</small></span></a><a class="sm-i" href="portal-renovacion.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva" style="--c:linear-gradient(145deg,#aeeaa8,#2f9e4f)"><span class="sm-ic" aria-hidden="true">🔄</span><span class="sm-t"><b>Portal de renovación</b><small>Renueva o mejora tu plan</small></span></a><a class="sm-i" href="arquitectura-seguridad.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva" style="--c:linear-gradient(145deg,#ffa3ab,#c23a4b)"><span class="sm-ic" aria-hidden="true">🛡️</span><span class="sm-t"><b>Seguridad técnica</b><small>Cómo protegemos tu sitio</small></span></a><a class="sm-i" href="migracion.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva" style="--c:linear-gradient(145deg,#d2bcff,#7a4fd6)"><span class="sm-ic" aria-hidden="true">🚚</span><span class="sm-t"><b>Migración y auditoría</b><small>Trae tu web actual</small></span></a><a class="sm-i" href="nosotros.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva" style="--c:linear-gradient(145deg,#a3dcff,#2a8bd1)"><span class="sm-ic" aria-hidden="true">👥</span><span class="sm-t"><b>Nosotros</b><small>Conócenos y escríbenos</small></span></a><a class="sm-i" href="privacidad.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva" style="--c:linear-gradient(145deg,#e1aebb,#713747)"><span class="sm-ic" aria-hidden="true">📜</span><span class="sm-t"><b>Privacidad · Ley 21.719</b><small>Cómo cuidamos tus datos</small></span></a></div></div></div>
@@ -1536,9 +1567,13 @@ html:not(.js) .pv3-nav,html:not(.js) .pv3-hint{display:none}
 <div class="rg" aria-hidden="true"></div>
 <section class="quick" id="resumen" aria-label="Resumen rápido de e-WEB">
 <div class="wrap">
-<div class="qk reveal">
-<div class="qk-top"><span class="qk-k">Resumen rápido</span><a class="qk-adn" href="adn.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva"><span aria-hidden="true">🧬</span><span>Somos el <b>resumen ágil y didáctico</b> · conoce nuestro ADN</span><i>Danos clic →</i></a></div>
-<div class="qk-view" id="qkv" role="region" aria-label="Accesos rápidos a planes y servicios" tabindex="0"><div class="qk-track"><a class="qk-c" href="#planes" style="--i:0"><span class="qk-ic" aria-hidden="true">🚀</span><span class="qk-t">Plan Basic</span><span class="qk-p"><b>$150.000</b> · 1 página que vende</span><span class="qk-m">¿Quieres saber más? <span aria-hidden="true">→</span></span></a><a class="qk-c" href="#planes" style="--i:1"><span class="qk-ic" aria-hidden="true">⭐</span><span class="qk-t">Plan Medium</span><span class="qk-p"><b>$200.000</b> · hasta 3 páginas</span><span class="qk-m">¿Quieres saber más? <span aria-hidden="true">→</span></span></a><a class="qk-c" href="#planes" style="--i:2"><span class="qk-ic" aria-hidden="true">👑</span><span class="qk-t">Plan High</span><span class="qk-p"><b>$250.000</b> · hasta 5 páginas</span><span class="qk-m">¿Quieres saber más? <span aria-hidden="true">→</span></span></a><a class="qk-c" href="#correo" style="--i:3"><span class="qk-ic" aria-hidden="true">📧</span><span class="qk-t">Correo corporativo</span><span class="qk-p">Con tu propio dominio</span><span class="qk-m">¿Quieres saber más? <span aria-hidden="true">→</span></span></a><a class="qk-c" href="#landing" style="--i:4"><span class="qk-ic" aria-hidden="true">🎯</span><span class="qk-t">Landing One-Page</span><span class="qk-p">Una página, tu formulario</span><span class="qk-m">¿Quieres saber más? <span aria-hidden="true">→</span></span></a><a class="qk-c" href="#adicionales" style="--i:5"><span class="qk-ic" aria-hidden="true">🎫</span><span class="qk-t">Tickets <b>$5.000</b></span><span class="qk-p">Modificaciones al instante</span><span class="qk-m">¿Quieres saber más? <span aria-hidden="true">→</span></span></a><a class="qk-c" href="#adicionales" style="--i:6"><span class="qk-ic" aria-hidden="true">🛒</span><span class="qk-t">Compras extra</span><span class="qk-p">Secciones, correos y enlaces</span><span class="qk-m">¿Quieres saber más? <span aria-hidden="true">→</span></span></a><a class="qk-c" href="soporte-ti.html#comparativa" target="_blank" rel="noopener" title="Se abre en una pestaña nueva" style="--i:7"><span class="qk-ic" aria-hidden="true">📋</span><span class="qk-t">Planes en detalle</span><span class="qk-p">Todo explicado, sin letra chica</span><span class="qk-m">¿Quieres saber más? <span aria-hidden="true">→</span></span></a><a class="qk-c" href="migracion.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva" style="--i:8"><span class="qk-ic" aria-hidden="true">🩺</span><span class="qk-t">Auditoría gratis</span><span class="qk-p">Revisamos tu web actual</span><span class="qk-m">¿Quieres saber más? <span aria-hidden="true">→</span></span></a></div></div>
+<div class="qk-wrap" id="qkw">
+<button class="qk-ar qk-ar-l" id="qkl" type="button" aria-label="Ver tarjetas anteriores"><span aria-hidden="true">‹</span></button>
+<div class="qk">
+<div class="qk-top"><span class="qk-k"><b aria-hidden="true">⚡</b>Resumen rápido</span><a class="qk-adn" href="adn.html" target="_blank" rel="noopener" title="Se abre en una pestaña nueva"><span aria-hidden="true">🧬</span><span>Somos el <b>resumen ágil y didáctico</b> · conoce nuestro ADN</span><i>Danos clic →</i></a></div>
+<div class="qk-view" id="qkv" role="region" aria-label="Accesos rápidos a servicios y planes" tabindex="0"><div class="qk-track"><a class="qk-b" href="#correo" style="--i:0"><span class="qk-bi" aria-hidden="true">📧</span><h4>Solo Correo Corporativo</h4><p>Si solo quieres verte profesional con tu propio dominio y <b>no usar un arroba de Gmail u Outlook</b> para contactar a tus clientes.</p><span class="qk-bm">¿Quieres saber más?<span class="arw" aria-hidden="true">→</span></span></a><a class="qk-b" href="#landing" style="--i:1"><span class="qk-bi" aria-hidden="true">🎯</span><h4>Landing One-Page</h4><p>Si solo quieres una página rápida con <b>bóveda de formulario</b> y pie de firma. Le mandas el link al cliente, él rellena los datos y a ti te llegan ordenados.</p><span class="qk-bm">¿Quieres saber más?<span class="arw" aria-hidden="true">→</span></span></a><a class="qk-b" href="#planes" style="--i:2"><span class="qk-bi" aria-hidden="true">💻</span><h4>Planes Web (Basic · Medium · High)</h4><p>Si necesitas un plan completo con <b>bóveda, correo corporativo, imágenes, movimiento y pie de firma</b>. Aquí está el nivel 1, 2 y 3.</p><span class="qk-bm">¿Quieres saber más?<span class="arw" aria-hidden="true">→</span></span></a><a class="qk-b" href="migracion.html#form" target="_blank" rel="noopener" title="Se abre en una pestaña nueva" style="--i:3"><span class="qk-bi" aria-hidden="true">🩺</span><h4>Migración + Auditoría</h4><p>Si ya tienes una página (en WordPress, Wix o donde sea) y quieres una <b>auditoría gratuita y rápida</b> para saber si está bien integrada o hay que migrarla.</p><span class="qk-bm">¿Quieres saber más?<span class="arw" aria-hidden="true">→</span></span></a><a class="qk-b" href="#adicionales" style="--i:4"><span class="qk-bi" aria-hidden="true">🎫</span><h4>Tickets de Soporte</h4><p>Si quieres saber cómo funcionan los tickets, o <b>comprar más</b> cuando se te acaben los del mes. El plus que casi nadie ofrece.</p><span class="qk-bm">¿Quieres saber más?<span class="arw" aria-hidden="true">→</span></span></a><a class="qk-b" href="#adicionales" style="--i:5"><span class="qk-bi" aria-hidden="true">🛒</span><h4>Solicitudes Adicionales</h4><p>Si necesitas <b>comprar secciones nuevas, más correos, más gigas, más bóvedas, una página extra o acelerar tu proyecto</b>. Todo con precio a la vista.</p><span class="qk-bm">¿Quieres saber más?<span class="arw" aria-hidden="true">→</span></span></a><span class="qk-sep" aria-hidden="true"></span><a class="qk-c" href="#planes" style="--i:0"><span class="qk-ic" aria-hidden="true">🚀</span><span class="qk-t">Plan Basic</span><span class="qk-p"><b>$150.000</b> · 1 página que vende</span><span class="qk-m">¿Quieres saber más? <span aria-hidden="true">→</span></span></a><a class="qk-c" href="#planes" style="--i:1"><span class="qk-ic" aria-hidden="true">⭐</span><span class="qk-t">Plan Medium</span><span class="qk-p"><b>$200.000</b> · hasta 3 páginas</span><span class="qk-m">¿Quieres saber más? <span aria-hidden="true">→</span></span></a><a class="qk-c" href="#planes" style="--i:2"><span class="qk-ic" aria-hidden="true">👑</span><span class="qk-t">Plan High</span><span class="qk-p"><b>$250.000</b> · hasta 5 páginas</span><span class="qk-m">¿Quieres saber más? <span aria-hidden="true">→</span></span></a><a class="qk-c" href="#correo" style="--i:3"><span class="qk-ic" aria-hidden="true">📧</span><span class="qk-t">Correo corporativo</span><span class="qk-p"><b>Desde $45.000</b> · tu dominio, sin @gmail</span><span class="qk-m">¿Quieres saber más? <span aria-hidden="true">→</span></span></a><a class="qk-c" href="#landing" style="--i:4"><span class="qk-ic" aria-hidden="true">🎯</span><span class="qk-t">Landing One-Page</span><span class="qk-p">Bóveda + correo económico · <b>$65.000</b></span><span class="qk-m">¿Quieres saber más? <span aria-hidden="true">→</span></span></a><a class="qk-c" href="#adicionales" style="--i:5"><span class="qk-ic" aria-hidden="true">🎫</span><span class="qk-t">Tickets <b>$5.000</b></span><span class="qk-p">Modificaciones al instante</span><span class="qk-m">¿Quieres saber más? <span aria-hidden="true">→</span></span></a><a class="qk-c" href="#adicionales" style="--i:6"><span class="qk-ic" aria-hidden="true">🛒</span><span class="qk-t">Compras extra</span><span class="qk-p">Secciones, correos y enlaces</span><span class="qk-m">¿Quieres saber más? <span aria-hidden="true">→</span></span></a></div></div>
+</div>
+<button class="qk-ar qk-ar-r" id="qkr" type="button" aria-label="Ver más tarjetas"><span aria-hidden="true">›</span></button>
 </div>
 </div>
 </section>
@@ -2379,16 +2414,21 @@ document.getElementById('y').textContent=new Date().getFullYear();
     if(mb)mb.addEventListener('click',function(){setO(false)});
   }
 
-  /* Carrusel de resumen: avanza de derecha a izquierda y vuelve; se pausa al tocarlo */
-  var v=document.getElementById('qkv');
+  /* Carrusel de resumen: avanza de derecha a izquierda y vuelve; flechas en escritorio; entrada con rebote */
+  var v=document.getElementById('qkv'),qw=document.getElementById('qkw');
   if(v){
     var rm=window.matchMedia&&matchMedia('(prefers-reduced-motion:reduce)').matches;
-    var pos=0,dir=1,paused=false,hold=1.2,last=0,speed=34,vis=true,rs=0;
+    var pos=0,dir=1,paused=false,hold=1.2,last=0,speed=34,vis=true,rs=0,anim=null;
     var mx=function(){return v.scrollWidth-v.clientWidth};
+    var ease=function(k){return 1-Math.pow(1-k,3)};
     var tick=function(t){
       if(!last)last=t;
       var dt=Math.min(.05,(t-last)/1000);last=t;
-      if(vis&&!paused&&!rm&&!document.hidden){
+      if(anim){
+        anim.t+=dt;var k=Math.min(1,anim.t/anim.d);
+        pos=anim.a+(anim.b-anim.a)*ease(k);v.scrollLeft=pos;
+        if(k>=1){anim=null;hold=.9}
+      }else if(vis&&!paused&&!rm&&!document.hidden){
         var m=mx();
         if(m>4){
           if(hold>0){hold-=dt}
@@ -2402,6 +2442,15 @@ document.getElementById('y').textContent=new Date().getFullYear();
       }
       requestAnimationFrame(tick);
     };
+    var nudge=function(sign){
+      var m=mx();if(m<=4)return;
+      var step=Math.round(Math.min(340,v.clientWidth*.6)),from=v.scrollLeft;
+      var to=Math.max(0,Math.min(m,from+sign*step));
+      pos=from;dir=sign>0?1:-1;anim={a:from,b:to,t:0,d:rm?.01:.5};
+    };
+    var bl=document.getElementById('qkl'),br=document.getElementById('qkr');
+    if(bl)bl.addEventListener('click',function(){nudge(-1)});
+    if(br)br.addEventListener('click',function(){nudge(1)});
     var pause=function(){paused=true;clearTimeout(rs)};
     var resume=function(){clearTimeout(rs);rs=setTimeout(function(){pos=v.scrollLeft;paused=false},2000)};
     v.addEventListener('pointerenter',pause);v.addEventListener('pointerleave',resume);
@@ -2409,6 +2458,10 @@ document.getElementById('y').textContent=new Date().getFullYear();
     v.addEventListener('touchstart',pause,{passive:true});v.addEventListener('touchend',resume,{passive:true});
     v.addEventListener('wheel',function(){pause();resume()},{passive:true});
     if('IntersectionObserver' in window){new IntersectionObserver(function(es){vis=es[0].isIntersecting},{threshold:.01}).observe(v)}
+    if(qw){
+      var go=function(){qw.classList.add('qk-go')};
+      if('IntersectionObserver' in window){var io2=new IntersectionObserver(function(es){if(es[0].isIntersecting){go();io2.disconnect()}},{threshold:.15});io2.observe(qw)}else{go()}
+    }
     requestAnimationFrame(tick);
   }
 
