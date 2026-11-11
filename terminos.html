@@ -3,78 +3,130 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <title>Términos y Condiciones | AyudaPlan</title>
+    <title>Términos y Condiciones | e-WEB</title>
+    <meta name="description" content="Términos y condiciones de uso de los servicios de desarrollo web de e-WEB.">
+    <meta name="robots" content="noindex, follow">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
     <style>
+        :root {
+            --ink: #0a2540;
+            --txt: #33475b;
+            --mut: #6b7c93;
+            --a: #0b5cff;
+            --gold: #d4af37;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
         body { 
-            background-color: #0f2b48; 
+            background-color: var(--ink); 
             color: #ffffff; 
-            font-family: system-ui, -apple-system, sans-serif; 
-            padding: 40px 20px; 
+            font-family: 'Inter', system-ui, -apple-system, sans-serif; 
+            padding: 60px 20px; 
             line-height: 1.7; 
-            max-width: 750px; 
-            margin: 0 auto; 
+            -webkit-font-smoothing: antialiased;
         }
+
         .container {
-            background-color: #0a1f33;
-            padding: 40px;
+            background-color: #ffffff;
+            color: var(--txt);
+            padding: 50px;
             border-radius: 16px;
-            border: 1px solid rgba(212, 175, 55, 0.3);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            border: 1px solid #dfe6ee;
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
         }
-        h1 { 
-            color: #e5c76b; 
-            font-size: 26px;
-            border-bottom: 1px solid rgba(212, 175, 55, 0.2); 
-            padding-bottom: 15px; 
-            margin-top: 0;
-        }
-        h2 { 
-            color: #ffffff; 
-            font-size: 18px;
-            margin-top: 30px; 
-            margin-bottom: 10px;
-            border-left: 3px solid #b76e79;
-            padding-left: 10px;
-        }
-        p, li { color: #cbd5e1; font-size: 15px; }
-        .btn-volver { 
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--ink);
+            text-decoration: none;
             display: inline-block;
+            margin-bottom: 30px;
+            letter-spacing: -0.03em;
+        }
+        .logo span { color: var(--a); }
+
+        h1 { 
+            color: var(--ink); 
+            font-size: clamp(1.8rem, 4vw, 2.2rem);
+            border-bottom: 2px solid var(--a); 
+            padding-bottom: 15px; 
+            margin-bottom: 30px;
+            line-height: 1.2;
+        }
+
+        h2 { 
+            color: var(--ink); 
+            font-size: 1.25rem;
+            margin-top: 35px; 
+            margin-bottom: 12px;
+            border-left: 4px solid var(--gold);
+            padding-left: 12px;
+        }
+
+        p, li { color: var(--mut); font-size: 1rem; margin-bottom: 15px; }
+        ul { padding-left: 20px; margin-bottom: 20px; }
+        li::marker { color: var(--a); }
+        strong { color: var(--ink); font-weight: 600; }
+
+        .btn-volver { 
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
             margin-top: 40px;
-            color: #0f2b48; 
-            background-color: #e5c76b;
-            padding: 10px 20px;
+            color: #ffffff; 
+            background-color: var(--a);
+            padding: 12px 24px;
             border-radius: 8px;
             text-decoration: none; 
-            font-size: 15px;
-            font-weight: 700;
-            transition: all 0.2s;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: background-color 0.2s, transform 0.2s;
         }
-        .btn-volver:hover { background-color: #d4af37; transform: translateY(-2px); }
+        .btn-volver:hover { background-color: #0847c4; transform: translateY(-2px); }
+
+        @media (max-width: 600px) {
+            .container { padding: 30px 20px; }
+        }
     </style>
 </head>
 <body>
 
     <div class="container">
+        <a href="https://economicaweb.cl" class="logo">e-<span>WEB</span></a>
+
         <h1>TÉRMINOS Y CONDICIONES DE USO</h1>
         <p><strong>Última actualización:</strong> Noviembre 2026</p>
-        <p>El acceso y uso de este sitio web atribuye la condición de usuario e implica la aceptación plena y sin reservas de todas las disposiciones incluidas en estos Términos y Condiciones.</p>
+        <p>El acceso y uso de este sitio web (economicaweb.cl) atribuye la condición de usuario e implica la aceptación plena y sin reservas de todas las disposiciones incluidas en estos Términos y Condiciones.</p>
         
         <h2>1. Propiedad Intelectual (Ley N° 17.336)</h2>
-        <p>Todo el contenido de este sitio web, incluyendo, pero no limitado a: textos, diseño gráfico, código fuente (HTML, CSS, JavaScript), logotipos, imágenes y estructura de navegación, es propiedad exclusiva de <strong>AyudaPlan</strong> (o <strong>e-WEB</strong>) y está protegido por las leyes de propiedad intelectual de Chile. Queda estrictamente prohibida la reproducción, distribución, modificación o uso comercial no autorizado de cualquier parte de este sitio.</p>
+        <p>Todo el contenido de este sitio web, incluyendo, pero no limitado a: textos, diseño gráfico, código fuente (HTML, CSS, JavaScript), logotipos, imágenes y estructura de navegación, es propiedad exclusiva de <strong>e-WEB</strong> y está protegido por las leyes de propiedad intelectual de Chile. Queda estrictamente prohibida la reproducción, distribución, modificación o uso comercial no autorizado de cualquier parte de este sitio o de los sitios desarrollados por la agencia.</p>
         
-        <h2>2. Uso del Sitio</h2>
-        <p>El usuario se compromete a utilizar el sitio web de conformidad con la ley, la moral, el orden público y los presentes Términos. Queda prohibido el uso del sitio con fines ilícitos o que puedan dañar los intereses de terceros.</p>
+        <h2>2. Servicios de Desarrollo Web</h2>
+        <p>e-WEB ofrece servicios de diseño, desarrollo y mantención de páginas web. Los plazos, entregables y condiciones específicas de cada proyecto se detallarán en la cotización formal enviada al cliente. El código fuente de los proyectos desarrollados se entrega bajo los términos acordados en dicha cotización.</p>
+
+        <h2>3. Uso del Sitio</h2>
+        <p>El usuario se compromete a utilizar el sitio web de conformidad con la ley, la moral, el orden público y los presentes Términos. Queda prohibido el uso del sitio con fines ilícitos o que puedan dañar los intereses de terceros o de la agencia.</p>
         
-        <h2>3. Protección de Datos Personales</h2>
-        <p>El tratamiento de los datos personales proporcionados a través de nuestros formularios se rige por nuestra Política de Privacidad, en cumplimiento de la Ley N° 21.719.</p>
+        <h2>4. Protección de Datos Personales</h2>
+        <p>El tratamiento de los datos personales proporcionados a través de nuestros formularios de cotización se rige por nuestra Política de Privacidad, en cumplimiento de la Ley N° 21.719.</p>
         
-        <h2>4. Exclusión de Responsabilidad</h2>
-        <p>La información proporcionada en este sitio tiene carácter informativo. No nos hacemos responsables de las decisiones tomadas por los usuarios basándose únicamente en el contenido de la web.</p>
+        <h2>5. Exclusión de Responsabilidad</h2>
+        <p>La información proporcionada en este sitio tiene carácter informativo. e-WEB no se hace responsable de las decisiones tomadas por los usuarios basándose únicamente en el contenido del sitio, ni de las interrupciones técnicas ajenas a su control.</p>
         
-        <h2>5. Legislación Aplicable</h2>
+        <h2>6. Legislación Aplicable</h2>
         <p>Estos términos se rigen por la legislación chilena. Cualquier controversia será sometida a la jurisdicción de los Tribunales Ordinarios de Justicia de Santiago de Chile.</p>
 
-        <a href="/" class="btn-volver">← Volver al sitio principal</a>
+        <a href="https://economicaweb.cl" class="btn-volver">
+            ← Volver a e-WEB
+        </a>
     </div>
 
 </body>
