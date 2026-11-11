@@ -84,4 +84,11 @@
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
+    <!-- 13. Portafolio (Paginas Webs Clientes) -->
+    <url>
+        <loc>https://economicaweb.cl/portafolio</loc>
+        <lastmod>2026-11-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
 </urlset>
