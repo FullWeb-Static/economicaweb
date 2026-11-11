@@ -9,84 +9,84 @@
     </url>
     <!-- 2. Página Secundaria de Privacidad (Ley N° 21.719) -->
     <url>
-        <loc>https://economicaweb.cl/privacidad</loc>
+        <loc>https://economicaweb.cl/privacidad.html</loc>
         <lastmod>2026-11-06</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
     </url>
     <!-- 3. Página Secundaria de Éxito (Gracias por Cotizar) -->
     <url>
-        <loc>https://economicaweb.cl/gracias</loc>
+        <loc>https://economicaweb.cl/gracias.html</loc>
         <lastmod>2026-11-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
     <!-- 4. Soporte TI Web (detalle de los planes) -->
     <url>
-        <loc>https://economicaweb.cl/soporte-ti</loc>
+        <loc>https://economicaweb.cl/soporte-ti.html</loc>
         <lastmod>2026-11-10</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <!-- 5. Correo Corporativo -->
     <url>
-        <loc>https://economicaweb.cl/correo-corporativo</loc>
+        <loc>https://economicaweb.cl/correo-corporativo.html</loc>
         <lastmod>2026-11-09</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <!-- 6. Landing One-Page -->
     <url>
-        <loc>https://economicaweb.cl/landing-one-page</loc>
+        <loc>https://economicaweb.cl/landing-one-page.html</loc>
         <lastmod>2026-11-09</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <!-- 7. Arquitectura y Seguridad -->
     <url>
-        <loc>https://economicaweb.cl/arquitectura-seguridad</loc>
+        <loc>https://economicaweb.cl/arquitectura-seguridad.html</loc>
         <lastmod>2026-11-09</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
     <!-- 8. Migración de sitios web -->
     <url>
-        <loc>https://economicaweb.cl/migracion</loc>
+        <loc>https://economicaweb.cl/migracion.html</loc>
         <lastmod>2026-11-09</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
     <!-- 9. Nosotros -->
     <url>
-        <loc>https://economicaweb.cl/nosotros</loc>
+        <loc>https://economicaweb.cl/nosotros.html</loc>
         <lastmod>2026-11-09</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
     <!-- 10. Tickets de soporte -->
     <url>
-        <loc>https://economicaweb.cl/tickets</loc>
+        <loc>https://economicaweb.cl/tickets.html</loc>
         <lastmod>2026-11-10</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
     <!-- 11. Portal de Renovación -->
     <url>
-        <loc>https://economicaweb.cl/portal-renovacion</loc>
+        <loc>https://economicaweb.cl/portal-renovacion.html</loc>
         <lastmod>2026-11-10</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
     <!-- 12. ADN e-WEB (manifiesto) -->
     <url>
-        <loc>https://economicaweb.cl/adn</loc>
+        <loc>https://economicaweb.cl/adn.html</loc>
         <lastmod>2026-11-10</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <!-- 13. Portafolio (Paginas Webs Clientes) -->
     <url>
-        <loc>https://economicaweb.cl/portafolio</loc>
+        <loc>https://economicaweb.cl/portafolio.html</loc>
         <lastmod>2026-11-10</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
