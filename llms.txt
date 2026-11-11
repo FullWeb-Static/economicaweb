@@ -1,0 +1,18 @@
+# e-WEB
+
+> e-WEB es una agencia chilena de desarrollo web de élite, especializada en landing pages, sitios corporativos y tiendas online estáticas. Ofrecemos integración con correos corporativos, bóvedas de formularios seguras y optimización avanzada para SEO e Inteligencias Artificiales.
+
+## Servicios principales
+- Landing pages: Sitios de una sola página enfocados en conversión.
+- Sitios corporativos: Web de múltiples páginas para empresas.
+- Correos corporativos: Dominios y casillas de correo seguras.
+- Integración SEO e IA: Implementación de Schema JSON-LD y LLMs.txt.
+- Mantención y soporte: Gestión de tickets mensuales.
+
+## Enlaces importantes
+- [Sitio Principal](https://economicaweb.cl)
+- [Ejemplo de Portafolio: AyudaPlan](https://ayudaplan.cl)
+
+## Contacto
+- Email: contacto@economicaweb.cl
+- WhatsApp: +56922133902
