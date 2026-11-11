@@ -2437,6 +2437,8 @@ document.getElementById('y').textContent=new Date().getFullYear();
     if(mb)mb.addEventListener('click',function(){setO(false)});
   }
 
+})();
+(function(){
   /* Carrusel de resumen: avanza de derecha a izquierda y vuelve; flechas en escritorio; entrada con rebote */
   var v=document.getElementById('qkv'),qw=document.getElementById('qkw');
   if(v){
@@ -2482,12 +2484,14 @@ document.getElementById('y').textContent=new Date().getFullYear();
     v.addEventListener('wheel',function(){pause();resume()},{passive:true});
     if('IntersectionObserver' in window){new IntersectionObserver(function(es){vis=es[0].isIntersecting},{threshold:.01}).observe(v)}
     if(qw){
-      var go=function(){qw.classList.add('qk-go')};
-      if('IntersectionObserver' in window){var io2=new IntersectionObserver(function(es){if(es[0].isIntersecting){go();io2.disconnect()}},{threshold:.15});io2.observe(qw)}else{go()}
+      var qkEnter=function(){qw.classList.add('qk-go')};
+      if('IntersectionObserver' in window){var io2=new IntersectionObserver(function(es){if(es[0].isIntersecting){qkEnter();io2.disconnect()}},{threshold:.15});io2.observe(qw)}else{qkEnter()}
     }
     requestAnimationFrame(tick);
   }
 
+})();
+(function(){
   /* Carrusel 360 de privacidad (posiciones calculadas una a una: sin 3D anidado) */
   var st=document.getElementById('pv3s'),root=document.getElementById('pv3');
   if(st&&root){
@@ -2520,6 +2524,7 @@ document.getElementById('y').textContent=new Date().getFullYear();
         for(var m=0;m<dots.length;m++)dots[m].setAttribute('aria-current',m===c?'true':'false');
       };
       var go=function(target){
+        if(typeof target!=='number'||!isFinite(target))return;
         cancelAnimationFrame(raf);
         var a=p,b=target,t0=null,dur=rmo?1:Math.min(650,220+Math.abs(b-a)*260);
         var stp=function(ts){
