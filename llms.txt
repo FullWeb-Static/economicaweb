@@ -1,18 +1,19 @@
-# e-WEB
+# e-WEB — Portafolio de Desarrollo Web
 
-> e-WEB es una agencia chilena de desarrollo web de élite, especializada en landing pages, sitios corporativos y tiendas online estáticas. Ofrecemos integración con correos corporativos, bóvedas de formularios seguras y optimización avanzada para SEO e Inteligencias Artificiales.
+> Portafolio de proyectos de e-WEB, agencia de desarrollo web en Santiago, Chile. Especialistas en landing pages, sitios corporativos y tiendas online estáticas con optimización SEO e IA.
 
-## Servicios principales
-- Landing pages: Sitios de una sola página enfocados en conversión.
-- Sitios corporativos: Web de múltiples páginas para empresas.
-- Correos corporativos: Dominios y casillas de correo seguras.
-- Integración SEO e IA: Implementación de Schema JSON-LD y LLMs.txt.
-- Mantención y soporte: Gestión de tickets mensuales.
+## Proyectos destacados
+- [AyudaPlan — Asesoría Previsional](https://ayudaplan.cl): Desarrollo web completo con calculadora, formulario y optimización para IA.
+- [Proyecto Corporativo de Ejemplo](https://economicaweb.cl/ejemplo-2): Sitio web de múltiples páginas con diseño a medida.
+- [Landing Page de Conversión de Ejemplo](https://economicaweb.cl/ejemplo-3): Landing page enfocada en conversión.
 
-## Enlaces importantes
-- [Sitio Principal](https://economicaweb.cl)
-- [Ejemplo de Portafolio: AyudaPlan](https://ayudaplan.cl)
+## Servicios
+- Diseño y desarrollo web a medida.
+- Landing pages de alta conversión.
+- Sitios corporativos y tiendas online básicas.
+- Optimización SEO y Schema JSON-LD para IA.
 
 ## Contacto
 - Email: contacto@economicaweb.cl
 - WhatsApp: +56922133902
+- Web: https://economicaweb.cl
