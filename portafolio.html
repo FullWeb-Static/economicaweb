@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Portafolio | e-WEB — Agencia de Desarrollo Web en Santiago, Chile</title>
 
-<link rel="canonical" href="https://economicaweb.cl/portafolio.html">
+<link rel="canonical" href="https://economicaweb.cl/portafolio">
 <meta property="og:title" content="Portafolio | e-WEB — Agencia de Desarrollo Web en Santiago, Chile">
 <meta property="og:description" content="Explora los proyectos de desarrollo web, landing pages y sitios corporativos de e-WEB. Diseño web a medida y optimización SEO en Chile.">
-<meta property="og:url" content="https://economicaweb.cl/portafolio.html">
+<meta property="og:url" content="https://economicaweb.cl/portafolio">
 <meta property="og:image" content="https://economicaweb.cl/imagen-redes.jpg">
 <meta property="og:image:secure_url" content="https://economicaweb.cl/imagen-redes.jpg">
 <meta property="og:image:type" content="image/jpeg">
@@ -26,106 +26,51 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-<!-- ============================================================
-     SCHEMA JSON-LD PARA PORTAFOLIO (GEO / AEO)
-     ============================================================ -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
+      "@type": "ProfessionalService",
       "@id": "https://economicaweb.cl/#organization",
       "name": "e-WEB",
-      "url": "https://economicaweb.cl/",
-      "logo": "https://economicaweb.cl/favicon.png",
-      "description": "Agencia de desarrollo web en Santiago, Chile. Especialistas en landing pages, sitios corporativos y tiendas online estáticas con SEO e IA.",
-      "telephone": "+56922133902",
-      "email": "contacto@economicaweb.cl",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Santiago",
-        "addressCountry": "CL"
-      },
-      "areaServed": {
-        "@type": "Country",
-        "name": "Chile"
-      },
-      "sameAs": [
-        "https://www.instagram.com/economicaweb",
-        "https://www.linkedin.com/company/economicaweb"
-      ]
+      "url": "https://economicaweb.cl/"
     },
     {
       "@type": "WebSite",
       "@id": "https://economicaweb.cl/#website",
       "url": "https://economicaweb.cl/",
       "name": "e-WEB",
-      "publisher": {
-        "@id": "https://economicaweb.cl/#organization"
-      },
+      "publisher": { "@id": "https://economicaweb.cl/#organization" },
       "inLanguage": "es-CL"
     },
     {
       "@type": "CollectionPage",
-      "@id": "https://economicaweb.cl/portafolio.html#page",
-      "url": "https://economicaweb.cl/portafolio.html",
+      "@id": "https://economicaweb.cl/portafolio#page",
+      "url": "https://economicaweb.cl/portafolio",
       "name": "Portafolio de Proyectos | e-WEB",
-      "description": "Casos de éxito y proyectos de desarrollo web, diseño a medida y optimización SEO realizados por e-WEB en Chile.",
-      "isPartOf": {
-        "@id": "https://economicaweb.cl/#website"
-      },
-      "about": {
-        "@id": "https://economicaweb.cl/#organization"
-      }
+      "description": "Proyectos de desarrollo web, diseño a medida y optimización SEO realizados por e-WEB en Chile.",
+      "inLanguage": "es-CL",
+      "isPartOf": { "@id": "https://economicaweb.cl/#website" },
+      "about": { "@id": "https://economicaweb.cl/#organization" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://economicaweb.cl/" },
+        { "@type": "ListItem", "position": 2, "name": "Portafolio", "item": "https://economicaweb.cl/portafolio" }
+      ]
     },
     {
       "@type": "CreativeWork",
-      "@id": "https://economicaweb.cl/portafolio.html#proyecto-ayudaplan",
+      "@id": "https://economicaweb.cl/portafolio#proyecto-ayudaplan",
       "name": "AyudaPlan — Asesoría Previsional de Élite",
       "description": "Desarrollo web completo para consultoría previsional en Chile. Incluye diseño responsivo, animaciones 3D, calculadora de 7% legal, formulario con Web3Forms, optimización SEO y Schema JSON-LD para IA.",
       "url": "https://ayudaplan.cl",
       "image": "https://ayudaplan.cl/imagen-redes.jpg",
-      "author": {
-        "@id": "https://economicaweb.cl/#organization"
-      },
-      "about": {
-        "@type": "Thing",
-        "name": "Asesoría de Isapres y Salud"
-      },
+      "author": { "@id": "https://economicaweb.cl/#organization" },
+      "about": { "@type": "Thing", "name": "Asesoría de Isapres y Salud" },
       "dateCreated": "2026-01-15"
-    },
-    {
-      "@type": "CreativeWork",
-      "@id": "https://economicaweb.cl/portafolio.html#proyecto-ejemplo-2",
-      "name": "Sitio Corporativo — Proyecto de Ejemplo",
-      "description": "Desarrollo de sitio web corporativo con múltiples páginas, optimización de velocidad y SEO local en Santiago.",
-      "url": "https://economicaweb.cl/ejemplo-2",
-      "image": "https://economicaweb.cl/imagen-redes.jpg",
-      "author": {
-        "@id": "https://economicaweb.cl/#organization"
-      },
-      "about": {
-        "@type": "Thing",
-        "name": "Sitio Web Corporativo"
-      },
-      "dateCreated": "2026-02-20"
-    },
-    {
-      "@type": "CreativeWork",
-      "@id": "https://economicaweb.cl/portafolio.html#proyecto-ejemplo-3",
-      "name": "Landing Page de Conversión — Proyecto de Ejemplo",
-      "description": "Diseño de landing page enfocada en la conversión, con integración de pagos y formularios optimizados.",
-      "url": "https://economicaweb.cl/ejemplo-3",
-      "image": "https://economicaweb.cl/imagen-redes.jpg",
-      "author": {
-        "@id": "https://economicaweb.cl/#organization"
-      },
-      "about": {
-        "@type": "Thing",
-        "name": "Landing Page de Conversión"
-      },
-      "dateCreated": "2026-03-10"
     }
   ]
 }
@@ -142,6 +87,7 @@
   --a:#0b5cff;
   --gold:#d4af37;
   --gold-light:#e5c76b;
+  --nav:73px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 body{font:16px/1.65 'Inter', system-ui, sans-serif; color:var(--txt); background:#fff; -webkit-font-smoothing:antialiased;}
@@ -181,6 +127,37 @@ body{font:16px/1.65 'Inter', system-ui, sans-serif; color:var(--txt); background
   .portfolio-grid { grid-template-columns: 1fr; }
   .hero { padding: 60px 0 40px; }
 }
+
+/* ===== Aviso: WhatsApp solo para consultas rápidas (cae desde arriba) ===== */
+.wabn{display:none;position:fixed;left:0;right:0;top:var(--nav,68px);z-index:19;pointer-events:none}
+.wabn.ready{display:block}
+.wabn.gone{display:none!important}
+.wabn-in{pointer-events:auto;position:relative;overflow:hidden;isolation:isolate;display:flex;align-items:center;gap:14px;width:min(1120px,94vw);margin:10px auto 0;padding:12px 52px 12px 14px;border-radius:14px;color:#f2fff6;background:linear-gradient(135deg,#093524 0%,#0f5a38 28%,#1f7a4a 50%,#12603a 74%,#093524 100%);border:1px solid #8be3ad66;box-shadow:0 14px 34px #04281a66,inset 0 1px 0 #ffffff55,inset 0 -2px 0 #04281a66;transform:translateY(-160%);opacity:0;visibility:hidden;font-family:inherit}
+.wabn-in:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(115deg,transparent 32%,#ffffff2e 50%,transparent 68%);transform:translateX(-120%);animation:wabnShine 6s ease-in-out 1.4s infinite}
+.wabn.show .wabn-in{visibility:visible;animation:wabnDrop .95s cubic-bezier(.2,.9,.3,1) forwards}
+.wabn.in .wabn-in{animation:none;opacity:1;transform:none;visibility:visible;transition:transform .45s cubic-bezier(.4,0,.2,1),opacity .35s}
+.wabn.in.off .wabn-in{transform:translateY(-160%);opacity:0;pointer-events:none}
+@keyframes wabnDrop{0%{opacity:0;transform:translateY(-160%)}55%{opacity:1;transform:translateY(10%)}72%{transform:translateY(-4%)}86%{transform:translateY(2%)}100%{opacity:1;transform:none}}
+@keyframes wabnShine{0%,60%{transform:translateX(-120%)}100%{transform:translateX(120%)}}
+.wabn-ic{flex:none;display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:linear-gradient(145deg,#3df08a 0%,#16b358 55%,#0e8a43 100%);box-shadow:inset 0 1px 0 #ffffff77,0 4px 12px #04281a66}
+.wabn-ic svg{width:24px;height:24px;fill:#fff}
+.wabn-tx{flex:1;min-width:0;margin:0;font-size:.92rem;line-height:1.45;color:#e9fff1;text-align:left}
+.wabn-tx b{color:#fff;font-weight:800}
+.wabn-tx strong{color:#fff3c4;font-weight:800}
+.wabn-short{display:none}
+.wabn-cta{flex:none;padding:10px 18px;border-radius:9px;font-weight:800;font-size:.9rem;line-height:1.2;text-decoration:none;color:#142b43;background:linear-gradient(115deg,#fff0bd 0%,#e8c46e 30%,#c9953d 58%,#f2d99b 82%,#d9ad58 100%);box-shadow:0 3px 0 #8f5a3f,inset 0 1px 0 #ffffff88;transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s}
+.wabn-cta:hover,.wabn-cta:focus-visible{transform:translateY(-2px);box-shadow:0 5px 0 #8f5a3f,0 0 18px #e8c46e66,inset 0 1px 0 #ffffff88;outline:none}
+.wabn-x{position:absolute;top:50%;right:10px;margin-top:-15px;width:30px;height:30px;padding:0 0 2px;border-radius:50%;border:1px solid #ffffff44;background:#00000026;color:#fff;font-size:1.3rem;line-height:1;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.wabn-x:hover,.wabn-x:focus-visible{background:#00000055;outline:none}
+@media(max-width:700px){
+.wabn-in{width:94vw;margin-top:8px;padding:10px 42px 10px 10px;gap:8px 10px;flex-wrap:wrap}
+.wabn-ic{width:34px;height:34px}.wabn-ic svg{width:20px;height:20px}
+.wabn-tx{font-size:.8rem;line-height:1.35}
+.wabn-long{display:none}.wabn-short{display:inline}
+.wabn-cta{flex:1 0 100%;text-align:center;padding:8px 14px;font-size:.86rem}
+.wabn-x{top:8px;right:8px;margin-top:0;width:28px;height:28px}
+}
+@media(prefers-reduced-motion:reduce){.wabn-in:before{animation:none}}
 </style>
 </head>
 <body>
@@ -192,6 +169,14 @@ body{font:16px/1.65 'Inter', system-ui, sans-serif; color:var(--txt); background
   </div>
 </header>
 
+<div class="wabn" id="wabn" role="region" aria-label="Aviso importante sobre cómo contactarnos">
+<div class="wabn-in">
+<span class="wabn-ic" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></span>
+<p class="wabn-tx"><b>WhatsApp: solo consultas rápidas por texto.</b> <span class="wabn-long">Para cotizar o iniciar tu proyecto, completa el formulario con tus datos y te contactamos a la brevedad.</span><span class="wabn-short">Para cotizar, completa el formulario.</span> <strong>No atendemos llamadas ni mensajes de voz.</strong></p>
+<a class="wabn-cta" href="index.html#cotizar">Completar formulario →</a>
+<button class="wabn-x" id="wabnX" type="button" aria-label="Cerrar aviso">×</button>
+</div>
+</div>
 <section class="hero">
   <div class="wrap">
     <h1>Portafolio de Proyectos Reales</h1>
@@ -214,27 +199,15 @@ body{font:16px/1.65 'Inter', system-ui, sans-serif; color:var(--txt); background
       </div>
     </article>
 
-    <!-- Proyecto: Ejemplo 2 -->
+    <!-- Tu proyecto -->
     <article class="project-card">
       <div class="project-image">
-        <span class="project-tag">Sitio Web</span>
+        <span class="project-tag">Tu proyecto</span>
       </div>
       <div class="project-content">
-        <h3>Proyecto Corporativo de Ejemplo</h3>
-        <p>Sitio web de múltiples páginas con diseño a medida, optimización de velocidad y estructura SEO local para Santiago.</p>
-        <a href="#" target="_blank" rel="noopener">Ver Proyecto <span aria-hidden="true">↗</span></a>
-      </div>
-    </article>
-
-    <!-- Proyecto: Ejemplo 3 -->
-    <article class="project-card">
-      <div class="project-image">
-        <span class="project-tag">Landing Page</span>
-      </div>
-      <div class="project-content">
-        <h3>Landing Page de Conversión — Ejemplo</h3>
-        <p>Diseño de landing page enfocada en la conversión, con integración de pagos y formularios optimizados para captar clientes.</p>
-        <a href="#" target="_blank" rel="noopener">Ver Proyecto <span aria-hidden="true">↗</span></a>
+        <h3>Tu proyecto puede ser el siguiente</h3>
+        <p>Cuéntanos qué necesitas (una landing, un sitio corporativo o una tienda online básica) y te enviamos una cotización a la brevedad.</p>
+        <a href="https://economicaweb.cl/#cotizar">Cotizar mi proyecto <span aria-hidden="true">→</span></a>
       </div>
     </article>
 
@@ -248,5 +221,41 @@ body{font:16px/1.65 'Inter', system-ui, sans-serif; color:var(--txt); background
   </div>
 </footer>
 
+<script>
+(function(){
+  /* Aviso: WhatsApp solo para consultas rápidas (cae desde arriba al entrar) */
+  var av=document.getElementById('wabn');
+  if(!av)return;
+  av.classList.add('ready');
+  var KEY='ewebAvisoTs',TTL=12*3600*1000,root=document.documentElement,inner=av.querySelector('.wabn-in');
+  try{var ts=+localStorage.getItem(KEY);if(ts&&Date.now()-ts<TTL){av.classList.add('gone');return}}catch(e){}
+  var rm=window.matchMedia&&matchMedia('(prefers-reduced-motion:reduce)').matches;
+  var shown=false,closed=false,formVis=false,t0=Date.now();
+  var sync=function(){if(!closed)av.classList.toggle('off',formVis)};
+  var show=function(){
+    if(shown)return;shown=true;
+    if(rm){av.classList.add('show','in');sync();return}
+    av.classList.add('show');
+    inner.addEventListener('animationend',function(e){if(e.animationName==='wabnDrop'){av.classList.add('in');sync()}});
+    setTimeout(function(){av.classList.add('in');sync()},1600);
+  };
+  var wait=function(){
+    var busy=root.classList.contains('intro-wait')||root.classList.contains('intro-on');
+    if(busy&&Date.now()-t0<15000){setTimeout(wait,300)}else{setTimeout(show,700)}
+  };
+  if(document.readyState==='complete')wait();else window.addEventListener('load',wait);
+  var close=function(){
+    closed=true;
+    try{localStorage.setItem(KEY,String(Date.now()))}catch(e){}
+    av.classList.add('show','in','off');
+    setTimeout(function(){av.classList.add('gone')},520);
+  };
+  document.getElementById('wabnX').addEventListener('click',close);
+  var cta=av.querySelector('.wabn-cta');
+  if(cta)cta.addEventListener('click',function(){setTimeout(close,60)});
+  var f=document.getElementById('cotizar')||document.getElementById('form');
+  if(f&&'IntersectionObserver' in window){new IntersectionObserver(function(es){formVis=es[0].isIntersecting;sync()},{threshold:.15}).observe(f)}
+})();
+</script>
 </body>
 </html>
