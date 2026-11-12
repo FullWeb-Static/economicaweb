@@ -1,19 +1,32 @@
-# e-WEB — Portafolio de Desarrollo Web
+# e-WEB — Desarrollo Web en Chile
 
-> Portafolio de proyectos de e-WEB, agencia de desarrollo web en Santiago, Chile. Especialistas en landing pages, sitios corporativos y tiendas online estáticas con optimización SEO e IA.
+> e-WEB (economicaweb.cl) es una agencia de desarrollo web en Chile. Crea landing pages, sitios corporativos y tiendas online básicas, con dominio, correo corporativo, soporte por tickets y optimización SEO para buscadores e IA.
 
-## Proyectos destacados
-- [AyudaPlan — Asesoría Previsional](https://ayudaplan.cl): Desarrollo web completo con calculadora, formulario y optimización para IA.
-- [Proyecto Corporativo de Ejemplo](https://economicaweb.cl/ejemplo-2): Sitio web de múltiples páginas con diseño a medida.
-- [Landing Page de Conversión de Ejemplo](https://economicaweb.cl/ejemplo-3): Landing page enfocada en conversión.
+## Proyectos
+- [AyudaPlan — Asesoría Previsional](https://ayudaplan.cl): sitio web completo con calculadora, formulario y optimización para buscadores e IA.
+- [Portafolio de e-WEB](https://economicaweb.cl/portafolio)
 
-## Servicios
-- Diseño y desarrollo web a medida.
-- Landing pages de alta conversión.
-- Sitios corporativos y tiendas online básicas.
-- Optimización SEO y Schema JSON-LD para IA.
+## Planes web (pesos chilenos, IVA incluido, 12 meses)
+- Basic (Nivel 1) $150.000: una página con 3 secciones y pie de firma, dominio, 1 correo corporativo de 5 GB, 1 bóveda de formulario, 2 enlaces a redes sociales, SEO básico y 2 tickets de soporte al mes.
+- Medium (Nivel 2) $200.000: hasta 3 páginas (3 secciones y pie de firma cada una), 2 correos corporativos, 2 bóvedas de formulario, 4 enlaces a redes sociales, SEO mejorado y 4 tickets de soporte al mes.
+- High (Nivel 3) $250.000: hasta 5 páginas o tienda online básica, 4 correos corporativos, 3 bóvedas de formulario, 6 enlaces a redes sociales, SEO avanzado y 6 tickets de soporte al mes.
+- [Detalle completo de cada plan](https://economicaweb.cl/soporte-ti)
+
+## Otros servicios
+- [Correo corporativo con tu propio dominio](https://economicaweb.cl/correo-corporativo): desde $45.000.
+- [Landing One-Page](https://economicaweb.cl/landing-one-page): una página con formulario, desde $65.000.
+- [Migración y auditoría gratuita de tu web actual](https://economicaweb.cl/migracion)
+- [Tickets de soporte y solicitudes adicionales](https://economicaweb.cl/tickets)
+- [Renovación y mejora de plan](https://economicaweb.cl/portal-renovacion)
+
+## Sobre e-WEB
+- [ADN e-WEB](https://economicaweb.cl/adn)
+- [Nosotros](https://economicaweb.cl/nosotros)
+- [Arquitectura de seguridad](https://economicaweb.cl/arquitectura-seguridad)
+- [Política de privacidad](https://economicaweb.cl/privacidad)
 
 ## Contacto
-- Email: contacto@economicaweb.cl
-- WhatsApp: +56922133902
+- Cotizaciones y proyectos nuevos: formulario en https://economicaweb.cl/#cotizar
+- Correo: contacto@economicaweb.cl
+- WhatsApp (+56 9 2213 3902, https://wa.me/56922133902): es un número de mensajería, solo para consultas rápidas por texto. No recibe llamadas ni mensajes de voz.
 - Web: https://economicaweb.cl
