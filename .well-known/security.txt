@@ -1,2 +1,4 @@
-Contact: mailto:[email protected]
-Expires: 2027-12-31T23:59:59.000Z
+Contact: mailto:contacto@economicaweb.cl
+Expires: 2027-09-30T23:59:59.000Z
+Preferred-Languages: es, en
+Canonical: https://economicaweb.cl/.well-known/security.txt
