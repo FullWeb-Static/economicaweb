@@ -71,6 +71,15 @@
       "author": { "@id": "https://economicaweb.cl/#organization" },
       "about": { "@type": "Thing", "name": "Asesoría de Isapres y Salud" },
       "dateCreated": "2026-01-15"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://economicaweb.cl/portafolio#proyecto-mineralesdelmundo",
+      "name": "Minerales del Mundo — Stickers digitales de minerales",
+      "description": "Sitio a medida para venta de stickers digitales de minerales, con catálogo ilustrado, pago automático con Mercado Pago, confirmación animada y aviso por correo de cada compra.",
+      "url": "https://mineralesdelmundo.cl",
+      "author": { "@id": "https://economicaweb.cl/#organization" },
+      "dateCreated": "2026-11"
     }
   ]
 }
@@ -102,31 +111,56 @@ body{font:16px/1.65 'Inter', system-ui, sans-serif; color:var(--txt); background
 .nav a.btn:hover{background:#1e40af}
 
 /* Hero */
-.hero{background:var(--ink); color:#fff; padding:90px 0 70px; text-align:center;}
-.hero h1{font-size:clamp(2.2rem, 4.5vw, 3.2rem); font-weight:800; letter-spacing:-0.03em; margin-bottom:16px; line-height:1.15;}
-.hero p{color:#b9c7dc; font-size:1.15rem; max-width:650px; margin:0 auto;}
+.hero{position:relative;overflow:hidden;text-align:center;padding:96px 0 72px;background:linear-gradient(180deg,#eef5ff 0%,#fffaf0 58%,#fff 100%)}
+.hero .blob{position:absolute;border-radius:50%;filter:blur(60px);opacity:.55;animation:blob 14s ease-in-out infinite alternate}
+.hero .b1{width:380px;height:380px;background:#9cc2ff;top:-130px;left:-90px}
+.hero .b2{width:340px;height:340px;background:#f3d98b;bottom:-150px;right:-70px;animation-delay:-6s}
+@keyframes blob{to{transform:translate(40px,30px) scale(1.15)}}
+.hero .wrap{position:relative}
+.eyebrow{display:inline-block;padding:6px 16px;margin-bottom:18px;border-radius:50px;background:#fff;border:1px solid var(--gold-light);color:#8a6b12;font-size:.78rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;box-shadow:0 4px 14px rgba(212,175,55,.2)}
+.hero h1{font-size:clamp(2.2rem,5vw,3.4rem);font-weight:800;letter-spacing:-.03em;line-height:1.12;color:var(--ink);margin-bottom:16px}
+.hero h1 em{font-style:normal;background:linear-gradient(100deg,var(--a),#6aa0ff 45%,var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--txt);font-size:1.12rem;max-width:660px;margin:0 auto 26px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.chips span{padding:8px 16px;border-radius:50px;background:#fff;border:1px solid var(--line);font-size:.85rem;font-weight:600;color:var(--ink);box-shadow:0 6px 16px rgba(10,37,64,.06);animation:bob 5s ease-in-out infinite}
+.chips span:nth-child(2){animation-delay:-1.2s}.chips span:nth-child(3){animation-delay:-2.4s}.chips span:nth-child(4){animation-delay:-3.6s}
+@keyframes bob{50%{transform:translateY(-6px)}}
 
 /* Grid de Portafolio */
-.portfolio-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:30px; padding:80px 0;}
-.project-card{background:#fff; border-radius:16px; overflow:hidden; border:1px solid var(--line); box-shadow:0 4px 20px rgba(0,0,0,0.03); transition:transform 0.3s ease, box-shadow 0.3s ease; display:flex; flex-direction:column;}
-.project-card:hover{transform:translateY(-6px); box-shadow:0 20px 40px rgba(10,37,64,0.08); border-color:var(--gold);}
-.project-image{height:200px; background:linear-gradient(135deg, #e2e8f0, #cbd5e1); display:flex; align-items:center; justify-content:center; position:relative; overflow:hidden;}
-.project-image::after{content:''; position:absolute; inset:0; background:url('https://ayudaplan.cl/imagen-redes.jpg') center/cover no-repeat; opacity:0.1;}
-.project-tag{position:absolute; top:16px; left:16px; background:var(--gold); color:var(--ink); font-size:0.75rem; font-weight:800; padding:4px 12px; border-radius:50px; text-transform:uppercase; letter-spacing:0.05em;}
-.project-content{padding:24px; flex:1; display:flex; flex-direction:column;}
-.project-content h3{font-size:1.3rem; color:var(--ink); margin-bottom:8px; font-weight:800;}
-.project-content p{font-size:0.95rem; color:var(--mut); margin-bottom:20px; flex:1;}
-.project-content a{display:inline-flex; align-items:center; gap:8px; color:var(--a); font-weight:700; font-size:0.95rem; text-decoration:none; transition:gap 0.2s;}
-.project-content a:hover{gap:12px;}
+.portfolio-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:34px;padding:70px 0 50px}
+.project-card{background:#fff;border-radius:22px;border:1px solid var(--line);box-shadow:0 10px 34px rgba(10,37,64,.07);display:flex;flex-direction:column;overflow:hidden;transition:transform .25s ease,box-shadow .3s,border-color .3s}
+.project-card:hover{box-shadow:0 26px 56px rgba(10,37,64,.14);border-color:var(--gold)}
+.shot{position:relative;margin:18px 18px 0;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:linear-gradient(135deg,#e8f0ff,#fff6dc);aspect-ratio:16/10;animation:float 6s ease-in-out infinite}
+.project-card:nth-child(2) .shot{animation-delay:-3s}
+@keyframes float{50%{transform:translateY(-6px)}}
+.shot-bar{position:absolute;top:0;left:0;right:0;z-index:2;height:34px;display:flex;align-items:center;gap:6px;padding:0 12px;background:#f1f5fa;border-bottom:1px solid var(--line)}
+.shot-bar i{width:9px;height:9px;border-radius:50%;background:#ff6b6b}.shot-bar i:nth-child(2){background:#ffcf4a}.shot-bar i:nth-child(3){background:#3ddc84}
+.shot-bar span{margin-left:8px;flex:1;background:#fff;border-radius:20px;padding:2px 12px;font-size:.7rem;color:var(--mut);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.shot img{position:absolute;left:0;top:34px;width:100%;height:calc(100% - 34px);object-fit:cover;object-position:top;transition:transform 1.2s ease}
+.project-card:hover .shot img{transform:scale(1.07)}
+.shot .ph{position:absolute;left:0;right:0;top:34px;bottom:0;display:grid;place-items:center;padding:10px;text-align:center;font-weight:800;font-size:1.15rem;color:var(--ink);opacity:.45}
+.shot::after{content:"";position:absolute;inset:0;z-index:3;pointer-events:none;background:linear-gradient(115deg,transparent 40%,rgba(255,255,255,.6) 50%,transparent 60%);transform:translateX(-120%);transition:transform .9s}
+.project-card:hover .shot::after{transform:translateX(120%)}
+.project-content{padding:24px;flex:1;display:flex;flex-direction:column}
+.project-tag{align-self:flex-start;margin-bottom:12px;background:var(--gold);color:var(--ink);font-size:.72rem;font-weight:800;padding:4px 12px;border-radius:50px;text-transform:uppercase;letter-spacing:.05em}
+.project-content h3{font-size:1.3rem;color:var(--ink);margin-bottom:8px;font-weight:800}
+.project-content p{font-size:.95rem;color:var(--mut);margin-bottom:20px;flex:1}
+.project-content a{display:inline-flex;align-items:center;gap:8px;color:var(--a);font-weight:700;font-size:.95rem;text-decoration:none;transition:gap .2s}
+.project-content a:hover{gap:12px}
+.project-card.cta{background:linear-gradient(145deg,#fffaf0,#eef5ff);border:2px dashed var(--gold-light);text-align:center;justify-content:center}
+.project-card.cta .project-tag{align-self:center}
+.cta-ic{font-size:3.4rem;margin-top:30px;animation:bob 3s ease-in-out infinite}
+
+/* Reveal al hacer scroll */
+html.js .rv{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
+html.js .rv.in{opacity:1;transform:none;transition:transform .25s ease,box-shadow .3s,border-color .3s}
 
 /* Footer */
-.main-footer{background:var(--ink); color:#9fb0c8; padding:40px 0; text-align:center; font-size:0.9rem; border-top:1px solid #1e293b;}
-.main-footer a{color:var(--gold-light); text-decoration:none;}
+.main-footer{background:linear-gradient(180deg,#fff,#f3f8ff);color:var(--mut);padding:40px 0;text-align:center;font-size:.9rem;border-top:3px solid var(--gold-light)}
+.main-footer a{color:var(--a);font-weight:700;text-decoration:none}
 
-@media (max-width: 768px) {
-  .portfolio-grid { grid-template-columns: 1fr; }
-  .hero { padding: 60px 0 40px; }
-}
+@media (max-width:768px){.hero{padding:64px 0 48px}.portfolio-grid{grid-template-columns:1fr;padding:44px 0 20px}}
+@media (prefers-reduced-motion:reduce){.hero .blob,.chips span,.shot,.cta-ic{animation:none}html.js .rv{opacity:1;transform:none}}
 
 /* ===== Aviso: WhatsApp solo para consultas rápidas (cae desde arriba) ===== */
 .wabn{display:none;position:fixed;left:0;right:0;top:var(--nav,68px);z-index:19;pointer-events:none}
@@ -177,10 +211,14 @@ body{font:16px/1.65 'Inter', system-ui, sans-serif; color:var(--txt); background
 <button class="wabn-x" id="wabnX" type="button" aria-label="Cerrar aviso">×</button>
 </div>
 </div>
+<script>document.documentElement.classList.add('js')</script>
 <section class="hero">
+  <div class="blob b1"></div><div class="blob b2"></div>
   <div class="wrap">
-    <h1>Portafolio de Proyectos Reales</h1>
+    <span class="eyebrow">Casos reales · Chile</span>
+    <h1>Portafolio de <em>Proyectos Reales</em></h1>
     <p>Explora los sitios web, landing pages y desarrollos a medida que hemos creado para empresas y profesionales en Chile.</p>
+    <div class="chips"><span>🎨 Diseño a medida</span><span>📱 100% responsivo</span><span>🔎 SEO e IA</span><span>💳 Formularios y pagos</span></div>
   </div>
 </section>
 
@@ -188,26 +226,43 @@ body{font:16px/1.65 'Inter', system-ui, sans-serif; color:var(--txt); background
   <div class="portfolio-grid">
 
     <!-- Proyecto: AyudaPlan -->
-    <article class="project-card">
-      <div class="project-image">
-        <span class="project-tag">Sitio Corporativo</span>
+    <article class="project-card tilt rv">
+      <div class="shot">
+        <div class="shot-bar"><i></i><i></i><i></i><span>ayudaplan.cl</span></div>
+        <div class="ph">AyudaPlan</div>
+        <img data-local="/capturas/ayudaplan.jpg" data-shot="https://ayudaplan.cl" alt="Vista del sitio web de AyudaPlan" loading="lazy">
       </div>
       <div class="project-content">
+        <span class="project-tag">Sitio Corporativo</span>
         <h3>AyudaPlan — Asesoría Previsional</h3>
         <p>Desarrollo web completo con diseño de élite, animaciones 3D, calculadora de 7% legal, formulario Web3Forms y optimización avanzada para Google e IA.</p>
         <a href="https://ayudaplan.cl" target="_blank" rel="noopener">Ver Proyecto <span aria-hidden="true">↗</span></a>
       </div>
     </article>
 
-    <!-- Tu proyecto -->
-    <article class="project-card">
-      <div class="project-image">
-        <span class="project-tag">Tu proyecto</span>
+    <!-- Proyecto: Minerales del Mundo -->
+    <article class="project-card tilt rv" style="transition-delay:.12s">
+      <div class="shot">
+        <div class="shot-bar"><i></i><i></i><i></i><span>mineralesdelmundo.cl</span></div>
+        <div class="ph">Minerales del Mundo</div>
+        <img data-local="/capturas/mineralesdelmundo.jpg" data-shot="https://mineralesdelmundo.cl/?preview=1" alt="Vista del sitio web de Minerales del Mundo" loading="lazy">
       </div>
       <div class="project-content">
+        <span class="project-tag">Proyecto a medida</span>
+        <h3>Minerales del Mundo — Stickers digitales</h3>
+        <p>Tienda de stickers digitales de minerales con catálogo ilustrado, pago automático con Mercado Pago, confirmación animada en pantalla, aviso por correo de cada compra y diseño responsivo.</p>
+        <a href="https://mineralesdelmundo.cl" target="_blank" rel="noopener">Ver Proyecto <span aria-hidden="true">↗</span></a>
+      </div>
+    </article>
+
+    <!-- Tu proyecto -->
+    <article class="project-card cta tilt rv" style="transition-delay:.24s">
+      <div class="cta-ic" aria-hidden="true">✨</div>
+      <div class="project-content">
+        <span class="project-tag">Tu proyecto</span>
         <h3>Tu proyecto puede ser el siguiente</h3>
         <p>Cuéntanos qué necesitas (una landing, un sitio corporativo o una tienda online básica) y te enviamos una cotización a la brevedad.</p>
-        <a href="https://economicaweb.cl/#cotizar">Cotizar mi proyecto <span aria-hidden="true">→</span></a>
+        <a href="https://economicaweb.cl/#cotizar" style="justify-content:center">Cotizar mi proyecto <span aria-hidden="true">→</span></a>
       </div>
     </article>
 
@@ -255,6 +310,33 @@ body{font:16px/1.65 'Inter', system-ui, sans-serif; color:var(--txt); background
   if(cta)cta.addEventListener('click',function(){setTimeout(close,60)});
   var f=document.getElementById('cotizar')||document.getElementById('form');
   if(f&&'IntersectionObserver' in window){new IntersectionObserver(function(es){formVis=es[0].isIntersecting;sync()},{threshold:.15}).observe(f)}
+})();
+</script>
+<script>
+(function(){
+  /* Capturas: primero /capturas/<sitio>.jpg; si no existe, captura en vivo; si falla, queda el marcador */
+  document.querySelectorAll('.shot img').forEach(function(img){
+    var paso=0;
+    img.addEventListener('error',function(){
+      paso++;
+      if(paso===1){img.src='https://s0.wp.com/mshots/v1/'+encodeURIComponent(img.dataset.shot)+'?w=1200&h=800';}
+      else{img.remove();}
+    });
+    img.src=img.dataset.local;
+  });
+  /* Aparición al hacer scroll */
+  var rv=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});
+    rv.forEach(function(el){io.observe(el)});
+  }else{rv.forEach(function(el){el.classList.add('in')})}
+  /* Inclinación 3D suave (solo con mouse) */
+  if(window.matchMedia&&matchMedia('(hover:hover) and (pointer:fine)').matches&&!matchMedia('(prefers-reduced-motion:reduce)').matches){
+    document.querySelectorAll('.tilt').forEach(function(c){
+      c.addEventListener('mousemove',function(e){var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform='perspective(900px) rotateY('+(x*6)+'deg) rotateX('+(-y*6)+'deg) translateY(-6px)'});
+      c.addEventListener('mouseleave',function(){c.style.transform=''});
+    });
+  }
 })();
 </script>
 </body>
